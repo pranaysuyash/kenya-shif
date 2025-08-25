@@ -10211,7 +10211,7 @@
       "description": "Service 'management of acute and chronic conditions for endemic / local cases' has conflicting facility level requirements",
       "severity": "medium",
       "services_count": 1,
-      "details": "Facility levels: Level 2, Not specified",
+      "details": "Facility levels: Not specified, Level 2",
       "kenya_context": "N/A",
       "status": "flagged"
     },
@@ -10220,7 +10220,7 @@
       "description": "Service 'screening for common health conditions' has conflicting facility level requirements",
       "severity": "medium",
       "services_count": 1,
-      "details": "Facility levels: Private, Not specified",
+      "details": "Facility levels: Not specified, Private",
       "kenya_context": "N/A",
       "status": "flagged"
     },
@@ -10229,7 +10229,7 @@
       "description": "Service 'reproductive, maternal and child health services as defined by the moh guide lines' has conflicting facility level requirements",
       "severity": "medium",
       "services_count": 1,
-      "details": "Facility levels: Private, Not specified",
+      "details": "Facility levels: Not specified, Private",
       "kenya_context": "N/A",
       "status": "flagged"
     },
@@ -10292,7 +10292,7 @@
       "description": "Service 'superficial parotidectomy' has conflicting facility level requirements",
       "severity": "medium",
       "services_count": 1,
-      "details": "Facility levels: Level 4-5 (County/Teaching Hospital), Level 4+ (County Hospital or higher)",
+      "details": "Facility levels: Level 4+ (County Hospital or higher), Level 4-5 (County/Teaching Hospital)",
       "kenya_context": "N/A",
       "status": "flagged"
     },
@@ -10319,7 +10319,7 @@
       "description": "Service 'management of acute and chronic conditions for endemic / local cases' has conflicting tariff amounts",
       "severity": "high",
       "services_count": 1,
-      "details": "Tariffs: KES nan, 900.0",
+      "details": "Tariffs: KES 900.0, nan",
       "kenya_context": "N/A",
       "status": "flagged"
     },
@@ -10612,5 +10612,5 @@
       "implementation_complexity": "Low"
     }
   ],
-  "generated_timestamp": "2025-08-25T23:36:02.971409"
+  "generated_timestamp": "2025-08-25T23:29:49.306083"
 }

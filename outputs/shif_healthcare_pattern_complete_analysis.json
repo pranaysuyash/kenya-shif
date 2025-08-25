@@ -18041,7 +18041,7 @@
         "management of acute and chronic conditions for endemic / local cases"
       ],
       "severity": "medium",
-      "details": "Facility levels: Not specified, Level 2",
+      "details": "Facility levels: Level 2, Not specified",
       "rule_types": [
         "policy",
         "policy"
@@ -18093,7 +18093,7 @@
         "intra- admission and post- discharge medication."
       ],
       "severity": "medium",
-      "details": "Facility levels: Not specified, Level 4",
+      "details": "Facility levels: Level 4, Not specified",
       "rule_types": [
         "policy",
         "policy"
@@ -18106,7 +18106,7 @@
         "preparation and storage of the body in mortuary"
       ],
       "severity": "medium",
-      "details": "Facility levels: Not specified, Level 4",
+      "details": "Facility levels: Level 4, Not specified",
       "rule_types": [
         "policy",
         "policy"
@@ -18119,7 +18119,7 @@
         "inpatient services shall include management of disease / condition while admitted."
       ],
       "severity": "medium",
-      "details": "Facility levels: Level 3, Level 4",
+      "details": "Facility levels: Level 4, Level 3",
       "rule_types": [
         "policy",
         "policy"
@@ -18132,7 +18132,7 @@
         "intra- admission consultation and review sbyboth general and specia list consultants, laboratory inv"
       ],
       "severity": "medium",
-      "details": "Facility levels: Not specified, Level 4",
+      "details": "Facility levels: Level 4, Not specified",
       "rule_types": [
         "policy",
         "policy"
@@ -18145,7 +18145,7 @@
         "components, artificial blood products, and biological serum."
       ],
       "severity": "medium",
-      "details": "Facility levels: Not specified, Level 4",
+      "details": "Facility levels: Level 4, Not specified",
       "rule_types": [
         "policy",
         "policy"
@@ -18158,7 +18158,7 @@
         "superficial parotidectomy"
       ],
       "severity": "medium",
-      "details": "Facility levels: Level 4+ (County Hospital or higher), Level 4-5 (County/Teaching Hospital)",
+      "details": "Facility levels: Level 4-5 (County/Teaching Hospital), Level 4+ (County Hospital or higher)",
       "rule_types": [
         "annex_procedure",
         "annex_procedure"
@@ -18448,7 +18448,7 @@
             "management of acute and chronic conditions for endemic / local cases"
           ],
           "severity": "medium",
-          "details": "Facility levels: Not specified, Level 2",
+          "details": "Facility levels: Level 2, Not specified",
           "rule_types": [
             "policy",
             "policy"
@@ -18504,7 +18504,7 @@
             "intra- admission and post- discharge medication."
           ],
           "severity": "medium",
-          "details": "Facility levels: Not specified, Level 4",
+          "details": "Facility levels: Level 4, Not specified",
           "rule_types": [
             "policy",
             "policy"
@@ -18518,7 +18518,7 @@
             "preparation and storage of the body in mortuary"
           ],
           "severity": "medium",
-          "details": "Facility levels: Not specified, Level 4",
+          "details": "Facility levels: Level 4, Not specified",
           "rule_types": [
             "policy",
             "policy"
@@ -18532,7 +18532,7 @@
             "inpatient services shall include management of disease / condition while admitted."
           ],
           "severity": "medium",
-          "details": "Facility levels: Level 3, Level 4",
+          "details": "Facility levels: Level 4, Level 3",
           "rule_types": [
             "policy",
             "policy"
@@ -18546,7 +18546,7 @@
             "intra- admission consultation and review sbyboth general and specia list consultants, laboratory inv"
           ],
           "severity": "medium",
-          "details": "Facility levels: Not specified, Level 4",
+          "details": "Facility levels: Level 4, Not specified",
           "rule_types": [
             "policy",
             "policy"
@@ -18560,7 +18560,7 @@
             "components, artificial blood products, and biological serum."
           ],
           "severity": "medium",
-          "details": "Facility levels: Not specified, Level 4",
+          "details": "Facility levels: Level 4, Not specified",
           "rule_types": [
             "policy",
             "policy"
@@ -18574,7 +18574,7 @@
             "superficial parotidectomy"
           ],
           "severity": "medium",
-          "details": "Facility levels: Level 4+ (County Hospital or higher), Level 4-5 (County/Teaching Hospital)",
+          "details": "Facility levels: Level 4-5 (County/Teaching Hospital), Level 4+ (County Hospital or higher)",
           "rule_types": [
             "annex_procedure",
             "annex_procedure"
@@ -29005,7 +29005,7 @@
         "description": "Service 'management of acute and chronic conditions for endemic / local cases' has conflicting facility level requirements",
         "severity": "medium",
         "services_count": 1,
-        "details": "Facility levels: Not specified, Level 2",
+        "details": "Facility levels: Level 2, Not specified",
         "kenya_context": "N/A",
         "status": "flagged"
       },
@@ -29041,7 +29041,7 @@
         "description": "Service 'intra- admission and post- discharge medication.' has conflicting facility level requirements",
         "severity": "medium",
         "services_count": 1,
-        "details": "Facility levels: Not specified, Level 4",
+        "details": "Facility levels: Level 4, Not specified",
         "kenya_context": "N/A",
         "status": "flagged"
       },
@@ -29050,7 +29050,7 @@
         "description": "Service 'preparation and storage of the body in mortuary' has conflicting facility level requirements",
         "severity": "medium",
         "services_count": 1,
-        "details": "Facility levels: Not specified, Level 4",
+        "details": "Facility levels: Level 4, Not specified",
         "kenya_context": "N/A",
         "status": "flagged"
       },
@@ -29059,7 +29059,7 @@
         "description": "Service 'inpatient services shall include management of disease / condition while admitted.' has conflicting facility level requirements",
         "severity": "medium",
         "services_count": 1,
-        "details": "Facility levels: Level 3, Level 4",
+        "details": "Facility levels: Level 4, Level 3",
         "kenya_context": "N/A",
         "status": "flagged"
       },
@@ -29068,7 +29068,7 @@
         "description": "Service 'intra- admission consultation and review sbyboth general and specia list consultants, laboratory inv' has conflicting facility level requirements",
         "severity": "medium",
         "services_count": 1,
-        "details": "Facility levels: Not specified, Level 4",
+        "details": "Facility levels: Level 4, Not specified",
         "kenya_context": "N/A",
         "status": "flagged"
       },
@@ -29077,7 +29077,7 @@
         "description": "Service 'components, artificial blood products, and biological serum.' has conflicting facility level requirements",
         "severity": "medium",
         "services_count": 1,
-        "details": "Facility levels: Not specified, Level 4",
+        "details": "Facility levels: Level 4, Not specified",
         "kenya_context": "N/A",
         "status": "flagged"
       },
@@ -29086,7 +29086,7 @@
         "description": "Service 'superficial parotidectomy' has conflicting facility level requirements",
         "severity": "medium",
         "services_count": 1,
-        "details": "Facility levels: Level 4+ (County Hospital or higher), Level 4-5 (County/Teaching Hospital)",
+        "details": "Facility levels: Level 4-5 (County/Teaching Hospital), Level 4+ (County Hospital or higher)",
         "kenya_context": "N/A",
         "status": "flagged"
       },
@@ -29406,13 +29406,13 @@
         "implementation_complexity": "Low"
       }
     ],
-    "generated_timestamp": "2025-08-25T22:22:05.236743"
+    "generated_timestamp": "2025-08-25T23:36:02.971409"
   },
   "analysis_metadata": {
-    "total_analysis_time": 0.25,
+    "total_analysis_time": 0.09,
     "tasks_completed": 4,
     "dataset_size": 922,
     "analysis_approach": "pattern_based",
-    "analysis_timestamp": "2025-08-25T22:22:05.305736"
+    "analysis_timestamp": "2025-08-25T23:36:02.992698"
   }
 }

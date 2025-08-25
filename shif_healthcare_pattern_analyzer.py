@@ -856,7 +856,7 @@ class SHIFHealthcarePatternAnalyzer:
         }
         
         # Save dashboard data
-        dashboard_file = Path('outputs/dr_rishi_pattern_dashboard.json')
+        dashboard_file = Path('outputs/shif_healthcare_pattern_dashboard.json')
         with open(dashboard_file, 'w') as f:
             json.dump(dashboard_data, f, indent=2, default=str)
         
@@ -866,7 +866,7 @@ class SHIFHealthcarePatternAnalyzer:
         # Create summary report
         self._create_summary_report(dashboard_data)
         
-        print(f"   ✅ TASK 4 COMPLETE: Dashboard saved to outputs/dr_rishi_pattern_dashboard.json")
+        print(f"   ✅ TASK 4 COMPLETE: Dashboard saved to outputs/shif_healthcare_pattern_dashboard.json")
         
         return dashboard_data
 
@@ -1044,7 +1044,7 @@ class SHIFHealthcarePatternAnalyzer:
         for filename, table_key in table_mappings.items():
             if dashboard_data.get(table_key):
                 df = pd.DataFrame(dashboard_data[table_key])
-                df.to_csv(output_dir / f'dr_rishi_{filename}.csv', index=False)
+                df.to_csv(output_dir / f'shif_healthcare_{filename}.csv', index=False)
 
     def _create_summary_report(self, dashboard_data: Dict):
         """Create a summary report"""
@@ -1081,7 +1081,7 @@ RECOMMENDATIONS
         report += f"\nFor detailed analysis, see CSV files in outputs/ directory.\n"
         
         # Save report
-        with open('outputs/dr_rishi_analysis_report.txt', 'w') as f:
+        with open('outputs/shif_healthcare_analysis_report.txt', 'w') as f:
             f.write(report)
 
     # ========== MAIN EXECUTION ==========
@@ -1134,7 +1134,7 @@ RECOMMENDATIONS
             }
             
             # Save complete results
-            results_file = Path('outputs/dr_rishi_pattern_complete_analysis.json')
+            results_file = Path('outputs/shif_healthcare_pattern_complete_analysis.json')
             with open(results_file, 'w') as f:
                 json.dump(complete_results, f, indent=2, default=str)
             
@@ -1167,15 +1167,15 @@ RECOMMENDATIONS
         
         print(f"\n📁 OUTPUT FILES CREATED:")
         output_files = [
-            "dr_rishi_pattern_complete_analysis.json - Complete analysis results",
-            "dr_rishi_pattern_dashboard.json - Dashboard data",
-            "dr_rishi_rules_parsed.csv - All structured rules",
-            "dr_rishi_contradictions.csv - Contradiction analysis", 
-            "dr_rishi_gaps.csv - Coverage gaps analysis",
-            "dr_rishi_specialties.csv - Specialty breakdown",
-            "dr_rishi_kenya_context.csv - Kenya context insights",
-            "dr_rishi_recommendations.csv - Policy recommendations",
-            "dr_rishi_analysis_report.txt - Executive summary report"
+            "shif_healthcare_pattern_complete_analysis.json - Complete analysis results",
+            "shif_healthcare_pattern_dashboard.json - Dashboard data",
+            "shif_healthcare_rules_parsed.csv - All structured rules",
+            "shif_healthcare_contradictions.csv - Contradiction analysis", 
+            "shif_healthcare_gaps.csv - Coverage gaps analysis",
+            "shif_healthcare_specialties.csv - Specialty breakdown",
+            "shif_healthcare_kenya_context.csv - Kenya context insights",
+            "shif_healthcare_recommendations.csv - Policy recommendations",
+            "shif_healthcare_analysis_report.txt - Executive summary report"
         ]
         
         for file_desc in output_files:
