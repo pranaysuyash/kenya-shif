@@ -1,0 +1,30 @@
+conditions:
+  Chronic kidney disease:
+    expected_services: ["dialysis", "hemodialysis", "haemodialysis", "renal replacement"]
+    frequency: "2-3 sessions per week"
+    facility_levels: ["Level 4", "Level 5", "Level 6"]
+    priority: "HIGH"
+  
+  Stroke rehabilitation:
+    expected_services: ["physiotherapy", "stroke rehab", "rehabilitation", "physio"]
+    frequency: "daily sessions"
+    facility_levels: ["Level 3", "Level 4", "Level 5", "Level 6"]
+    priority: "HIGH"
+
+  Cancer treatment:
+    expected_services: ["chemotherapy", "radiotherapy", "oncology", "cancer treatment"]
+    frequency: "as prescribed"
+    facility_levels: ["Level 4", "Level 5", "Level 6"]
+    priority: "HIGH"
+
+  Mental health:
+    expected_services: ["psychiatric", "psychology", "counseling", "mental health"]
+    frequency: "weekly sessions"
+    facility_levels: ["Level 4", "Level 5", "Level 6"]
+    priority: "MEDIUM"
+
+  Maternity:
+    expected_services: ["delivery", "maternity", "antenatal", "postnatal", "caesarean"]
+    frequency: "full coverage"
+    facility_levels: ["Level 2", "Level 3", "Level 4", "Level 5", "Level 6"]
+    priority: "HIGH"
