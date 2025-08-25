@@ -10220,7 +10220,7 @@
       "description": "Service 'screening for common health conditions' has conflicting facility level requirements",
       "severity": "medium",
       "services_count": 1,
-      "details": "Facility levels: Not specified, Private",
+      "details": "Facility levels: Private, Not specified",
       "kenya_context": "N/A",
       "status": "flagged"
     },
@@ -10229,7 +10229,7 @@
       "description": "Service 'reproductive, maternal and child health services as defined by the moh guide lines' has conflicting facility level requirements",
       "severity": "medium",
       "services_count": 1,
-      "details": "Facility levels: Not specified, Private",
+      "details": "Facility levels: Private, Not specified",
       "kenya_context": "N/A",
       "status": "flagged"
     },
@@ -10247,7 +10247,7 @@
       "description": "Service 'intra- admission and post- discharge medication.' has conflicting facility level requirements",
       "severity": "medium",
       "services_count": 1,
-      "details": "Facility levels: Level 4, Not specified",
+      "details": "Facility levels: Not specified, Level 4",
       "kenya_context": "N/A",
       "status": "flagged"
     },
@@ -10256,7 +10256,7 @@
       "description": "Service 'preparation and storage of the body in mortuary' has conflicting facility level requirements",
       "severity": "medium",
       "services_count": 1,
-      "details": "Facility levels: Level 4, Not specified",
+      "details": "Facility levels: Not specified, Level 4",
       "kenya_context": "N/A",
       "status": "flagged"
     },
@@ -10265,7 +10265,7 @@
       "description": "Service 'inpatient services shall include management of disease / condition while admitted.' has conflicting facility level requirements",
       "severity": "medium",
       "services_count": 1,
-      "details": "Facility levels: Level 4, Level 3",
+      "details": "Facility levels: Level 3, Level 4",
       "kenya_context": "N/A",
       "status": "flagged"
     },
@@ -10274,7 +10274,7 @@
       "description": "Service 'intra- admission consultation and review sbyboth general and specia list consultants, laboratory inv' has conflicting facility level requirements",
       "severity": "medium",
       "services_count": 1,
-      "details": "Facility levels: Level 4, Not specified",
+      "details": "Facility levels: Not specified, Level 4",
       "kenya_context": "N/A",
       "status": "flagged"
     },
@@ -10283,7 +10283,7 @@
       "description": "Service 'components, artificial blood products, and biological serum.' has conflicting facility level requirements",
       "severity": "medium",
       "services_count": 1,
-      "details": "Facility levels: Level 4, Not specified",
+      "details": "Facility levels: Not specified, Level 4",
       "kenya_context": "N/A",
       "status": "flagged"
     },
@@ -10319,7 +10319,7 @@
       "description": "Service 'management of acute and chronic conditions for endemic / local cases' has conflicting tariff amounts",
       "severity": "high",
       "services_count": 1,
-      "details": "Tariffs: KES 900.0, nan",
+      "details": "Tariffs: KES nan, 900.0",
       "kenya_context": "N/A",
       "status": "flagged"
     },
@@ -10612,5 +10612,5 @@
       "implementation_complexity": "Low"
     }
   ],
-  "generated_timestamp": "2025-08-25T22:12:01.759837"
+  "generated_timestamp": "2025-08-25T22:22:05.236743"
 }

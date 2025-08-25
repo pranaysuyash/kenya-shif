@@ -18,7 +18,7 @@ import time
 from datetime import datetime
 from collections import defaultdict, Counter
 
-class DrRishiPatternAnalyzer:
+class SHIFHealthcarePatternAnalyzer:
     """
     Pattern-based healthcare policy analyzer for all Dr. Rishi's requirements
     """
@@ -1196,7 +1196,7 @@ RECOMMENDATIONS
 def main():
     """Main execution function"""
     
-    analyzer = DrRishiPatternAnalyzer()
+    analyzer = SHIFHealthcarePatternAnalyzer()
     results = analyzer.run_complete_analysis()
     
     return results

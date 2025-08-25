@@ -18015,7 +18015,7 @@
         "basic radiological examinations including x-rays, ultrasounds."
       ],
       "severity": "medium",
-      "details": "Facility levels: Level 2, Level 4",
+      "details": "Facility levels: Level 4, Level 2",
       "rule_types": [
         "policy",
         "policy"
@@ -18028,7 +18028,7 @@
         "prescription, drug administration and dispensing"
       ],
       "severity": "medium",
-      "details": "Facility levels: Level 2, Level 4",
+      "details": "Facility levels: Level 4, Level 2",
       "rule_types": [
         "policy",
         "policy"
@@ -18041,7 +18041,7 @@
         "management of acute and chronic conditions for endemic / local cases"
       ],
       "severity": "medium",
-      "details": "Facility levels: Level 2, Not specified",
+      "details": "Facility levels: Not specified, Level 2",
       "rule_types": [
         "policy",
         "policy"
@@ -18054,7 +18054,7 @@
         "screening for common health conditions"
       ],
       "severity": "medium",
-      "details": "Facility levels: Not specified, Private",
+      "details": "Facility levels: Private, Not specified",
       "rule_types": [
         "policy",
         "policy"
@@ -18067,7 +18067,7 @@
         "reproductive, maternal and child health services as defined by the moh guide lines"
       ],
       "severity": "medium",
-      "details": "Facility levels: Not specified, Private",
+      "details": "Facility levels: Private, Not specified",
       "rule_types": [
         "policy",
         "policy"
@@ -18080,7 +18080,7 @@
         "midwifery, including episio tomy care and nursing care."
       ],
       "severity": "medium",
-      "details": "Facility levels: Level 2, Level 4",
+      "details": "Facility levels: Level 4, Level 2",
       "rule_types": [
         "policy",
         "policy"
@@ -18158,7 +18158,7 @@
         "superficial parotidectomy"
       ],
       "severity": "medium",
-      "details": "Facility levels: Level 4-5 (County/Teaching Hospital), Level 4+ (County Hospital or higher)",
+      "details": "Facility levels: Level 4+ (County Hospital or higher), Level 4-5 (County/Teaching Hospital)",
       "rule_types": [
         "annex_procedure",
         "annex_procedure"
@@ -18420,7 +18420,7 @@
             "basic radiological examinations including x-rays, ultrasounds."
           ],
           "severity": "medium",
-          "details": "Facility levels: Level 2, Level 4",
+          "details": "Facility levels: Level 4, Level 2",
           "rule_types": [
             "policy",
             "policy"
@@ -18434,7 +18434,7 @@
             "prescription, drug administration and dispensing"
           ],
           "severity": "medium",
-          "details": "Facility levels: Level 2, Level 4",
+          "details": "Facility levels: Level 4, Level 2",
           "rule_types": [
             "policy",
             "policy"
@@ -18448,7 +18448,7 @@
             "management of acute and chronic conditions for endemic / local cases"
           ],
           "severity": "medium",
-          "details": "Facility levels: Level 2, Not specified",
+          "details": "Facility levels: Not specified, Level 2",
           "rule_types": [
             "policy",
             "policy"
@@ -18462,7 +18462,7 @@
             "screening for common health conditions"
           ],
           "severity": "medium",
-          "details": "Facility levels: Not specified, Private",
+          "details": "Facility levels: Private, Not specified",
           "rule_types": [
             "policy",
             "policy"
@@ -18476,7 +18476,7 @@
             "reproductive, maternal and child health services as defined by the moh guide lines"
           ],
           "severity": "medium",
-          "details": "Facility levels: Not specified, Private",
+          "details": "Facility levels: Private, Not specified",
           "rule_types": [
             "policy",
             "policy"
@@ -18490,7 +18490,7 @@
             "midwifery, including episio tomy care and nursing care."
           ],
           "severity": "medium",
-          "details": "Facility levels: Level 2, Level 4",
+          "details": "Facility levels: Level 4, Level 2",
           "rule_types": [
             "policy",
             "policy"
@@ -18574,7 +18574,7 @@
             "superficial parotidectomy"
           ],
           "severity": "medium",
-          "details": "Facility levels: Level 4-5 (County/Teaching Hospital), Level 4+ (County Hospital or higher)",
+          "details": "Facility levels: Level 4+ (County Hospital or higher), Level 4-5 (County/Teaching Hospital)",
           "rule_types": [
             "annex_procedure",
             "annex_procedure"
@@ -28987,7 +28987,7 @@
         "description": "Service 'basic radiological examinations including x-rays, ultrasounds.' has conflicting facility level requirements",
         "severity": "medium",
         "services_count": 1,
-        "details": "Facility levels: Level 2, Level 4",
+        "details": "Facility levels: Level 4, Level 2",
         "kenya_context": "N/A",
         "status": "flagged"
       },
@@ -28996,7 +28996,7 @@
         "description": "Service 'prescription, drug administration and dispensing' has conflicting facility level requirements",
         "severity": "medium",
         "services_count": 1,
-        "details": "Facility levels: Level 2, Level 4",
+        "details": "Facility levels: Level 4, Level 2",
         "kenya_context": "N/A",
         "status": "flagged"
       },
@@ -29005,7 +29005,7 @@
         "description": "Service 'management of acute and chronic conditions for endemic / local cases' has conflicting facility level requirements",
         "severity": "medium",
         "services_count": 1,
-        "details": "Facility levels: Level 2, Not specified",
+        "details": "Facility levels: Not specified, Level 2",
         "kenya_context": "N/A",
         "status": "flagged"
       },
@@ -29014,7 +29014,7 @@
         "description": "Service 'screening for common health conditions' has conflicting facility level requirements",
         "severity": "medium",
         "services_count": 1,
-        "details": "Facility levels: Not specified, Private",
+        "details": "Facility levels: Private, Not specified",
         "kenya_context": "N/A",
         "status": "flagged"
       },
@@ -29023,7 +29023,7 @@
         "description": "Service 'reproductive, maternal and child health services as defined by the moh guide lines' has conflicting facility level requirements",
         "severity": "medium",
         "services_count": 1,
-        "details": "Facility levels: Not specified, Private",
+        "details": "Facility levels: Private, Not specified",
         "kenya_context": "N/A",
         "status": "flagged"
       },
@@ -29032,7 +29032,7 @@
         "description": "Service 'midwifery, including episio tomy care and nursing care.' has conflicting facility level requirements",
         "severity": "medium",
         "services_count": 1,
-        "details": "Facility levels: Level 2, Level 4",
+        "details": "Facility levels: Level 4, Level 2",
         "kenya_context": "N/A",
         "status": "flagged"
       },
@@ -29086,7 +29086,7 @@
         "description": "Service 'superficial parotidectomy' has conflicting facility level requirements",
         "severity": "medium",
         "services_count": 1,
-        "details": "Facility levels: Level 4-5 (County/Teaching Hospital), Level 4+ (County Hospital or higher)",
+        "details": "Facility levels: Level 4+ (County Hospital or higher), Level 4-5 (County/Teaching Hospital)",
         "kenya_context": "N/A",
         "status": "flagged"
       },
@@ -29406,13 +29406,13 @@
         "implementation_complexity": "Low"
       }
     ],
-    "generated_timestamp": "2025-08-25T22:06:11.687183"
+    "generated_timestamp": "2025-08-25T22:22:05.236743"
   },
   "analysis_metadata": {
-    "total_analysis_time": 0.27,
+    "total_analysis_time": 0.25,
     "tasks_completed": 4,
     "dataset_size": 922,
     "analysis_approach": "pattern_based",
-    "analysis_timestamp": "2025-08-25T22:06:11.719391"
+    "analysis_timestamp": "2025-08-25T22:22:05.305736"
   }
 }
