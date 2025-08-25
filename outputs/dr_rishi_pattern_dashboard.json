@@ -10193,7 +10193,7 @@
       "description": "Service 'basic radiological examinations including x-rays, ultrasounds.' has conflicting facility level requirements",
       "severity": "medium",
       "services_count": 1,
-      "details": "Facility levels: Level 2, Level 4",
+      "details": "Facility levels: Level 4, Level 2",
       "kenya_context": "N/A",
       "status": "flagged"
     },
@@ -10202,7 +10202,7 @@
       "description": "Service 'prescription, drug administration and dispensing' has conflicting facility level requirements",
       "severity": "medium",
       "services_count": 1,
-      "details": "Facility levels: Level 2, Level 4",
+      "details": "Facility levels: Level 4, Level 2",
       "kenya_context": "N/A",
       "status": "flagged"
     },
@@ -10238,7 +10238,7 @@
       "description": "Service 'midwifery, including episio tomy care and nursing care.' has conflicting facility level requirements",
       "severity": "medium",
       "services_count": 1,
-      "details": "Facility levels: Level 2, Level 4",
+      "details": "Facility levels: Level 4, Level 2",
       "kenya_context": "N/A",
       "status": "flagged"
     },
@@ -10247,7 +10247,7 @@
       "description": "Service 'intra- admission and post- discharge medication.' has conflicting facility level requirements",
       "severity": "medium",
       "services_count": 1,
-      "details": "Facility levels: Not specified, Level 4",
+      "details": "Facility levels: Level 4, Not specified",
       "kenya_context": "N/A",
       "status": "flagged"
     },
@@ -10256,7 +10256,7 @@
       "description": "Service 'preparation and storage of the body in mortuary' has conflicting facility level requirements",
       "severity": "medium",
       "services_count": 1,
-      "details": "Facility levels: Not specified, Level 4",
+      "details": "Facility levels: Level 4, Not specified",
       "kenya_context": "N/A",
       "status": "flagged"
     },
@@ -10274,7 +10274,7 @@
       "description": "Service 'intra- admission consultation and review sbyboth general and specia list consultants, laboratory inv' has conflicting facility level requirements",
       "severity": "medium",
       "services_count": 1,
-      "details": "Facility levels: Not specified, Level 4",
+      "details": "Facility levels: Level 4, Not specified",
       "kenya_context": "N/A",
       "status": "flagged"
     },
@@ -10283,7 +10283,7 @@
       "description": "Service 'components, artificial blood products, and biological serum.' has conflicting facility level requirements",
       "severity": "medium",
       "services_count": 1,
-      "details": "Facility levels: Not specified, Level 4",
+      "details": "Facility levels: Level 4, Not specified",
       "kenya_context": "N/A",
       "status": "flagged"
     },
@@ -10292,7 +10292,7 @@
       "description": "Service 'superficial parotidectomy' has conflicting facility level requirements",
       "severity": "medium",
       "services_count": 1,
-      "details": "Facility levels: Level 4-5 (County/Teaching Hospital), Level 4+ (County Hospital or higher)",
+      "details": "Facility levels: Level 4+ (County Hospital or higher), Level 4-5 (County/Teaching Hospital)",
       "kenya_context": "N/A",
       "status": "flagged"
     },
@@ -10612,5 +10612,5 @@
       "implementation_complexity": "Low"
     }
   ],
-  "generated_timestamp": "2025-08-25T21:08:36.690406"
+  "generated_timestamp": "2025-08-25T22:12:01.759837"
 }
