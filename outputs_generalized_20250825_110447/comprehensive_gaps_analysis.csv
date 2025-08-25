@@ -1,0 +1,6 @@
+gap_type,service_category,description,services_found,recommended_minimum,priority,detection_method
+insufficient_coverage,emergency_services,Insufficient coverage for emergency services,1,3,HIGH,comprehensive_coverage_analysis
+insufficient_coverage,primary_care,Insufficient coverage for primary care,1,3,HIGH,comprehensive_coverage_analysis
+insufficient_coverage,specialist_consultation,Insufficient coverage for specialist consultation,0,3,MEDIUM,comprehensive_coverage_analysis
+insufficient_coverage,diagnostic_imaging,Insufficient coverage for diagnostic imaging,0,3,MEDIUM,comprehensive_coverage_analysis
+insufficient_coverage,laboratory_services,Insufficient coverage for laboratory services,0,3,MEDIUM,comprehensive_coverage_analysis
