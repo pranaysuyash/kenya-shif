@@ -1,0 +1,222 @@
+{
+  "rules_parsed": [
+    {
+      "service_name": "Health education and wellness, counselling, and ongoing suppo rtas needed.",
+      "facility_level": "LEVEL 2, 3 and level 4 primary health care referral facility designated by the Authority",
+      "tariff_amount": 900.0,
+      "coverage_conditions_count": 0,
+      "exclusions_count": 0,
+      "rule_type": "policy"
+    },
+    {
+      "service_name": "Consultation, diagnosis, and treatment",
+      "facility_level": "LEVEL 2, 3 and level 4 primary health care referral facility designated by the Authority",
+      "tariff_amount": 900.0,
+      "coverage_conditions_count": 0,
+      "exclusions_count": 0,
+      "rule_type": "policy"
+    },
+    {
+      "service_name": "Prescribed laboratory inve sti gations",
+      "facility_level": "LEVEL 2, 3 and level 4 primary health care referral facility designated by the Authority",
+      "tariff_amount": 900.0,
+      "coverage_conditions_count": 0,
+      "exclusions_count": 0,
+      "rule_type": "policy"
+    },
+    {
+      "service_name": "Basic radiological examinations including X-rays, ultrasounds.",
+      "facility_level": "LEVEL 2, 3 and level 4 primary health care referral facility designated by the Authority",
+      "tariff_amount": 900.0,
+      "coverage_conditions_count": 0,
+      "exclusions_count": 0,
+      "rule_type": "policy"
+    },
+    {
+      "service_name": "Prescription, drug administration and dispensing",
+      "facility_level": "LEVEL 2, 3 and level 4 primary health care referral facility designated by the Authority",
+      "tariff_amount": 900.0,
+      "coverage_conditions_count": 0,
+      "exclusions_count": 0,
+      "rule_type": "policy"
+    },
+    {
+      "service_name": "Management of acute and chronic conditions for endemic / local cases",
+      "facility_level": "LEVEL 2, 3 and level 4 primary health care referral facility designated by the Authority",
+      "tariff_amount": 900.0,
+      "coverage_conditions_count": 0,
+      "exclusions_count": 0,
+      "rule_type": "policy"
+    },
+    {
+      "service_name": "Management ofNCDs, enteric infections; neglectedtropical",
+      "facility_level": "LEVEL 2, 3 and level 4 primary health care referral facility designated by the Authority",
+      "tariff_amount": 900.0,
+      "coverage_conditions_count": 0,
+      "exclusions_count": 0,
+      "rule_type": "policy"
+    },
+    {
+      "service_name": "diseases ( NTDs ), STI \u2019 sand HIV / AIDS",
+      "facility_level": "",
+      "tariff_amount": NaN,
+      "coverage_conditions_count": 0,
+      "exclusions_count": 0,
+      "rule_type": "policy"
+    },
+    {
+      "service_name": "Screening for common health conditions",
+      "facility_level": "",
+      "tariff_amount": NaN,
+      "coverage_conditions_count": 0,
+      "exclusions_count": 0,
+      "rule_type": "policy"
+    },
+    {
+      "service_name": "Minor surgical procedure sand medical procedures including male circumcision.",
+      "facility_level": "",
+      "tariff_amount": NaN,
+      "coverage_conditions_count": 0,
+      "exclusions_count": 0,
+      "rule_type": "policy"
+    },
+    {
+      "service_name": "Aortic Valvuloplasty",
+      "facility_level": "specialist",
+      "tariff_amount": 620000.0,
+      "coverage_conditions_count": 0,
+      "exclusions_count": 0,
+      "rule_type": "annex_procedure"
+    },
+    {
+      "service_name": "ASD percutaneous device closure",
+      "facility_level": "specialist",
+      "tariff_amount": 414400.0,
+      "coverage_conditions_count": 0,
+      "exclusions_count": 0,
+      "rule_type": "annex_procedure"
+    },
+    {
+      "service_name": "Atrial Septostomy",
+      "facility_level": "specialist",
+      "tariff_amount": 201600.0,
+      "coverage_conditions_count": 0,
+      "exclusions_count": 0,
+      "rule_type": "annex_procedure"
+    },
+    {
+      "service_name": "Cardiac Resynchronization Therapy Defibrillator (CRT- D) device",
+      "facility_level": "specialist",
+      "tariff_amount": 504000.0,
+      "coverage_conditions_count": 0,
+      "exclusions_count": 0,
+      "rule_type": "annex_procedure"
+    },
+    {
+      "service_name": "Cardiac Resynchronization Therapy Pacemaker (CRT-P)",
+      "facility_level": "specialist",
+      "tariff_amount": 537600.0,
+      "coverage_conditions_count": 0,
+      "exclusions_count": 0,
+      "rule_type": "annex_procedure"
+    },
+    {
+      "service_name": "Coronary angiography (diagnostic)",
+      "facility_level": "specialist",
+      "tariff_amount": 78400.0,
+      "coverage_conditions_count": 0,
+      "exclusions_count": 0,
+      "rule_type": "annex_procedure"
+    },
+    {
+      "service_name": "Coronary Angioplasty (with single or Multiple Stents)",
+      "facility_level": "specialist",
+      "tariff_amount": 537600.0,
+      "coverage_conditions_count": 0,
+      "exclusions_count": 0,
+      "rule_type": "annex_procedure"
+    },
+    {
+      "service_name": "Diagnostic catheterization",
+      "facility_level": "specialist",
+      "tariff_amount": 78400.0,
+      "coverage_conditions_count": 0,
+      "exclusions_count": 0,
+      "rule_type": "annex_procedure"
+    },
+    {
+      "service_name": "Dual Chamber pacemaker insertion (permanent)",
+      "facility_level": "specialist",
+      "tariff_amount": 280000.0,
+      "coverage_conditions_count": 0,
+      "exclusions_count": 0,
+      "rule_type": "annex_procedure"
+    },
+    {
+      "service_name": "Implantable Converter Defibrillator (ICD) Dual chamber insertion Implantable Converter Defibrillator (ICD) Single",
+      "facility_level": "specialist",
+      "tariff_amount": 504000.0,
+      "coverage_conditions_count": 0,
+      "exclusions_count": 0,
+      "rule_type": "annex_procedure"
+    },
+    {
+      "service_name": " chamber insertion",
+      "facility_level": "specialist",
+      "tariff_amount": 504000.0,
+      "coverage_conditions_count": 0,
+      "exclusions_count": 0,
+      "rule_type": "annex_procedure"
+    },
+    {
+      "service_name": "Intra- Aortic Balloon Pump",
+      "facility_level": "specialist",
+      "tariff_amount": 168000.0,
+      "coverage_conditions_count": 0,
+      "exclusions_count": 0,
+      "rule_type": "annex_procedure"
+    },
+    {
+      "service_name": "IVC Filter insertion",
+      "facility_level": "specialist",
+      "tariff_amount": 168000.0,
+      "coverage_conditions_count": 0,
+      "exclusions_count": 0,
+      "rule_type": "annex_procedure"
+    },
+    {
+      "service_name": "Loop recorder - reveal link",
+      "facility_level": "specialist",
+      "tariff_amount": 537600.0,
+      "coverage_conditions_count": 0,
+      "exclusions_count": 0,
+      "rule_type": "annex_procedure"
+    },
+    {
+      "service_name": "Loop recorder-reveal xt",
+      "facility_level": "specialist",
+      "tariff_amount": 358400.0,
+      "coverage_conditions_count": 0,
+      "exclusions_count": 0,
+      "rule_type": "annex_procedure"
+    }
+  ],
+  "contradictions_flagged": [],
+  "coverage_gaps": [],
+  "summary_statistics": {
+    "total_rules_parsed": 25,
+    "total_contradictions": 0,
+    "high_severity_contradictions": 0,
+    "total_gaps": 0,
+    "high_impact_gaps": 0,
+    "policy_services_analyzed": 194,
+    "annex_procedures_analyzed": 728
+  },
+  "kenya_context_insights": {
+    "kenya_context_available": true,
+    "shif_context_available": true,
+    "enhanced_analysis_available": true,
+    "context_summary": "RAG-enhanced analysis with Kenya healthcare and SHIF context"
+  },
+  "generated_timestamp": "2025-08-25T19:51:58.240037"
+}

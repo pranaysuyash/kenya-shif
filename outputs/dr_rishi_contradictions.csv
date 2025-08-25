@@ -1,0 +1,20 @@
+type,description,severity,services_count,details,kenya_context,status
+facility_level_contradiction,"Service 'basic radiological examinations including x-rays, ultrasounds.' has conflicting facility level requirements",medium,1,"Facility levels: Level 2, Level 4",N/A,flagged
+facility_level_contradiction,"Service 'prescription, drug administration and dispensing' has conflicting facility level requirements",medium,1,"Facility levels: Level 2, Level 4",N/A,flagged
+facility_level_contradiction,Service 'management of acute and chronic conditions for endemic / local cases' has conflicting facility level requirements,medium,1,"Facility levels: Not specified, Level 2",N/A,flagged
+facility_level_contradiction,Service 'screening for common health conditions' has conflicting facility level requirements,medium,1,"Facility levels: Not specified, Private",N/A,flagged
+facility_level_contradiction,"Service 'reproductive, maternal and child health services as defined by the moh guide lines' has conflicting facility level requirements",medium,1,"Facility levels: Not specified, Private",N/A,flagged
+facility_level_contradiction,"Service 'midwifery, including episio tomy care and nursing care.' has conflicting facility level requirements",medium,1,"Facility levels: Level 2, Level 4",N/A,flagged
+facility_level_contradiction,Service 'intra- admission and post- discharge medication.' has conflicting facility level requirements,medium,1,"Facility levels: Not specified, Level 4",N/A,flagged
+facility_level_contradiction,Service 'preparation and storage of the body in mortuary' has conflicting facility level requirements,medium,1,"Facility levels: Not specified, Level 4",N/A,flagged
+facility_level_contradiction,Service 'inpatient services shall include management of disease / condition while admitted.' has conflicting facility level requirements,medium,1,"Facility levels: Level 4, Level 3",N/A,flagged
+facility_level_contradiction,"Service 'intra- admission consultation and review sbyboth general and specia list consultants, laboratory inv' has conflicting facility level requirements",medium,1,"Facility levels: Not specified, Level 4",N/A,flagged
+facility_level_contradiction,"Service 'components, artificial blood products, and biological serum.' has conflicting facility level requirements",medium,1,"Facility levels: Not specified, Level 4",N/A,flagged
+facility_level_contradiction,Service 'superficial parotidectomy' has conflicting facility level requirements,medium,1,"Facility levels: Level 4-5 (County/Teaching Hospital), Level 4+ (County Hospital or higher)",N/A,flagged
+tariff_contradiction,"Service 'basic radiological examinations including x-rays, ultrasounds.' has conflicting tariff amounts",high,1,"Tariffs: KES 2.0, 900.0",N/A,flagged
+tariff_contradiction,"Service 'prescription, drug administration and dispensing' has conflicting tariff amounts",high,1,"Tariffs: KES 2.0, 900.0",N/A,flagged
+tariff_contradiction,Service 'management of acute and chronic conditions for endemic / local cases' has conflicting tariff amounts,high,1,"Tariffs: KES 900.0, nan",N/A,flagged
+tariff_contradiction,Service 'intra- admission and post- discharge medication.' has conflicting tariff amounts,high,1,"Tariffs: KES 11.0, nan",N/A,flagged
+tariff_contradiction,Service 'unnamed service' has conflicting tariff amounts,high,1,"Tariffs: KES 3.0, nan",N/A,flagged
+tariff_contradiction,Service 'inpatient services shall include management of disease / condition while admitted.' has conflicting tariff amounts,high,1,"Tariffs: KES 2.0, 3.0",N/A,flagged
+tariff_contradiction,"Service 'intra- admission consultation and review sbyboth general and specia list consultants, laboratory inv' has conflicting tariff amounts",high,1,"Tariffs: KES 3.0, nan",N/A,flagged
