@@ -118,10 +118,17 @@ def main():
         )
         
         # Model selection
-        model = st.selectbox(
-            "AI Model",
-            ["gpt-4o-mini", "gpt-4o", "gpt-4-turbo"],
-            help="Select the AI model for medical analysis"
+        primary_model = st.selectbox(
+            "Primary AI Model",
+            ["gpt-5-mini", "gpt-4.1-mini", "gpt-4o-mini", "gpt-4o"],
+            help="Select the primary AI model for medical analysis"
+        )
+        
+        fallback_model = st.selectbox(
+            "Fallback AI Model", 
+            ["gpt-4.1-mini", "gpt-5-mini", "gpt-4o-mini", "gpt-4o"],
+            index=1,
+            help="Select the fallback AI model if primary fails"
         )
         
         # Analysis mode
@@ -137,13 +144,13 @@ def main():
 
     # Main content area
     if analysis_mode == "🚀 Complete Analysis":
-        run_complete_analysis(api_key, model)
+        run_complete_analysis(api_key, primary_model, fallback_model)
     elif analysis_mode == "📊 Load Previous Results":
         load_previous_results()
     elif analysis_mode == "🧪 Test Medical Reasoning":
-        test_medical_reasoning(api_key, model)
+        test_medical_reasoning(api_key, primary_model, fallback_model)
 
-def run_complete_analysis(api_key, model):
+def run_complete_analysis(api_key, primary_model, fallback_model):
     """Run complete generalized medical analysis"""
     
     st.header("🚀 Complete Generalized Medical Analysis")
@@ -164,7 +171,7 @@ def run_complete_analysis(api_key, model):
         st.success(f"✅ PDF uploaded: {uploaded_file.name}")
         
         if st.button("🚀 Start Generalized Medical Analysis", type="primary"):
-            analyze_with_generalized_ai(pdf_path, api_key, model)
+            analyze_with_generalized_ai(pdf_path, api_key, primary_model, fallback_model)
     
     else:
         # Default analysis with existing PDF
@@ -173,17 +180,17 @@ def run_complete_analysis(api_key, model):
         if st.button("🚀 Analyze Default SHIF PDF", type="primary"):
             pdf_path = "TARIFFS TO THE BENEFIT PACKAGE TO THE SHI.pdf"
             if os.path.exists(pdf_path):
-                analyze_with_generalized_ai(pdf_path, api_key, model)
+                analyze_with_generalized_ai(pdf_path, api_key, primary_model, fallback_model)
             else:
                 st.error("❌ Default SHIF PDF not found. Please upload a PDF file.")
 
-def analyze_with_generalized_ai(pdf_path, api_key, model):
+def analyze_with_generalized_ai(pdf_path, api_key, primary_model, fallback_model):
     """Run analysis with generalized medical AI"""
     
     # Initialize analyzer
     with st.spinner("🚀 Initializing Generalized Medical AI Analyzer..."):
         try:
-            analyzer = GeneralizedMedicalAnalyzer(api_key=api_key, model=model)
+            analyzer = GeneralizedMedicalAnalyzer(api_key=api_key, primary_model=primary_model, fallback_model=fallback_model)
             
             # Set environment variable for analysis
             if api_key:
@@ -885,7 +892,7 @@ def load_previous_results():
         except Exception as e:
             st.error(f"Failed to load results: {str(e)}")
 
-def test_medical_reasoning(api_key, model):
+def test_medical_reasoning(api_key, primary_model, fallback_model):
     """Test AI medical reasoning capabilities"""
     st.header("🧪 Test Medical Reasoning")
     
@@ -923,7 +930,7 @@ def test_medical_reasoning(api_key, model):
     if st.button("🧪 Run Medical Reasoning Test"):
         with st.spinner("Testing AI medical reasoning..."):
             try:
-                analyzer = GeneralizedMedicalAnalyzer(api_key=api_key, model=model)
+                analyzer = GeneralizedMedicalAnalyzer(api_key=api_key, primary_model=primary_model, fallback_model=fallback_model)
                 
                 # Create test context
                 test_context = f"""
