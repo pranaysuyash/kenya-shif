@@ -1,0 +1,106 @@
+[
+  {
+    "issue_type": "duplicate_tariff",
+    "specialty": "Cardiology / Cardiothoracic and Vascular",
+    "procedure": "Atrial Septal Defect (ASD) closure — percutaneous vs surgical",
+    "evidence": "Cardiology row 'ASD percutaneous device closure' tariff = KES 414,400 vs Cardiothoracic row 'Atrial Septal Defect Closure' tariff = KES 784,000. The same clinical target (ASD) shows two tariffs that differ by KES 369,600 (≈89% higher for the surgical entry). It is unclear whether labels refer to percutaneous vs open surgical approach or are duplicated entries.",
+    "recommended_action": "clarify complexity bands and coding (explicitly tag percutaneous vs open surgical ASD); merge/align duplicate labels where same approach; if both approaches retained, justify differential and move device costs to pass-through or separate line items.",
+    "confidence": 0.95
+  },
+  {
+    "issue_type": "duplicate_tariff",
+    "specialty": "Cardiology",
+    "procedure": "Diagnostic coronary angiography vs 'Diagnostic catheterization' / 'Right and Left Catheterization'",
+    "evidence": "'Coronary angiography (diagnostic)' tariff = KES 78,400; 'Diagnostic catheterization' tariff = KES 78,400 (duplicate price, different labels). 'Right and Left Catheterization' tariff = KES 145,600 (≈2× diagnostic catheterization). Different labels describing the same basic diagnostic procedure create opportunities for inconsistent billing and data noise.",
+    "recommended_action": "merge duplicates with a canonical label for diagnostic catheter/angiography; explicitly add a bilateral/combined code if applicable (vs single diagnostic), and document pricing logic for single vs bilateral studies.",
+    "confidence": 0.92
+  },
+  {
+    "issue_type": "duplicate_tariff",
+    "specialty": "Cardiology",
+    "procedure": "Implantable defibrillator / chamber insertion naming duplicates",
+    "evidence": "Row 10: 'Implantable Converter Defibrillator (ICD) Dual chamber insertion Implantable Converter Defibrillator (ICD) Single' tariff = KES 504,000. Row 11: 'chamber insertion' tariff = KES 504,000. These entries are concatenated/truncated names and appear to duplicate the same service with inconsistent labeling.",
+    "recommended_action": "merge duplicates and correct procedure names; standardize distinct entries for 'ICD single-chamber' and 'ICD dual-chamber' and ensure tariffs reflect device complexity and implant costs (or use device pass-through).",
+    "confidence": 0.98
+  },
+  {
+    "issue_type": "outlier",
+    "specialty": "Cardiology",
+    "procedure": "CRT-D vs CRT-P pricing inconsistency",
+    "evidence": "'Cardiac Resynchronization Therapy Defibrillator (CRT - D) device' tariff = KES 504,000 while 'Cardiac Resynchronization Therapy Pacemaker (CRT - P)' tariff = KES 537,600. A CRT-D (with defibrillator) is clinically and device-wise more complex/expensive than CRT-P but is priced ≈6.25% lower.",
+    "recommended_action": "adjust tariff to ensure CRT-D >= CRT-P (adjust CRT-D upward or re-cost CRT-P); introduce device-cost pass-through for incremental device cost and list device models/price bands.",
+    "confidence": 0.94
+  },
+  {
+    "issue_type": "outlier",
+    "specialty": "Cardiothoracic and Vascular",
+    "procedure": "Abdominal Aortic Aneurysm (AAA) Repair (Open)",
+    "evidence": "'Abdominal Aortic Aneurym Repair (Open)' tariff = KES 392,000 vs TEVAR = KES 504,000. Open AAA is typically at least as resource-intensive as endovascular repair (OR time, graft cost, ICU stay); open AAA here is priced ≈22% below TEVAR, which suggests potential underfunding.",
+    "recommended_action": "re-cost open AAA repair (include graft, ICU, blood products, OR time) and adjust tariff upward where indicated; if TEVAR includes device passthrough, introduce similar approach for open graft costs or harmonize pricing methodology.",
+    "confidence": 0.88
+  },
+  {
+    "issue_type": "outlier",
+    "specialty": "Cardiothoracic and Vascular",
+    "procedure": "AV Fistula take-down",
+    "evidence": "'AV Fistula Take down' tariff = KES 33,600 which is markedly low compared with comparable minor vascular procedures (e.g., 'Peripheral Angiography' = KES 56,000). The absolute level (KES 33.6k) is plausibly a data-entry error or missing zero given typical OR/anesthesia/ward use.",
+    "recommended_action": "verify entry for data/decimal error and re-cost AVF take-down (include theatre, anesthesia, possible short admission); correct tariff or flag as likely transcription error.",
+    "confidence": 0.90
+  },
+  {
+    "issue_type": "inconsistent_by_level",
+    "specialty": "Cardiology",
+    "procedure": "Coronary angioplasty (with stents) pricing and device handling",
+    "evidence": "'Coronary Angioplasty (with single or Multiple Stents)' tariff = KES 537,600 vs 'Coronary angiography (diagnostic)' = KES 78,400 (angioplasty ≈6.9× diagnostic). High-cost variability exists across device-dependent procedures, yet tariffs are single flat amounts irrespective of number/type of stents or device model.",
+    "recommended_action": "introduce structured complexity bands or device pass-throughs for angioplasty (e.g., diagnostic, angioplasty w/1 stent, w/≥2 stents, drug-eluting vs bare), or document clearly why a single flat tariff is appropriate.",
+    "confidence": 0.85
+  },
+  {
+    "issue_type": "duplicate_tariff",
+    "specialty": "Cardiology",
+    "procedure": "Loop recorder models pricing disparity",
+    "evidence": "'Loop recorder - reveal link' tariff = KES 537,600; 'Loop recorder - reveal xt' tariff = KES 358,400. Two devices for the same clinical purpose show a KES 179,200 (≈50%) difference. Without device cost breakdown, this is a potential inconsistency or requires justification by device pricing.",
+    "recommended_action": "require device model-level cost justification or move device component to pass-through; harmonize tariffs or document technology-differential bands.",
+    "confidence": 0.80
+  },
+  {
+    "issue_type": "duplicate_tariff",
+    "specialty": "Cardiology",
+    "procedure": "Right and Left Catheterization vs Diagnostic catheterization",
+    "evidence": "'Diagnostic catheterization' = KES 78,400; 'Right and Left Catheterization' = KES 145,600 (~1.86×). Different labels likely describe single vs combined studies — labeling ambiguity risks incorrect billing.",
+    "recommended_action": "standardize labels and explicitly code single-side vs bilateral catheterization; if the higher tariff is intended for combined procedures, document rule and unify naming.",
+    "confidence": 0.90
+  },
+  {
+    "issue_type": "outlier",
+    "specialty": "Cardiology / Cardiothoracic",
+    "procedure": "High tariff clustering for heterogenous procedures (tariff compression)",
+    "evidence": Multiple distinct high-complexity interventions share identical tariffs: KES 537,600 assigned to 'Cardiac Resynchronization Therapy Pacemaker (CRT - P)', 'Coronary Angioplasty (with single or Multiple Stents)', and 'Loop recorder - reveal link'. Identical pricing across clinically and resource-wise heterogeneous procedures suggests tariff compression / insufficient differentiation by resource use.",
+    "recommended_action": "disaggregate tariffs by resource drivers (OR minutes, ICU days, implant/device cost, consumables); where device-driven, use pass-through items; consider revising tariff matrix to reflect complexity bands and facility level.",
+    "confidence": 0.86
+  },
+  {
+    "issue_type": "underfunded_complex",
+    "specialty": "Neurosurgery",
+    "procedure": "Complex neurosurgical procedures (craniotomy for tumour, aneurysm clipping, spinal fusion, skull-base surgery)",
+    "evidence": Annex lists only 29 neurosurgery procedures and the dataset-wide average tariff = KES 187,976. Typical resource and device intensity for major neurosurgical cases (long OR time, implants, ICU, imaging) commonly exceed such national averages. Absence of sample neurosurgery high-tariff items suggests risk of underfunding or under-representation.",
+    "recommended_action": "perform focused cost audit of neurosurgery group: re-cost representative high-complexity procedures, add device/implant pass-throughs, create tertiary-level uplifts and complexity bands, and expand neurosurgery tariff set to cover major procedures explicitly.",
+    "confidence": 0.78
+  },
+  {
+    "issue_type": "inconsistent_by_level",
+    "specialty": "Cross-specialty (policy)",
+    "procedure": "Lack of explicit complexity / facility-level modifiers",
+    "evidence": Dataset shows wide procedural mix (728 items across 13 specialties) but no transparent complexity tiers or tertiary/secondary modifiers in sample rows. High-cost tertiary procedures and device-intensive interventions appear priced on same flat basis as other procedures.",
+    "recommended_action": "introduce explicit complexity bands (minor/moderate/major/complex), add facility-level multipliers (secondary vs tertiary), and require that tariffs include breakdowns (OR time, implants, ICU days) so reviewers can assess adequacy.",
+    "confidence": 0.88
+  },
+  {
+    "issue_type": "outlier",
+    "specialty": "Cardiothoracic and Vascular",
+    "procedure": "Anterior Chest/Mediastinal mass resections high parity",
+    "evidence": 'Anterior Chest Wall Mass Excision and Reconstruction' and 'Anterior Mediastinal Mass Resection' both = KES 599,200. While parity can be justified, mediastinal surgery frequently carries higher risk and resource use (sternotomy, cardiopulmonary bypass potential) than superficial chest wall reconstruction. Identical tariffs merit confirmation.",
+    "recommended_action": "verify clinical complexity assumptions and cost bases for both entries; if resource use differs materially, split into different complexity bands or adjust tariffs accordingly.",
+    "confidence": 0.72
+  }
+]

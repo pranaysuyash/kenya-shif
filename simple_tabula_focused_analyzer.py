@@ -26,7 +26,7 @@ class SimpleTabulaFocusedAnalyzer:
         
         results = {}
         
-        # PHASE 1: Simple tabula extraction (your proven method)
+        # PHASE 1: Simple Tabula extraction (validated method)
         print("\n📊 PHASE 1: Simple Tabula Extraction (Annex Pages 19-54)")
         self.annex_procedures = self._extract_annex_tabula_simple(pdf_path, "19-54")
         print(f"   ✅ Extracted {len(self.annex_procedures)} procedures")

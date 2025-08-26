@@ -30,11 +30,11 @@
       "Level 3-4 (Health Center/County Hospital)": 157,
       "Level 4-5 (County/Teaching Hospital)": 275
     },
-    "total_contradictions": 19,
-    "high_severity_contradictions": 7,
+    "total_contradictions": 42,
+    "high_severity_contradictions": 30,
     "contradiction_type_distribution": {
       "facility_level_contradiction": 12,
-      "tariff_contradiction": 7
+      "tariff_contradiction": 30
     },
     "total_gaps": 10,
     "high_impact_gaps": 9,
@@ -10193,7 +10193,7 @@
       "description": "Service 'basic radiological examinations including x-rays, ultrasounds.' has conflicting facility level requirements",
       "severity": "medium",
       "services_count": 1,
-      "details": "Facility levels: Level 4, Level 2",
+      "details": "Facility levels: Level 2, Level 4",
       "kenya_context": "N/A",
       "status": "flagged"
     },
@@ -10202,7 +10202,7 @@
       "description": "Service 'prescription, drug administration and dispensing' has conflicting facility level requirements",
       "severity": "medium",
       "services_count": 1,
-      "details": "Facility levels: Level 4, Level 2",
+      "details": "Facility levels: Level 2, Level 4",
       "kenya_context": "N/A",
       "status": "flagged"
     },
@@ -10211,7 +10211,7 @@
       "description": "Service 'management of acute and chronic conditions for endemic / local cases' has conflicting facility level requirements",
       "severity": "medium",
       "services_count": 1,
-      "details": "Facility levels: Level 2, Not specified",
+      "details": "Facility levels: Not specified, Level 2",
       "kenya_context": "N/A",
       "status": "flagged"
     },
@@ -10220,7 +10220,7 @@
       "description": "Service 'screening for common health conditions' has conflicting facility level requirements",
       "severity": "medium",
       "services_count": 1,
-      "details": "Facility levels: Private, Not specified",
+      "details": "Facility levels: Not specified, Private",
       "kenya_context": "N/A",
       "status": "flagged"
     },
@@ -10229,7 +10229,7 @@
       "description": "Service 'reproductive, maternal and child health services as defined by the moh guide lines' has conflicting facility level requirements",
       "severity": "medium",
       "services_count": 1,
-      "details": "Facility levels: Private, Not specified",
+      "details": "Facility levels: Not specified, Private",
       "kenya_context": "N/A",
       "status": "flagged"
     },
@@ -10238,7 +10238,7 @@
       "description": "Service 'midwifery, including episio tomy care and nursing care.' has conflicting facility level requirements",
       "severity": "medium",
       "services_count": 1,
-      "details": "Facility levels: Level 4, Level 2",
+      "details": "Facility levels: Level 2, Level 4",
       "kenya_context": "N/A",
       "status": "flagged"
     },
@@ -10247,7 +10247,7 @@
       "description": "Service 'intra- admission and post- discharge medication.' has conflicting facility level requirements",
       "severity": "medium",
       "services_count": 1,
-      "details": "Facility levels: Level 4, Not specified",
+      "details": "Facility levels: Not specified, Level 4",
       "kenya_context": "N/A",
       "status": "flagged"
     },
@@ -10256,7 +10256,7 @@
       "description": "Service 'preparation and storage of the body in mortuary' has conflicting facility level requirements",
       "severity": "medium",
       "services_count": 1,
-      "details": "Facility levels: Level 4, Not specified",
+      "details": "Facility levels: Not specified, Level 4",
       "kenya_context": "N/A",
       "status": "flagged"
     },
@@ -10274,7 +10274,7 @@
       "description": "Service 'intra- admission consultation and review sbyboth general and specia list consultants, laboratory inv' has conflicting facility level requirements",
       "severity": "medium",
       "services_count": 1,
-      "details": "Facility levels: Level 4, Not specified",
+      "details": "Facility levels: Not specified, Level 4",
       "kenya_context": "N/A",
       "status": "flagged"
     },
@@ -10283,7 +10283,7 @@
       "description": "Service 'components, artificial blood products, and biological serum.' has conflicting facility level requirements",
       "severity": "medium",
       "services_count": 1,
-      "details": "Facility levels: Level 4, Not specified",
+      "details": "Facility levels: Not specified, Level 4",
       "kenya_context": "N/A",
       "status": "flagged"
     },
@@ -10325,10 +10325,73 @@
     },
     {
       "type": "tariff_contradiction",
+      "description": "Service 'screening for common health conditions' has conflicting tariff amounts",
+      "severity": "high",
+      "services_count": 1,
+      "details": "Tariffs: KES nan, nan",
+      "kenya_context": "N/A",
+      "status": "flagged"
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'reproductive, maternal and child health services as defined by the moh guide lines' has conflicting tariff amounts",
+      "severity": "high",
+      "services_count": 1,
+      "details": "Tariffs: KES nan, nan",
+      "kenya_context": "N/A",
+      "status": "flagged"
+    },
+    {
+      "type": "tariff_contradiction",
       "description": "Service 'intra- admission and post- discharge medication.' has conflicting tariff amounts",
       "severity": "high",
       "services_count": 1,
-      "details": "Tariffs: KES 11.0, nan",
+      "details": "Tariffs: KES nan, 11.0",
+      "kenya_context": "N/A",
+      "status": "flagged"
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'medical supplies and equipment, including oxygen.' has conflicting tariff amounts",
+      "severity": "high",
+      "services_count": 1,
+      "details": "Tariffs: KES nan, nan",
+      "kenya_context": "N/A",
+      "status": "flagged"
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'post natal family plan ning.' has conflicting tariff amounts",
+      "severity": "high",
+      "services_count": 1,
+      "details": "Tariffs: KES nan, nan",
+      "kenya_context": "N/A",
+      "status": "flagged"
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'management ofpo stpa rtum infections and haemorrhage, birth traumas and conditions related to child' has conflicting tariff amounts",
+      "severity": "high",
+      "services_count": 1,
+      "details": "Tariffs: KES nan, nan",
+      "kenya_context": "N/A",
+      "status": "flagged"
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'mana geme ntof neonatal conditions.' has conflicting tariff amounts",
+      "severity": "high",
+      "services_count": 1,
+      "details": "Tariffs: KES nan, nan",
+      "kenya_context": "N/A",
+      "status": "flagged"
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'obste tric and neonatal complications including intra- admission post partum / post natal infections' has conflicting tariff amounts",
+      "severity": "high",
+      "services_count": 1,
+      "details": "Tariffs: KES nan, nan",
       "kenya_context": "N/A",
       "status": "flagged"
     },
@@ -10337,7 +10400,25 @@
       "description": "Service 'unnamed service' has conflicting tariff amounts",
       "severity": "high",
       "services_count": 1,
-      "details": "Tariffs: KES 3.0, nan",
+      "details": "Tariffs: KES nan, 3.0, nan, nan",
+      "kenya_context": "N/A",
+      "status": "flagged"
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'end of life services' has conflicting tariff amounts",
+      "severity": "high",
+      "services_count": 1,
+      "details": "Tariffs: KES nan, nan",
+      "kenya_context": "N/A",
+      "status": "flagged"
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'medical inpatient services' has conflicting tariff amounts",
+      "severity": "high",
+      "services_count": 1,
+      "details": "Tariffs: KES nan, nan",
       "kenya_context": "N/A",
       "status": "flagged"
     },
@@ -10356,6 +10437,132 @@
       "severity": "high",
       "services_count": 1,
       "details": "Tariffs: KES 3.0, nan",
+      "kenya_context": "N/A",
+      "status": "flagged"
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'bed side services including physio therapy, occupational therapy, oxygen supply, medical consumables' has conflicting tariff amounts",
+      "severity": "high",
+      "services_count": 1,
+      "details": "Tariffs: KES nan, nan",
+      "kenya_context": "N/A",
+      "status": "flagged"
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'cross-matching and administration of blood and blood products; derivatives and components, artificia' has conflicting tariff amounts",
+      "severity": "high",
+      "services_count": 1,
+      "details": "Tariffs: KES nan, nan",
+      "kenya_context": "N/A",
+      "status": "flagged"
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'post - discharge medi cati onor follow-up within the treatment plan.' has conflicting tariff amounts",
+      "severity": "high",
+      "services_count": 1,
+      "details": "Tariffs: KES nan, nan",
+      "kenya_context": "N/A",
+      "status": "flagged"
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'components, artificial blood products, and biological serum.' has conflicting tariff amounts",
+      "severity": "high",
+      "services_count": 1,
+      "details": "Tariffs: KES nan, nan",
+      "kenya_context": "N/A",
+      "status": "flagged"
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'diabetes type 1 & 2,' has conflicting tariff amounts",
+      "severity": "high",
+      "services_count": 1,
+      "details": "Tariffs: KES nan, nan",
+      "kenya_context": "N/A",
+      "status": "flagged"
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'hypertension,' has conflicting tariff amounts",
+      "severity": "high",
+      "services_count": 1,
+      "details": "Tariffs: KES nan, nan",
+      "kenya_context": "N/A",
+      "status": "flagged"
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'chronic renal disea seon dialysis' has conflicting tariff amounts",
+      "severity": "high",
+      "services_count": 1,
+      "details": "Tariffs: KES nan, nan",
+      "kenya_context": "N/A",
+      "status": "flagged"
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'sickle cell' has conflicting tariff amounts",
+      "severity": "high",
+      "services_count": 1,
+      "details": "Tariffs: KES nan, nan",
+      "kenya_context": "N/A",
+      "status": "flagged"
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'oncology medicines' has conflicting tariff amounts",
+      "severity": "high",
+      "services_count": 1,
+      "details": "Tariffs: KES nan, nan",
+      "kenya_context": "N/A",
+      "status": "flagged"
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'anti-d' has conflicting tariff amounts",
+      "severity": "high",
+      "services_count": 1,
+      "details": "Tariffs: KES nan, nan",
+      "kenya_context": "N/A",
+      "status": "flagged"
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'anti snake venom' has conflicting tariff amounts",
+      "severity": "high",
+      "services_count": 1,
+      "details": "Tariffs: KES nan, nan",
+      "kenya_context": "N/A",
+      "status": "flagged"
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'anti rabies' has conflicting tariff amounts",
+      "severity": "high",
+      "services_count": 1,
+      "details": "Tariffs: KES nan, nan",
+      "kenya_context": "N/A",
+      "status": "flagged"
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'mental health long-ac ting medicines' has conflicting tariff amounts",
+      "severity": "high",
+      "services_count": 1,
+      "details": "Tariffs: KES nan, nan",
+      "kenya_context": "N/A",
+      "status": "flagged"
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'epilepsy' has conflicting tariff amounts",
+      "severity": "high",
+      "services_count": 1,
+      "details": "Tariffs: KES nan, nan",
       "kenya_context": "N/A",
       "status": "flagged"
     }
@@ -10612,5 +10819,5 @@
       "implementation_complexity": "Low"
     }
   ],
-  "generated_timestamp": "2025-08-25T23:36:02.971409"
+  "generated_timestamp": "2025-08-26T01:18:03.804544"
 }

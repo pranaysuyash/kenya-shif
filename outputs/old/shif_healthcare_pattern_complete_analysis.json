@@ -18015,7 +18015,7 @@
         "basic radiological examinations including x-rays, ultrasounds."
       ],
       "severity": "medium",
-      "details": "Facility levels: Level 4, Level 2",
+      "details": "Facility levels: Level 2, Level 4",
       "rule_types": [
         "policy",
         "policy"
@@ -18028,7 +18028,7 @@
         "prescription, drug administration and dispensing"
       ],
       "severity": "medium",
-      "details": "Facility levels: Level 4, Level 2",
+      "details": "Facility levels: Level 2, Level 4",
       "rule_types": [
         "policy",
         "policy"
@@ -18041,7 +18041,7 @@
         "management of acute and chronic conditions for endemic / local cases"
       ],
       "severity": "medium",
-      "details": "Facility levels: Level 2, Not specified",
+      "details": "Facility levels: Not specified, Level 2",
       "rule_types": [
         "policy",
         "policy"
@@ -18054,7 +18054,7 @@
         "screening for common health conditions"
       ],
       "severity": "medium",
-      "details": "Facility levels: Private, Not specified",
+      "details": "Facility levels: Not specified, Private",
       "rule_types": [
         "policy",
         "policy"
@@ -18067,7 +18067,7 @@
         "reproductive, maternal and child health services as defined by the moh guide lines"
       ],
       "severity": "medium",
-      "details": "Facility levels: Private, Not specified",
+      "details": "Facility levels: Not specified, Private",
       "rule_types": [
         "policy",
         "policy"
@@ -18080,7 +18080,7 @@
         "midwifery, including episio tomy care and nursing care."
       ],
       "severity": "medium",
-      "details": "Facility levels: Level 4, Level 2",
+      "details": "Facility levels: Level 2, Level 4",
       "rule_types": [
         "policy",
         "policy"
@@ -18093,7 +18093,7 @@
         "intra- admission and post- discharge medication."
       ],
       "severity": "medium",
-      "details": "Facility levels: Level 4, Not specified",
+      "details": "Facility levels: Not specified, Level 4",
       "rule_types": [
         "policy",
         "policy"
@@ -18106,7 +18106,7 @@
         "preparation and storage of the body in mortuary"
       ],
       "severity": "medium",
-      "details": "Facility levels: Level 4, Not specified",
+      "details": "Facility levels: Not specified, Level 4",
       "rule_types": [
         "policy",
         "policy"
@@ -18132,7 +18132,7 @@
         "intra- admission consultation and review sbyboth general and specia list consultants, laboratory inv"
       ],
       "severity": "medium",
-      "details": "Facility levels: Level 4, Not specified",
+      "details": "Facility levels: Not specified, Level 4",
       "rule_types": [
         "policy",
         "policy"
@@ -18145,7 +18145,7 @@
         "components, artificial blood products, and biological serum."
       ],
       "severity": "medium",
-      "details": "Facility levels: Level 4, Not specified",
+      "details": "Facility levels: Not specified, Level 4",
       "rule_types": [
         "policy",
         "policy"
@@ -18205,12 +18205,103 @@
     },
     {
       "type": "tariff_contradiction",
+      "description": "Service 'screening for common health conditions' has conflicting tariff amounts",
+      "services_involved": [
+        "screening for common health conditions"
+      ],
+      "severity": "high",
+      "details": "Tariffs: KES nan, nan",
+      "rule_types": [
+        "policy",
+        "policy"
+      ]
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'reproductive, maternal and child health services as defined by the moh guide lines' has conflicting tariff amounts",
+      "services_involved": [
+        "reproductive, maternal and child health services as defined by the moh guide lines"
+      ],
+      "severity": "high",
+      "details": "Tariffs: KES nan, nan",
+      "rule_types": [
+        "policy",
+        "policy"
+      ]
+    },
+    {
+      "type": "tariff_contradiction",
       "description": "Service 'intra- admission and post- discharge medication.' has conflicting tariff amounts",
       "services_involved": [
         "intra- admission and post- discharge medication."
       ],
       "severity": "high",
-      "details": "Tariffs: KES 11.0, nan",
+      "details": "Tariffs: KES nan, 11.0",
+      "rule_types": [
+        "policy",
+        "policy"
+      ]
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'medical supplies and equipment, including oxygen.' has conflicting tariff amounts",
+      "services_involved": [
+        "medical supplies and equipment, including oxygen."
+      ],
+      "severity": "high",
+      "details": "Tariffs: KES nan, nan",
+      "rule_types": [
+        "policy",
+        "policy"
+      ]
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'post natal family plan ning.' has conflicting tariff amounts",
+      "services_involved": [
+        "post natal family plan ning."
+      ],
+      "severity": "high",
+      "details": "Tariffs: KES nan, nan",
+      "rule_types": [
+        "policy",
+        "policy"
+      ]
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'management ofpo stpa rtum infections and haemorrhage, birth traumas and conditions related to child' has conflicting tariff amounts",
+      "services_involved": [
+        "management ofpo stpa rtum infections and haemorrhage, birth traumas and conditions related to child"
+      ],
+      "severity": "high",
+      "details": "Tariffs: KES nan, nan",
+      "rule_types": [
+        "policy",
+        "policy"
+      ]
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'mana geme ntof neonatal conditions.' has conflicting tariff amounts",
+      "services_involved": [
+        "mana geme ntof neonatal conditions."
+      ],
+      "severity": "high",
+      "details": "Tariffs: KES nan, nan",
+      "rule_types": [
+        "policy",
+        "policy"
+      ]
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'obste tric and neonatal complications including intra- admission post partum / post natal infections' has conflicting tariff amounts",
+      "services_involved": [
+        "obste tric and neonatal complications including intra- admission post partum / post natal infections"
+      ],
+      "severity": "high",
+      "details": "Tariffs: KES nan, nan",
       "rule_types": [
         "policy",
         "policy"
@@ -18223,11 +18314,37 @@
         "unnamed service"
       ],
       "severity": "high",
-      "details": "Tariffs: KES 3.0, nan",
+      "details": "Tariffs: KES nan, 3.0, nan, nan",
       "rule_types": [
         "policy",
         "policy",
         "policy",
+        "policy",
+        "policy"
+      ]
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'end of life services' has conflicting tariff amounts",
+      "services_involved": [
+        "end of life services"
+      ],
+      "severity": "high",
+      "details": "Tariffs: KES nan, nan",
+      "rule_types": [
+        "policy",
+        "policy"
+      ]
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'medical inpatient services' has conflicting tariff amounts",
+      "services_involved": [
+        "medical inpatient services"
+      ],
+      "severity": "high",
+      "details": "Tariffs: KES nan, nan",
+      "rule_types": [
         "policy",
         "policy"
       ]
@@ -18253,6 +18370,188 @@
       ],
       "severity": "high",
       "details": "Tariffs: KES 3.0, nan",
+      "rule_types": [
+        "policy",
+        "policy"
+      ]
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'bed side services including physio therapy, occupational therapy, oxygen supply, medical consumables' has conflicting tariff amounts",
+      "services_involved": [
+        "bed side services including physio therapy, occupational therapy, oxygen supply, medical consumables"
+      ],
+      "severity": "high",
+      "details": "Tariffs: KES nan, nan",
+      "rule_types": [
+        "policy",
+        "policy"
+      ]
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'cross-matching and administration of blood and blood products; derivatives and components, artificia' has conflicting tariff amounts",
+      "services_involved": [
+        "cross-matching and administration of blood and blood products; derivatives and components, artificia"
+      ],
+      "severity": "high",
+      "details": "Tariffs: KES nan, nan",
+      "rule_types": [
+        "policy",
+        "policy"
+      ]
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'post - discharge medi cati onor follow-up within the treatment plan.' has conflicting tariff amounts",
+      "services_involved": [
+        "post - discharge medi cati onor follow-up within the treatment plan."
+      ],
+      "severity": "high",
+      "details": "Tariffs: KES nan, nan",
+      "rule_types": [
+        "policy",
+        "policy"
+      ]
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'components, artificial blood products, and biological serum.' has conflicting tariff amounts",
+      "services_involved": [
+        "components, artificial blood products, and biological serum."
+      ],
+      "severity": "high",
+      "details": "Tariffs: KES nan, nan",
+      "rule_types": [
+        "policy",
+        "policy"
+      ]
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'diabetes type 1 & 2,' has conflicting tariff amounts",
+      "services_involved": [
+        "diabetes type 1 & 2,"
+      ],
+      "severity": "high",
+      "details": "Tariffs: KES nan, nan",
+      "rule_types": [
+        "policy",
+        "policy"
+      ]
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'hypertension,' has conflicting tariff amounts",
+      "services_involved": [
+        "hypertension,"
+      ],
+      "severity": "high",
+      "details": "Tariffs: KES nan, nan",
+      "rule_types": [
+        "policy",
+        "policy"
+      ]
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'chronic renal disea seon dialysis' has conflicting tariff amounts",
+      "services_involved": [
+        "chronic renal disea seon dialysis"
+      ],
+      "severity": "high",
+      "details": "Tariffs: KES nan, nan",
+      "rule_types": [
+        "policy",
+        "policy"
+      ]
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'sickle cell' has conflicting tariff amounts",
+      "services_involved": [
+        "sickle cell"
+      ],
+      "severity": "high",
+      "details": "Tariffs: KES nan, nan",
+      "rule_types": [
+        "policy",
+        "policy"
+      ]
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'oncology medicines' has conflicting tariff amounts",
+      "services_involved": [
+        "oncology medicines"
+      ],
+      "severity": "high",
+      "details": "Tariffs: KES nan, nan",
+      "rule_types": [
+        "policy",
+        "policy"
+      ]
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'anti-d' has conflicting tariff amounts",
+      "services_involved": [
+        "anti-d"
+      ],
+      "severity": "high",
+      "details": "Tariffs: KES nan, nan",
+      "rule_types": [
+        "policy",
+        "policy"
+      ]
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'anti snake venom' has conflicting tariff amounts",
+      "services_involved": [
+        "anti snake venom"
+      ],
+      "severity": "high",
+      "details": "Tariffs: KES nan, nan",
+      "rule_types": [
+        "policy",
+        "policy"
+      ]
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'anti rabies' has conflicting tariff amounts",
+      "services_involved": [
+        "anti rabies"
+      ],
+      "severity": "high",
+      "details": "Tariffs: KES nan, nan",
+      "rule_types": [
+        "policy",
+        "policy"
+      ]
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'mental health long-ac ting medicines' has conflicting tariff amounts",
+      "services_involved": [
+        "mental health long-ac ting medicines"
+      ],
+      "severity": "high",
+      "details": "Tariffs: KES nan, nan",
+      "rule_types": [
+        "policy",
+        "policy"
+      ]
+    },
+    {
+      "type": "tariff_contradiction",
+      "description": "Service 'epilepsy' has conflicting tariff amounts",
+      "services_involved": [
+        "epilepsy"
+      ],
+      "severity": "high",
+      "details": "Tariffs: KES nan, nan",
       "rule_types": [
         "policy",
         "policy"
@@ -18420,7 +18719,7 @@
             "basic radiological examinations including x-rays, ultrasounds."
           ],
           "severity": "medium",
-          "details": "Facility levels: Level 4, Level 2",
+          "details": "Facility levels: Level 2, Level 4",
           "rule_types": [
             "policy",
             "policy"
@@ -18434,7 +18733,7 @@
             "prescription, drug administration and dispensing"
           ],
           "severity": "medium",
-          "details": "Facility levels: Level 4, Level 2",
+          "details": "Facility levels: Level 2, Level 4",
           "rule_types": [
             "policy",
             "policy"
@@ -18448,7 +18747,7 @@
             "management of acute and chronic conditions for endemic / local cases"
           ],
           "severity": "medium",
-          "details": "Facility levels: Level 2, Not specified",
+          "details": "Facility levels: Not specified, Level 2",
           "rule_types": [
             "policy",
             "policy"
@@ -18462,7 +18761,7 @@
             "screening for common health conditions"
           ],
           "severity": "medium",
-          "details": "Facility levels: Private, Not specified",
+          "details": "Facility levels: Not specified, Private",
           "rule_types": [
             "policy",
             "policy"
@@ -18476,7 +18775,7 @@
             "reproductive, maternal and child health services as defined by the moh guide lines"
           ],
           "severity": "medium",
-          "details": "Facility levels: Private, Not specified",
+          "details": "Facility levels: Not specified, Private",
           "rule_types": [
             "policy",
             "policy"
@@ -18490,7 +18789,7 @@
             "midwifery, including episio tomy care and nursing care."
           ],
           "severity": "medium",
-          "details": "Facility levels: Level 4, Level 2",
+          "details": "Facility levels: Level 2, Level 4",
           "rule_types": [
             "policy",
             "policy"
@@ -18504,7 +18803,7 @@
             "intra- admission and post- discharge medication."
           ],
           "severity": "medium",
-          "details": "Facility levels: Level 4, Not specified",
+          "details": "Facility levels: Not specified, Level 4",
           "rule_types": [
             "policy",
             "policy"
@@ -18518,7 +18817,7 @@
             "preparation and storage of the body in mortuary"
           ],
           "severity": "medium",
-          "details": "Facility levels: Level 4, Not specified",
+          "details": "Facility levels: Not specified, Level 4",
           "rule_types": [
             "policy",
             "policy"
@@ -18546,7 +18845,7 @@
             "intra- admission consultation and review sbyboth general and specia list consultants, laboratory inv"
           ],
           "severity": "medium",
-          "details": "Facility levels: Level 4, Not specified",
+          "details": "Facility levels: Not specified, Level 4",
           "rule_types": [
             "policy",
             "policy"
@@ -18560,7 +18859,7 @@
             "components, artificial blood products, and biological serum."
           ],
           "severity": "medium",
-          "details": "Facility levels: Level 4, Not specified",
+          "details": "Facility levels: Not specified, Level 4",
           "rule_types": [
             "policy",
             "policy"
@@ -18625,12 +18924,110 @@
         },
         {
           "type": "tariff_contradiction",
+          "description": "Service 'screening for common health conditions' has conflicting tariff amounts",
+          "services_involved": [
+            "screening for common health conditions"
+          ],
+          "severity": "high",
+          "details": "Tariffs: KES nan, nan",
+          "rule_types": [
+            "policy",
+            "policy"
+          ],
+          "kenya_context": "Could impact financial access in Kenya's mixed health economy"
+        },
+        {
+          "type": "tariff_contradiction",
+          "description": "Service 'reproductive, maternal and child health services as defined by the moh guide lines' has conflicting tariff amounts",
+          "services_involved": [
+            "reproductive, maternal and child health services as defined by the moh guide lines"
+          ],
+          "severity": "high",
+          "details": "Tariffs: KES nan, nan",
+          "rule_types": [
+            "policy",
+            "policy"
+          ],
+          "kenya_context": "Could impact financial access in Kenya's mixed health economy"
+        },
+        {
+          "type": "tariff_contradiction",
           "description": "Service 'intra- admission and post- discharge medication.' has conflicting tariff amounts",
           "services_involved": [
             "intra- admission and post- discharge medication."
           ],
           "severity": "high",
-          "details": "Tariffs: KES 11.0, nan",
+          "details": "Tariffs: KES nan, 11.0",
+          "rule_types": [
+            "policy",
+            "policy"
+          ],
+          "kenya_context": "Could impact financial access in Kenya's mixed health economy"
+        },
+        {
+          "type": "tariff_contradiction",
+          "description": "Service 'medical supplies and equipment, including oxygen.' has conflicting tariff amounts",
+          "services_involved": [
+            "medical supplies and equipment, including oxygen."
+          ],
+          "severity": "high",
+          "details": "Tariffs: KES nan, nan",
+          "rule_types": [
+            "policy",
+            "policy"
+          ],
+          "kenya_context": "Could impact financial access in Kenya's mixed health economy"
+        },
+        {
+          "type": "tariff_contradiction",
+          "description": "Service 'post natal family plan ning.' has conflicting tariff amounts",
+          "services_involved": [
+            "post natal family plan ning."
+          ],
+          "severity": "high",
+          "details": "Tariffs: KES nan, nan",
+          "rule_types": [
+            "policy",
+            "policy"
+          ],
+          "kenya_context": "Could impact financial access in Kenya's mixed health economy"
+        },
+        {
+          "type": "tariff_contradiction",
+          "description": "Service 'management ofpo stpa rtum infections and haemorrhage, birth traumas and conditions related to child' has conflicting tariff amounts",
+          "services_involved": [
+            "management ofpo stpa rtum infections and haemorrhage, birth traumas and conditions related to child"
+          ],
+          "severity": "high",
+          "details": "Tariffs: KES nan, nan",
+          "rule_types": [
+            "policy",
+            "policy"
+          ],
+          "kenya_context": "Could impact financial access in Kenya's mixed health economy"
+        },
+        {
+          "type": "tariff_contradiction",
+          "description": "Service 'mana geme ntof neonatal conditions.' has conflicting tariff amounts",
+          "services_involved": [
+            "mana geme ntof neonatal conditions."
+          ],
+          "severity": "high",
+          "details": "Tariffs: KES nan, nan",
+          "rule_types": [
+            "policy",
+            "policy"
+          ],
+          "kenya_context": "Could impact financial access in Kenya's mixed health economy"
+        },
+        {
+          "type": "tariff_contradiction",
+          "description": "Service 'obste tric and neonatal complications including intra- admission post partum / post natal infections' has conflicting tariff amounts",
+          "services_involved": [
+            "obste tric and neonatal complications including intra- admission post partum / post natal infections"
+          ],
+          "severity": "high",
+          "details": "Tariffs: KES nan, nan",
           "rule_types": [
             "policy",
             "policy"
@@ -18644,11 +19041,39 @@
             "unnamed service"
           ],
           "severity": "high",
-          "details": "Tariffs: KES 3.0, nan",
+          "details": "Tariffs: KES nan, 3.0, nan, nan",
           "rule_types": [
             "policy",
             "policy",
             "policy",
+            "policy",
+            "policy"
+          ],
+          "kenya_context": "Could impact financial access in Kenya's mixed health economy"
+        },
+        {
+          "type": "tariff_contradiction",
+          "description": "Service 'end of life services' has conflicting tariff amounts",
+          "services_involved": [
+            "end of life services"
+          ],
+          "severity": "high",
+          "details": "Tariffs: KES nan, nan",
+          "rule_types": [
+            "policy",
+            "policy"
+          ],
+          "kenya_context": "Could impact financial access in Kenya's mixed health economy"
+        },
+        {
+          "type": "tariff_contradiction",
+          "description": "Service 'medical inpatient services' has conflicting tariff amounts",
+          "services_involved": [
+            "medical inpatient services"
+          ],
+          "severity": "high",
+          "details": "Tariffs: KES nan, nan",
+          "rule_types": [
             "policy",
             "policy"
           ],
@@ -18676,6 +19101,202 @@
           ],
           "severity": "high",
           "details": "Tariffs: KES 3.0, nan",
+          "rule_types": [
+            "policy",
+            "policy"
+          ],
+          "kenya_context": "Could impact financial access in Kenya's mixed health economy"
+        },
+        {
+          "type": "tariff_contradiction",
+          "description": "Service 'bed side services including physio therapy, occupational therapy, oxygen supply, medical consumables' has conflicting tariff amounts",
+          "services_involved": [
+            "bed side services including physio therapy, occupational therapy, oxygen supply, medical consumables"
+          ],
+          "severity": "high",
+          "details": "Tariffs: KES nan, nan",
+          "rule_types": [
+            "policy",
+            "policy"
+          ],
+          "kenya_context": "Could impact financial access in Kenya's mixed health economy"
+        },
+        {
+          "type": "tariff_contradiction",
+          "description": "Service 'cross-matching and administration of blood and blood products; derivatives and components, artificia' has conflicting tariff amounts",
+          "services_involved": [
+            "cross-matching and administration of blood and blood products; derivatives and components, artificia"
+          ],
+          "severity": "high",
+          "details": "Tariffs: KES nan, nan",
+          "rule_types": [
+            "policy",
+            "policy"
+          ],
+          "kenya_context": "Could impact financial access in Kenya's mixed health economy"
+        },
+        {
+          "type": "tariff_contradiction",
+          "description": "Service 'post - discharge medi cati onor follow-up within the treatment plan.' has conflicting tariff amounts",
+          "services_involved": [
+            "post - discharge medi cati onor follow-up within the treatment plan."
+          ],
+          "severity": "high",
+          "details": "Tariffs: KES nan, nan",
+          "rule_types": [
+            "policy",
+            "policy"
+          ],
+          "kenya_context": "Could impact financial access in Kenya's mixed health economy"
+        },
+        {
+          "type": "tariff_contradiction",
+          "description": "Service 'components, artificial blood products, and biological serum.' has conflicting tariff amounts",
+          "services_involved": [
+            "components, artificial blood products, and biological serum."
+          ],
+          "severity": "high",
+          "details": "Tariffs: KES nan, nan",
+          "rule_types": [
+            "policy",
+            "policy"
+          ],
+          "kenya_context": "Could impact financial access in Kenya's mixed health economy"
+        },
+        {
+          "type": "tariff_contradiction",
+          "description": "Service 'diabetes type 1 & 2,' has conflicting tariff amounts",
+          "services_involved": [
+            "diabetes type 1 & 2,"
+          ],
+          "severity": "high",
+          "details": "Tariffs: KES nan, nan",
+          "rule_types": [
+            "policy",
+            "policy"
+          ],
+          "kenya_context": "Could impact financial access in Kenya's mixed health economy"
+        },
+        {
+          "type": "tariff_contradiction",
+          "description": "Service 'hypertension,' has conflicting tariff amounts",
+          "services_involved": [
+            "hypertension,"
+          ],
+          "severity": "high",
+          "details": "Tariffs: KES nan, nan",
+          "rule_types": [
+            "policy",
+            "policy"
+          ],
+          "kenya_context": "Could impact financial access in Kenya's mixed health economy"
+        },
+        {
+          "type": "tariff_contradiction",
+          "description": "Service 'chronic renal disea seon dialysis' has conflicting tariff amounts",
+          "services_involved": [
+            "chronic renal disea seon dialysis"
+          ],
+          "severity": "high",
+          "details": "Tariffs: KES nan, nan",
+          "rule_types": [
+            "policy",
+            "policy"
+          ],
+          "kenya_context": "Could impact financial access in Kenya's mixed health economy"
+        },
+        {
+          "type": "tariff_contradiction",
+          "description": "Service 'sickle cell' has conflicting tariff amounts",
+          "services_involved": [
+            "sickle cell"
+          ],
+          "severity": "high",
+          "details": "Tariffs: KES nan, nan",
+          "rule_types": [
+            "policy",
+            "policy"
+          ],
+          "kenya_context": "Could impact financial access in Kenya's mixed health economy"
+        },
+        {
+          "type": "tariff_contradiction",
+          "description": "Service 'oncology medicines' has conflicting tariff amounts",
+          "services_involved": [
+            "oncology medicines"
+          ],
+          "severity": "high",
+          "details": "Tariffs: KES nan, nan",
+          "rule_types": [
+            "policy",
+            "policy"
+          ],
+          "kenya_context": "Could impact financial access in Kenya's mixed health economy"
+        },
+        {
+          "type": "tariff_contradiction",
+          "description": "Service 'anti-d' has conflicting tariff amounts",
+          "services_involved": [
+            "anti-d"
+          ],
+          "severity": "high",
+          "details": "Tariffs: KES nan, nan",
+          "rule_types": [
+            "policy",
+            "policy"
+          ],
+          "kenya_context": "Could impact financial access in Kenya's mixed health economy"
+        },
+        {
+          "type": "tariff_contradiction",
+          "description": "Service 'anti snake venom' has conflicting tariff amounts",
+          "services_involved": [
+            "anti snake venom"
+          ],
+          "severity": "high",
+          "details": "Tariffs: KES nan, nan",
+          "rule_types": [
+            "policy",
+            "policy"
+          ],
+          "kenya_context": "Could impact financial access in Kenya's mixed health economy"
+        },
+        {
+          "type": "tariff_contradiction",
+          "description": "Service 'anti rabies' has conflicting tariff amounts",
+          "services_involved": [
+            "anti rabies"
+          ],
+          "severity": "high",
+          "details": "Tariffs: KES nan, nan",
+          "rule_types": [
+            "policy",
+            "policy"
+          ],
+          "kenya_context": "Could impact financial access in Kenya's mixed health economy"
+        },
+        {
+          "type": "tariff_contradiction",
+          "description": "Service 'mental health long-ac ting medicines' has conflicting tariff amounts",
+          "services_involved": [
+            "mental health long-ac ting medicines"
+          ],
+          "severity": "high",
+          "details": "Tariffs: KES nan, nan",
+          "rule_types": [
+            "policy",
+            "policy"
+          ],
+          "kenya_context": "Could impact financial access in Kenya's mixed health economy"
+        },
+        {
+          "type": "tariff_contradiction",
+          "description": "Service 'epilepsy' has conflicting tariff amounts",
+          "services_involved": [
+            "epilepsy"
+          ],
+          "severity": "high",
+          "details": "Tariffs: KES nan, nan",
           "rule_types": [
             "policy",
             "policy"
@@ -18824,11 +19445,11 @@
         "Level 3-4 (Health Center/County Hospital)": 157,
         "Level 4-5 (County/Teaching Hospital)": 275
       },
-      "total_contradictions": 19,
-      "high_severity_contradictions": 7,
+      "total_contradictions": 42,
+      "high_severity_contradictions": 30,
       "contradiction_type_distribution": {
         "facility_level_contradiction": 12,
-        "tariff_contradiction": 7
+        "tariff_contradiction": 30
       },
       "total_gaps": 10,
       "high_impact_gaps": 9,
@@ -28987,7 +29608,7 @@
         "description": "Service 'basic radiological examinations including x-rays, ultrasounds.' has conflicting facility level requirements",
         "severity": "medium",
         "services_count": 1,
-        "details": "Facility levels: Level 4, Level 2",
+        "details": "Facility levels: Level 2, Level 4",
         "kenya_context": "N/A",
         "status": "flagged"
       },
@@ -28996,7 +29617,7 @@
         "description": "Service 'prescription, drug administration and dispensing' has conflicting facility level requirements",
         "severity": "medium",
         "services_count": 1,
-        "details": "Facility levels: Level 4, Level 2",
+        "details": "Facility levels: Level 2, Level 4",
         "kenya_context": "N/A",
         "status": "flagged"
       },
@@ -29005,7 +29626,7 @@
         "description": "Service 'management of acute and chronic conditions for endemic / local cases' has conflicting facility level requirements",
         "severity": "medium",
         "services_count": 1,
-        "details": "Facility levels: Level 2, Not specified",
+        "details": "Facility levels: Not specified, Level 2",
         "kenya_context": "N/A",
         "status": "flagged"
       },
@@ -29014,7 +29635,7 @@
         "description": "Service 'screening for common health conditions' has conflicting facility level requirements",
         "severity": "medium",
         "services_count": 1,
-        "details": "Facility levels: Private, Not specified",
+        "details": "Facility levels: Not specified, Private",
         "kenya_context": "N/A",
         "status": "flagged"
       },
@@ -29023,7 +29644,7 @@
         "description": "Service 'reproductive, maternal and child health services as defined by the moh guide lines' has conflicting facility level requirements",
         "severity": "medium",
         "services_count": 1,
-        "details": "Facility levels: Private, Not specified",
+        "details": "Facility levels: Not specified, Private",
         "kenya_context": "N/A",
         "status": "flagged"
       },
@@ -29032,7 +29653,7 @@
         "description": "Service 'midwifery, including episio tomy care and nursing care.' has conflicting facility level requirements",
         "severity": "medium",
         "services_count": 1,
-        "details": "Facility levels: Level 4, Level 2",
+        "details": "Facility levels: Level 2, Level 4",
         "kenya_context": "N/A",
         "status": "flagged"
       },
@@ -29041,7 +29662,7 @@
         "description": "Service 'intra- admission and post- discharge medication.' has conflicting facility level requirements",
         "severity": "medium",
         "services_count": 1,
-        "details": "Facility levels: Level 4, Not specified",
+        "details": "Facility levels: Not specified, Level 4",
         "kenya_context": "N/A",
         "status": "flagged"
       },
@@ -29050,7 +29671,7 @@
         "description": "Service 'preparation and storage of the body in mortuary' has conflicting facility level requirements",
         "severity": "medium",
         "services_count": 1,
-        "details": "Facility levels: Level 4, Not specified",
+        "details": "Facility levels: Not specified, Level 4",
         "kenya_context": "N/A",
         "status": "flagged"
       },
@@ -29068,7 +29689,7 @@
         "description": "Service 'intra- admission consultation and review sbyboth general and specia list consultants, laboratory inv' has conflicting facility level requirements",
         "severity": "medium",
         "services_count": 1,
-        "details": "Facility levels: Level 4, Not specified",
+        "details": "Facility levels: Not specified, Level 4",
         "kenya_context": "N/A",
         "status": "flagged"
       },
@@ -29077,7 +29698,7 @@
         "description": "Service 'components, artificial blood products, and biological serum.' has conflicting facility level requirements",
         "severity": "medium",
         "services_count": 1,
-        "details": "Facility levels: Level 4, Not specified",
+        "details": "Facility levels: Not specified, Level 4",
         "kenya_context": "N/A",
         "status": "flagged"
       },
@@ -29119,10 +29740,73 @@
       },
       {
         "type": "tariff_contradiction",
+        "description": "Service 'screening for common health conditions' has conflicting tariff amounts",
+        "severity": "high",
+        "services_count": 1,
+        "details": "Tariffs: KES nan, nan",
+        "kenya_context": "N/A",
+        "status": "flagged"
+      },
+      {
+        "type": "tariff_contradiction",
+        "description": "Service 'reproductive, maternal and child health services as defined by the moh guide lines' has conflicting tariff amounts",
+        "severity": "high",
+        "services_count": 1,
+        "details": "Tariffs: KES nan, nan",
+        "kenya_context": "N/A",
+        "status": "flagged"
+      },
+      {
+        "type": "tariff_contradiction",
         "description": "Service 'intra- admission and post- discharge medication.' has conflicting tariff amounts",
         "severity": "high",
         "services_count": 1,
-        "details": "Tariffs: KES 11.0, nan",
+        "details": "Tariffs: KES nan, 11.0",
+        "kenya_context": "N/A",
+        "status": "flagged"
+      },
+      {
+        "type": "tariff_contradiction",
+        "description": "Service 'medical supplies and equipment, including oxygen.' has conflicting tariff amounts",
+        "severity": "high",
+        "services_count": 1,
+        "details": "Tariffs: KES nan, nan",
+        "kenya_context": "N/A",
+        "status": "flagged"
+      },
+      {
+        "type": "tariff_contradiction",
+        "description": "Service 'post natal family plan ning.' has conflicting tariff amounts",
+        "severity": "high",
+        "services_count": 1,
+        "details": "Tariffs: KES nan, nan",
+        "kenya_context": "N/A",
+        "status": "flagged"
+      },
+      {
+        "type": "tariff_contradiction",
+        "description": "Service 'management ofpo stpa rtum infections and haemorrhage, birth traumas and conditions related to child' has conflicting tariff amounts",
+        "severity": "high",
+        "services_count": 1,
+        "details": "Tariffs: KES nan, nan",
+        "kenya_context": "N/A",
+        "status": "flagged"
+      },
+      {
+        "type": "tariff_contradiction",
+        "description": "Service 'mana geme ntof neonatal conditions.' has conflicting tariff amounts",
+        "severity": "high",
+        "services_count": 1,
+        "details": "Tariffs: KES nan, nan",
+        "kenya_context": "N/A",
+        "status": "flagged"
+      },
+      {
+        "type": "tariff_contradiction",
+        "description": "Service 'obste tric and neonatal complications including intra- admission post partum / post natal infections' has conflicting tariff amounts",
+        "severity": "high",
+        "services_count": 1,
+        "details": "Tariffs: KES nan, nan",
         "kenya_context": "N/A",
         "status": "flagged"
       },
@@ -29131,7 +29815,25 @@
         "description": "Service 'unnamed service' has conflicting tariff amounts",
         "severity": "high",
         "services_count": 1,
-        "details": "Tariffs: KES 3.0, nan",
+        "details": "Tariffs: KES nan, 3.0, nan, nan",
+        "kenya_context": "N/A",
+        "status": "flagged"
+      },
+      {
+        "type": "tariff_contradiction",
+        "description": "Service 'end of life services' has conflicting tariff amounts",
+        "severity": "high",
+        "services_count": 1,
+        "details": "Tariffs: KES nan, nan",
+        "kenya_context": "N/A",
+        "status": "flagged"
+      },
+      {
+        "type": "tariff_contradiction",
+        "description": "Service 'medical inpatient services' has conflicting tariff amounts",
+        "severity": "high",
+        "services_count": 1,
+        "details": "Tariffs: KES nan, nan",
         "kenya_context": "N/A",
         "status": "flagged"
       },
@@ -29150,6 +29852,132 @@
         "severity": "high",
         "services_count": 1,
         "details": "Tariffs: KES 3.0, nan",
+        "kenya_context": "N/A",
+        "status": "flagged"
+      },
+      {
+        "type": "tariff_contradiction",
+        "description": "Service 'bed side services including physio therapy, occupational therapy, oxygen supply, medical consumables' has conflicting tariff amounts",
+        "severity": "high",
+        "services_count": 1,
+        "details": "Tariffs: KES nan, nan",
+        "kenya_context": "N/A",
+        "status": "flagged"
+      },
+      {
+        "type": "tariff_contradiction",
+        "description": "Service 'cross-matching and administration of blood and blood products; derivatives and components, artificia' has conflicting tariff amounts",
+        "severity": "high",
+        "services_count": 1,
+        "details": "Tariffs: KES nan, nan",
+        "kenya_context": "N/A",
+        "status": "flagged"
+      },
+      {
+        "type": "tariff_contradiction",
+        "description": "Service 'post - discharge medi cati onor follow-up within the treatment plan.' has conflicting tariff amounts",
+        "severity": "high",
+        "services_count": 1,
+        "details": "Tariffs: KES nan, nan",
+        "kenya_context": "N/A",
+        "status": "flagged"
+      },
+      {
+        "type": "tariff_contradiction",
+        "description": "Service 'components, artificial blood products, and biological serum.' has conflicting tariff amounts",
+        "severity": "high",
+        "services_count": 1,
+        "details": "Tariffs: KES nan, nan",
+        "kenya_context": "N/A",
+        "status": "flagged"
+      },
+      {
+        "type": "tariff_contradiction",
+        "description": "Service 'diabetes type 1 & 2,' has conflicting tariff amounts",
+        "severity": "high",
+        "services_count": 1,
+        "details": "Tariffs: KES nan, nan",
+        "kenya_context": "N/A",
+        "status": "flagged"
+      },
+      {
+        "type": "tariff_contradiction",
+        "description": "Service 'hypertension,' has conflicting tariff amounts",
+        "severity": "high",
+        "services_count": 1,
+        "details": "Tariffs: KES nan, nan",
+        "kenya_context": "N/A",
+        "status": "flagged"
+      },
+      {
+        "type": "tariff_contradiction",
+        "description": "Service 'chronic renal disea seon dialysis' has conflicting tariff amounts",
+        "severity": "high",
+        "services_count": 1,
+        "details": "Tariffs: KES nan, nan",
+        "kenya_context": "N/A",
+        "status": "flagged"
+      },
+      {
+        "type": "tariff_contradiction",
+        "description": "Service 'sickle cell' has conflicting tariff amounts",
+        "severity": "high",
+        "services_count": 1,
+        "details": "Tariffs: KES nan, nan",
+        "kenya_context": "N/A",
+        "status": "flagged"
+      },
+      {
+        "type": "tariff_contradiction",
+        "description": "Service 'oncology medicines' has conflicting tariff amounts",
+        "severity": "high",
+        "services_count": 1,
+        "details": "Tariffs: KES nan, nan",
+        "kenya_context": "N/A",
+        "status": "flagged"
+      },
+      {
+        "type": "tariff_contradiction",
+        "description": "Service 'anti-d' has conflicting tariff amounts",
+        "severity": "high",
+        "services_count": 1,
+        "details": "Tariffs: KES nan, nan",
+        "kenya_context": "N/A",
+        "status": "flagged"
+      },
+      {
+        "type": "tariff_contradiction",
+        "description": "Service 'anti snake venom' has conflicting tariff amounts",
+        "severity": "high",
+        "services_count": 1,
+        "details": "Tariffs: KES nan, nan",
+        "kenya_context": "N/A",
+        "status": "flagged"
+      },
+      {
+        "type": "tariff_contradiction",
+        "description": "Service 'anti rabies' has conflicting tariff amounts",
+        "severity": "high",
+        "services_count": 1,
+        "details": "Tariffs: KES nan, nan",
+        "kenya_context": "N/A",
+        "status": "flagged"
+      },
+      {
+        "type": "tariff_contradiction",
+        "description": "Service 'mental health long-ac ting medicines' has conflicting tariff amounts",
+        "severity": "high",
+        "services_count": 1,
+        "details": "Tariffs: KES nan, nan",
+        "kenya_context": "N/A",
+        "status": "flagged"
+      },
+      {
+        "type": "tariff_contradiction",
+        "description": "Service 'epilepsy' has conflicting tariff amounts",
+        "severity": "high",
+        "services_count": 1,
+        "details": "Tariffs: KES nan, nan",
         "kenya_context": "N/A",
         "status": "flagged"
       }
@@ -29406,13 +30234,191 @@
         "implementation_complexity": "Low"
       }
     ],
-    "generated_timestamp": "2025-08-25T23:36:02.971409"
+    "generated_timestamp": "2025-08-26T01:18:03.804544"
+  },
+  "ai_analysis_results": {
+    "ai_contradictions": [
+      {
+        "contradiction_type": "session_frequency_inconsistency",
+        "medical_specialty": "nephrology",
+        "description": "Policy (implied in examples/structure) allows different maximum weekly session counts for equivalent renal replacement therapies (e.g., 3 sessions/week for haemodialysis but only 2 sessions/week for hemodiafiltration), creating inconsistent standards for therapies that serve the same clinical purpose.",
+        "services_involved": [
+          "Hemodialysis - 3 sessions/week (policy fragment/example)",
+          "Hemodiafiltration - 2 sessions/week (policy fragment/example)"
+        ],
+        "medical_rationale": "Both hemodialysis and hemodiafiltration are renal replacement modalities intended to achieve adequate solute clearance and volume control in end-stage renal disease. International nephrology guidance (KDOQI, KDIGO) recommends a minimum dialysis dose/frequency (commonly 3 sessions/week for conventional in-center haemodialysis) unless clinically justified otherwise. Setting lower frequency for one modality risks under-treatment for patients assigned to that modality.",
+        "clinical_impact": "HIGH",
+        "patient_safety_risk": "Inadequate dialysis delivery (insufficient Kt/V, volume overload, hyperkalaemia, fluid overload) leading to higher morbidity, hospitalizations, and mortality for patients steered to the lower-frequency modality.",
+        "provider_impact": "Confusion when scheduling dialysis, potential denial or restriction of clinically indicated modality choices, and medicolegal risk if providers follow the lower frequency and patients deteriorate.",
+        "evidence": "Example in brief: 'Maximum of 3 sessions per week for haemodialysis. Maximum of 2 sessions per week for hemodiafiltration.' (policy input / dataset example).",
+        "medical_guidelines": "KDOQI Clinical Practice Guidelines for Hemodialysis Adequacy; KDIGO 2012 Clinical Practice Guideline for the Management of CKD; International Society for Hemodialysis position statements.",
+        "recommendation": "Standardize session frequency requirements across equivalent RRT modalities. Adopt a minimum standard (e.g., 3 sessions/week or individualized dosing based on Kt/V/urea reduction ratio) and allow clinical exceptions documented by nephrology specialists.",
+        "detection_method": "ai_generalized_medical_expertise",
+        "confidence": 0.95
+      },
+      {
+        "contradiction_type": "tariff_and_coverage_gap_for_high-frequency_services",
+        "medical_specialty": "nephrology",
+        "description": "Tariff entries are incomplete (only 84/194 services have tariffs). High-frequency, high-cost services like dialysis require clear per-session tariffs tied to clinically-appropriate session frequency. Missing or limited tariff coverage conflicts with frequency policies and risks under-provision.",
+        "services_involved": [
+          "Dialysis (renal replacement therapy sessions)",
+          "Other high-frequency therapies requiring per-session funding"
+        ],
+        "medical_rationale": "Dialysis is a recurring, resource-intensive treatment. If tariffs are missing or insufficient relative to required session frequency, facilities may limit sessions or shift costs to patients, leading to under-treatment.",
+        "clinical_impact": "HIGH",
+        "patient_safety_risk": "Reduced access to necessary sessions, rationing of care, preventable complications (electrolyte imbalance, fluid overload, hospitalization), and inequitable outcomes.",
+        "provider_impact": "Financial uncertainty for providers, risk-averse rationing of sessions, administrative burden in seeking alternative procurement/funding, and potential out-of-pocket charges to patients.",
+        "evidence": "Dataset: 'Entries with Tariffs: 84' out of 194 service entries; Tariff range KES 2,240 - 2,186,800, Average KES 187,976. No explicit per-session dialysis tariff identified in the given summary.",
+        "medical_guidelines": "KDIGO; KDOQI; WHO guidance on financing essential NCD services in LMICs (emphasizes predictable financing for chronic high-cost services).",
+        "recommendation": "Ensure all recurring high-cost treatments (dialysis, chemotherapy, radiotherapy) have explicit per-session/per-cycle tariffs tied to evidence-based frequency. Include provisions for medically-necessary exceptions and fund flows for chronic care.",
+        "detection_method": "ai_generalized_medical_expertise",
+        "confidence": 0.9
+      },
+      {
+        "contradiction_type": "imaging_facility_level_mismatch",
+        "medical_specialty": "diagnostics / radiology",
+        "description": "Policy text simultaneously states 'All facilities with required imaging services' can provide imaging, but also mandates that specialized modalities (fluoroscopy, mammography, echocardiograms, EEG, Doppler/specialized ultrasound) be procured only from GOK Level IV-V hospitals \u2014 creating ambiguity on whether lower-level/contracted facilities can perform or must outsource these services.",
+        "services_involved": [
+          "Fluoroscopy",
+          "Mammography",
+          "Echocardiograms",
+          "Electroencephalograms (EEG)",
+          "Specialized ultrasounds (Dopplers)"
+        ],
+        "medical_rationale": "Specialized imaging requires not only equipment but trained personnel, QA programs, radiation safety, and interpretation expertise. If lower-level facilities are allowed to provide imaging without the required infrastructure/QA, diagnostic errors and safety risks increase. Conversely, restricting purchase to Level IV-V without clear referral pathways limits access and delays care.",
+        "clinical_impact": "MEDIUM to HIGH (depending on local implementation)",
+        "patient_safety_risk": "Misdiagnosis due to inadequate imaging quality or interpretation; radiation safety breaches; delays in diagnosis if forced referral pathways are not operational.",
+        "provider_impact": "Operational confusion\u2014facilities unsure whether to invest in imaging capacity or outsource; potential duplication of services or inappropriate patient referrals higher up the system.",
+        "evidence": "Policy snippets: '\u27a2 All facilities with required imaging services. \u27a2 Fluoroscopy, Mammography, Echo cardiog rams, Electroencephalograms ( EEG ), and special ized ultrasounds ( dopplers ) to be purchased from GOK Level IV-V hospitals.'",
+        "medical_guidelines": "WHO Diagnostic Imaging Systems in LMICs; IAEA safety standards for diagnostic radiology; Royal College guidelines on minimum staffing and QA for echo/EEG services.",
+        "recommendation": "Clarify: 1) Which imaging modalities are permitted at each facility level and the minimum infrastructure/staffing/QA required; 2) Where outsourcing is mandated, define timely referral/transport/turnaround standards and contracting/payment mechanisms to avoid delays. Consider hub-and-spoke model with clear SLAs.",
+        "detection_method": "ai_generalized_medical_expertise",
+        "confidence": 0.92
+      },
+      {
+        "contradiction_type": "surgical_facility_and_procurement_conflict",
+        "medical_specialty": "surgery / perioperative care",
+        "description": "Policy restricts major and specialized surgical procedures to Level 4-6 facilities with at least two operating theatres, but also allows 'procurement of eligible minor, major and specialized procedures from single specialty providers' and permits co-payment for laser and laparoscopic surgeries. This creates a contradiction where single-specialty/contracted providers (which may not meet Level 4-6 theatre and perioperative capacity standards) are authorized to perform major procedures.",
+        "services_involved": [
+          "Major and specialized surgical procedures",
+          "Procurement from single specialty providers",
+          "Laser and laparoscopic surgeries (co-payment allowed)"
+        ],
+        "medical_rationale": "Major surgeries demand not just an operating theatre but perioperative ICU/HD, blood bank access, anaesthesia and critical care staffing, and clear emergency backup. Allowing contracted single-specialty centers that may lack these elements to perform major procedures increases perioperative risk.",
+        "clinical_impact": "HIGH",
+        "patient_safety_risk": "Increased perioperative morbidity and mortality from insufficient intra- and post-operative support, inability to manage complications, delayed transfer to higher-level care.",
+        "provider_impact": "Ambiguity on credentialing and site accreditation; legal/quality responsibilities unclear for contracted providers; potential mismatch of patients to facilities.",
+        "evidence": "Policy fragments: 'Major and specialised surgical procedures will be provided at Level 4 - 6 facilities with at least 2 operating theatres.' and 'Procurement of eligible minor, major and special ized procedures from single specialty providers.' plus 'Co-payment allowed for laser and laparoscopic surgeries.'",
+        "medical_guidelines": "WHO Safe Surgery Checklist and Safe Surgical Services guidance; WHO Facility-based Emergency and Essential Surgical Care (EESC) standards; national standards for theatre and anaesthesia services.",
+        "recommendation": "Require accreditation/verification that any contracted single-specialty provider meets the same minimum facility, staffing and emergency backup requirements as Level 4-6 facilities for the scope of procedures contracted. Prohibit performance of major/specialized surgeries at facilities without verified perioperative capacity. If co-payments are allowed, ensure they are not required for emergent indications and that exemptions exist for vulnerable populations.",
+        "detection_method": "ai_generalized_medical_expertise",
+        "confidence": 0.93
+      },
+      {
+        "contradiction_type": "obstetric_emergency_access_contradiction",
+        "medical_specialty": "obstetrics & gynaecology / emergency medicine",
+        "description": "Policy concentrates major and specialized procedures at Level 4-6 but also lists services at Level 2-3 and includes the Accident and Emergency package under ECCIF. There is insufficient clarity whether emergency obstetric care (EmOC) including Caesarean sections and blood transfusion is consistently available at the facility levels where deliveries are permitted.",
+        "services_involved": [
+          "Emergency obstetric care (Caesarean sections, blood transfusion, management of PPH, eclampsia)",
+          "Accident and Emergency Package in ECCIF"
+        ],
+        "medical_rationale": "Timely access to EmOC is essential to prevent maternal and perinatal mortality. If deliveries or initial obstetric care occur at facilities without guaranteed surgical/anaesthesia/blood bank capacity\u2014or if the policy ambiguously places these services at lower levels\u2014critical delays may occur.",
+        "clinical_impact": "HIGH",
+        "patient_safety_risk": "Increased risk of maternal death, severe maternal morbidity (uncontrolled hemorrhage, sepsis), and neonatal death due to delayed Caesarean or transfusion.",
+        "provider_impact": "Confusion about where to admit laboring women, inconsistent referral protocols, and medico-legal risk for frontline providers forced to manage beyond their capacity.",
+        "evidence": "Access points include 'Level 2 - 3' (11 entries) and 'Level 4 - 6' (40 entries). Policy note: 'the Accident and Emergency Package in the ECCIF fund.' 'Major and specialized surgical procedures will be provided at Level 4 - 6 facilities\u2026' but no explicit, consistent mapping for EmOC in the summary.",
+        "medical_guidelines": "WHO Standards for improving quality of maternal and newborn care; ACOG guidelines on emergency obstetric care; Kenya Ministry of Health EmOC standards recommending signal functions at specific facility levels.",
+        "recommendation": "Explicitly map emergency obstetric signal functions to facility levels. Ensure that any facility permitted to offer delivery services is mandated to provide basic/ comprehensive EmOC as appropriate (including Caesarean and transfusion) or have guaranteed rapid transfer with functioning referral systems and defined time-to-care targets.",
+        "detection_method": "ai_generalized_medical_expertise",
+        "confidence": 0.9
+      },
+      {
+        "contradiction_type": "co_payment_policy_creates_access_barrier",
+        "medical_specialty": "surgery / health financing",
+        "description": "Policy explicitly allows co-payments for laser and laparoscopic surgeries while other surgeries are covered, creating inequity and potential financial barriers for patients needing minimally-invasive procedures that may be clinically indicated.",
+        "services_involved": [
+          "Laser surgeries",
+          "Laparoscopic surgeries",
+          "Major and specialized surgical procedures"
+        ],
+        "medical_rationale": "Minimally-invasive approaches (laparoscopy) are often clinically preferred for reduced morbidity and faster recovery. Charging co-payments for these modalities may inappropriately steer patients toward more invasive open procedures or deny access to the clinically optimal technique.",
+        "clinical_impact": "MEDIUM to HIGH",
+        "patient_safety_risk": "Suboptimal surgical approach selected due to cost, increased complications or longer recovery when open surgery is used instead of laparoscopy, or delayed care if patients cannot afford co-pay.",
+        "provider_impact": "Perverse incentives affecting clinical decision-making; increased administrative burden managing exemptions/co-payments.",
+        "evidence": "Policy phrase: 'Co-payment allowed for laser and laparoscopic surgeries.'",
+        "medical_guidelines": "WHO guidance on universal health coverage and financial protection; surgical best practice endorsing minimally-invasive approaches when indicated.",
+        "recommendation": "Remove co-payment requirement for clinically indicated minimally-invasive surgeries, or define strict clinical criteria and exemption rules to prevent financial barriers. Ensure tariffs for laparoscopic/laser procedures reflect realistic costs or are fully covered for essential indications.",
+        "detection_method": "ai_generalized_medical_expertise",
+        "confidence": 0.88
+      },
+      {
+        "contradiction_type": "pediatric_services_and_neonatal_gap",
+        "medical_specialty": "pediatrics / neonatology",
+        "description": "The annex specialties list (13 specialties shown) and counts emphasize adult surgical fields (urological 146, cardiothoracic 92, ophthalmic 85, etc.) but do not list Pediatrics/Neonatology as a distinct specialty with procedural coverage. This suggests important pediatric and neonatal critical care, emergency, and surgical services may be under-specified or missing.",
+        "services_involved": [
+          "Neonatal intensive care (NBU/NICU)",
+          "Pediatric emergency and critical care",
+          "Common pediatric surgical procedures"
+        ],
+        "medical_rationale": "Children and neonates require age- and weight-specific protocols, equipment, drug dosing and staffing. Omission or inadequate policy coverage for pediatric/neonatal services risks inappropriate care or lack of access to specialized interventions.",
+        "clinical_impact": "HIGH for neonates and young children",
+        "patient_safety_risk": "Poorly defined coverage can lead to lack of access to lifesaving neonatal care (e.g., CPAP, phototherapy, neonatal resuscitation), increased morbidity/mortality, and inappropriate transfer delays.",
+        "provider_impact": "Frontline providers lack clear guidance on where and how pediatric cases should be managed or funded; referral confusion and inconsistent standards of care.",
+        "evidence": "Annex specialties listed (13) do not explicitly include Pediatrics/Neonatology in the provided summary; access points include facility levels but no pediatric-specific mapping provided.",
+        "medical_guidelines": "WHO Integrated Management of Childhood Illness (IMCI); WHO Standards for improving quality of care for small and sick newborns; Kenyan MOH neonatal care guidelines.",
+        "recommendation": "Explicitly include pediatric and neonatal services in the policy annex with clear facility-level mapping, tariffs, staffing and equipment requirements, and referral pathways. Prioritize coverage for essential newborn interventions and pediatric emergencies.",
+        "detection_method": "ai_generalized_medical_expertise",
+        "confidence": 0.9
+      },
+      {
+        "contradiction_type": "palliative_and_oncology_service_coverage_gap",
+        "medical_specialty": "oncology / palliative care",
+        "description": "Policy specifically states 'Palliative surgery shall be paid under ECCIF' but does not clearly define funding or coverage for non-surgical palliative oncology interventions (chemotherapy, radiotherapy, opioid analgesia, symptom control) nor delineate how palliative medical care is financed or where it is provided.",
+        "services_involved": [
+          "Palliative surgery (covered under ECCIF)",
+          "Palliative chemotherapy and radiotherapy (not explicitly covered)",
+          "Opioid analgesia and home-based palliative care (not specified)"
+        ],
+        "medical_rationale": "Palliative care for cancer includes medical, radiation, and pharmacologic symptom control \u2014 not only surgery. Funding only surgical palliative interventions without supporting systemic therapy, analgesia, or community palliative services undermines holistic care.",
+        "clinical_impact": "MEDIUM to HIGH",
+        "patient_safety_risk": "Patients may receive incomplete palliative care \u2014 inadequate symptom control, avoidable suffering, and increased hospital utilization.",
+        "provider_impact": "Oncologists and palliative teams face unclear funding for key interventions, leading to inconsistent service availability and potential out-of-pocket costs for patients.",
+        "evidence": "Policy phrase: 'Palliative surgery shall be paid under ECCIF.' No corresponding mention of palliative medical oncology funding in the summary.",
+        "medical_guidelines": "WHO Palliative Care guidelines; ESMO recommendations for palliative systemic therapy; WHO Essential Medicines List for palliative care (opioids).",
+        "recommendation": "Define comprehensive palliative care coverage in the policy, including medical palliative treatments (analgesia, symptom control medications), radiotherapy for palliation, supportive home-based care, and funding mechanisms. Ensure access to opioids with safe prescribing pathways.",
+        "detection_method": "ai_generalized_medical_expertise",
+        "confidence": 0.86
+      },
+      {
+        "contradiction_type": "mental_health_service_coverage_gap",
+        "medical_specialty": "mental health / psychiatry",
+        "description": "The summary does not explicitly include mental health procedural/service coverage (inpatient psychiatric care, crisis intervention, community-based therapy) in the annex or mapped facility levels, suggesting potential omission of structured mental health services within SHIF policy.",
+        "services_involved": [
+          "Inpatient psychiatric care",
+          "Crisis intervention services",
+          "Outpatient psychotherapy and community mental health",
+          "Medication management for severe mental illness"
+        ],
+        "medical_rationale": "Mental health disorders are prevalent and require defined pathways (acute care, crisis stabilization, long-term outpatient management). Policies that omit explicit coverage risk leaving services unfunded or inconsistently provided.",
+        "clinical_impact": "MEDIUM",
+        "patient_safety_risk": "Inadequate crisis response can lead to harm (self-harm, violence), poor continuity of care, relapse and avoidable hospitalizations.",
+        "provider_impact": "Clinicians lack clear reimbursement pathways and referral algorithms; mental health services remain fragmented and under-resourced.",
+        "evidence": "No explicit mention of mental health/procedural counts in the provided annex specialty summary; mental health listed as an area of expertise but absent in the procedural counts.",
+        "medical_guidelines": "WHO Mental Health Gap Action Programme (mhGAP); WHO guidance on integrating mental health into UHC; Kenyan mental health policy frameworks.",
+        "recommendation": "Explicitly include mental health services across the continuum (emergency, inpatient, outpatient, community-based) with tariffs, accreditation standards for facilities providing psychiatric care, and crisis response pathways. Protect funding for essential psychotropic medicines.",
+        "detection_method": "ai_generalized_medical_expertise",
+        "confidence": 0.8
+      }
+    ],
+    "ai_gaps": [],
+    "ai_insights": [],
+    "full_ai_analysis": "[\n  {\n    \"contradiction_type\": \"session_frequency_inconsistency\",\n    \"medical_specialty\": \"nephrology\",\n    \"description\": \"Policy (implied in examples/structure) allows different maximum weekly session counts for equivalent renal replacement therapies (e.g., 3 sessions/week for haemodialysis but only 2 sessions/week for hemodiafiltration), creating inconsistent standards for therapies that serve the same clinical purpose.\",\n    \"services_involved\": [\n      \"Hemodialysis - 3 sessions/week (policy fragment/example)\",\n      \"Hemodiafiltration - 2 sessions/week (policy fragment/example)\"\n    ],\n    \"medical_rationale\": \"Both hemodialysis and hemodiafiltration are renal replacement modalities intended to achieve adequate solute clearance and volume control in end-stage renal disease. International nephrology guidance (KDOQI, KDIGO) recommends a minimum dialysis dose/frequency (commonly 3 sessions/week for conventional in-center haemodialysis) unless clinically justified otherwise. Setting lower frequency for one modality risks under-treatment for patients assigned to that modality.\",\n    \"clinical_impact\": \"HIGH\",\n    \"patient_safety_risk\": \"Inadequate dialysis delivery (insufficient Kt/V, volume overload, hyperkalaemia, fluid overload) leading to higher morbidity, hospitalizations, and mortality for patients steered to the lower-frequency modality.\",\n    \"provider_impact\": \"Confusion when scheduling dialysis, potential denial or restriction of clinically indicated modality choices, and medicolegal risk if providers follow the lower frequency and patients deteriorate.\",\n    \"evidence\": \"Example in brief: 'Maximum of 3 sessions per week for haemodialysis. Maximum of 2 sessions per week for hemodiafiltration.' (policy input / dataset example).\",\n    \"medical_guidelines\": \"KDOQI Clinical Practice Guidelines for Hemodialysis Adequacy; KDIGO 2012 Clinical Practice Guideline for the Management of CKD; International Society for Hemodialysis position statements.\",\n    \"recommendation\": \"Standardize session frequency requirements across equivalent RRT modalities. Adopt a minimum standard (e.g., 3 sessions/week or individualized dosing based on Kt/V/urea reduction ratio) and allow clinical exceptions documented by nephrology specialists.\",\n    \"detection_method\": \"ai_generalized_medical_expertise\",\n    \"confidence\": 0.95\n  },\n  {\n    \"contradiction_type\": \"tariff_and_coverage_gap_for_high-frequency_services\",\n    \"medical_specialty\": \"nephrology\",\n    \"description\": \"Tariff entries are incomplete (only 84/194 services have tariffs). High-frequency, high-cost services like dialysis require clear per-session tariffs tied to clinically-appropriate session frequency. Missing or limited tariff coverage conflicts with frequency policies and risks under-provision.\",\n    \"services_involved\": [\n      \"Dialysis (renal replacement therapy sessions)\",\n      \"Other high-frequency therapies requiring per-session funding\"\n    ],\n    \"medical_rationale\": \"Dialysis is a recurring, resource-intensive treatment. If tariffs are missing or insufficient relative to required session frequency, facilities may limit sessions or shift costs to patients, leading to under-treatment.\",\n    \"clinical_impact\": \"HIGH\",\n    \"patient_safety_risk\": \"Reduced access to necessary sessions, rationing of care, preventable complications (electrolyte imbalance, fluid overload, hospitalization), and inequitable outcomes.\",\n    \"provider_impact\": \"Financial uncertainty for providers, risk-averse rationing of sessions, administrative burden in seeking alternative procurement/funding, and potential out-of-pocket charges to patients.\",\n    \"evidence\": \"Dataset: 'Entries with Tariffs: 84' out of 194 service entries; Tariff range KES 2,240 - 2,186,800, Average KES 187,976. No explicit per-session dialysis tariff identified in the given summary.\",\n    \"medical_guidelines\": \"KDIGO; KDOQI; WHO guidance on financing essential NCD services in LMICs (emphasizes predictable financing for chronic high-cost services).\",\n    \"recommendation\": \"Ensure all recurring high-cost treatments (dialysis, chemotherapy, radiotherapy) have explicit per-session/per-cycle tariffs tied to evidence-based frequency. Include provisions for medically-necessary exceptions and fund flows for chronic care.\",\n    \"detection_method\": \"ai_generalized_medical_expertise\",\n    \"confidence\": 0.9\n  },\n  {\n    \"contradiction_type\": \"imaging_facility_level_mismatch\",\n    \"medical_specialty\": \"diagnostics / radiology\",\n    \"description\": \"Policy text simultaneously states 'All facilities with required imaging services' can provide imaging, but also mandates that specialized modalities (fluoroscopy, mammography, echocardiograms, EEG, Doppler/specialized ultrasound) be procured only from GOK Level IV-V hospitals \u2014 creating ambiguity on whether lower-level/contracted facilities can perform or must outsource these services.\",\n    \"services_involved\": [\n      \"Fluoroscopy\",\n      \"Mammography\",\n      \"Echocardiograms\",\n      \"Electroencephalograms (EEG)\",\n      \"Specialized ultrasounds (Dopplers)\"\n    ],\n    \"medical_rationale\": \"Specialized imaging requires not only equipment but trained personnel, QA programs, radiation safety, and interpretation expertise. If lower-level facilities are allowed to provide imaging without the required infrastructure/QA, diagnostic errors and safety risks increase. Conversely, restricting purchase to Level IV-V without clear referral pathways limits access and delays care.\",\n    \"clinical_impact\": \"MEDIUM to HIGH (depending on local implementation)\",\n    \"patient_safety_risk\": \"Misdiagnosis due to inadequate imaging quality or interpretation; radiation safety breaches; delays in diagnosis if forced referral pathways are not operational.\",\n    \"provider_impact\": \"Operational confusion\u2014facilities unsure whether to invest in imaging capacity or outsource; potential duplication of services or inappropriate patient referrals higher up the system.\",\n    \"evidence\": \"Policy snippets: '\u27a2 All facilities with required imaging services. \u27a2 Fluoroscopy, Mammography, Echo cardiog rams, Electroencephalograms ( EEG ), and special ized ultrasounds ( dopplers ) to be purchased from GOK Level IV-V hospitals.'\",\n    \"medical_guidelines\": \"WHO Diagnostic Imaging Systems in LMICs; IAEA safety standards for diagnostic radiology; Royal College guidelines on minimum staffing and QA for echo/EEG services.\",\n    \"recommendation\": \"Clarify: 1) Which imaging modalities are permitted at each facility level and the minimum infrastructure/staffing/QA required; 2) Where outsourcing is mandated, define timely referral/transport/turnaround standards and contracting/payment mechanisms to avoid delays. Consider hub-and-spoke model with clear SLAs.\",\n    \"detection_method\": \"ai_generalized_medical_expertise\",\n    \"confidence\": 0.92\n  },\n  {\n    \"contradiction_type\": \"surgical_facility_and_procurement_conflict\",\n    \"medical_specialty\": \"surgery / perioperative care\",\n    \"description\": \"Policy restricts major and specialized surgical procedures to Level 4-6 facilities with at least two operating theatres, but also allows 'procurement of eligible minor, major and specialized procedures from single specialty providers' and permits co-payment for laser and laparoscopic surgeries. This creates a contradiction where single-specialty/contracted providers (which may not meet Level 4-6 theatre and perioperative capacity standards) are authorized to perform major procedures.\",\n    \"services_involved\": [\n      \"Major and specialized surgical procedures\",\n      \"Procurement from single specialty providers\",\n      \"Laser and laparoscopic surgeries (co-payment allowed)\"\n    ],\n    \"medical_rationale\": \"Major surgeries demand not just an operating theatre but perioperative ICU/HD, blood bank access, anaesthesia and critical care staffing, and clear emergency backup. Allowing contracted single-specialty centers that may lack these elements to perform major procedures increases perioperative risk.\",\n    \"clinical_impact\": \"HIGH\",\n    \"patient_safety_risk\": \"Increased perioperative morbidity and mortality from insufficient intra- and post-operative support, inability to manage complications, delayed transfer to higher-level care.\",\n    \"provider_impact\": \"Ambiguity on credentialing and site accreditation; legal/quality responsibilities unclear for contracted providers; potential mismatch of patients to facilities.\",\n    \"evidence\": \"Policy fragments: 'Major and specialised surgical procedures will be provided at Level 4 - 6 facilities with at least 2 operating theatres.' and 'Procurement of eligible minor, major and special ized procedures from single specialty providers.' plus 'Co-payment allowed for laser and laparoscopic surgeries.'\",\n    \"medical_guidelines\": \"WHO Safe Surgery Checklist and Safe Surgical Services guidance; WHO Facility-based Emergency and Essential Surgical Care (EESC) standards; national standards for theatre and anaesthesia services.\",\n    \"recommendation\": \"Require accreditation/verification that any contracted single-specialty provider meets the same minimum facility, staffing and emergency backup requirements as Level 4-6 facilities for the scope of procedures contracted. Prohibit performance of major/specialized surgeries at facilities without verified perioperative capacity. If co-payments are allowed, ensure they are not required for emergent indications and that exemptions exist for vulnerable populations.\",\n    \"detection_method\": \"ai_generalized_medical_expertise\",\n    \"confidence\": 0.93\n  },\n  {\n    \"contradiction_type\": \"obstetric_emergency_access_contradiction\",\n    \"medical_specialty\": \"obstetrics & gynaecology / emergency medicine\",\n    \"description\": \"Policy concentrates major and specialized procedures at Level 4-6 but also lists services at Level 2-3 and includes the Accident and Emergency package under ECCIF. There is insufficient clarity whether emergency obstetric care (EmOC) including Caesarean sections and blood transfusion is consistently available at the facility levels where deliveries are permitted.\",\n    \"services_involved\": [\n      \"Emergency obstetric care (Caesarean sections, blood transfusion, management of PPH, eclampsia)\",\n      \"Accident and Emergency Package in ECCIF\"\n    ],\n    \"medical_rationale\": \"Timely access to EmOC is essential to prevent maternal and perinatal mortality. If deliveries or initial obstetric care occur at facilities without guaranteed surgical/anaesthesia/blood bank capacity\u2014or if the policy ambiguously places these services at lower levels\u2014critical delays may occur.\",\n    \"clinical_impact\": \"HIGH\",\n    \"patient_safety_risk\": \"Increased risk of maternal death, severe maternal morbidity (uncontrolled hemorrhage, sepsis), and neonatal death due to delayed Caesarean or transfusion.\",\n    \"provider_impact\": \"Confusion about where to admit laboring women, inconsistent referral protocols, and medico-legal risk for frontline providers forced to manage beyond their capacity.\",\n    \"evidence\": \"Access points include 'Level 2 - 3' (11 entries) and 'Level 4 - 6' (40 entries). Policy note: 'the Accident and Emergency Package in the ECCIF fund.' 'Major and specialized surgical procedures will be provided at Level 4 - 6 facilities\u2026' but no explicit, consistent mapping for EmOC in the summary.\",\n    \"medical_guidelines\": \"WHO Standards for improving quality of maternal and newborn care; ACOG guidelines on emergency obstetric care; Kenya Ministry of Health EmOC standards recommending signal functions at specific facility levels.\",\n    \"recommendation\": \"Explicitly map emergency obstetric signal functions to facility levels. Ensure that any facility permitted to offer delivery services is mandated to provide basic/ comprehensive EmOC as appropriate (including Caesarean and transfusion) or have guaranteed rapid transfer with functioning referral systems and defined time-to-care targets.\",\n    \"detection_method\": \"ai_generalized_medical_expertise\",\n    \"confidence\": 0.9\n  },\n  {\n    \"contradiction_type\": \"co_payment_policy_creates_access_barrier\",\n    \"medical_specialty\": \"surgery / health financing\",\n    \"description\": \"Policy explicitly allows co-payments for laser and laparoscopic surgeries while other surgeries are covered, creating inequity and potential financial barriers for patients needing minimally-invasive procedures that may be clinically indicated.\",\n    \"services_involved\": [\n      \"Laser surgeries\",\n      \"Laparoscopic surgeries\",\n      \"Major and specialized surgical procedures\"\n    ],\n    \"medical_rationale\": \"Minimally-invasive approaches (laparoscopy) are often clinically preferred for reduced morbidity and faster recovery. Charging co-payments for these modalities may inappropriately steer patients toward more invasive open procedures or deny access to the clinically optimal technique.\",\n    \"clinical_impact\": \"MEDIUM to HIGH\",\n    \"patient_safety_risk\": \"Suboptimal surgical approach selected due to cost, increased complications or longer recovery when open surgery is used instead of laparoscopy, or delayed care if patients cannot afford co-pay.\",\n    \"provider_impact\": \"Perverse incentives affecting clinical decision-making; increased administrative burden managing exemptions/co-payments.\",\n    \"evidence\": \"Policy phrase: 'Co-payment allowed for laser and laparoscopic surgeries.'\",\n    \"medical_guidelines\": \"WHO guidance on universal health coverage and financial protection; surgical best practice endorsing minimally-invasive approaches when indicated.\",\n    \"recommendation\": \"Remove co-payment requirement for clinically indicated minimally-invasive surgeries, or define strict clinical criteria and exemption rules to prevent financial barriers. Ensure tariffs for laparoscopic/laser procedures reflect realistic costs or are fully covered for essential indications.\",\n    \"detection_method\": \"ai_generalized_medical_expertise\",\n    \"confidence\": 0.88\n  },\n  {\n    \"contradiction_type\": \"pediatric_services_and_neonatal_gap\",\n    \"medical_specialty\": \"pediatrics / neonatology\",\n    \"description\": \"The annex specialties list (13 specialties shown) and counts emphasize adult surgical fields (urological 146, cardiothoracic 92, ophthalmic 85, etc.) but do not list Pediatrics/Neonatology as a distinct specialty with procedural coverage. This suggests important pediatric and neonatal critical care, emergency, and surgical services may be under-specified or missing.\",\n    \"services_involved\": [\n      \"Neonatal intensive care (NBU/NICU)\",\n      \"Pediatric emergency and critical care\",\n      \"Common pediatric surgical procedures\"\n    ],\n    \"medical_rationale\": \"Children and neonates require age- and weight-specific protocols, equipment, drug dosing and staffing. Omission or inadequate policy coverage for pediatric/neonatal services risks inappropriate care or lack of access to specialized interventions.\",\n    \"clinical_impact\": \"HIGH for neonates and young children\",\n    \"patient_safety_risk\": \"Poorly defined coverage can lead to lack of access to lifesaving neonatal care (e.g., CPAP, phototherapy, neonatal resuscitation), increased morbidity/mortality, and inappropriate transfer delays.\",\n    \"provider_impact\": \"Frontline providers lack clear guidance on where and how pediatric cases should be managed or funded; referral confusion and inconsistent standards of care.\",\n    \"evidence\": \"Annex specialties listed (13) do not explicitly include Pediatrics/Neonatology in the provided summary; access points include facility levels but no pediatric-specific mapping provided.\",\n    \"medical_guidelines\": \"WHO Integrated Management of Childhood Illness (IMCI); WHO Standards for improving quality of care for small and sick newborns; Kenyan MOH neonatal care guidelines.\",\n    \"recommendation\": \"Explicitly include pediatric and neonatal services in the policy annex with clear facility-level mapping, tariffs, staffing and equipment requirements, and referral pathways. Prioritize coverage for essential newborn interventions and pediatric emergencies.\",\n    \"detection_method\": \"ai_generalized_medical_expertise\",\n    \"confidence\": 0.9\n  },\n  {\n    \"contradiction_type\": \"palliative_and_oncology_service_coverage_gap\",\n    \"medical_specialty\": \"oncology / palliative care\",\n    \"description\": \"Policy specifically states 'Palliative surgery shall be paid under ECCIF' but does not clearly define funding or coverage for non-surgical palliative oncology interventions (chemotherapy, radiotherapy, opioid analgesia, symptom control) nor delineate how palliative medical care is financed or where it is provided.\",\n    \"services_involved\": [\n      \"Palliative surgery (covered under ECCIF)\",\n      \"Palliative chemotherapy and radiotherapy (not explicitly covered)\",\n      \"Opioid analgesia and home-based palliative care (not specified)\"\n    ],\n    \"medical_rationale\": \"Palliative care for cancer includes medical, radiation, and pharmacologic symptom control \u2014 not only surgery. Funding only surgical palliative interventions without supporting systemic therapy, analgesia, or community palliative services undermines holistic care.\",\n    \"clinical_impact\": \"MEDIUM to HIGH\",\n    \"patient_safety_risk\": \"Patients may receive incomplete palliative care \u2014 inadequate symptom control, avoidable suffering, and increased hospital utilization.\",\n    \"provider_impact\": \"Oncologists and palliative teams face unclear funding for key interventions, leading to inconsistent service availability and potential out-of-pocket costs for patients.\",\n    \"evidence\": \"Policy phrase: 'Palliative surgery shall be paid under ECCIF.' No corresponding mention of palliative medical oncology funding in the summary.\",\n    \"medical_guidelines\": \"WHO Palliative Care guidelines; ESMO recommendations for palliative systemic therapy; WHO Essential Medicines List for palliative care (opioids).\",\n    \"recommendation\": \"Define comprehensive palliative care coverage in the policy, including medical palliative treatments (analgesia, symptom control medications), radiotherapy for palliation, supportive home-based care, and funding mechanisms. Ensure access to opioids with safe prescribing pathways.\",\n    \"detection_method\": \"ai_generalized_medical_expertise\",\n    \"confidence\": 0.86\n  },\n  {\n    \"contradiction_type\": \"mental_health_service_coverage_gap\",\n    \"medical_specialty\": \"mental health / psychiatry\",\n    \"description\": \"The summary does not explicitly include mental health procedural/service coverage (inpatient psychiatric care, crisis intervention, community-based therapy) in the annex or mapped facility levels, suggesting potential omission of structured mental health services within SHIF policy.\",\n    \"services_involved\": [\n      \"Inpatient psychiatric care\",\n      \"Crisis intervention services\",\n      \"Outpatient psychotherapy and community mental health\",\n      \"Medication management for severe mental illness\"\n    ],\n    \"medical_rationale\": \"Mental health disorders are prevalent and require defined pathways (acute care, crisis stabilization, long-term outpatient management). Policies that omit explicit coverage risk leaving services unfunded or inconsistently provided.\",\n    \"clinical_impact\": \"MEDIUM\",\n    \"patient_safety_risk\": \"Inadequate crisis response can lead to harm (self-harm, violence), poor continuity of care, relapse and avoidable hospitalizations.\",\n    \"provider_impact\": \"Clinicians lack clear reimbursement pathways and referral algorithms; mental health services remain fragmented and under-resourced.\",\n    \"evidence\": \"No explicit mention of mental health/procedural counts in the provided annex specialty summary; mental health listed as an area of expertise but absent in the procedural counts.\",\n    \"medical_guidelines\": \"WHO Mental Health Gap Action Programme (mhGAP); WHO guidance on integrating mental health into UHC; Kenyan mental health policy frameworks.\",\n    \"recommendation\": \"Explicitly include mental health services across the continuum (emergency, inpatient, outpatient, community-based) with tariffs, accreditation standards for facilities providing psychiatric care, and crisis response pathways. Protect funding for essential psychotropic medicines.\",\n    \"detection_method\": \"ai_generalized_medical_expertise\",\n    \"confidence\": 0.8\n  }\n]"
   },
   "analysis_metadata": {
-    "total_analysis_time": 0.09,
+    "total_analysis_time": 94.38,
     "tasks_completed": 4,
     "dataset_size": 922,
-    "analysis_approach": "pattern_based",
-    "analysis_timestamp": "2025-08-25T23:36:02.992698"
+    "analysis_approach": "pattern_based_with_ai_enhancement",
+    "analysis_timestamp": "2025-08-26T01:18:03.821434"
   }
 }

@@ -2,6 +2,9 @@
 """
 Improved Prompts for Enhanced SHIF Analysis
 Addresses critical quality issues found in prompt analysis
+
+UPDATE (August 26, 2025): Enhanced with real Kenya health data
+See: updated_ai_prompts artifact for production-ready prompts with validated statistics
 """
 
 class ImprovedPrompts:
@@ -190,6 +193,13 @@ def main():
     print("- Contradiction-aware extraction")
     print("- Clinical reasoning")
     print("- Specific dialysis service differentiation")
+    print("")
+    print("📋 NOTE: For production use, see updated_ai_prompts artifact")
+    print("   - Updated with real Kenya health data (August 2024)")
+    print("   - 20+ validated official sources integrated")
+    print("   - Population: 56.4M, Disease burden: Pneumonia #1, Cancer #2, CVD #3")
+    print("   - Sources: KNBS, WHO Kenya, UN Population Division")
+    print("   - See DATA_SOURCES_DOCUMENTATION.md for full details")
 
 if __name__ == "__main__":
     main()

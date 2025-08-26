@@ -1,0 +1,402 @@
+[
+  {
+    "service_name": "Complex repair for congenital heart disease",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Major paediatric cardiac reconstruction requiring paediatric cardiac surgery, CPB and ICU; tariff (~1.25M) is in the higher band for such care."
+  },
+  {
+    "service_name": "Congenital AV fistula malformation Resection",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Potentially hemorrhagic vascular resection needing surgical expertise and OR support; tariff (~201k) is low for complex vascular resections."
+  },
+  {
+    "service_name": "Conventional Elephant Trunk (CET) Procedure",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Major aortic arch/thoracic aortic surgery requiring advanced cardiac surgical teams and ICU; tariff (~1.30M) aligns with high resource needs."
+  },
+  {
+    "service_name": "Coronary artery Bypass Grafting (CABG)",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Open cardiac surgery with CPB and prolonged ICU stay; tariff (~868k) is likely low relative to full perioperative costs and consumables."
+  },
+  {
+    "service_name": "Cox Maze IV Procedure",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Surgical ablation performed with cardiac surgery and perioperative monitoring; tariff (~513k) is modest for combined procedure and ICU needs."
+  },
+  {
+    "service_name": "Diaphragmatic Hernia Repair",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Neonatal/complex cases require paediatric anaesthesia and neonatal ICU; tariff (~224k) is low for neonatal complex repairs."
+  },
+  {
+    "service_name": "Dissected Aortic Aneurysm Repair (Open)",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Emergency major aortic surgery with high perioperative resource needs; tariff (~392k) is likely inadequate for full care."
+  },
+  {
+    "service_name": "Double Valve Replacement",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Complex open-heart valve surgery requiring CPB and ICU; tariff (~1.25M) is in the upper band appropriate for high-complexity valve work."
+  },
+  {
+    "service_name": "Endovascular Aneurysm Repair (EVAR)",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Specialised endovascular procedure requiring hybrid theatre and imaging; tariff (~1.63M) is consistent with device and imaging costs."
+  },
+  {
+    "service_name": "Esophagostomy",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Surgical stoma creation may need theatre and postop monitoring; tariff (~470k) is reasonable for an operative thoracic procedure."
+  },
+  {
+    "service_name": "ESRD AV Fistula Creation",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Routine vascular access creation for dialysis; usually performed under local anaesthesia at county/sub-county level; tariff (~78k) consistent with outpatient surgical rates."
+  },
+  {
+    "service_name": "ESRD AV Graft Surgery",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Use of prosthetic graft increases material cost and complication risk; tariff (~168k) may not cover prosthesis and perioperative care fully."
+  },
+  {
+    "service_name": "Excision of Mediastinal Tumour",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "May require thoracotomy/sternotomy and ICU monitoring; tariff (~280k) is in a reasonable range for planned mediastinal resections at referral hospitals."
+  },
+  {
+    "service_name": "Fontan procedure",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Complex staged paediatric single-ventricle surgery with prolonged ICU and multidisciplinary care; tariff (~955k) likely inadequate given complexity."
+  },
+  {
+    "service_name": "Frozen Elephant Trunk (FET) Procedure",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Advanced hybrid aortic surgery requiring specialised teams and devices; tariff (~1.41M) reflects high resource use."
+  },
+  {
+    "service_name": "Gastrostomy / Jejunostomy",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Feeding access can be percutaneous or open; tariff (~89.6k) is low for theatre-based procedures with imaging/anaesthesia support."
+  },
+  {
+    "service_name": "Heller's myotomy",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Elective oesophageal surgery requiring OR and postoperative monitoring; tariff (~386k) is within an expected range."
+  },
+  {
+    "service_name": "Insertion of MB tube",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [3,4],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Minor bedside or endoscopic tube insertion under local or light sedation; tariff (~44.8k) is appropriate for a low-resource procedure."
+  },
+  {
+    "service_name": "Lung decortication",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Major thoracic procedure often with prolonged chest drainage and ICU needs; tariff (~224k) is low for expected resource use."
+  },
+  {
+    "service_name": "Mitral Valve Replacement (MVR)",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Open-heart valve replacement requiring CPB and ICU; tariff (~1.06M) is within the higher band appropriate for valve surgery."
+  },
+  {
+    "service_name": "Mitral Valvotomy / Balloon",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Percutaneous valvotomy performed in cath lab; tariff (~224k) is modest but consistent with an interventional procedure at referral level."
+  },
+  {
+    "service_name": "Myocardial Biopsy",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Endomyocardial biopsy needs cath lab imaging and pathology; tariff (~44.8k) is very low for required facilities and testing."
+  },
+  {
+    "service_name": "Oesophageal perforation Repair",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Emergency thoracic/oesophageal surgery with high morbidity and ICU needs; tariff (~554k) is likely inadequate for full emergency resource use."
+  },
+  {
+    "service_name": "Oesophagectomy",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Major thoracoabdominal oncologic surgery with ICU and prolonged care; tariff (~748k) is substantial but likely still insufficient for full pathway."
+  },
+  {
+    "service_name": "Open Lobectomy",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Major pulmonary resection requiring thoracic anaesthesia and ICU; tariff (~591k) is lower than many international benchmarks for full care."
+  },
+  {
+    "service_name": "Open Lung Biopsy",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Operative diagnostic lung biopsy needs OR and postoperative monitoring; tariff (~350k) is consistent with referral-level thoracic procedures."
+  },
+  {
+    "service_name": "Open Patent Ductus Arteriosus (PDA) surgery",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Pediatric cardiac surgery requiring anaesthesia, possible ICU; tariff (~314k) is low for operating-room and perioperative needs."
+  },
+  {
+    "service_name": "Open Pneumonectomy",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Extensive lung resection with significant perioperative risk and ICU requirement; tariff (~280k) is inadequate relative to complexity."
+  },
+  {
+    "service_name": "Open Removal of Esophageal Foreign Body",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Surgical airway/oesophageal retrieval requiring OR and postoperative observation; tariff (~554k) appears sufficient for urgent operative care."
+  },
+  {
+    "service_name": "Open Removal of Tracheal / Bronchial Foreign Body",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Urgent airway surgery commonly needing anaesthesia and possible ICU; tariff (~554k) aligns with resource needs for referral centres."
+  },
+  {
+    "service_name": "Other aneurysms repair",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Repairs of major arterial aneurysms often require vascular/cardiothoracic expertise and ICU; tariff (~392k) is likely inadequate."
+  },
+  {
+    "service_name": "Pacemaker Change of battery",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Procedure is low-moderate risk but requires sterile facility and device handling; tariff (~134k) may be borderline given device-related costs."
+  },
+  {
+    "service_name": "Partial Atrioventricular Canal Defect Repair",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Paediatric intracardiac repair with CPB and ICU needs; tariff (~784k) is substantial but likely insufficient for full perioperative pathway."
+  },
+  {
+    "service_name": "Pericardial Catheterization",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Percutaneous catheter drainage can be done with imaging support at referral hospitals; tariff (~89.6k) reasonable for this less invasive intervention."
+  },
+  {
+    "service_name": "Pericardial Window",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Surgical drainage requiring OR and postoperative monitoring; tariff (~89.6k) is low for operative and inpatient care."
+  },
+  {
+    "service_name": "Pericardiectomy",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Major cardiac/thoracic surgery with potential for significant morbidity and ICU stay; tariff (~554k) is likely insufficient."
+  },
+  {
+    "service_name": "Pericardiocentesis",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [3,4,5],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Emergency bedside or echo‑guided drainage; relatively low resource procedure and tariff (~56k) is appropriate."
+  },
+  {
+    "service_name": "Peripheral Vascular Disease (PAD) Bypass Grafting",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Major vascular surgery with possible blood loss and perioperative care; tariff (~392k) is low for full vascular bypass pathway."
+  },
+  {
+    "service_name": "Peripheral Vascular Disease (PAD) Embolectomy",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Limb-saving urgent procedure requiring theatre and monitoring; tariff (~168k) may not cover necessary perioperative costs."
+  },
+  {
+    "service_name": "Peripheral Vascular Disease (PAD) Endovascular Balloon Angioplasty",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Interventional procedure requiring cath lab and imaging; tariff (~280k) is reasonable for device and imaging costs at referral centres."
+  },
+  {
+    "service_name": "Peripheral Vascular Disease (PAD) Endovascular Stenting",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Endovascular stenting requires cath lab and devices; tariff (~280k) aligns with expected device and facility expenditure."
+  },
+  {
+    "service_name": "Peripheral Vascular Disease (PAD) Vascular Amputation",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Major limb surgery with rehabilitation needs; tariff (~350k) reasonably covers operative and immediate postoperative care at referral level."
+  },
+  {
+    "service_name": "Pleurodesis",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Pleural sclerosis often performed under anaesthesia or via chest tube with inpatient stay; tariff (~144k) is modest for theatre or procedural room plus admission."
+  },
+  {
+    "service_name": "Primary Open Pacemaker implantation",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Initial device implantation requires sterile theatre, device and monitoring; tariff (~224k) is consistent with referral-level pacemaker procedures."
+  },
+  {
+    "service_name": "Pulmonary Artery Banding",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Paediatric palliative cardiac surgery with ICU support; tariff (~481.6k) is high but still likely insufficient for paediatric cardiac pathways."
+  },
+  {
+    "service_name": "Repair of Ruptured Diaphragm",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Emergency thoracoabdominal repair may need significant perioperative support; tariff (~145.6k) is low for emergency theatre and postop care."
+  },
+  {
+    "service_name": "Simple Thoracotomy - Retained Haemothrax / Duct ligation / pleurodesis / FB removal",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Targeted thoracotomy procedures requiring OR and short postop monitoring; tariff (~201.6k) is reasonable for referral-level management."
+  },
+  {
+    "service_name": "Simple tracheal / Bronchial fistula repairs",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Airway repair requiring specialised surgical and anaesthetic support; tariff (~224k) fits referral-level resource needs."
+  },
+  {
+    "service_name": "Splenorenal shunt",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Portal hypertension surgery with significant intraoperative risk; tariff (~112k) is low for operative and inpatient care."
+  },
+  {
+    "service_name": "Subfascial DVT ligation + skin graft",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Combined vascular procedure and reconstructive care requiring OR and possible inpatient stay; tariff (~89.6k) unlikely to cover combined costs."
+  }
+]

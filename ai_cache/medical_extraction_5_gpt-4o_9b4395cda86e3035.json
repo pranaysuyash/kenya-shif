@@ -1,0 +1,68 @@
+[
+  {
+    "service_name": "Open Heart Surgery",
+    "medical_category": "cardiac_surgery",
+    "clinical_specialization": "cardiology",
+    "disease_target": [
+      "congenital_heart_disease",
+      "valvular_disease",
+      "coronary_artery_disease"
+    ],
+    "clinical_rationale": "Necessary for correcting structural heart defects and improving cardiac function",
+    "related_services": [
+      "cardiac_catheterization",
+      "angioplasty",
+      "post-operative_cardiac_rehabilitation"
+    ],
+    "clinical_equivalencies": [
+      "none"
+    ],
+    "standard_protocol": {
+      "pre_surgery_assessment": "specialist_cardiologist_referral",
+      "post_surgery_care": "7_day_ICU_coverage_included",
+      "clinical_justification": "Corrective surgery for life-threatening cardiac conditions"
+    },
+    "tariff_kes": 150000,
+    "pricing_analysis": {
+      "cost_appropriateness": "reasonable_for_complex_surgery",
+      "benchmark_comparison": "aligned_with_regional_costs",
+      "economic_burden": "high_but_essential_for_life_saving"
+    },
+    "facility_requirements": {
+      "levels": [
+        6
+      ],
+      "capability_rationale": "requires_advanced_surgical_facilities_and_ICU_support",
+      "minimum_infrastructure": [
+        "operating_theatre",
+        "ICU",
+        "cardiac_monitoring_equipment"
+      ],
+      "staffing_needs": [
+        "cardiothoracic_surgeon",
+        "anesthesiologist",
+        "ICU_nurses"
+      ]
+    },
+    "coverage_framework": {
+      "authorization": "pre_authorization_required",
+      "clinical_justification": "high_cost_life_saving_procedure",
+      "appeals_process": "medical_review_available",
+      "emergency_provisions": "not_applicable"
+    },
+    "quality_metrics": {
+      "extraction_confidence": 0.97,
+      "clinical_accuracy": 0.99,
+      "policy_clarity": 0.95
+    },
+    "validation_flags": {
+      "requires_cross_check": [
+        "none"
+      ],
+      "clinical_review_needed": false,
+      "policy_ambiguity": "none_identified"
+    },
+    "page_reference": 6,
+    "evidence_snippet": "Open heart procedures available at Level 6 facilities only"
+  }
+]

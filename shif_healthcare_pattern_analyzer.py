@@ -17,6 +17,12 @@ from pathlib import Path
 import time
 from datetime import datetime
 from collections import defaultdict, Counter
+import openai
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from root .env
+load_dotenv('.env')
 
 class SHIFHealthcarePatternAnalyzer:
     """
@@ -24,7 +30,7 @@ class SHIFHealthcarePatternAnalyzer:
     """
     
     def __init__(self):
-        # Load the verified 825-service dataset
+        # Data storage
         self.policy_services = []
         self.annex_procedures = []
         self.structured_rules = []
@@ -32,18 +38,88 @@ class SHIFHealthcarePatternAnalyzer:
         self.gaps = []
         self.kenya_context = {}
         
+        # OpenAI setup with user-specified models
+        self.primary_model = "gpt-5-mini"  # Primary model as specified
+        self.fallback_model = "gpt-4.1-mini"  # Fallback model as specified
+        self.setup_openai()
+        
         # Pattern definitions
         self.facility_patterns = self._define_facility_patterns()
         self.condition_patterns = self._define_condition_patterns()
         self.exclusion_patterns = self._define_exclusion_patterns()
         self.tariff_patterns = self._define_tariff_patterns()
         
-        print("🩺 DR. RISHI PATTERN-BASED HEALTHCARE ANALYZER")
+        # Create dynamic output directory with timestamp
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        self.output_dir = Path(f"outputs_pattern_{timestamp}")
+        self.output_dir.mkdir(parents=True, exist_ok=True)
+        
+        print("🩺 SHIF PATTERN-BASED HEALTHCARE ANALYZER") 
         print("=" * 60)
         print("✅ TASK 1: Rule structuring with pattern matching")
         print("✅ TASK 2: Contradiction and gap detection") 
         print("✅ TASK 3: Kenya/SHIF domain knowledge integration")
         print("✅ TASK 4: Dashboard interface")
+        print(f"📁 Output directory: {self.output_dir}")
+
+    def setup_openai(self):
+        """Setup OpenAI client with user-specified models (gpt-5-mini, gpt-4.1-mini)"""
+        try:
+            # Force reload .env file to get correct API key
+            from dotenv import load_dotenv
+            load_dotenv('.env', override=True)
+            api_key = os.getenv('OPENAI_API_KEY')
+            if not api_key:
+                api_key = "OPENAI_API_KEY_REMOVED"
+            self.openai_client = openai.OpenAI(api_key=api_key)
+            
+            # Test the client with specified models (try primary first, then fallback)
+            try:
+                # Try primary model (gpt-5-mini) first
+                response = self.openai_client.chat.completions.create(
+                    model=self.primary_model,
+                    messages=[{"role": "user", "content": "Hi"}]
+                )
+                print(f"✅ OpenAI Ready: {self.primary_model}")
+            except Exception as primary_e:
+                try:
+                    # Try fallback model (gpt-4.1-mini)
+                    response = self.openai_client.chat.completions.create(
+                        model=self.fallback_model,
+                        messages=[{"role": "user", "content": "Hi"}]
+                    )
+                    print(f"✅ OpenAI Ready: {self.fallback_model} (fallback)")
+                except Exception as fallback_e:
+                    print(f"⚠️ OpenAI models unavailable: {self.primary_model}, {self.fallback_model}")
+                    self.openai_client = None
+                
+        except Exception as e:
+            print("⚠️ OpenAI not available. Core functionality will work without AI insights.")
+            self.openai_client = None
+
+    def make_openai_request(self, messages):
+        """Make OpenAI request with primary/fallback model strategy"""
+        if not self.openai_client:
+            raise Exception("OpenAI client not available")
+        
+        # Try primary model first
+        try:
+            response = self.openai_client.chat.completions.create(
+                model=self.primary_model,
+                messages=messages
+            )
+            return response.choices[0].message.content.strip(), self.primary_model
+        except Exception as e:
+            # Try fallback model
+            try:
+                print(f"Primary model {self.primary_model} failed, trying fallback {self.fallback_model}")
+                response = self.openai_client.chat.completions.create(
+                    model=self.fallback_model,
+                    messages=messages
+                )
+                return response.choices[0].message.content.strip(), self.fallback_model
+            except Exception as fallback_e:
+                raise Exception(f"Both models failed. Primary: {str(e)}, Fallback: {str(fallback_e)}")
 
     def _define_facility_patterns(self) -> Dict:
         """Define patterns for facility level extraction"""
@@ -93,29 +169,64 @@ class SHIFHealthcarePatternAnalyzer:
         }
 
     def load_verified_dataset(self) -> Dict:
-        """Load the verified 825-service dataset"""
+        """Run LIVE PDF extraction using the integrated comprehensive analyzer"""
         
-        print(f"\n📊 LOADING VERIFIED DATASET")
+        print(f"\n📊 RUNNING LIVE PDF EXTRACTION")
+        print("🎯 Using validated methodology:")
+        print("   📊 Pages 1-18: Advanced text processing with dynamic de-glue")
+        print("   📊 Pages 19-54: Simple Tabula extraction")
         
         try:
-            # Load comprehensive results
-            with open('outputs/integrated_comprehensive_analysis.json', 'r') as f:
-                results = json.load(f)
+            # Import and run the comprehensive analyzer for LIVE extraction
+            from integrated_comprehensive_analyzer import IntegratedComprehensiveMedicalAnalyzer
             
+            pdf_path = "TARIFFS TO THE BENEFIT PACKAGE TO THE SHI.pdf"
+            
+            if not Path(pdf_path).exists():
+                print(f"   ❌ PDF file not found: {pdf_path}")
+                return {}
+            
+            # Initialize the integrated analyzer (validated extraction)
+            print(f"   🔄 Initializing integrated analyzer...")
+            analyzer = IntegratedComprehensiveMedicalAnalyzer()
+            
+            # Run LIVE comprehensive extraction (not cached data!)
+            print(f"   🚀 Running LIVE extraction from PDF...")
+            results = analyzer.analyze_complete_document(pdf_path)
+            
+            # Store extracted data for pattern analysis
             self.policy_services = results['extraction_results']['policy_structure']['data']
             self.annex_procedures = results['extraction_results']['annex_procedures']['data']
             
             total_services = len(self.policy_services) + len(self.annex_procedures)
             
-            print(f"   ✅ Policy services loaded: {len(self.policy_services)}")
-            print(f"   ✅ Annex procedures loaded: {len(self.annex_procedures)}")
+            print(f"   ✅ LIVE extraction complete!")
+            print(f"   ✅ Policy services extracted: {len(self.policy_services)}")
+            print(f"   ✅ Annex procedures extracted: {len(self.annex_procedures)}")
             print(f"   ✅ Total dataset: {total_services} services/procedures")
             
             return results
             
         except Exception as e:
-            print(f"   ❌ Error loading dataset: {e}")
-            return {}
+            print(f"   ❌ Error in LIVE extraction: {e}")
+            print(f"   🔄 Attempting to load cached results as fallback...")
+            
+            # Fallback to cached data if live extraction fails
+            try:
+                with open('outputs/integrated_comprehensive_analysis.json', 'r') as f:
+                    results = json.load(f)
+                
+                self.policy_services = results['extraction_results']['policy_structure']['data']
+                self.annex_procedures = results['extraction_results']['annex_procedures']['data']
+                
+                total_services = len(self.policy_services) + len(self.annex_procedures)
+                
+                print(f"   ⚠️ Using cached data: {total_services} services/procedures")
+                return results
+                
+            except Exception as fallback_e:
+                print(f"   ❌ Fallback also failed: {fallback_e}")
+                return {}
 
     # ========== TASK 1: EXTRACT RULES INTO STRUCTURED FORMAT ==========
     
@@ -856,7 +967,7 @@ class SHIFHealthcarePatternAnalyzer:
         }
         
         # Save dashboard data
-        dashboard_file = Path('outputs/shif_healthcare_pattern_dashboard.json')
+        dashboard_file = self.output_dir / 'shif_healthcare_pattern_dashboard.json'
         with open(dashboard_file, 'w') as f:
             json.dump(dashboard_data, f, indent=2, default=str)
         
@@ -1029,7 +1140,7 @@ class SHIFHealthcarePatternAnalyzer:
     def _create_csv_tables(self, dashboard_data: Dict):
         """Create CSV files for dashboard tables"""
         
-        output_dir = Path('outputs')
+        # Use dynamic output directory
         
         # Save each table as CSV
         table_mappings = {
@@ -1044,7 +1155,7 @@ class SHIFHealthcarePatternAnalyzer:
         for filename, table_key in table_mappings.items():
             if dashboard_data.get(table_key):
                 df = pd.DataFrame(dashboard_data[table_key])
-                df.to_csv(output_dir / f'shif_healthcare_{filename}.csv', index=False)
+                df.to_csv(self.output_dir / f'shif_healthcare_{filename}.csv', index=False)
 
     def _create_summary_report(self, dashboard_data: Dict):
         """Create a summary report"""
@@ -1081,7 +1192,7 @@ RECOMMENDATIONS
         report += f"\nFor detailed analysis, see CSV files in outputs/ directory.\n"
         
         # Save report
-        with open('outputs/shif_healthcare_analysis_report.txt', 'w') as f:
+        with open(self.output_dir / 'shif_healthcare_analysis_report.txt', 'w') as f:
             f.write(report)
 
     # ========== MAIN EXECUTION ==========
@@ -1094,12 +1205,15 @@ RECOMMENDATIONS
         
         start_time = time.time()
         
-        # Load verified dataset
+        # Load verified dataset (includes live extraction + AI analysis)
         dataset = self.load_verified_dataset()
         
         if not dataset:
             print("❌ Failed to load dataset")
             return {}
+            
+        # Extract AI analysis results from integrated analyzer
+        self.ai_results = dataset.get('analysis_results', {})
         
         # Execute all tasks
         try:
@@ -1117,24 +1231,30 @@ RECOMMENDATIONS
             
             analysis_time = round(time.time() - start_time, 2)
             
-            # Complete results
+            # Complete results including AI analysis
             complete_results = {
                 'task1_structured_rules': structured_rules,
                 'task2_contradictions': contradictions,
                 'task2_gaps': gaps,
                 'task3_context_analysis': context_analysis,
                 'task4_dashboard': dashboard,
+                'ai_analysis_results': {
+                    'ai_contradictions': self.ai_results.get('ai_contradictions', []),
+                    'ai_gaps': self.ai_results.get('ai_gaps', []),
+                    'ai_insights': self.ai_results.get('ai_insights', []),
+                    'full_ai_analysis': self.ai_results.get('full_ai_analysis', '')
+                },
                 'analysis_metadata': {
                     'total_analysis_time': analysis_time,
                     'tasks_completed': 4,
                     'dataset_size': len(self.policy_services) + len(self.annex_procedures),
-                    'analysis_approach': 'pattern_based',
+                    'analysis_approach': 'pattern_based_with_ai_enhancement',
                     'analysis_timestamp': datetime.now().isoformat()
                 }
             }
             
             # Save complete results
-            results_file = Path('outputs/shif_healthcare_pattern_complete_analysis.json')
+            results_file = self.output_dir / 'shif_healthcare_pattern_complete_analysis.json'
             with open(results_file, 'w') as f:
                 json.dump(complete_results, f, indent=2, default=str)
             
@@ -1160,10 +1280,17 @@ RECOMMENDATIONS
         high_severity_contradictions = sum(1 for c in results.get('task2_contradictions', []) if c.get('severity') == 'high')
         high_impact_gaps = sum(1 for g in results.get('task2_gaps', []) if g.get('impact') == 'high')
         
+        # Extract AI analysis counts
+        ai_results = results.get('ai_analysis_results', {})
+        ai_contradictions = len(ai_results.get('ai_contradictions', []))
+        ai_gaps = len(ai_results.get('ai_gaps', []))
+        ai_insights = len(ai_results.get('ai_insights', []))
+        
         print(f"✅ TASK 1: {rules_count} rules structured with detailed components")
         print(f"✅ TASK 2: {contradictions_count} contradictions ({high_severity_contradictions} high severity), {gaps_count} gaps ({high_impact_gaps} high impact)")
         print(f"✅ TASK 3: Kenya/SHIF domain knowledge integrated")
         print(f"✅ TASK 4: Comprehensive dashboard and analysis tables created")
+        print(f"🤖 AI ANALYSIS: {ai_contradictions} AI contradictions, {ai_gaps} AI gaps, {ai_insights} insights")
         
         print(f"\n📁 OUTPUT FILES CREATED:")
         output_files = [

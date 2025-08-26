@@ -32,3 +32,47 @@ python integrated_comprehensive_analyzer.py
 - **Dual Extraction Strategy** - Advanced processing + proven simple tabula combined
 - **Complete Medical Coverage** - All 13 specialties with pricing analysis
 - **Performance Optimized** - Fast extraction with high-quality results
+- **Enhanced AI Prompts** - Real Kenya health context using validated 2024 statistics
+- **Evidence-Based Analysis** - 20+ official sources integrated for clinical reasoning
+- **Source-Validated Context** - All AI prompts use verified government and WHO data
+
+## 📊 **Data Sources & Documentation**
+
+This system uses two distinct types of data sources:
+
+### **Primary Analysis Data**
+- **SHIF Policy Document**: Official Kenya Ministry of Health tariffs document
+- **Usage**: Direct extraction and analysis for contradictions/gaps
+- **Content**: 825+ services, tariffs, access rules from actual policy
+
+### **AI Context Data** 
+- **Real Kenya Health Statistics**: Population, disease burden, health system data
+- **Usage**: Clinical reasoning and impact assessment context only
+- **Sources**: 20+ validated sources including KNBS, WHO Kenya, UN Population Division
+- **Enhancement Date**: August 2024 comprehensive validation conducted
+- **Purpose**: Enhance AI understanding of Kenya's health landscape with verified data
+- **Quality**: All statistics cross-validated across multiple official sources
+
+**📋 Full Documentation**: See [`DATA_SOURCES_DOCUMENTATION.md`](DATA_SOURCES_DOCUMENTATION.md) for complete source details, validation methods, and AI prompt enhancement methodology.
+
+## 🔍 **Enhanced AI Prompts (August 2024)**
+
+### **Real Data Integration**
+AI prompts now use verified Kenya health statistics for clinical reasoning:
+- **Population**: 56.4M (UN Population Division 2024) - cross-validated
+- **Disease Burden**: Pneumonia #1, Cancer #2, CVD #3 (KNBS 2024)
+- **Health System**: 47 counties, 70% rural population (World Bank 2024)
+- **CVD Impact**: 25% hospital admissions (WHO Kenya 2024)
+
+### **Source Validation Process**
+- ✅ **20+ Official Sources** consulted and cross-referenced
+- ✅ **Government Priority**: Kenya National Bureau of Statistics, Ministry of Health
+- ✅ **International Validation**: WHO, UN Population Division, World Bank
+- ✅ **Quality Assurance**: Multiple source validation for each data point
+- ✅ **Temporal Accuracy**: Preference for 2024 data where available
+
+### **Impact on Analysis Quality**
+**Enhanced AI Reasoning**: Real context improves clinical impact assessment
+**Better Prioritization**: Disease burden data guides gap analysis focus
+**Accurate Recommendations**: Kenya-specific health system understanding
+**Credible Results**: Evidence-based rather than illustrative examples

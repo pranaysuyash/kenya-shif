@@ -561,14 +561,14 @@ Focus on actionable insights for healthcare policy improvement in Kenya.
         }
         
         # Save dashboard data
-        dashboard_file = Path('outputs/dr_rishi_dashboard.json')
+        dashboard_file = Path('outputs/shif_healthcare_dashboard.json')
         with open(dashboard_file, 'w') as f:
             json.dump(dashboard_data, f, indent=2, default=str)
         
         # Create CSV tables
         self._create_csv_tables(dashboard_data)
         
-        print(f"   ✅ TASK 4 COMPLETE: Dashboard saved to outputs/dr_rishi_dashboard.json")
+        print(f"   ✅ TASK 4 COMPLETE: Dashboard saved to outputs/shif_healthcare_dashboard.json")
         
         return dashboard_data
 
@@ -641,17 +641,17 @@ Focus on actionable insights for healthcare policy improvement in Kenya.
         # Rules table
         if dashboard_data['rules_parsed']:
             rules_df = pd.DataFrame(dashboard_data['rules_parsed'])
-            rules_df.to_csv(output_dir / 'dr_rishi_rules_parsed.csv', index=False)
+            rules_df.to_csv(output_dir / 'shif_healthcare_rules_parsed.csv', index=False)
         
         # Contradictions table
         if dashboard_data['contradictions_flagged']:
             contradictions_df = pd.DataFrame(dashboard_data['contradictions_flagged'])
-            contradictions_df.to_csv(output_dir / 'dr_rishi_contradictions.csv', index=False)
+            contradictions_df.to_csv(output_dir / 'shif_healthcare_contradictions.csv', index=False)
         
         # Gaps table
         if dashboard_data['coverage_gaps']:
             gaps_df = pd.DataFrame(dashboard_data['coverage_gaps'])
-            gaps_df.to_csv(output_dir / 'dr_rishi_coverage_gaps.csv', index=False)
+            gaps_df.to_csv(output_dir / 'shif_healthcare_coverage_gaps.csv', index=False)
 
     # ========== MAIN EXECUTION ==========
     
@@ -702,7 +702,7 @@ Focus on actionable insights for healthcare policy improvement in Kenya.
             }
             
             # Save complete results
-            results_file = Path('outputs/dr_rishi_complete_analysis.json')
+            results_file = Path('outputs/shif_healthcare_complete_analysis.json')
             with open(results_file, 'w') as f:
                 json.dump(complete_results, f, indent=2, default=str)
             
@@ -730,11 +730,11 @@ Focus on actionable insights for healthcare policy improvement in Kenya.
         print(f"✅ TASK 4: Dashboard and tables created")
         
         print(f"\n📁 OUTPUT FILES:")
-        print(f"   • dr_rishi_complete_analysis.json - Complete results")
-        print(f"   • dr_rishi_dashboard.json - Dashboard data")
-        print(f"   • dr_rishi_rules_parsed.csv - Structured rules table")
-        print(f"   • dr_rishi_contradictions.csv - Contradictions table")
-        print(f"   • dr_rishi_coverage_gaps.csv - Coverage gaps table")
+        print(f"   • shif_healthcare_complete_analysis.json - Complete results")
+        print(f"   • shif_healthcare_dashboard.json - Dashboard data")
+        print(f"   • shif_healthcare_rules_parsed.csv - Structured rules table")
+        print(f"   • shif_healthcare_contradictions.csv - Contradictions table")
+        print(f"   • shif_healthcare_coverage_gaps.csv - Coverage gaps table")
         
         print(f"\n⏱️ Analysis completed in {analysis_time} seconds")
         print(f"🎯 All Dr. Rishi requirements implemented!")

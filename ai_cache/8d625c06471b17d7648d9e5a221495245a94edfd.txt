@@ -1,0 +1,402 @@
+[
+  {
+    "service_name": "Tetralogy of Fallot Repair",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Complex pediatric open cardiac surgery requiring cardiopulmonary bypass, paediatric ICU and specialist team — best at national referral; tariff unlikely to cover true costs."
+  },
+  {
+    "service_name": "Thoracic Aortic Aneurysm Repair (Open)",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Major high-risk thoracic vascular procedure with long OR, ICU and blood product needs — should be at highest‑level centre; tariff appears too low."
+  },
+  {
+    "service_name": "Thoracic Endovascular Aortic Aneurysm Repair (TEVAR)",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Endovascular procedure requiring hybrid theatre and costly endografts; tariff is high and more aligned with resource needs but depends on device pricing."
+  },
+  {
+    "service_name": "Thoracotomy",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Major chest surgery (elective or emergency) needing skilled thoracic team and post‑op ICU/monitoring; tariff is likely below true resource use."
+  },
+  {
+    "service_name": "Tracheal Stenosis Resection and Anastomosis",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Complex airway reconstruction demanding highly experienced multidisciplinary team and specialised postoperative care; reimbursement appears inadequate."
+  },
+  {
+    "service_name": "Tracheal / Bronchial Reconstruction",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Major airway surgery with risk of airway compromise; requires specialist surgeons and ICU — tariff unlikely to fully cover costs."
+  },
+  {
+    "service_name": "Transcatheter percutaneous device PDA closure",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Pediatric interventional cardiology procedure requiring cath lab and expensive device; current tariff likely does not cover device and consumable costs."
+  },
+  {
+    "service_name": "Traumatic Tracheal / Bronchial Disruption repair and anastomosis",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Emergency complex airway repair with high morbidity requiring specialised teams and ICU; reimbursement is unlikely sufficient."
+  },
+  {
+    "service_name": "Traumatic Vascular Injury Repair",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [4,5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Time‑sensitive vascular surgery requiring skilled surgeons, blood products and possible ICU care; tariff seems low for true resource needs."
+  },
+  {
+    "service_name": "Tube Thoracostomy",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [4,5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Common emergency procedure performed in district and higher hospitals; tariff generally adequate to cover procedure and immediate care."
+  },
+  {
+    "service_name": "Vascular Exposure and Safeguarding for Anterior Lumbar Interbody Fusion",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Planned vascular exposure is specialist work supporting spine surgery; requires vascular surgeon and OR time — tariff seems low relative to specialist involvement."
+  },
+  {
+    "service_name": "Venous Insufficiency Laser Ablation",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Elective endovenous procedure done in specialised centres; tariff aligns reasonably with ambulatory intervention costs."
+  },
+  {
+    "service_name": "Venous Insufficiency Perforator Ligation",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Surgical procedure for venous insufficiency performed in secondary/tertiary hospitals; tariff generally covers expected resources."
+  },
+  {
+    "service_name": "Venous Insufficiency Radiofrequency Ablation",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Minimally invasive outpatient/short‑stay procedure in specialised centres; tariff appears appropriate for device/operation costs."
+  },
+  {
+    "service_name": "Venous Insufficiency Stripping",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Conventional surgical treatment for varicose veins; suitable for county hospitals with vascular/general surgery expertise."
+  },
+  {
+    "service_name": "Ventricular Septal Defect Closure",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Pediatric cardiac repair (open or device) requiring CPB, specialised ICU and consumables — tariff unlikely to cover full cost."
+  },
+  {
+    "service_name": "Vessel bypass Surgery",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Peripheral or major vascular bypass needs specialist expertise, grafts and ICU/ward resources; reimbursement appears low."
+  },
+  {
+    "service_name": "Video Assisted Thoracoscopic Surgery (VATS) Decortication",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Thoracoscopic procedure for empyema requiring specialized instruments, anaesthesia and post‑op care; tariff likely underestimates costs."
+  },
+  {
+    "service_name": "Video Assisted Thoracoscopic Surgery (VATS) Lobectomy",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Major lung resection via VATS needs thoracic surgical team, specialized equipment and ICU support; tariff is probably insufficient."
+  },
+  {
+    "service_name": "Video Assisted Thoracoscopic Surgery (VATS) Pneumonectomy",
+    "specialty": "Cardiothoracic and Vascular",
+    "recommended_facility_level": [6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Extensive lung resection with high perioperative risk and resource need; should be at referral centre and tariff is low for complexity."
+  },
+  {
+    "service_name": "Block dissection of the neck",
+    "specialty": "Ear Nose & Throat",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Comprehensive oncologic neck dissection with reconstruction potential; needs specialist OR time, possible ICU and pathology support."
+  },
+  {
+    "service_name": "Cochlea operations",
+    "specialty": "Ear Nose & Throat",
+    "recommended_facility_level": [6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "MISSING",
+    "notes": "Cochlear implantation entails high device cost and long‑term support; listed tariff will not cover implant device and associated expenses."
+  },
+  {
+    "service_name": "Excision and reconstruction of head and neck tumours",
+    "specialty": "Ear Nose & Throat",
+    "recommended_facility_level": [6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Major extirpative and reconstructive surgery (may need free flap, ICU and prolonged stay); tariff unlikely to cover full multidisciplinary costs."
+  },
+  {
+    "service_name": "Excision of pharyngeal diverticulum",
+    "specialty": "Ear Nose & Throat",
+    "recommended_facility_level": [5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Specialist ENT procedure typically performed in tertiary centres; tariff is reasonable for operative and inpatient care."
+  },
+  {
+    "service_name": "Facial nerve decompression",
+    "specialty": "Ear Nose & Throat",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Delicate surgical procedure often requiring neuro‑otology expertise and imaging support; tariff appears broadly appropriate for resource needs."
+  },
+  {
+    "service_name": "Laryngectomy (Partial)",
+    "specialty": "Ear Nose & Throat",
+    "recommended_facility_level": [5],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Major airway/oncologic surgery with potential for reconstruction and prolonged care; tariff likely underestimates resource intensity."
+  },
+  {
+    "service_name": "Laryngectomy (Total)",
+    "specialty": "Ear Nose & Throat",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Extensive oncologic airway surgery with high perioperative care needs; reimbursement appears inadequate."
+  },
+  {
+    "service_name": "Laryngectomy with radical neck dissection",
+    "specialty": "Ear Nose & Throat",
+    "recommended_facility_level": [6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Combined major resections and neck dissection often require reconstruction, ICU and multidisciplinary care — tariff is unlikely sufficient."
+  },
+  {
+    "service_name": "Middle ear tumour excision",
+    "specialty": "Ear Nose & Throat",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Specialist otologic surgery requiring microscopy and possible reconstruction; tariff is in a reasonable range for tertiary care."
+  },
+  {
+    "service_name": "Total / Radical parotidectomy",
+    "specialty": "Ear Nose & Throat",
+    "recommended_facility_level": [5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Major salivary gland surgery with facial nerve considerations; tertiary hospital appropriate and tariff appears commensurate."
+  },
+  {
+    "service_name": "EUA and biopsy of nasopharynx, ears, nose",
+    "specialty": "Ear Nose & Throat",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Examination under anaesthesia and biopsy is low complexity and can be done at county/tertiary hospitals; tariff is modest but appropriate."
+  },
+  {
+    "service_name": "Frontal sinus trephination",
+    "specialty": "Ear Nose & Throat",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Minor ENT procedure for acute sinus disease; suitable for county hospitals and tariff is proportionate."
+  },
+  {
+    "service_name": "Maxillary Artery Ligation",
+    "specialty": "Ear Nose & Throat",
+    "recommended_facility_level": [5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Hemorrhage control procedure often performed by specialists in tertiary centres; tariff reasonable for operative and anaesthesia needs."
+  },
+  {
+    "service_name": "MUA # nose",
+    "specialty": "Ear Nose & Throat",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Manipulation under anaesthesia for nasal fracture is low complexity and appropriate at county hospitals; tariff adequate."
+  },
+  {
+    "service_name": "Removal of FB in ear or nose (paediatrics under GA)",
+    "specialty": "Ear Nose & Throat",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Common paediatric ENT procedure under GA; county/tertiary hospitals can provide this and tariff is reasonable."
+  },
+  {
+    "service_name": "Adenoidectomy",
+    "specialty": "Ear Nose & Throat",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Routine paediatric ENT surgery appropriate at secondary/tertiary hospitals; tariff aligns with expected resource use."
+  },
+  {
+    "service_name": "Adenotonsillectomy (Ts 7 As)",
+    "specialty": "Ear Nose & Throat",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Common ENT operation with short stay; county hospitals can perform this and tariff is acceptable."
+  },
+  {
+    "service_name": "Cricotracheal reconstruction",
+    "specialty": "Ear Nose & Throat",
+    "recommended_facility_level": [6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Complex airway reconstruction requiring specialised multidisciplinary teams and intensive post‑op care; reimbursement is likely inadequate."
+  },
+  {
+    "service_name": "Direct laryngoscopy and biopsy",
+    "specialty": "Ear Nose & Throat",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Diagnostic procedure under anaesthesia; appropriate at county/tertiary hospitals and tariff is modest but sufficient."
+  },
+  {
+    "service_name": "Excision of submandibular gland",
+    "specialty": "Ear Nose & Throat",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Routine head & neck procedure requiring ENT/OMFS expertise; county tertiary centres appropriate and tariff reasonable."
+  },
+  {
+    "service_name": "Frontal mucocele",
+    "specialty": "Ear Nose & Throat",
+    "recommended_facility_level": [5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Requires specialist endoscopic/sinus surgery skills; tertiary centre fit and tariff acceptable for planned care."
+  },
+  {
+    "service_name": "Functional endoscopic sinus surgery (FESS)",
+    "specialty": "Ear Nose & Throat",
+    "recommended_facility_level": [5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Elective endoscopic sinus surgery at tertiary centres; tariff aligns with theatre, instrumentation and anaesthesia needs."
+  },
+  {
+    "service_name": "Hemiglossectomy",
+    "specialty": "Ear Nose & Throat",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Oncologic tongue resection often requiring reconstruction and prolonged care; tariff unlikely to cover multidisciplinary costs."
+  },
+  {
+    "service_name": "Intranasal ethmoidectomy",
+    "specialty": "Ear Nose & Throat",
+    "recommended_facility_level": [5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "ENT endoscopic sinus procedure for chronic disease; appropriate for tertiary centres and tariff is reasonable."
+  },
+  {
+    "service_name": "Laryngocele excision",
+    "specialty": "Ear Nose & Throat",
+    "recommended_facility_level": [5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Specialist ENT surgery manageable at tertiary hospitals; tariff adequate for operative/anesthesia costs."
+  },
+  {
+    "service_name": "Lateral Rhinotomy (due to tumour, scars or congenital)",
+    "specialty": "Ear Nose & Throat",
+    "recommended_facility_level": [5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Open approach for nasal lesions performed at tertiary centres; tariff consistent with expected resource use."
+  },
+  {
+    "service_name": "Maxillectomy",
+    "specialty": "Ear Nose & Throat",
+    "recommended_facility_level": [6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Major maxillofacial oncologic resection often needing reconstruction/free flap and ICU — tariff likely insufficient."
+  },
+  {
+    "service_name": "Myringoplasty",
+    "specialty": "Ear Nose & Throat",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Common otologic procedure appropriate for county/tertiary hospitals; tariff matches typical outpatient/inpatient costs."
+  },
+  {
+    "service_name": "Myringotomy",
+    "specialty": "Ear Nose & Throat",
+    "recommended_facility_level": [3,4,5],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Minor ENT procedure frequently done as day‑case; suitable at lower‑level hospitals and tariff is adequate."
+  },
+  {
+    "service_name": "Nasal polypectomy",
+    "specialty": "Ear Nose & Throat",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Routine ENT procedure for polyp disease, appropriate at county/tertiary hospitals; tariff appears sufficient."
+  }
+]

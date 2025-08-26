@@ -494,7 +494,7 @@ def main():
     print("🚀 KENYAN SHIF COMPREHENSIVE PDF EXTRACTOR")
     print("=" * 60)
     print("   📊 Pages 1-18: Policy structure with advanced text processing")  
-    print("   📊 Pages 19-54: Annex procedures with your proven simple tabula")
+    print("   📊 Pages 19-54: Annex procedures with validated Simple Tabula extraction")
     print("   🔧 Features: Dynamic de-glue, bullet splitting, tariff mapping")
     
     # Read raw tables once (to build vocab)
@@ -517,7 +517,7 @@ def main():
     structured_df.to_csv(OUT_DIR / "rules_p1_18_structured.csv", index=False)
     print(f"   ✅ Pages 1–18 complete: raw={len(rules_df)}, wide={len(wide_df)}, exploded={len(exploded_df)}")
 
-    # Extract Annex (19–54) using your proven simple tabula approach
+    # Extract Annex (19–54) using validated Simple Tabula approach
     print("\n📊 PROCESSING PAGES 19-54 (Annex Procedures)...")
     print("   🔧 Using proven simple tabula approach...")
     annex_df = extract_annex_tabula_simple("19-54")

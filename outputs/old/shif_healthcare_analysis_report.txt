@@ -1,14 +1,14 @@
 
 DR. RISHI HEALTHCARE POLICY ANALYSIS REPORT
 ==========================================
-Generated: 2025-08-25T23:36:02.971409
+Generated: 2025-08-26T01:18:03.804544
 
 EXECUTIVE SUMMARY
 -----------------
 • Total Services Analyzed: 922
 • Rules Structured: 922
 • Tariff Coverage: 100.0%
-• Contradictions Found: 19 (7 high severity)
+• Contradictions Found: 42 (30 high severity)
 • Coverage Gaps Identified: 10 (9 high impact)
 
 TOP FINDINGS
