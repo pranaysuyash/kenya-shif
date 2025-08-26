@@ -1,0 +1,920 @@
+[
+  {
+    "gap_id": "COVERAGE_SERVICE_CATEGORY_01",
+    "gap_category": "service_category",
+    "gap_type": "Community health workforce functionality",
+    "coverage_priority": "HIGH",
+    "description": "Large variability in functionality, supervision, remuneration and commodity support for Community Health Volunteers (CHVs) leading to inconsistent outreach, health promotion, early case detection and referral from Level 1. Gaps include weak supervision, irregular stipends, and lack of standardized CHV service packages under SHIF/PHC fund.",
+    "kenya_health_system_context": {
+      "service_delivery_platform": "Level 1 (community units) with interfaces to Level 2-3",
+      "population_impact": "Rural households, low‑income urban informal settlements, pregnant women, children under 5",
+      "geographic_scope": "National but concentrated effect in arid and marginalized counties (Garissa, Mandera, Wajir, Turkana, Samburu); urban informal settlements (Nairobi, Mombasa)",
+      "current_coverage_level": "Estimated functional CHV coverage ~50% (wide county variation: 20–80%)"
+    },
+    "who_essential_services_gap": "Preventive services (health promotion, community case management)",
+    "coverage_completeness_analysis": {
+      "service_availability": "Limited",
+      "geographic_accessibility": "Variable - good in some counties, poor in remote/arid counties",
+      "financial_accessibility": "Mostly affordable to users but sustainability issues due to lack of CHV financing",
+      "quality_adequacy": "Suboptimal (training, supervision and SOPs inconsistent)"
+    },
+    "integration_with_clinical_gaps": "Supports but differs from emergency obstetric and newborn care gaps — CHVs are critical for early identification/referral (antenatal visits, danger signs) but clinical EmONC service availability is separate.",
+    "recommended_coverage_interventions": {
+      "immediate_coverage_expansion": [
+        "Standardize and finance a CHV package (stipend, training, supervision) under PHC Fund/SHIF with performance monitoring",
+        "Provide basic commodity kits (malaria RDTs, oral rehydration salts, contraceptives) to CHVs"
+      ],
+      "service_integration_opportunities": [
+        "Link CHV outreach with immunization campaigns, TB/HIV community differentiation of care, NCD screening drives"
+      ],
+      "infrastructure_requirements": [
+        "Digital supervision tools (mobile reporting), transport allowances, supply chain linkage to Level 2 facilities"
+      ]
+    },
+    "implementation_pathway": {
+      "county_integration": "Counties adopt standardized CHV package, integrate in county HR plans and provide top-ups via PHC Fund; CHV roles integrated into referral workflows",
+      "funding_mechanisms": "PHC Fund for recurrent CHV costs; SHIF to reimburse CHV‑facilitated referrals; county budgets co‑finance",
+      "timeline_realistic": "12–24 months (policy standardization 3–6 months; phased roll‑out 12–24 months)"
+    }
+  },
+  {
+    "gap_id": "COVERAGE_SERVICE_CATEGORY_02",
+    "gap_category": "service_category",
+    "gap_type": "Primary care diagnostic capacity (laboratory and point‑of‑care)",
+    "coverage_priority": "HIGH",
+    "description": "Primary care facilities (Level 2–3) frequently lack basic diagnostic tests (biochemistry, basic hematology, point‑of‑care glucose, rapid diagnostics) and trained lab staff, limiting evidence‑based management of common conditions (malaria, sepsis, NCDs).",
+    "kenya_health_system_context": {
+      "service_delivery_platform": "Level 2–3 (dispensaries, health centres)",
+      "population_impact": "Rural populations and peri‑urban poor who rely on primary care for first contact",
+      "geographic_scope": "Widespread gaps, worse in small counties and remote sub‑counties (Northern and ASAL counties)",
+      "current_coverage_level": "Estimated availability of basic diagnostics at Level 2–3 ~40%"
+    },
+    "who_essential_services_gap": "Curative services (diagnostic capacity for primary care management)",
+    "coverage_completeness_analysis": {
+      "service_availability": "Limited",
+      "geographic_accessibility": "Limited (many communities must travel to Level 4+ for tests)",
+      "financial_accessibility": "Limited — out‑of‑pocket testing common when not provided free",
+      "quality_adequacy": "Suboptimal (equipment maintenance, QC and trained personnel lacking)"
+    },
+    "integration_with_clinical_gaps": "Relates to cancer and imaging gaps in higher levels but focuses on basic diagnostics required to manage most primary care conditions, not specialised imaging.",
+    "recommended_coverage_interventions": {
+      "immediate_coverage_expansion": [
+        "Deploy standard essential point‑of‑care test (POCT) packages to Level 2–3 (malaria RDT, urine dipstick, glucometer, Hb, RPR/HIV rapid tests)",
+        "Task‑shift training and mentorship for facility staff in POCT use and quality control"
+      ],
+      "service_integration_opportunities": [
+        "Integrate POCT into NCD and maternal health visits, HIV/TB screening and referral algorithms"
+      ],
+      "infrastructure_requirements": [
+        "Cold chain where needed, basic lab benches, QA systems, supply chain strengthening"
+      ]
+    },
+    "implementation_pathway": {
+      "county_integration": "County labs to adopt hub‑and‑spoke model with Level 3 as hubs for confirmatory testing; county quality assurance teams supervise",
+      "funding_mechanisms": "PHC Fund procurement for POCT; SHIF reimbursement linked to diagnostics performed at accredited primary facilities",
+      "timeline_realistic": "6–18 months for POCT roll‑out and training; ongoing QA"
+    }
+  },
+  {
+    "gap_id": "COVERAGE_SERVICE_CATEGORY_03",
+    "gap_category": "service_category",
+    "gap_type": "Essential medicines and commodity security at primary level",
+    "coverage_priority": "HIGH",
+    "description": "Frequent stockouts of essential medicines and family planning commodities at Level 2–3 disrupt continuity of care, increase OOP spending and drive bypassing to higher levels.",
+    "kenya_health_system_context": {
+      "service_delivery_platform": "Level 2–3 primarily; impacts Level 1 outreach services",
+      "population_impact": "Pregnant women, children, NCD patients, contraceptive users, rural poor",
+      "geographic_scope": "National with higher stockout rates in remote counties and during supply chain shocks",
+      "current_coverage_level": "Estimated continuous availability of key tracer medicines at primary care ~55%"
+    },
+    "who_essential_services_gap": "Curative services (essential medicines provision)",
+    "coverage_completeness_analysis": {
+      "service_availability": "Limited",
+      "geographic_accessibility": "Variable with remote clinics frequently out of stock",
+      "financial_accessibility": "Limited — patients purchase meds OOP when stockouts occur",
+      "quality_adequacy": "Suboptimal (expiry management, forecasting weaknesses)"
+    },
+    "integration_with_clinical_gaps": "Essential medicines gaps compound clinical gaps (e.g., in surgical and emergency care) by limiting peri‑operative and chronic disease management, but this gap focuses on supply chain and availability rather than clinical capacity.",
+    "recommended_coverage_interventions": {
+      "immediate_coverage_expansion": [
+        "Strengthen county-led quantification and push/pull supply systems for PHC facilities; procure buffer stocks for remote clinics",
+        "Introduce performance‑based supply indicators tied to PHC Fund disbursements"
+      ],
+      "service_integration_opportunities": [
+        "Align commodity forecasting across programs (maternal, HIV, NCDs) to maximize procurement efficiencies"
+      ],
+      "infrastructure_requirements": [
+        "Improved storage at facility level, supply chain information systems (eLMIS) integration to county DHIS2"
+      ]
+    },
+    "implementation_pathway": {
+      "county_integration": "Counties incorporate essential medicine performance metrics into annual workplans and allocate PHC funds for logistics; SHIF lists medicines for reimbursement to reduce OOP",
+      "funding_mechanisms": "PHC Fund for recurrent procurement and storage; SHIF reimbursements for medicines provided during accredited service encounters",
+      "timeline_realistic": "6–24 months (short‑term buffer stocks immediately; system fixes within 12–24 months)"
+    }
+  },
+  {
+    "gap_id": "COVERAGE_CARE_LEVEL_01",
+    "gap_category": "care_level",
+    "gap_type": "Referral and transport system weaknesses",
+    "coverage_priority": "HIGH",
+    "description": "Fragmented ambulance services, poor referral communication, and no standardized county ambulance dispatch lead to delays in time‑sensitive referrals (medical, surgical, trauma).",
+    "kenya_health_system_context": {
+      "service_delivery_platform": "Inter‑level (Level 2–6 referrals), emergency corridor",
+      "population_impact": "All age groups requiring urgent transfer — trauma victims, surgical emergencies, severe medical cases from rural areas",
+      "geographic_scope": "Nationwide, acute impact in remote and sparsely populated counties (ASALs)",
+      "current_coverage_level": "Estimated coverage of functional ambulance referral system ~30%"
+    },
+    "who_essential_services_gap": "Emergency care services (timely access to higher‑level care)",
+    "coverage_completeness_analysis": {
+      "service_availability": "Limited",
+      "geographic_accessibility": "Poor in remote regions (long travel times)",
+      "financial_accessibility": "Often expensive or unavailable - high indirect costs",
+      "quality_adequacy": "Suboptimal (lack of trained pre‑hospital staff, no standard triage/ referral protocols)"
+    },
+    "integration_with_clinical_gaps": "Supports emergency obstetric/newborn care and critical care pathways but targets system processes (transport and communication) rather than clinical service content.",
+    "recommended_coverage_interventions": {
+      "immediate_coverage_expansion": [
+        "Establish county ambulance hub networks with GPS dispatch and triage protocols; use private fleet contracting where feasible",
+        "Standardize referral forms and digital referral tracking integrated into DHIS2"
+      ],
+      "service_integration_opportunities": [
+        "Link ambulance services to CHV early detection and to facility triage for time‑sensitive referrals (e.g., stroke, trauma, obstetric emergencies)"
+      ],
+      "infrastructure_requirements": [
+        "Ambulance vehicles, communication infrastructure, fuel/subsidy schemes, pre‑hospital care training"
+      ]
+    },
+    "implementation_pathway": {
+      "county_integration": "Counties develop ambulance service plans, integrate with emergency call centres and hospital on‑call rosters",
+      "funding_mechanisms": "Emergency, Chronic and Critical Illness Fund for acute transport start‑up; SHIF to reimburse transfers tied to approved referral pathways; county budgets for recurrent costs",
+      "timeline_realistic": "6–36 months (urban hubs faster; remote county coverage requires phased scale up over 18–36 months)"
+    }
+  },
+  {
+    "gap_id": "COVERAGE_CARE_LEVEL_02",
+    "gap_category": "care_level",
+    "gap_type": "Emergency unit readiness at secondary hospitals",
+    "coverage_priority": "HIGH",
+    "description": "Many Level 4 county hospitals lack organized emergency units with trained staff, triage systems, essential emergency drugs and equipment, compromising timely acute care for trauma, sepsis and acute NCD events.",
+    "kenya_health_system_context": {
+      "service_delivery_platform": "Level 4 (county hospitals) with referral links to Level 5",
+      "population_impact": "Urban and rural populations reliant on county hospitals for emergency care",
+      "geographic_scope": "County hospitals nationally; worse in smaller counties with limited budgets",
+      "current_coverage_level": "Estimated fully operational emergency units in Level 4 hospitals ~40%"
+    },
+    "who_essential_services_gap": "Emergency care services (facility readiness and emergency treatment)",
+    "coverage_completeness_analysis": {
+      "service_availability": "Limited",
+      "geographic_accessibility": "Moderate (hospitals exist but not fully functional emergency units)",
+      "financial_accessibility": "Mixed — some services require OOP when commodities lacking",
+      "quality_adequacy": "Suboptimal (triage and resuscitation protocols inconsistently applied)"
+    },
+    "integration_with_clinical_gaps": "Complementary to EmONC gaps (obstetric emergencies) but broader — covering trauma, surgical and medical emergencies not limited to maternal/newborn care.",
+    "recommended_coverage_interventions": {
+      "immediate_coverage_expansion": [
+        "Roll out WHO Basic Emergency Care training for facility teams and establish triage areas in Level 4 hospitals",
+        "Equip emergency units with essential resuscitation kits and emergency drug stocks"
+      ],
+      "service_integration_opportunities": [
+        "Integrate emergency data into county health information systems and SHIF reporting to track outcomes"
+      ],
+      "infrastructure_requirements": [
+        "Designated emergency unit space, oxygen supply reliability, basic monitoring equipment"
+      ]
+    },
+    "implementation_pathway": {
+      "county_integration": "Counties prioritize emergency unit upgrades in annual plans; integrate with ambulance referral pathways",
+      "funding_mechanisms": "SHIF and Emergency Fund for capital/initial kit purchases; PHC Fund and county recurrent budgets for staffing and maintenance",
+      "timeline_realistic": "6–24 months (training and basic equipment within 6–12 months; physical renovations 12–24 months)"
+    }
+  },
+  {
+    "gap_id": "COVERAGE_SERVICE_CATEGORY_04",
+    "gap_category": "service_category",
+    "gap_type": "Intensive care and critical care capacity (adult and paediatric)",
+    "coverage_priority": "HIGH",
+    "description": "Limited ICU beds, ventilators, trained critical care nurses and physicians at Level 4–6 resulting in constrained capacity to manage severe medical and surgical conditions, seasonal surges and public health emergencies.",
+    "kenya_health_system_context": {
+      "service_delivery_platform": "Level 4–6 (county, referral and national hospitals)",
+      "population_impact": "Severe cases across age groups, including trauma, sepsis, severe NCD exacerbations and perioperative critical care",
+      "geographic_scope": "Concentrated in urban and referral centres (Nairobi, Mombasa, Kisumu); northern and rural counties largely unserved",
+      "current_coverage_level": "Estimated functional ICU bed coverage nationally ~20% of estimated need"
+    },
+    "who_essential_services_gap": "Curative services (critical care and management of severe illness)",
+    "coverage_completeness_analysis": {
+      "service_availability": "Limited",
+      "geographic_accessibility": "Poor outside tertiary urban centres",
+      "financial_accessibility": "Expensive due to high-intensity care; limited SHIF tariffs for critical care",
+      "quality_adequacy": "Variable — equipment without trained staff reduces effectiveness"
+    },
+    "integration_with_clinical_gaps": "Relates to Critical Illness Fund entries in policy but focuses on expanding capacity and equitable geographic distribution rather than clinical guidelines.",
+    "recommended_coverage_interventions": {
+      "immediate_coverage_expansion": [
+        "Scale up high‑dependency units at Level 4 hospitals with basic ventilatory support and oxygen monitoring",
+        "Train multidisciplinary teams (nurses, anaesthetists) in critical care protocols"
+      ],
+      "service_integration_opportunities": [
+        "Link critical care capacity planning to surgical, obstetric and emergency services to maximize use",
+        "Use tele‑ICU mentorship from Level 6 national referral centres"
+      ],
+      "infrastructure_requirements": [
+        "Oxygen plants, reliable power, patient monitoring, ventilators, staff accommodation for shift patterns"
+      ]
+    },
+    "implementation_pathway": {
+      "county_integration": "Counties designate at least one Level 4 hospital as HDU hub; coordinate with regional referral hospitals for mentorship",
+      "funding_mechanisms": "Emergency, Chronic and Critical Illness Fund for capital; SHIF to define critical care reimbursement packages; county budgets for staffing",
+      "timeline_realistic": "18–36 months (HDU scale up feasible in 18 months; full ICU expansion longer)"
+    }
+  },
+  {
+    "gap_id": "COVERAGE_SERVICE_CATEGORY_05",
+    "gap_category": "service_category",
+    "gap_type": "Surgical workforce distribution and theatre capacity at county level",
+    "coverage_priority": "HIGH",
+    "description": "Despite an extensive annex of surgical procedures, there is uneven distribution of surgeons, anaesthetists and functioning theatres across counties, limiting access to essential, safe surgery within timely windows.",
+    "kenya_health_system_context": {
+      "service_delivery_platform": "Level 3–4 primarily (theatres in Level 4 county hospitals and Level 5 regional hospitals)",
+      "population_impact": "Patients needing general, obstetric, orthopaedic, and emergency surgery; rural populations disproportionately affected",
+      "geographic_scope": "Urban concentration of specialists in Nairobi, Mombasa and Kisumu; shortage in northern and small rural counties",
+      "current_coverage_level": "Access to essential surgical care within 2 hours estimated ~60% nationally but much lower in remote counties"
+    },
+    "who_essential_services_gap": "Curative services (surgical services and safe anaesthesia)",
+    "coverage_completeness_analysis": {
+      "service_availability": "Limited (procedures listed but capacity uneven)",
+      "geographic_accessibility": "Poor in remote counties; travel often >2 hours",
+      "financial_accessibility": "Expensive for patients when private providers used",
+      "quality_adequacy": "Variable — infection prevention and anaesthesia safety standards not uniform"
+    },
+    "integration_with_clinical_gaps": "Complements surgical entries in policy annex and the surgical services package but focuses on human resources and equitable distribution rather than procedural lists.",
+    "recommended_coverage_interventions": {
+      "immediate_coverage_expansion": [
+        "County surgical workforce plans including incentives/retention packages for specialists to underserved counties",
+        "Strengthen surgical hubs with outreach/supervision from Level 5 hospitals"
+      ],
+      "service_integration_opportunities": [
+        "Integrate surgical outreach with CHV referrals, ambulance networks and rehabilitation services"
+      ],
+      "infrastructure_requirements": [
+        "Functional theatres, sterilization equipment, blood bank linkages, perioperative monitoring"
+      ]
+    },
+    "implementation_pathway": {
+      "county_integration": "Counties create surgical service plans and partner with referral hospitals for mentorship and periodic specialist outreach camps",
+      "funding_mechanisms": "SHIF tariff alignment for surgical packages; county capital investments and PHC fund for outreach logistics",
+      "timeline_realistic": "12–36 months (staffing strategies over 12–24 months; infrastructure upgrades 18–36 months)"
+    }
+  },
+  {
+    "gap_id": "COVERAGE_SERVICE_CATEGORY_06",
+    "gap_category": "service_category",
+    "gap_type": "Blood transfusion services and safe blood availability",
+    "coverage_priority": "MEDIUM",
+    "description": "Inadequate blood collection, screening, storage and distribution systems lead to shortages at county hospitals, affecting obstetric haemorrhage, trauma and surgical safety.",
+    "kenya_health_system_context": {
+      "service_delivery_platform": "Level 4–6 hospitals; collection at designated centres",
+      "population_impact": "Pregnant/postpartum women, trauma patients, surgical patients",
+      "geographic_scope": "Regional disparities: better supply near national/regional centres; shortages in remote counties",
+      "current_coverage_level": "Availability of screened blood components for emergencies estimated ~40–60% depending on county"
+    },
+    "who_essential_services_gap": "Curative services (safe blood and transfusion services)",
+    "coverage_completeness_analysis": {
+      "service_availability": "Limited",
+      "geographic_accessibility": "Poor in remote/rural counties",
+      "financial_accessibility": "Often subsidized but logistic costs high; occasional OOP for private blood",
+      "quality_adequacy": "Suboptimal in some storage/ screening practices"
+    },
+    "integration_with_clinical_gaps": "Supports emergency obstetric and surgical services by ensuring availability of blood but focuses on systems for collection and distribution rather than clinical transfu­sion protocols.",
+    "recommended_coverage_interventions": {
+      "immediate_coverage_expansion": [
+        "Strengthen county blood collection drives and community donor pools; ensure consistent screening capacity",
+        "Establish regional blood storage hubs with reliable cold chain"
+      ],
+      "service_integration_opportunities": [
+        "Coordinate blood availability with referral protocols and ambulance dispatch for time‑sensitive transfers"
+      ],
+      "infrastructure_requirements": [
+        "Cold chain equipment for blood storage, testing labs, transport logistics"
+      ]
+    },
+    "implementation_pathway": {
+      "county_integration": "Counties support blood donor mobilisation and maintain cold storage; integrate with regional hub operations",
+      "funding_mechanisms": "SHIF to cover costs of transfusion during accredited episodes; county health budgets and donor support for capital equipment",
+      "timeline_realistic": "12–24 months for hub establishment and system strengthening"
+    }
+  },
+  {
+    "gap_id": "COVERAGE_POPULATION_GROUP_01",
+    "gap_category": "population_group",
+    "gap_type": "Continuity of TB services including DR‑TB in remote areas",
+    "coverage_priority": "HIGH",
+    "description": "Diagnosis, linkage to care and adherence support for TB and drug‑resistant TB remain inconsistent in remote counties, with delays in laboratory turnaround and limited access to new TB diagnostics and second‑line drugs at Level 4 and below.",
+    "kenya_health_system_context": {
+      "service_delivery_platform": "Level 2–5 (case detection at primary; treatment at higher levels depending on regimen)",
+      "population_impact": "Rural populations, PLHIV, marginalized communities, contacts of index TB cases",
+      "geographic_scope": "Higher burden and service gaps in populous informal settlements and remote counties (coastal and ASAL zones)",
+      "current_coverage_level": "Estimated case detection and treatment completion vary; overall effective coverage ~60–70% with DR‑TB lower (~30–50% depending on county)"
+    },
+    "who_essential_services_gap": "Preventive and curative services (TB detection and continuity of care)",
+    "coverage_completeness_analysis": {
+      "service_availability": "Limited for DR‑TB services; moderate for drug‑sensitive TB",
+      "geographic_accessibility": "Limited in remote areas due to lab access and stock of second‑line drugs",
+      "financial_accessibility": "Treatment ostensibly free but access costs and travel pose barriers",
+      "quality_adequacy": "Variable — delays in diagnostics and follow‑up"
+    },
+    "integration_with_clinical_gaps": "Complements HIV service continuity and community health work; distinct from clinical priority gaps listed earlier.",
+    "recommended_coverage_interventions": {
+      "immediate_coverage_expansion": [
+        "Expand GeneXpert/rapid diagnostic networks with sample referral systems; decentralize DR‑TB treatment support including community DSD models",
+        "Provide adherence support (digital adherence technologies, CHV follow‑up)"
+      ],
+      "service_integration_opportunities": [
+        "Integrate TB screening with HIV, maternal and NCD clinics and CHV outreach"
+      ],
+      "infrastructure_requirements": [
+        "Specimen transport networks, cold chain for some medications, decentralised storage and dispensing points"
+      ]
+    },
+    "implementation_pathway": {
+      "county_integration": "Counties integrate TB services in PHC packages, allocate staff for sample transport and community follow‑up",
+      "funding_mechanisms": "PHC Fund for community adherence models; SHIF for reimbursing facility TB management episodes; donor transition support for diagnostics",
+      "timeline_realistic": "6–24 months (diagnostics expansion faster; DR‑TB decentralization over 12–24 months)"
+    }
+  },
+  {
+    "gap_id": "COVERAGE_SERVICE_CATEGORY_07",
+    "gap_category": "service_category",
+    "gap_type": "NCD primary care management (hypertension, diabetes, asthma)",
+    "coverage_priority": "HIGH",
+    "description": "Weak chronic care models at primary care level — poor screening, treatment initiation, follow‑up, monitoring and medication continuity for NCDs — leading to high uncontrolled disease and avoidable complications.",
+    "kenya_health_system_context": {
+      "service_delivery_platform": "Level 2–4 (primary care and county hospitals)",
+      "population_impact": "Adults (working age and older adults), urban poor with rising NCD burden",
+      "geographic_scope": "Nationwide; urban and peri‑urban counties show high prevalence but rural management systems weaker",
+      "current_coverage_level": "Effective coverage for hypertension/diabetes (diagnosed and controlled) estimated ~30–40%"
+    },
+    "who_essential_services_gap": "Curative and preventive services (chronic disease management and screening)",
+    "coverage_completeness_analysis": {
+      "service_availability": "Limited",
+      "geographic_accessibility": "Moderate in urban areas, poor in rural counties",
+      "financial_accessibility": "Limited — OOP for medicines common when public stocks fail",
+      "quality_adequacy": "Suboptimal (no standardised chronic care follow‑up or registries at PHC level)"
+    },
+    "integration_with_clinical_gaps": "Differs from specialist-level NCD interventions (e.g., cardiac rehab) by focusing on longitudinal primary care systems to prevent progression to specialist needs.",
+    "recommended_coverage_interventions": {
+      "immediate_coverage_expansion": [
+        "Introduce standardized NCD chronic care pathways at Level 2–3 with registries, appointment systems, and simplified treatment algorithms",
+        "Ensure consistent supply of core NCD medicines (antihypertensives, metformin, insulin where indicated)"
+      ],
+      "service_integration_opportunities": [
+        "Combine NCD screening with maternal/child clinics and HIV platforms for integrated multi‑morbid care",
+        "Use CHVs for adherence support and home follow‑up"
+      ],
+      "infrastructure_requirements": [
+        "Patient registers/EMR modules for NCDs, point‑of‑care HbA1c/glucose monitoring, training modules for clinical staff"
+      ]
+    },
+    "implementation_pathway": {
+      "county_integration": "Counties adopt NCD targets and integrate chronic care into PHC incentives and outreach schedules",
+      "funding_mechanisms": "PHC Fund to underwrite primary NCD medicines and clinics; SHIF to define and reimburse chronic care consultations and meds",
+      "timeline_realistic": "12–36 months for establishing registries, medication supply chains and staff capacity"
+    }
+  },
+  {
+    "gap_id": "COVERAGE_SERVICE_CATEGORY_08",
+    "gap_category": "service_category",
+    "gap_type": "Rehabilitation services beyond cardiac (stroke, musculoskeletal, prosthetics)",
+    "coverage_priority": "MEDIUM",
+    "description": "Rehabilitation services (physiotherapy, occupational therapy, prosthetics/orthotics, community‑based rehab) are scarce at Level 3–4, limiting recovery after stroke, injuries and surgery.",
+    "kenya_health_system_context": {
+      "service_delivery_platform": "Level 3–5 (some services at referral centres), community-based rehabilitation at Level 1 limited",
+      "population_impact": "Stroke survivors, trauma victims, people with disabilities, post‑surgical patients",
+      "geographic_scope": "Concentrated in urban referral hospitals; rural counties lack accessible services",
+      "current_coverage_level": "Estimated access to structured rehabilitation services ~25%"
+    },
+    "who_essential_services_gap": "Rehabilitative services",
+    "coverage_completeness_analysis": {
+      "service_availability": "Limited",
+      "geographic_accessibility": "Poor outside major urban centres",
+      "financial_accessibility": "Often expensive with OOP for private rehab",
+      "quality_adequacy": "Variable — few trained therapists and no standardized PHC rehab protocols"
+    },
+    "integration_with_clinical_gaps": "Complements but is distinct from cardiac rehabilitation gap by addressing a broader range of rehabilitation needs across conditions.",
+    "recommended_coverage_interventions": {
+      "immediate_coverage_expansion": [
+        "Train and deploy mid‑level rehabilitation workers to county hospitals; develop basic physiotherapy services at Level 3",
+        "Establish community‑based rehabilitation linkages using CHVs"
+      ],
+      "service_integration_opportunities": [
+        "Integrate rehab referrals from surgical, trauma, and NCD clinics; include prosthetics in surgical care pathways"
+      ],
+      "infrastructure_requirements": [
+        "Rehab workspaces, basic therapy equipment, assistive device procurement and maintenance"
+      ]
+    },
+    "implementation_pathway": {
+      "county_integration": "Counties include rehabilitation in essential PHC package and workforce plans; partner with NGOs for prosthetics programs",
+      "funding_mechanisms": "PHC Fund for basic rehab services; SHIF to include rehab encounter tariffs for higher‑level services",
+      "timeline_realistic": "12–36 months (training and basic services within 12 months; prosthetics scale up 24–36 months)"
+    }
+  },
+  {
+    "gap_id": "COVERAGE_SERVICE_CATEGORY_09",
+    "gap_category": "service_category",
+    "gap_type": "Palliative and end‑of‑life care integration",
+    "coverage_priority": "MEDIUM",
+    "description": "Palliative care services (pain management, psychosocial support, home‑based palliative care) are limited and not integrated into PHC or SHIF benefit packages, leaving terminal patients without standardized supportive care.",
+    "kenya_health_system_context": {
+      "service_delivery_platform": "Level 2–6 (home‑based care via CHVs limited), hospices concentrated in urban areas",
+      "population_impact": "Patients with advanced cancer, progressive NCDs, HIV with advanced disease, elderly",
+      "geographic_scope": "Concentrated in urban centres; rural counties lack services",
+      "current_coverage_level": "Palliative care coverage estimated ~20% nationally"
+    },
+    "who_essential_services_gap": "Palliative services",
+    "coverage_completeness_analysis": {
+      "service_availability": "Absent to limited",
+      "geographic_accessibility": "Poor outside urban centres",
+      "financial_accessibility": "Often OOP or NGO‑dependent",
+      "quality_adequacy": "Suboptimal (limited training, analgesic access challenges)"
+    },
+    "integration_with_clinical_gaps": "Differs from clinical cure‑focused gaps (e.g., cancer treatment) by addressing symptom relief and quality of life needs; should be linked to those services.",
+    "recommended_coverage_interventions": {
+      "immediate_coverage_expansion": [
+        "Incorporate basic palliative care training into PHC worker curricula and CHV outreach; ensure morphine/analgesic availability at Level 4",
+        "Develop home‑based palliative care protocols and referral linkages"
+      ],
+      "service_integration_opportunities": [
+        "Link palliative care to NCD, HIV and oncology services for continuum of care"
+      ],
+      "infrastructure_requirements": [
+        "Medication procurement (opioid balance and regulation), psychosocial support teams, tele‑palliative consultation systems"
+      ]
+    },
+    "implementation_pathway": {
+      "county_integration": "Counties adopt palliative care guidelines, integrate into PHC capacity building and home care services",
+      "funding_mechanisms": "PHC Fund for community‑based palliative care; SHIF to reimburse facility palliative consultations and medications",
+      "timeline_realistic": "6–24 months (training and medication access quickly; service scale‑up over 12–24 months)"
+    }
+  },
+  {
+    "gap_id": "COVERAGE_POPULATION_GROUP_02",
+    "gap_category": "population_group",
+    "gap_type": "Geriatric services and long‑term care",
+    "coverage_priority": "MEDIUM",
+    "description": "Lack of age‑appropriate services, geriatric assessment, dementia care and long‑term care options in PHC and county hospital settings as the older population increases.",
+    "kenya_health_system_context": {
+      "service_delivery_platform": "Level 2–4 (primary care and county hospitals), limited community long‑term care",
+      "population_impact": "Elderly population, people with chronic multimorbidity, dementia patients",
+      "geographic_scope": "Nationwide, but access worse in rural counties with high out‑migration of working age adults",
+      "current_coverage_level": "Estimated geriatric service availability ~15%"
+    },
+    "who_essential_services_gap": "Preventive and curative services across the life course (geriatric care)",
+    "coverage_completeness_analysis": {
+      "service_availability": "Absent to limited",
+      "geographic_accessibility": "Poor especially in rural settings",
+      "financial_accessibility": "High OOP for long‑term care options",
+      "quality_adequacy": "Suboptimal (few trained staff and no guidelines at PHC)"
+    },
+    "integration_with_clinical_gaps": "Complementary to NCD chronic care gap; focuses on age‑tailored assessments, polypharmacy and long‑term support rather than disease‑specific clinical interventions.",
+    "recommended_coverage_interventions": {
+      "immediate_coverage_expansion": [
+        "Introduce basic geriatric screening in PHC clinics, training on polypharmacy and dementia recognition",
+        "Pilot community‑based long‑term care and caregiver support models using CHVs"
+      ],
+      "service_integration_opportunities": [
+        "Integrate geriatric assessments into NCD clinics and home care programs"
+      ],
+      "infrastructure_requirements": [
+        "Training materials, home care kits, referral links to social services"
+      ]
+    },
+    "implementation_pathway": {
+      "county_integration": "Counties include geriatric care elements in PHC packages and social support programmes",
+      "funding_mechanisms": "PHC Fund for community and primary geriatric services; SHIF reimbursement of geriatric clinic visits where defined",
+      "timeline_realistic": "12–36 months (pilots 12 months; scale 24–36 months)"
+    }
+  },
+  {
+    "gap_id": "COVERAGE_POPULATION_GROUP_03",
+    "gap_category": "population_group",
+    "gap_type": "Adolescent‑friendly health services (sexual/reproductive health, substance use, mental health linkage)",
+    "coverage_priority": "HIGH",
+    "description": "Limited availability of confidential, accessible and age‑appropriate services for adolescents including contraception, STI services, mental health screening and substance use counselling.",
+    "kenya_health_system_context": {
+      "service_delivery_platform": "Level 2–4 (PHC clinics, youth centres), community outreach",
+      "population_impact": "Adolescents (10–19 years), particularly girls in rural and informal urban settings",
+      "geographic_scope": "Nationwide; hotspots in counties with early pregnancy and school dropout rates",
+      "current_coverage_level": "Adolescent‑friendly service coverage estimated ~30%"
+    },
+    "who_essential_services_gap": "Preventive and curative services for adolescents (SRH and mental health linkage)",
+    "coverage_completeness_analysis": {
+      "service_availability": "Limited",
+      "geographic_accessibility": "Moderate in urban centres, poor in rural areas",
+      "financial_accessibility": "Often free but confidentiality and acceptability barriers reduce effective access",
+      "quality_adequacy": "Suboptimal (staff not trained in adolescent‑friendly approaches)"
+    },
+    "integration_with_clinical_gaps": "Overlaps with mental health integration priorities but emphasises adolescent‑specific service models and SRH rather than adult mental health systems.",
+    "recommended_coverage_interventions": {
+      "immediate_coverage_expansion": [
+        "Establish adolescent‑friendly corners in PHC facilities with trained staff and youth outreach services",
+        "Scale school‑based SRH and mental health promotion with referral linkages"
+      ],
+      "service_integration_opportunities": [
+        "Use CHVs and community outreach to link adolescents to services; integrate SRH with HPV vaccination and NCD screening as age‑appropriate"
+      ],
+      "infrastructure_requirements": [
+        "Private consultation spaces, youth outreach kits, youth‑friendly IEC materials"
+      ]
+    },
+    "implementation_pathway": {
+      "county_integration": "Counties incorporate youth health targets into PHC service packages and partner with education and youth departments",
+      "funding_mechanisms": "PHC Fund for adolescent service operational costs; SHIF to include adolescent consultations in benefit package",
+      "timeline_realistic": "6–18 months for setting up youth corners and training"
+    }
+  },
+  {
+    "gap_id": "COVERAGE_SERVICE_CATEGORY_10",
+    "gap_category": "service_category",
+    "gap_type": "Child health preventive services and IMCI fidelity (excluding pneumonia oxygen)",
+    "coverage_priority": "HIGH",
+    "description": "While vaccination coverage is relatively high in many counties, other child preventive services — growth monitoring, Integrated Management of Childhood Illness (IMCI) implementation, nutrition screening and community follow‑up — are inconsistently delivered.",
+    "kenya_health_system_context": {
+      "service_delivery_platform": "Level 1–3 (community, dispensary, health centre)",
+      "population_impact": "Children under 5 years, caregivers in rural and informal urban settings",
+      "geographic_scope": "Nationwide gaps, worse in remote counties with pastoralist populations",
+      "current_coverage_level": "Composite coverage for growth monitoring/IMCI fidelity estimated ~60%"
+    },
+    "who_essential_services_gap": "Preventive and curative child health services",
+    "coverage_completeness_analysis": {
+      "service_availability": "Limited to moderate",
+      "geographic_accessibility": "Variable — outreach services inconsistent",
+      "financial_accessibility": "Mostly affordable but poor service availability drives access issues",
+      "quality_adequacy": "Suboptimal (IMCI training and supervision gaps)"
+    },
+    "integration_with_clinical_gaps": "Avoids duplication with pneumonia/oxygen clinical gap by focusing on broader child preventive and follow‑up systems rather than oxygen therapy.",
+    "recommended_coverage_interventions": {
+      "immediate_coverage_expansion": [
+        "Reinstate regular growth monitoring outreach and strengthen IMCI training + mentorship at Level 2–3",
+        "Link community malnutrition screening to rapid referral and ready‑to‑use therapeutic food supply chains"
+      ],
+      "service_integration_opportunities": [
+        "Combine child health outreaches with immunisation days and maternal health visits"
+      ],
+      "infrastructure_requirements": [
+        "Growth monitoring equipment, nutrition supply chains, CHV referral tools"
+      ]
+    },
+    "implementation_pathway": {
+      "county_integration": "Counties schedule routine outreaches and include child health performance in PHC reporting",
+      "funding_mechanisms": "PHC Fund for outreach and commodities; SHIF to reimburse facility child health visits under defined package",
+      "timeline_realistic": "6–18 months"
+    }
+  },
+  {
+    "gap_id": "COVERAGE_SERVICE_CATEGORY_11",
+    "gap_category": "service_category",
+    "gap_type": "Diagnostic imaging equity for routine imaging (X‑ray, ultrasound) at lower levels",
+    "coverage_priority": "MEDIUM",
+    "description": "Policy indicates imaging is concentrated at Level 4–6; however, lack of routine x‑ray and ultrasound at Level 3/4 limits timely diagnosis of common conditions (fractures, obstetric scans, abdominal emergencies).",
+    "kenya_health_system_context": {
+      "service_delivery_platform": "Level 3–4 (health centres and county hospitals) primarily affected",
+      "population_impact": "Patients requiring basic imaging — trauma patients, pregnant women needing ultrasound, patients with chest symptoms requiring x‑ray",
+      "geographic_scope": "Most counties have limited lower‑level imaging; urban referral centres better equipped",
+      "current_coverage_level": "Basic imaging availability at Level 3–4 estimated ~40%"
+    },
+    "who_essential_services_gap": "Curative services (diagnostic imaging for essential care)",
+    "coverage_completeness_analysis": {
+      "service_availability": "Limited at lower levels",
+      "geographic_accessibility": "Poor outside Level 4+ equipped facilities",
+      "financial_accessibility": "Out‑of‑pocket or travel costs often required",
+      "quality_adequacy": "Variable — maintenance and radiographer availability issues"
+    },
+    "integration_with_clinical_gaps": "Relates to policy imaging concentration but differs from cancer imaging gaps by focusing on routine imaging needed for common acute care and obstetric services.",
+    "recommended_coverage_interventions": {
+      "immediate_coverage_expansion": [
+        "Provide portable ultrasound units and basic digital x‑ray systems to priority Level 4 hospitals and selected Level 3 hubs",
+        "Train mid‑level staff in focused ultrasound use (e.g., FOCUS, obstetric) and tele‑radiology linkages"
+      ],
+      "service_integration_opportunities": [
+        "Combine imaging with emergency, maternal and trauma services; tele‑interpretation links to Level 5/6 radiologists"
+      ],
+      "infrastructure_requirements": [
+        "Stable power, image PACS or cloud storage solutions, maintenance contracts"
+      ]
+    },
+    "implementation_pathway": {
+      "county_integration": "Counties identify Level 3/4 hubs for imaging upgrade and link with referral hospitals for reporting",
+      "funding_mechanisms": "PHC Fund for portable ultrasound; SHIF to cover imaging tariffs at accredited facilities; targeted capital grants for x‑ray",
+      "timeline_realistic": "6–24 months"
+    }
+  },
+  {
+    "gap_id": "COVERAGE_SERVICE_CATEGORY_12",
+    "gap_category": "service_category",
+    "gap_type": "Health information systems and referral data use",
+    "coverage_priority": "MEDIUM",
+    "description": "Although DHIS2 is deployed, gaps exist in real‑time referral tracking, data quality, interoperability with eLMIS and SHIF claims systems, limiting performance monitoring and resource targeting.",
+    "kenya_health_system_context": {
+      "service_delivery_platform": "All levels (data flow across Level 1–6)",
+      "population_impact": "Entire population — affects planning and resource allocation",
+      "geographic_scope": "National; poorer data quality in remote counties and small facilities",
+      "current_coverage_level": "Reporting coverage ~80% but data quality and interoperability usable for decision‑making ~60%"
+    },
+    "who_essential_services_gap": "Cross‑cutting systems capacity affecting all WHO essential services",
+    "coverage_completeness_analysis": {
+      "service_availability": "Available but not fully fit for purpose",
+      "geographic_accessibility": "Accessible but variable data quality",
+      "financial_accessibility": "N/A (system gap)",
+      "quality_adequacy": "Suboptimal (incomplete, late or inconsistent reporting; poor referral tracking)"
+    },
+    "integration_with_clinical_gaps": "Enables measurement of clinical gaps (e.g., surgical, cancer delays) but is a system gap addressing monitoring rather than direct clinical service delivery.",
+    "recommended_coverage_interventions": {
+      "immediate_coverage_expansion": [
+        "Integrate referral module into DHIS2 with unique identifiers and digital referral tracking from Level 2–6",
+        "Improve data quality through targeted training, audits and feedback loops"
+      ],
+      "service_integration_opportunities": [
+        "Link DHIS2 with eLMIS and SHIF claims to monitor service availability, stockouts and utilization"
+      ],
+      "infrastructure_requirements": [
+        "Connectivity, facility computers/tablets, interoperability middleware and user support"
+      ]
+    },
+    "implementation_pathway": {
+      "county_integration": "Counties institutionalise data quality improvement cycles and use data for resource allocation",
+      "funding_mechanisms": "PHC Fund for facility ICT needs; SHIF administrative budgets for interoperability; partners for technical assistance",
+      "timeline_realistic": "6–18 months for module integration and training"
+    }
+  },
+  {
+    "gap_id": "COVERAGE_GEOGRAPHIC_ACCESS_01",
+    "gap_category": "geographic_access",
+    "gap_type": "Rural and remote county service deserts (northern/ASAL counties)",
+    "coverage_priority": "HIGH",
+    "description": "Geographic inequities leave large areas with minimal facility density and long travel times to any functional health facility, worsening preventable morbidity and mortality.",
+    "kenya_health_system_context": {
+      "service_delivery_platform": "All levels but limited physical facilities in ASAL and border regions",
+      "population_impact": "Pastoralist populations, internally displaced and nomadic groups in Garissa, Wajir, Mandera, Turkana",
+      "geographic_scope": "Northern and ASAL counties, border regions",
+      "current_coverage_level": "Access to a basic health facility within 2 hours in worst‑served counties estimated <50%"
+    },
+    "who_essential_services_gap": "Equitable access to WHO essential services (preventive, curative, emergency)",
+    "coverage_completeness_analysis": {
+      "service_availability": "Poor (few facilities and sparse outreach)",
+      "geographic_accessibility": "Poor (long distances, seasonal barriers)",
+      "financial_accessibility": "Limited (transport and opportunity costs high)",
+      "quality_adequacy": "Suboptimal due to staff shortages and irregular supplies"
+    },
+    "integration_with_clinical_gaps": "Geographic gap exacerbates clinical priority gaps (e.g., delayed cancer diagnosis, EmONC) but focuses on spatial accessibility solutions rather than condition‑specific clinical care.",
+    "recommended_coverage_interventions": {
+      "immediate_coverage_expansion": [
+        "Deploy mobile clinics and scheduled outreach (maternal, immunization, NCD screening) with CHV identification",
+        "Use telemedicine hubs at county hospitals linked to remote outreach points"
+      ],
+      "service_integration_opportunities": [
+        "Coordinate outreach across programs (immunization, TB, NCDs, SRH) to maximise visits",
+        "Cross‑sector linkages with transport and security agencies for access"
+      ],
+      "infrastructure_requirements": [
+        "Mobile clinic vehicles, solar power systems, portable diagnostics, network connectivity"
+      ]
+    },
+    "implementation_pathway": {
+      "county_integration": "County health departments plan outreach schedules aligned with community calendars and partner with NGOs for mobile services",
+      "funding_mechanisms": "PHC Fund for recurrent outreach costs; SHIF to reimburse accredited mobile clinic service packages; donor bridge financing for initial scale",
+      "timeline_realistic": "6–24 months (mobile services and telemedicine pilots within 6–12 months; scale‑up 18–24 months)"
+    }
+  },
+  {
+    "gap_id": "COVERAGE_GEOGRAPHIC_ACCESS_02",
+    "gap_category": "geographic_access",
+    "gap_type": "Urban primary care overcrowding and referral bypassing",
+    "coverage_priority": "MEDIUM",
+    "description": "High patient volumes and perceived low quality at primary care in urban informal settlements lead to bypassing to higher‑level hospitals, creating congestion, longer wait times and inefficiencies.",
+    "kenya_health_system_context": {
+      "service_delivery_platform": "Level 2–4 in urban areas; tertiary hospitals receive excess primary care cases",
+      "population_impact": "Residents of informal settlements in Nairobi, Mombasa, Kisumu, Eldoret",
+      "geographic_scope": "Urban counties with large informal settlements",
+      "current_coverage_level": "Effective primary care usage in urban poor groups estimated ~40% with high bypass rates"
+    },
+    "who_essential_services_gap": "Accessible, quality primary care services",
+    "coverage_completeness_analysis": {
+      "service_availability": "Available but perceived as poor",
+      "geographic_accessibility": "Physically accessible but functionally poor",
+      "financial_accessibility": "Mixed; cost not the sole barrier",
+      "quality_adequacy": "Suboptimal leading to loss of trust and bypassing"
+    },
+    "integration_with_clinical_gaps": "Impacts service utilization patterns that affect specialized services but is a systems and trust issue rather than a clinical content gap.",
+    "recommended_coverage_interventions": {
+      "immediate_coverage_expansion": [
+        "Strengthen staffing, extend hours and provide essential diagnostics at urban PHC facilities",
+        "Public information campaigns and community engagement to rebuild trust in PHC"
+      ],
+      "service_integration_opportunities": [
+        "Link PHC to referral hospitals through appointment and triage systems to reduce unnecessary referrals"
+      ],
+      "infrastructure_requirements": [
+        "Clinic expansion where feasible, patient flow improvements, digital appointment systems"
+      ]
+    },
+    "implementation_pathway": {
+      "county_integration": "Urban counties prioritize PHC strengthening in high‑burden facilities and include utilization metrics in performance contracts",
+      "funding_mechanisms": "PHC Fund for staffing and extended hours; SHIF to incentivize care at accredited primary facilities through differential tariffs",
+      "timeline_realistic": "6–18 months"
+    }
+  },
+  {
+    "gap_id": "COVERAGE_GEOGRAPHIC_ACCESS_03",
+    "gap_category": "geographic_access",
+    "gap_type": "Cross‑border and refugee population health service access",
+    "coverage_priority": "MEDIUM",
+    "description": "Border counties and refugee camps face strained health services with gaps in continuity, financing and integration with county health systems, causing gaps in maternal, child and communicable disease services.",
+    "kenya_health_system_context": {
+      "service_delivery_platform": "County facilities in border counties, health posts in camps, NGO and UNHCR partners",
+      "population_impact": "Refugee populations (Dadaab, Kakuma), cross‑border mobile populations",
+      "geographic_scope": "Border counties (Turkana, Garissa, Kwale, Mandera) and refugee settlements",
+      "current_coverage_level": "Service coverage variable; integrated county access limited — effective coverage for routine services in these populations ~50%"
+    },
+    "who_essential_services_gap": "Essential preventive and curative services for vulnerable populations",
+    "coverage_completeness_analysis": {
+      "service_availability": "Variable (NGO support often fills gaps)",
+      "geographic_accessibility": "Restricted due to administrative and logistic challenges",
+      "financial_accessibility": "Often subsidized by humanitarian partners, but coordination with SHIF limited",
+      "quality_adequacy": "Mixed depending on partner presence"
+    },
+    "integration_with_clinical_gaps": "This gap interacts with maternal and child service gaps and TB/HIV continuity but is focused on population groups with special access needs.",
+    "recommended_coverage_interventions": {
+      "immediate_coverage_expansion": [
+        "Formalize agreements between counties and humanitarian partners to integrate services and data sharing",
+        "Extend PHC outreach and referral pathways to refugee health posts"
+      ],
+      "service_integration_opportunities": [
+        "Leverage CHV networks and NGO resources to provide continuity of care for chronic conditions and vaccinations"
+      ],
+      "infrastructure_requirements": [
+        "Supply chain linkages, interoperable HIS for refugee health data, cold chain in camps"
+      ]
+    },
+    "implementation_pathway": {
+      "county_integration": "Counties coordinate with national government and UNHCR to co‑plan and finance integrated service delivery",
+      "funding_mechanisms": "PHC Fund to support outreach to mixed populations; SHIF policy clarity for reimbursement of services in camps; donor support for transition",
+      "timeline_realistic": "6–24 months depending on coordination complexity"
+    }
+  },
+  {
+    "gap_id": "COVERAGE_SERVICE_CATEGORY_13",
+    "gap_category": "service_category",
+    "gap_type": "Workforce distribution and retention in remote/arid counties",
+    "coverage_priority": "HIGH",
+    "description": "Chronic shortages and high turnover of skilled health workers (nurses, midwives, clinical officers, certain specialists) in remote and arid counties undermine service continuity and quality.",
+    "kenya_health_system_context": {
+      "service_delivery_platform": "All care levels in underserved counties (Level 2–4 primarily affected)",
+      "population_impact": "Residents of northern and ASAL counties; services like maternal health, chronic care and emergency care impacted",
+      "geographic_scope": "ASAL counties, sparsely populated regions, and some islands (Lamu)",
+      "current_coverage_level": "Estimated staffing adequacy in worst counties ~40% of required complement"
+    },
+    "who_essential_services_gap": "Cross‑cutting HRH for WHO essential services",
+    "coverage_completeness_analysis": {
+      "service_availability": "Limited due to staff shortages",
+      "geographic_accessibility": "Poor in remote postings",
+      "financial_accessibility": "N/A (workforce issue)",
+      "quality_adequacy": "Suboptimal due to lack of experienced clinicians and continuous training"
+    },
+    "integration_with_clinical_gaps": "Workforce shortages underpin many clinical gaps (e.g., surgical, obstetric), but this entry targets retention policies and distribution rather than single‑disease clinical interventions.",
+    "recommended_coverage_interventions": {
+      "immediate_coverage_expansion": [
+        "Implement financial and non‑financial incentive packages (housing, hardship allowances, career progression) for remote postings",
+        "Scale telemedicine and specialist outreach to supplement local capacity"
+      ],
+      "service_integration_opportunities": [
+        "Use staff rotation and hub‑and‑spoke mentoring between referral and county hospitals",
+        "Integrate training with continuous professional development credits"
+      ],
+      "infrastructure_requirements": [
+        "Staff housing, reliable utilities, internet connectivity for telemedicine"
+      ]
+    },
+    "implementation_pathway": {
+      "county_integration": "Counties adopt retention packages and link to national bonding/placement policies; partner with training institutions for rural placements",
+      "funding_mechanisms": "County HR budgets augmented by conditional grants; SHIF to reimburse for accredited services that require rural posting incentives",
+      "timeline_realistic": "12–36 months (policy adoption and incentive disbursement 12 months; retention effects observable 24–36 months)"
+    }
+  },
+  {
+    "gap_id": "COVERAGE_SERVICE_CATEGORY_14",
+    "gap_category": "service_category",
+    "gap_type": "Cold chain and vaccine delivery resilience in arid and remote regions",
+    "coverage_priority": "MEDIUM",
+    "description": "Cold chain failures and limited outreach scheduling in hot/arid regions compromise vaccine potency and reduce immunization coverage especially during seasonal mobility of pastoralist populations.",
+    "kenya_health_system_context": {
+      "service_delivery_platform": "Level 1–3 outreach and facility immunization points",
+      "population_impact": "Children and pregnant women in ASAL and remote counties",
+      "geographic_scope": "ASAL counties and hard‑to‑reach sub‑counties",
+      "current_coverage_level": "Routine immunization functional coverage variable; effective cold chain reliability in these areas ~50–60%"
+    },
+    "who_essential_services_gap": "Preventive services (immunization supply chain resilience)",
+    "coverage_completeness_analysis": {
+      "service_availability": "Available but compromised by cold chain lapses",
+      "geographic_accessibility": "Limited during seasonal movements",
+      "financial_accessibility": "Mostly free but indirect costs hinder uptake",
+      "quality_adequacy": "At risk due to cold chain instability"
+    },
+    "integration_with_clinical_gaps": "Supports pneumonia prevention and other immunization‑preventable disease control but is a supply/logistics gap rather than a clinical treatment gap.",
+    "recommended_coverage_interventions": {
+      "immediate_coverage_expansion": [
+        "Deploy solar direct‑drive refrigerators and vaccine carriers suitable for ASAL conditions; schedule flexible outreach aligned with pastoral movement",
+        "Strengthen vaccine stock visibility and cold chain monitoring (remote temperature loggers)"
+      ],
+      "service_integration_opportunities": [
+        "Integrate with mobile clinics providing integrated mother‑child services and NCD screening where feasible",
+        "Coordinate vaccination with food security and livestock outreach programs"
+      ],
+      "infrastructure_requirements": [
+        "Solar cold chain equipment, reliable transport, data loggers and training for cold chain management"
+      ]
+    },
+    "implementation_pathway": {
+      "county_integration": "Counties prioritize cold chain upgrades in their immunization plans and coordinate outreach with community leaders",
+      "funding_mechanisms": "PHC Fund for recurrent outreach costs and cold chain maintenance; partners/donors for initial capital investments; SHIF to cover facility‑based immunizations within benefit package",
+      "timeline_realistic": "6–18 months for equipment deployment and outreach rescheduling"
+    }
+  },
+  {
+    "gap_id": "COVERAGE_GEOGRAPHIC_ACCESS_04",
+    "gap_category": "geographic_access",
+    "gap_type": "Facility distribution and catchment mismatches",
+    "coverage_priority": "MEDIUM",
+    "description": "Facility locations, catchment sizes and service mixes are not systematically aligned with population density and travel patterns leading to underserved pockets even within counties with adequate aggregate facility counts.",
+    "kenya_health_system_context": {
+      "service_delivery_platform": "All facility levels, planning and GIS mapping needed",
+      "population_impact": "Communities living at the margins of facility catchments — often peri‑urban and remote rural hamlets",
+      "geographic_scope": "Scattered nationally; pronounced in rapidly urbanising peri‑urban zones and remote wards",
+      "current_coverage_level": "Effective geographic coverage (population within 2 km/30 min) variable; in many wards <70%"
+    },
+    "who_essential_services_gap": "Access to essential services through appropriate facility placement",
+    "coverage_completeness_analysis": {
+      "service_availability": "Facilities exist but location misalignment reduces functional accessibility",
+      "geographic_accessibility": "Variable with localized poor coverage",
+      "financial_accessibility": "Indirect costs increase when travel distances rise",
+      "quality_adequacy": "Facility quality may be adequate but underutilised due to access barriers"
+    },
+    "integration_with_clinical_gaps": "Affects reach of all clinical services including maternal care and chronic disease management but is a spatial planning and equity gap rather than a clinical capability issue.",
+    "recommended_coverage_interventions": {
+      "immediate_coverage_expansion": [
+        "Conduct facility catchment and travel time GIS mapping at county level to identify service deserts",
+        "Re‑allocate outreach and mobile services to identified gaps and consider facility relocation/upgrades where necessary"
+      ],
+      "service_integration_opportunities": [
+        "Establish satellite clinics or periodic services in underserved wards combining multiple programmatic needs"
+      ],
+      "infrastructure_requirements": [
+        "Geospatial analysis capacity, transport for outreach, temporary clinic infrastructure"
+      ]
+    },
+    "implementation_pathway": {
+      "county_integration": "Counties use mapping to inform annual investment and outreach plans; revise facility placement policies",
+      "funding_mechanisms": "County capital budgets for targeted facility upgrades; PHC Fund for outreach; SHIF to recognise accredited satellite service points",
+      "timeline_realistic": "6–24 months for mapping and initial re‑allocation; infrastructure changes 12–36 months"
+    }
+  },
+  {
+    "gap_id": "COVERAGE_SERVICE_CATEGORY_15",
+    "gap_category": "service_category",
+    "gap_type": "PHC funding and benefit package skew towards higher‑level services",
+    "coverage_priority": "HIGH",
+    "description": "Policy inputs indicate a concentration of SHIF entries and access points at Level 4–6, with limited PHC Fund allocations and primary-care service coverage in the SHIF benefit design — risking underinvestment in first‑contact care essential for UHC.",
+    "kenya_health_system_context": {
+      "service_delivery_platform": "System‑wide financing misalignment affecting Level 1–3 primarily",
+      "population_impact": "All populations, disproportionately affecting those who need primary care the most (rural poor, informal urban)",
+      "geographic_scope": "National policy and benefit design issue with local execution effects",
+      "current_coverage_level": "Proportion of SHIF/benefit emphasis at Level 2–3 currently low; PHC Fund allocations cover limited entitlements — estimated primary care package coverage ~35%"
+    },
+    "who_essential_services_gap": "Health financing and service coverage for preventive and basic curative services",
+    "coverage_completeness_analysis": {
+      "service_availability": "Primary care services available but not adequately funded",
+      "geographic_accessibility": "Physically accessible but limited by service scope and supplies",
+      "financial_accessibility": "Coverage gaps lead to higher OOP and bypassing",
+      "quality_adequacy": "Constrained by limited recurrent funding and human resources"
+    },
+    "integration_with_clinical_gaps": "Touches all clinical gaps by influencing where resources are allocated; distinct from clinical priorities since it is about benefit design and financing skew.",
+    "recommended_coverage_interventions": {
+      "immediate_coverage_expansion": [
+        "Rebalance SHIF benefit package to explicitly define and fund a basic PHC package with clear entitlements at Level 2–3",
+        "Increase PHC Fund allocation to cover core recurrent PHC costs (staff, medicines, diagnostics)"
+      ],
+      "service_integration_opportunities": [
+        "Use SHIF accreditation and reimbursement incentives to encourage cases to be managed at PHC where appropriate",
+        "Align PHC Fund performance indicators with SHIF contracting"
+      ],
+      "infrastructure_requirements": [
+        "Updated benefits management systems, provider payment reforms and claims processing that recognise PHC services"
+      ]
+    },
+    "implementation_pathway": {
+      "county_integration": "Counties revise benefit delivery plans to prioritise PHC, ring‑fence PHC Fund disbursements for primary services",
+      "funding_mechanisms": "PHC Fund to finance recurrent PHC entitlements; SHIF to develop PHC reimbursement tariffs and capitation models; transitional donor support for reform",
+      "timeline_realistic": "6–24 months for benefit redesign and pilots; scale up over 12–36 months"
+    }
+  }
+]
