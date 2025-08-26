@@ -1,0 +1,403 @@
+[
+  {
+    "service_name": "Cutaneous ureterostomy",
+    "specialty": "Urological",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Major urinary diversion requiring OR, anesthesia and postop support; tariff (~270k) reasonable for a tertiary setting."
+  },
+  {
+    "service_name": "Direct visual urethrotomy",
+    "specialty": "Urological",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Endoscopic outpatient/short-stay procedure; requires endoscopy suite and sedation — tariff (56k) sufficient for level 4–5."
+  },
+  {
+    "service_name": "Epispadia urethroplasty",
+    "specialty": "Urological",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Complex reconstructive pediatric surgery needing specialized expertise; tariff (420k) appropriate for tertiary care."
+  },
+  {
+    "service_name": "Excision and graft peyronies repair",
+    "specialty": "Urological",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Reconstructive penile surgery with grafting requires OR and specialist; tariff (396k) aligns with resource needs."
+  },
+  {
+    "service_name": "Excision of epididymal cyst",
+    "specialty": "Urological",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Elective scrotal procedure under regional/general anaesthesia; tariff (195k) is generous and covers expected costs."
+  },
+  {
+    "service_name": "Excision of patent urachus",
+    "specialty": "Urological",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Often pediatric abdominal procedure requiring anesthesia and inpatient care; tariff (250k) appropriate."
+  },
+  {
+    "service_name": "Female urethral diverticulectomy",
+    "specialty": "Urological",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Specialist reconstructive procedure with risk of fistula/stricture; tariff (320k) reasonable for tertiary care."
+  },
+  {
+    "service_name": "Femoral hernia repair",
+    "specialty": "Urological",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Common general surgical procedure requiring anesthesia and OR; tariff (180k) is sufficient."
+  },
+  {
+    "service_name": "Flexible cystoscopy and removal of JJ stent",
+    "specialty": "Urological",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Office/endoscopy suite procedure; tariff (35k) adequate for procedure and short observation."
+  },
+  {
+    "service_name": "Flexible cystoscopy and surveillance for bladder cancer",
+    "specialty": "Urological",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Repeat outpatient surveillance requiring endoscopy and possible biopsy; tariff (33.6k) reasonable for surveillance visit."
+  },
+  {
+    "service_name": "Flexible ureterorenoscopy and laser ablation of ureteric or renal neoplasm",
+    "specialty": "Urological",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Advanced endoscopic oncologic procedure requiring laser, disposables and senior staff; tariff (201.6k) aligns with costs."
+  },
+  {
+    "service_name": "Flexible ureterorenoscopy and laser lithotripsy",
+    "specialty": "Urological",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Resource-intensive endourology (laser, scopes, disposables); tariff (201.6k) adequate for high-level facility."
+  },
+  {
+    "service_name": "Flexible ureteroscopy",
+    "specialty": "Urological",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Endoscopic procedure needing expensive disposables and scope maintenance; tariff (120k) likely underestimates true costs for tertiary setting."
+  },
+  {
+    "service_name": "Flexible urethrocystoscopy",
+    "specialty": "Urological",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Diagnostic/therapeutic cystoscopy in endoscopy suite; tariff (70k) covers staffing and consumables."
+  },
+  {
+    "service_name": "Fournier's gangrene necrosectomy",
+    "specialty": "Urological",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Emergency extensive debridement with ICU/critical care needs; tariff (180k) reasonable though post-op care may increase costs."
+  },
+  {
+    "service_name": "Graft urethroplasty",
+    "specialty": "Urological",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Complex reconstructive urethral surgery requiring specialist team and inpatient care; tariff (280k) appropriate."
+  },
+  {
+    "service_name": "Hydrocelectomy",
+    "specialty": "Urological",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Common elective scrotal procedure; tariff (75k) sufficient for OR and short stay."
+  },
+  {
+    "service_name": "Hypospadia urethroplasty",
+    "specialty": "Urological",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Pediatric reconstructive procedure with need for specialist anaesthesia and follow-up; tariff (202k) is appropriate."
+  },
+  {
+    "service_name": "Ileal replacement of ureter",
+    "specialty": "Urological",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Major reconstructive bowel-urinary surgery requiring tertiary facilities; tariff (280k) aligned with complexity."
+  },
+  {
+    "service_name": "Inguinal hernia repair",
+    "specialty": "Urological",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Routine general surgical procedure; tariff (56k) adequate for repair and perioperative care."
+  },
+  {
+    "service_name": "Inguinal ochidopexy",
+    "specialty": "Urological",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Common paediatric/urology procedure; tariff (44.8k) covers anaesthesia and OR time."
+  },
+  {
+    "service_name": "Insertion of artificial urethral sphincter",
+    "specialty": "Urological",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Complex implant procedure with device cost and long-term follow-up; tariff (1.2M) appears to reflect device and surgical costs but device procurement/maintenance should be confirmed."
+  },
+  {
+    "service_name": "Insertion of female urethral sling",
+    "specialty": "Urological",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Sling/mesh procedure requires OR and possible device costs; tariff (300k) is consistent with tertiary provision."
+  },
+  {
+    "service_name": "Intravesical instillation of chemotherapy for bladder cancer",
+    "specialty": "Urological",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Outpatient chemo instillation with safety and disposables; tariff (45k) adequate for drug and administration in level 4–5."
+  },
+  {
+    "service_name": "JJ stent placement",
+    "specialty": "Urological",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Endourological procedure often done in day-case; tariff (56k) appropriate for stent and anaesthesia."
+  },
+  {
+    "service_name": "Laparoscopic ablation of renal cyst",
+    "specialty": "Urological",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Minimally invasive renal procedure needing laparoscopy; tariff (250k) fits tertiary lap capability."
+  },
+  {
+    "service_name": "Laparoscopic adrenalectomy",
+    "specialty": "Urological",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Requires advanced laparoscopy and perioperative endocrine support; tariff (168k) likely underestimates resource needs."
+  },
+  {
+    "service_name": "Laparoscopic donor nephrectomy",
+    "specialty": "Urological",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Complex procedure with high standards for donor safety; tariff (200k) is borderline but acceptable for a transplant-capable centre."
+  },
+  {
+    "service_name": "Laparoscopic ochidopexy",
+    "specialty": "Urological",
+    "service_name": "Laparoscopic ochidopexy",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Minimally invasive orchidopexy; tariff (56k) reasonable for laparoscopy in a secondary/tertiary centre."
+  },
+  {
+    "service_name": "Laparoscopic partial nephrectomy",
+    "specialty": "Urological",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Nephron-sparing oncologic surgery requiring advanced lap skills; tariff (325k) appropriate."
+  },
+  {
+    "service_name": "Laparoscopic pyelolithotomy",
+    "specialty": "Urological",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Laparoscopic stone surgery needs lap setup and disposables; tariff (168k) may be low for tertiary costs."
+  },
+  {
+    "service_name": "Laparoscopic pyeloplasty",
+    "specialty": "Urological",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Reconstructive lap procedure requiring experienced team; tariff (145.6k) likely underfunds required OR/time and disposables."
+  },
+  {
+    "service_name": "Laparoscopic radical nephrectomy",
+    "specialty": "Urological",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Major oncologic laparoscopy; tariff (280k) appropriate for tertiary facility."
+  },
+  {
+    "service_name": "Laparoscopic radical nephroureterectomy",
+    "specialty": "Urological",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Complex oncologic procedure with long OR time and potential stenting; tariff (145.6k) below expected tertiary cost."
+  },
+  {
+    "service_name": "Laparoscopic radical ochidectomy",
+    "specialty": "Urological",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Oncologic orchiectomy via laparoscopy requires perioperative support; tariff (134.4k) is low for tertiary provision."
+  },
+  {
+    "service_name": "Laparoscopic radical prostatectomy",
+    "specialty": "Urological",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Complex oncologic laparoscopy with long OR and specialized team; tariff (250k) reasonable for referral centres."
+  },
+  {
+    "service_name": "Laparoscopic simple nephrectomy",
+    "specialty": "Urological",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Elective lap nephrectomy requires OR and imaging support; tariff (145.6k) probably underfunds tertiary costs."
+  },
+  {
+    "service_name": "Laparoscopic ureterolithotomy",
+    "specialty": "Urological",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Minimally invasive ureteral stone removal; tariff (275k) adequate for required consumables and OR time."
+  },
+  {
+    "service_name": "Laparoscopic varicocelectomy",
+    "specialty": "Urological",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Elective laparoscopic procedure; tariff (56k) acceptable for secondary/tertiary sites."
+  },
+  {
+    "service_name": "Laser cystolithotripsy",
+    "specialty": "Urological",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Endoscopic laser stone fragmentation requires laser and disposables; tariff (234k) matches resource needs."
+  },
+  {
+    "service_name": "Laser urethrolithotripsy",
+    "specialty": "Urological",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Endoscopic laser for urethral stones; tariff (168k) adequate for laser use and consumables."
+  },
+  {
+    "service_name": "Laser urethrotomy",
+    "specialty": "Urological",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Endoscopic treatment of strictures; tariff (56k) sufficient for outpatient endoscopy unit."
+  },
+  {
+    "service_name": "Mainz II urinary diversion",
+    "specialty": "Urological",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Major reconstruction/diversion requiring tertiary care and long-term follow-up; tariff (224k) appropriate."
+  },
+  {
+    "service_name": "Meatoplasty",
+    "specialty": "Urological",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Minor reconstructive outpatient procedure; tariff (44.8k) sufficient."
+  },
+  {
+    "service_name": "Micturating cystourethrography",
+    "specialty": "Urological",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Radiologic procedure requiring fluoroscopy, contrast and radiographer; tariff (6k) is likely inadequate to cover imaging and consumables."
+  },
+  {
+    "service_name": "Mitrofanoff's appendicovesicostomy",
+    "specialty": "Urological",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Complex reconstructive urinary diversion needing tertiary multidisciplinary care; tariff (295k) aligns with complexity."
+  },
+  {
+    "service_name": "Open adrenalectomy",
+    "specialty": "Urological",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Major open surgery with endocrine perioperative needs; tariff (168k) likely underestimates total resource needs."
+  },
+  {
+    "service_name": "Open cystolithotomy",
+    "specialty": "Urological",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Open bladder stone removal requiring OR and inpatient stay; tariff (234k) is consistent with expected costs."
+  },
+  {
+    "service_name": "Open decortication of renal cyst",
+    "specialty": "Urological",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Open renal surgery with inpatient care needs; tariff (250k) appropriate."
+  },
+  {
+    "service_name": "Open donor nephrectomy",
+    "specialty": "Urological",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Major donor surgery requiring high-standard perioperative care; tariff (200k) is borderline but acceptable for transplant centres."
+  }
+]

@@ -1,17 +1,17 @@
 # SHIF Policy Deterministic Validation Report
 
-**Generated:** 2025-08-26T15:23:22.050103
+**Generated:** 2025-08-26T22:34:21.733247
 
 ## Analysis Summary
 
 - **Total services analyzed:** 0
 - **Policy rules analyzed:** 0
-- **AI analysis available:** ✅
+- **AI analysis available:** ❌
 
 ## Dr. Rishi's Assignment Examples
 
 - **Dialysis contradictions:** ❌ NOT FOUND
-- **Hypertension gap:** ❌ NOT FOUND
+- **Hypertension gap:** ✅ FOUND
 
 ## Contradictions Detected
 
@@ -19,25 +19,18 @@
 
 ## Coverage Gaps Detected
 
-**Diseases found in analysis:** 5
-**Diseases missing coverage:** 12
-
-### Diseases WITH Coverage Detected
-✅ Cancer
-✅ Heart Disease
-✅ Hypertension
-✅ Pneumonia
-✅ Stroke
+**Diseases found in analysis:** 0
+**Diseases missing coverage:** 17
 
 ### Diseases WITHOUT Coverage (Sample)
 • Aids
 • Anxiety
 • Asthma
+• Cancer
 • Depression
 • Diabetes
 • Epilepsy
+• Heart Disease
 • Hiv
-• Kidney Disease
-• Liver Disease
-• Malaria
+⭐ Hypertension
 

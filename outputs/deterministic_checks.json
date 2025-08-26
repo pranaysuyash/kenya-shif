@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-26T15:23:22.050103",
+  "timestamp": "2025-08-26T22:34:21.733247",
   "extraction_parity": {
     "manual_file_exists": true,
     "integrated_count": 0,
@@ -9,7 +9,7 @@
   },
   "rishi_examples": {
     "dialysis_contradictions_found": 0,
-    "hypertension_gap_found": false,
+    "hypertension_gap_found": true,
     "dialysis_services_detected": {}
   },
   "contradictions": {
@@ -20,9 +20,21 @@
   "gaps": {
     "disease_coverage": [
       {
+        "disease": "hypertension",
+        "type": "missing_disease_coverage",
+        "description": "Common disease 'hypertension' not found in extracted services",
+        "matches_rishi_example": true
+      },
+      {
         "disease": "diabetes",
         "type": "missing_disease_coverage",
         "description": "Common disease 'diabetes' not found in extracted services",
+        "matches_rishi_example": false
+      },
+      {
+        "disease": "pneumonia",
+        "type": "missing_disease_coverage",
+        "description": "Common disease 'pneumonia' not found in extracted services",
         "matches_rishi_example": false
       },
       {
@@ -62,6 +74,24 @@
         "matches_rishi_example": false
       },
       {
+        "disease": "stroke",
+        "type": "missing_disease_coverage",
+        "description": "Common disease 'stroke' not found in extracted services",
+        "matches_rishi_example": false
+      },
+      {
+        "disease": "heart disease",
+        "type": "missing_disease_coverage",
+        "description": "Common disease 'heart disease' not found in extracted services",
+        "matches_rishi_example": false
+      },
+      {
+        "disease": "cancer",
+        "type": "missing_disease_coverage",
+        "description": "Common disease 'cancer' not found in extracted services",
+        "matches_rishi_example": false
+      },
+      {
         "disease": "depression",
         "type": "missing_disease_coverage",
         "description": "Common disease 'depression' not found in extracted services",
@@ -92,22 +122,21 @@
         "matches_rishi_example": false
       }
     ],
-    "total": 12,
-    "diseases_found": [
-      "hypertension",
-      "pneumonia",
-      "stroke",
-      "heart disease",
-      "cancer"
-    ],
+    "total": 17,
+    "diseases_found": [],
     "diseases_missing": [
+      "hypertension",
       "diabetes",
+      "pneumonia",
       "malaria",
       "tuberculosis",
       "tb",
       "hiv",
       "aids",
       "asthma",
+      "stroke",
+      "heart disease",
+      "cancer",
       "depression",
       "anxiety",
       "epilepsy",
@@ -118,6 +147,6 @@
   "summary_stats": {
     "total_services_analyzed": 0,
     "policy_rules_analyzed": 0,
-    "ai_analysis_available": true
+    "ai_analysis_available": false
   }
 }

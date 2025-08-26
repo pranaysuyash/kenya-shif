@@ -1,78 +1,179 @@
-# 🩺 Integrated Comprehensive Medical SHIF Analyzer
+# Integrated Comprehensive Medical Analyzer
 
-> **Production-ready healthcare policy analysis system with integrated extraction and comprehensive medical reasoning**
+A complete solution for analyzing Kenya's SHIF healthcare policy documents, combining proven extraction methods with AI-enhanced medical analysis.
 
-## 🎯 **System Overview**
+## Overview
 
-The Integrated Comprehensive Medical SHIF Analyzer is a complete healthcare policy analysis solution that combines proven extraction methods with advanced AI reasoning. Successfully extracts and analyzes **825 services/procedures** from Kenya's Social Health Insurance Fund (SHIF) benefits package with **98.8% tariff coverage** across **13 medical specialties**.
+This analyzer processes the Kenya Social Health Insurance Fund (SHIF) tariff document to extract:
+- **Pages 1-18**: Policy structure with fund hierarchies, services, tariffs, and access rules
+- **Pages 19-54**: Annex surgical procedures with specialties and tariffs
+- **AI Analysis**: Medical contradictions, healthcare gaps, and policy insights
 
-### **🏆 INTEGRATION SUCCESS** ✅ **(VERIFIED BY MANUAL PDF CHECK)**
-- **825 Total Services/Procedures** extracted and analyzed
-- **13 Medical Specialties** fully covered with pricing
-- **98.8% Tariff Coverage** (815 services with complete pricing)
-- **3.26 Second Processing Time** (253 services/second)
-- **Complete Dataset** ready for comprehensive healthcare policy analysis
+## Key Features
 
-## 🚀 **Quick Start - Integrated Analyzer**
+- **Validated Extraction**: Uses exact functions from manual.ipynb for reliable data extraction
+- **Dynamic Text Processing**: Intelligent de-glue algorithm for handling merged text
+- **AI Enhancement**: Advanced medical reasoning for contradiction and gap analysis
+- **Comprehensive Output**: Multiple CSV formats plus detailed analysis reports
+- **Unique Insight Tracking**: Prevents duplicate findings across multiple runs
 
-### **Primary Script to Run:**
-```bash
-python integrated_comprehensive_analyzer.py
+## File Structure
+
+```
+final_submission/
+├── integrated_comprehensive_analyzer.py  # Main analyzer class
+├── run_analyzer.py                      # Simple execution script
+├── test_analyzer.py                     # Component testing script
+├── complete_gap_extraction.py           # Standalone gap extraction function
+├── missing_gap_extraction.py            # Additional gap parsing methods
+└── README.md                            # This documentation
 ```
 
-### **What It Does:**
-1. **Builds Document Vocabulary** - 869 medical/policy terms for intelligent processing
-2. **Extracts Pages 1-18** - Policy structure with advanced text processing
-3. **Extracts Pages 19-54** - Annex procedures with proven simple tabula method
-4. **Integrates Results** - Complete 825-service comprehensive dataset
-5. **Generates Outputs** - Multiple CSV formats in `outputs/` directory
+## Quick Start
 
-### **Key Features:**
-- **Dynamic De-glue Algorithm** - Fixes concatenated words using document vocabulary
-- **Dual Extraction Strategy** - Advanced processing + proven simple tabula combined
-- **Complete Medical Coverage** - All 13 specialties with pricing analysis
-- **Performance Optimized** - Fast extraction with high-quality results
-- **Enhanced AI Prompts** - Real Kenya health context using validated 2024 statistics
-- **Evidence-Based Analysis** - 20+ official sources integrated for clinical reasoning
-- **Source-Validated Context** - All AI prompts use verified government and WHO data
+### 1. Test the Installation
+```bash
+python test_analyzer.py
+```
 
-## 📊 **Data Sources & Documentation**
+### 2. Run the Analyzer
+```bash
+# With default PDF (if available)
+python run_analyzer.py
 
-This system uses two distinct types of data sources:
+# With specific PDF path
+python run_analyzer.py "path/to/your/SHIF_document.pdf"
+```
 
-### **Primary Analysis Data**
-- **SHIF Policy Document**: Official Kenya Ministry of Health tariffs document
-- **Usage**: Direct extraction and analysis for contradictions/gaps
-- **Content**: 825+ services, tariffs, access rules from actual policy
+### 3. Check Results
+Results are saved to both:
+- `outputs/` folder for direct access
+- `outputs_run_YYYYMMDD_HHMMSS/` for timestamped runs
 
-### **AI Context Data** 
-- **Real Kenya Health Statistics**: Population, disease burden, health system data
-- **Usage**: Clinical reasoning and impact assessment context only
-- **Sources**: 20+ validated sources including KNBS, WHO Kenya, UN Population Division
-- **Enhancement Date**: August 2024 comprehensive validation conducted
-- **Purpose**: Enhance AI understanding of Kenya's health landscape with verified data
-- **Quality**: All statistics cross-validated across multiple official sources
+## Required Dependencies
 
-**📋 Full Documentation**: See [`DATA_SOURCES_DOCUMENTATION.md`](DATA_SOURCES_DOCUMENTATION.md) for complete source details, validation methods, and AI prompt enhancement methodology.
+### Essential
+```bash
+pip install pandas numpy python-dateutil
+```
 
-## 🔍 **Enhanced AI Prompts (August 2024)**
+### For PDF Extraction (Recommended)
+```bash
+pip install tabula-py
+# Requires Java: https://www.java.com/en/download/
+```
 
-### **Real Data Integration**
-AI prompts now use verified Kenya health statistics for clinical reasoning:
-- **Population**: 56.4M (UN Population Division 2024) - cross-validated
-- **Disease Burden**: Pneumonia #1, Cancer #2, CVD #3 (KNBS 2024)
-- **Health System**: 47 counties, 70% rural population (World Bank 2024)
-- **CVD Impact**: 25% hospital admissions (WHO Kenya 2024)
+### For AI Analysis (Optional)
+```bash
+pip install openai python-dotenv
+```
 
-### **Source Validation Process**
-- ✅ **20+ Official Sources** consulted and cross-referenced
-- ✅ **Government Priority**: Kenya National Bureau of Statistics, Ministry of Health
-- ✅ **International Validation**: WHO, UN Population Division, World Bank
-- ✅ **Quality Assurance**: Multiple source validation for each data point
-- ✅ **Temporal Accuracy**: Preference for 2024 data where available
+## Output Files
 
-### **Impact on Analysis Quality**
-**Enhanced AI Reasoning**: Real context improves clinical impact assessment
-**Better Prioritization**: Disease burden data guides gap analysis focus
-**Accurate Recommendations**: Kenya-specific health system understanding
-**Credible Results**: Evidence-based rather than illustrative examples
+### Core Data Extraction
+- `rules_p1_18_structured.csv` - Policy services (main format)
+- `rules_p1_18_structured_wide.csv` - Wide format with lists
+- `rules_p1_18_structured_exploded.csv` - One row per service item
+- `annex_surgical_tariffs_all.csv` - All surgical procedures
+
+### AI Analysis (if enabled)
+- `ai_contradictions.csv` - Detected policy contradictions
+- `ai_gaps.csv` - Identified healthcare gaps
+- `persistent_insights.json` - Unique findings tracker
+
+## Configuration
+
+### API Key Setup (Optional)
+Create a `.env` file:
+```
+OPENAI_API_KEY=your_api_key_here
+```
+
+Or set environment variable:
+```bash
+export OPENAI_API_KEY="your_api_key_here"
+```
+
+## Key Functions
+
+### Data Extraction
+- **Policy Structure**: Extracts fund hierarchies, services, tariffs, access rules
+- **Annex Procedures**: Surgical procedures with specialties and tariffs
+- **Text Processing**: Dynamic de-glue for merged text, bullet point splitting
+
+### AI Analysis
+- **Contradiction Detection**: Medical inconsistencies using clinical expertise
+- **Gap Analysis**: Missing services based on Kenya health burden data
+- **Unique Tracking**: Prevents duplicate insights across runs
+
+## Usage Examples
+
+### Basic Analysis
+```python
+from integrated_comprehensive_analyzer import IntegratedComprehensiveMedicalAnalyzer
+
+analyzer = IntegratedComprehensiveMedicalAnalyzer()
+results = analyzer.analyze_complete_document("SHIF_document.pdf")
+
+print(f"Extracted {results['total_policy_services']} policy services")
+print(f"Extracted {results['total_annex_procedures']} procedures")
+```
+
+### With AI Analysis
+```python
+# Requires OpenAI API key
+analyzer = IntegratedComprehensiveMedicalAnalyzer(api_key="your_key")
+results = analyzer.analyze_complete_document("SHIF_document.pdf")
+
+print(f"Found {results['total_ai_contradictions']} contradictions")
+print(f"Identified {results['total_ai_gaps']} gaps")
+```
+
+## Troubleshooting
+
+### Java/Tabula Issues
+If tabula-py fails:
+1. Install Java: https://www.java.com/en/download/
+2. Verify: `java -version`
+3. Restart terminal/IDE
+
+### Missing Data
+- Without tabula-py: Limited extraction capability
+- Without OpenAI API: No AI analysis, but extraction still works
+
+### Performance
+- First run: ~30-60 seconds (builds vocabulary, caches AI responses)
+- Subsequent runs: ~10-30 seconds (uses caches)
+
+## Technical Details
+
+### Extraction Method
+- Uses exact code from manual.ipynb for validated results
+- Handles fund/service hierarchies, continuation rows, merged text
+- Dynamic vocabulary building for intelligent text processing
+
+### AI Enhancement
+- Real Kenya health data (WHO, KNBS, official sources)
+- Clinical reasoning based on medical guidelines
+- Structured output with evidence and recommendations
+
+### Data Quality
+- Deduplication of procedures and services
+- Text normalization and cleaning
+- Tariff extraction and validation
+
+## Contributing
+
+To extend the analyzer:
+1. Add new extraction methods to the main class
+2. Create additional AI prompts in the prompts module
+3. Update output integration in `_integrate_comprehensive_results`
+
+## Validation
+
+The analyzer produces identical results to manual.ipynb for:
+- Policy services extraction (pages 1-18)
+- Annex procedures extraction (pages 19-54)
+- Text processing and tariff extraction
+
+AI analysis adds value without affecting core extraction reliability.
