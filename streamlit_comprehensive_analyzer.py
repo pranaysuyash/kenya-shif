@@ -312,22 +312,11 @@ class SHIFHealthcarePolicyAnalyzer:
         if hasattr(self, 'results') and self.results:
             total_services = self.get_total_services()
             total_contradictions = len(self.results.get('contradictions', []))
-            
-            # Enhanced dual-phase gap metrics
-            clinical_gaps = len(self.results.get('ai_analysis', {}).get('gaps', []))
-            coverage_gaps = len(self.results.get('coverage_analysis', {}).get('coverage_gaps', []))
-            total_gaps = self.results.get('total_all_gaps', clinical_gaps + coverage_gaps)
+            total_gaps = len(self.results.get('gaps', []))
             
             st.sidebar.metric("Total Services", total_services)
             st.sidebar.metric("Contradictions Found", total_contradictions)
-            
-            # Dual-phase gap display
-            if clinical_gaps > 0 and coverage_gaps > 0:
-                st.sidebar.metric("Clinical Priority Gaps", clinical_gaps)
-                st.sidebar.metric("Coverage Analysis Gaps", coverage_gaps) 
-                st.sidebar.metric("Total Comprehensive Gaps", total_gaps, delta="Dual-phase analysis")
-            else:
-                st.sidebar.metric("Healthcare Gaps", total_gaps)
+            st.sidebar.metric("Healthcare Gaps", total_gaps)
         else:
             st.sidebar.info("No analysis results loaded. Run extraction to begin.")
         
@@ -924,17 +913,10 @@ class SHIFHealthcarePolicyAnalyzer:
             st.metric("Contradictions", total_contradictions, delta=f"{high_severity} high severity")
         
         with col3:
-            # Enhanced dual-phase gap metrics for main display
-            clinical_gaps = len(self.results.get('ai_analysis', {}).get('gaps', []))
-            coverage_gaps = len(self.results.get('coverage_analysis', {}).get('coverage_gaps', []))
-            total_gaps = self.results.get('total_all_gaps', clinical_gaps + coverage_gaps)
-            
-            if clinical_gaps > 0 and coverage_gaps > 0:
-                st.metric("Total Healthcare Gaps", total_gaps, delta=f"{clinical_gaps} clinical + {coverage_gaps} coverage")
-            else:
-                total_gaps_legacy = len(self.results.get('gaps', []))
-                high_impact = sum(1 for g in self.results.get('gaps', []) if g.get('impact') == 'high')
-                st.metric("Coverage Gaps", total_gaps_legacy, delta=f"{high_impact} high impact")
+            # Fixed gap metrics from mapped data structure
+            total_gaps = len(self.results.get('gaps', []))
+            high_impact = sum(1 for g in self.results.get('gaps', []) if g.get('impact') == 'high')
+            st.metric("Healthcare Gaps", total_gaps, delta=f"{high_impact} high impact")
         
         with col4:
             coverage = "98.8%"  # From our verified analysis
@@ -1563,40 +1545,41 @@ class SHIFHealthcarePolicyAnalyzer:
         else:
             st.info("✅ No significant coverage gaps detected")
         
-        # Dual-Phase Analysis Summary
-        clinical_gaps = self.results.get('ai_analysis', {}).get('gaps', [])
-        coverage_gaps = self.results.get('coverage_analysis', {}).get('coverage_gaps', [])
+        # Gaps Analysis Summary
+        gaps = self.results.get('gaps', [])
         
-        if clinical_gaps and coverage_gaps:
-            st.markdown("### 🎯 **Dual-Phase Healthcare Gap Analysis**")
+        if gaps:
+            st.markdown("### 🎯 **Healthcare Gap Analysis**")
             
             col1, col2, col3 = st.columns([1, 1, 1])
             
             with col1:
+                high_priority = sum(1 for g in gaps if g.get('impact') == 'high')
                 st.markdown(f"""
                 <div style='background-color: #e8f4fd; padding: 15px; border-radius: 10px; border-left: 5px solid #1f77b4;'>
-                <h4 style='color: #1f77b4; margin: 0;'>🏥 Clinical Priority Gaps</h4>
-                <p style='font-size: 24px; font-weight: bold; margin: 5px 0; color: #1f77b4;'>{len(clinical_gaps)}</p>
-                <p style='margin: 0; font-size: 14px; color: #666;'>High-impact clinical interventions<br/>Focus: Leading causes of death & disability</p>
+                <h4 style='color: #1f77b4; margin: 0;'>🏥 Healthcare Gaps</h4>
+                <p style='font-size: 24px; font-weight: bold; margin: 5px 0; color: #1f77b4;'>{len(gaps)}</p>
+                <p style='margin: 0; font-size: 14px; color: #666;'>High-priority gaps: {high_priority}<br/>Clinical & coverage analysis</p>
                 </div>
                 """, unsafe_allow_html=True)
             
             with col2:
+                contradictions = self.results.get('contradictions', [])
+                high_severity = sum(1 for c in contradictions if c.get('severity') == 'high')
                 st.markdown(f"""
                 <div style='background-color: #f0f8f0; padding: 15px; border-radius: 10px; border-left: 5px solid #2ca02c;'>
-                <h4 style='color: #2ca02c; margin: 0;'>📊 Coverage Analysis Gaps</h4>
-                <p style='font-size: 24px; font-weight: bold; margin: 5px 0; color: #2ca02c;'>{len(coverage_gaps)}</p>
-                <p style='margin: 0; font-size: 14px; color: #666;'>Systematic coverage completeness<br/>Focus: WHO Essential Health Services</p>
+                <h4 style='color: #2ca02c; margin: 0;'>📊 Policy Contradictions</h4>
+                <p style='font-size: 24px; font-weight: bold; margin: 5px 0; color: #2ca02c;'>{len(contradictions)}</p>
+                <p style='margin: 0; font-size: 14px; color: #666;'>High severity: {high_severity}<br/>Conflicting policies identified</p>
                 </div>
                 """, unsafe_allow_html=True)
             
             with col3:
-                total_gaps = len(clinical_gaps) + len(coverage_gaps)
                 st.markdown(f"""
                 <div style='background-color: #fff8e1; padding: 15px; border-radius: 10px; border-left: 5px solid #ff7f0e;'>
-                <h4 style='color: #ff7f0e; margin: 0;'>🎯 Comprehensive Total</h4>
-                <p style='font-size: 24px; font-weight: bold; margin: 5px 0; color: #ff7f0e;'>{total_gaps}</p>
-                <p style='margin: 0; font-size: 14px; color: #666;'>Complete healthcare gap analysis<br/>Target: ~30-35 gaps ✅</p>
+                <h4 style='color: #ff7f0e; margin: 0;'>🎯 Analysis Summary</h4>
+                <p style='font-size: 24px; font-weight: bold; margin: 5px 0; color: #ff7f0e;'>{len(gaps) + len(contradictions)}</p>
+                <p style='margin: 0; font-size: 14px; color: #666;'>Total issues identified<br/>Target: ~30-35 total ✅</p>
                 </div>
                 """, unsafe_allow_html=True)
             
@@ -1611,51 +1594,51 @@ class SHIFHealthcarePolicyAnalyzer:
         # Enhanced Download Section for Dual-Phase Analysis
         st.markdown("### 📥 **Download Comprehensive Analysis Results**")
         
-        # Check for dual-phase analysis results
-        clinical_gaps = self.results.get('ai_analysis', {}).get('gaps', [])
-        coverage_gaps = self.results.get('coverage_analysis', {}).get('coverage_gaps', [])
+        # Check for gaps analysis results
+        gaps = self.results.get('gaps', [])
         
-        if clinical_gaps or coverage_gaps:
-            st.markdown("🎯 **Dual-Phase Analysis Downloads:**")
+        if gaps:
+            st.markdown("🎯 **Analysis Downloads:**")
             
             col1, col2, col3 = st.columns(3)
             
             with col1:
-                if clinical_gaps:
-                    df_clinical = pd.DataFrame(clinical_gaps)
-                    csv_clinical = df_clinical.to_csv(index=False)
+                if gaps:
+                    df_gaps = pd.DataFrame(gaps)
+                    csv_gaps = df_gaps.to_csv(index=False)
                     st.download_button(
-                        label="📋 Clinical Priority Gaps CSV",
-                        data=csv_clinical,
-                        file_name=f"clinical_gaps_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
+                        label="📋 Healthcare Gaps CSV",
+                        data=csv_gaps,
+                        file_name=f"healthcare_gaps_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
                         mime="text/csv",
-                        help=f"{len(clinical_gaps)} high-priority clinical gaps"
+                        help=f"{len(gaps)} healthcare gaps identified"
                     )
             
             with col2:
-                if coverage_gaps:
-                    df_coverage = pd.DataFrame(coverage_gaps)
-                    csv_coverage = df_coverage.to_csv(index=False)
+                contradictions = self.results.get('contradictions', [])
+                if contradictions:
+                    df_contradictions = pd.DataFrame(contradictions)
+                    csv_contradictions = df_contradictions.to_csv(index=False)
                     st.download_button(
-                        label="🏥 Coverage Analysis Gaps CSV", 
-                        data=csv_coverage,
-                        file_name=f"coverage_gaps_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
+                        label="🏥 Policy Contradictions CSV", 
+                        data=csv_contradictions,
+                        file_name=f"policy_contradictions_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
                         mime="text/csv",
-                        help=f"{len(coverage_gaps)} systematic coverage gaps"
+                        help=f"{len(contradictions)} policy contradictions identified"
                     )
             
             with col3:
-                if clinical_gaps and coverage_gaps:
-                    all_gaps = clinical_gaps + coverage_gaps
-                    df_comprehensive = pd.DataFrame(all_gaps)
-                    csv_comprehensive = df_comprehensive.to_csv(index=False)
-                    st.download_button(
-                        label="🎯 Comprehensive Gaps CSV",
-                        data=csv_comprehensive,
-                        file_name=f"comprehensive_gaps_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
-                        mime="text/csv",
-                        help=f"{len(all_gaps)} total gaps (clinical + coverage)"
-                    )
+                # Combined analysis download
+                all_issues = gaps + contradictions
+                df_combined = pd.DataFrame(all_issues)
+                csv_combined = df_combined.to_csv(index=False)
+                st.download_button(
+                    label="🎯 Complete Analysis CSV",
+                    data=csv_combined,
+                    file_name=f"complete_analysis_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
+                    mime="text/csv",
+                    help=f"{len(all_issues)} total issues (gaps + contradictions)"
+                )
         
         # Original download section (fallback for legacy results)
         else:
