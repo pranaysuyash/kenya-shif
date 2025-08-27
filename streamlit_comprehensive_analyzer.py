@@ -404,7 +404,35 @@ class SHIFHealthcarePolicyAnalyzer:
             sub_progress.progress(20)
             sub_text.text("Extracting from PDF using integrated comprehensive analyzer...")
             
-            dataset = analyzer.load_verified_dataset()
+            # Try to load existing results first, then run analysis if needed
+            analyzer.load_existing_results()
+            
+            if hasattr(analyzer, 'results') and analyzer.results:
+                st.write("✅ Found existing analysis results!")
+                dataset = True
+            elif integrated_available:
+                try:
+                    st.write("🔄 Running fresh analysis...")
+                    # Run the integrated analyzer as subprocess to avoid issues
+                    import subprocess
+                    result = subprocess.run(['python', 'integrated_comprehensive_analyzer.py'], 
+                                          capture_output=True, text=True, timeout=300)
+                    
+                    if result.returncode == 0:
+                        st.write("✅ Analysis completed successfully!")
+                        # Now load the fresh results
+                        analyzer.load_existing_results()
+                        dataset = True
+                    else:
+                        st.error(f"❌ Analysis failed: {result.stderr}")
+                        dataset = False
+                        
+                except Exception as e:
+                    st.error(f"❌ Live extraction failed: {e}")
+                    dataset = False
+            else:
+                st.error("❌ Integrated analyzer not available")
+                dataset = False
             
             if not dataset:
                 st.error("❌ Live extraction failed - check PDF and try again")
@@ -883,12 +911,7 @@ class SHIFHealthcarePolicyAnalyzer:
                     self.load_existing_results()
             
             with col2:
-                pdf_available = Path("TARIFFS TO THE BENEFIT PACKAGE TO THE SHI.pdf").exists()
-                if pdf_available:
-                    if st.button("🔄 Run Fresh Analysis", type="secondary", use_container_width=True):
-                        self.run_complete_extraction()
-                else:
-                    st.button("❌ PDF Required", disabled=True, use_container_width=True)
+                st.info("🔧 Use sidebar buttons to run analysis")
             
             with col3:
                 if st.button("📋 Show Quick Summary", use_container_width=True):
