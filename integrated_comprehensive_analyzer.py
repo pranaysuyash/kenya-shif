@@ -16,11 +16,19 @@ import json
 import pandas as pd
 import re
 import math
+import argparse
 # Optional dependency: tabula-py (requires Java). Import lazily/defensively.
 try:
     import tabula  # type: ignore
 except Exception:
     tabula = None  # Fallback handled at call sites
+try:
+    import plotly.express as px
+    import plotly.graph_objects as go
+except ImportError:
+    px = None
+    go = None
+    print("⚠️ Plotly not available - charts will be skipped in headless mode")
 from typing import List, Dict, Optional, Tuple
 import time
 from pathlib import Path
@@ -3670,5 +3678,233 @@ def main():
     
     return results
 
+def parse_args():
+    p = argparse.ArgumentParser(description="Kenya SHIF Healthcare Policy Analyzer")
+    p.add_argument("--headless-report", action="store_true", 
+                   help="Export charts + REPORT.md without Streamlit")
+    p.add_argument("--no-openai", action="store_true", 
+                   help="Disable OpenAI calls (debug mode)")
+    p.add_argument("--submission", action="store_true", 
+                   help="Shortcut to set SUBMISSION_MODE=1 for this run")
+    return p.parse_args()
+
+def _save_fig(fig, path_no_ext: Path):
+    """Save PNG if kaleido is available, otherwise save HTML."""
+    png_path = path_no_ext.with_suffix(".png")
+    html_path = path_no_ext.with_suffix(".html")
+    try:
+        fig.write_image(str(png_path))  # needs kaleido
+        return str(png_path)
+    except Exception:
+        fig.write_html(str(html_path))
+        return str(html_path)
+
+def generate_headless_report(output_dir: str, results: dict):
+    """Generate comprehensive headless report with charts and analysis"""
+    if not px:
+        print("⚠️ Plotly not available - skipping chart generation")
+        return
+        
+    out = Path(output_dir)
+    report_dir = out / "report"
+    report_dir.mkdir(parents=True, exist_ok=True)
+
+    print(f"\n📊 Generating headless report in: {report_dir}")
+
+    # Load core tables
+    rules_csv = out / "rules_p1_18_structured.csv"
+    annex_csv = out / "annex_procedures.csv"
+    gaps_csv = out / "comprehensive_gaps_analysis.csv"
+    contr_csv = out / "ai_contradictions.csv"
+
+    rules = pd.read_csv(rules_csv) if rules_csv.exists() else pd.DataFrame()
+    annex = pd.read_csv(annex_csv) if annex_csv.exists() else pd.DataFrame()
+    gaps = pd.read_csv(gaps_csv) if gaps_csv.exists() else pd.DataFrame()
+
+    # Contradictions: prefer CSV if present, else derive from JSON results
+    if contr_csv.exists():
+        contradictions = pd.read_csv(contr_csv)
+    else:
+        ai_analysis = results.get("ai_analysis", {})
+        contradictions = pd.DataFrame(ai_analysis.get("contradictions", []))
+
+    # KPIs (current run)
+    kpis = {
+        "structured_services": int(len(rules)),
+        "annex_procedures": int(len(annex)),
+        "gaps_dedup_current_run": int(len(gaps)),
+        "contradictions_current_run": int(len(contradictions)),
+        "submission_mode": os.getenv("SUBMISSION_MODE", "0") == "1"
+    }
+    (report_dir / "metrics.json").write_text(json.dumps(kpis, indent=2))
+    print(f"   ✅ Saved metrics.json: {kpis}")
+
+    # ---- Charts ----
+    artifacts = []
+
+    # 1) Gaps by category
+    if not gaps.empty and "gap_category" in gaps.columns:
+        g = gaps.groupby("gap_category").size().reset_index(name="count").sort_values("count", ascending=False)
+        fig = px.bar(g, x="gap_category", y="count", title="Healthcare Coverage Gaps by Category")
+        fig.update_xaxes(tickangle=45)
+        artifact_path = _save_fig(fig, report_dir / "gaps_by_category")
+        artifacts.append(artifact_path)
+        print(f"   ✅ Saved {Path(artifact_path).name}")
+
+    # 2) Risk/Severity distribution (if present)
+    sev_col = None
+    for cand in ["coverage_priority", "clinical_priority", "severity", "clinical_severity", "risk_level"]:
+        if not gaps.empty and cand in gaps.columns:
+            sev_col = cand
+            break
+    if sev_col:
+        priority_counts = gaps[sev_col].value_counts()
+        fig = px.pie(values=priority_counts.values, names=priority_counts.index, 
+                    title=f"Coverage Gap Priority Distribution ({sev_col})")
+        artifact_path = _save_fig(fig, report_dir / "risk_severity_distribution")
+        artifacts.append(artifact_path)
+        print(f"   ✅ Saved {Path(artifact_path).name}")
+
+    # 3) Services by fund distribution
+    fund_col = None
+    for cand in ["fund", "Fund"]:
+        if not rules.empty and cand in rules.columns:
+            fund_col = cand
+            break
+    if fund_col:
+        fund_counts = rules[fund_col].value_counts()
+        fig = px.pie(values=fund_counts.values, names=fund_counts.index, 
+                    title="Healthcare Services by Fund")
+        artifact_path = _save_fig(fig, report_dir / "services_by_fund")
+        artifacts.append(artifact_path)
+        print(f"   ✅ Saved {Path(artifact_path).name}")
+
+    # 4) Services by access point (facility levels)
+    access_col = None
+    for cand in ["access_point", "facility_level", "facility"]:
+        if not rules.empty and cand in rules.columns:
+            access_col = cand
+            break
+    if access_col:
+        # Take first 20 characters to avoid overlong labels
+        rules_copy = rules.copy()
+        rules_copy[access_col + "_short"] = rules_copy[access_col].astype(str).str[:20]
+        g = rules_copy.groupby(access_col + "_short").size().reset_index(name="count").sort_values("count", ascending=False)
+        fig = px.bar(g, x=access_col + "_short", y="count", 
+                    title="Services by Access Point / Facility Level")
+        fig.update_xaxes(tickangle=45)
+        artifact_path = _save_fig(fig, report_dir / "services_by_access_point")
+        artifacts.append(artifact_path)
+        print(f"   ✅ Saved {Path(artifact_path).name}")
+
+    # 5) Contradictions by specialty (if available)
+    if not contradictions.empty:
+        if "medical_specialty" in contradictions.columns:
+            spec_counts = contradictions["medical_specialty"].value_counts()
+            fig = px.bar(x=spec_counts.index, y=spec_counts.values, 
+                        title="AI Contradictions by Medical Specialty")
+            fig.update_xaxes(tickangle=45)
+            artifact_path = _save_fig(fig, report_dir / "contradictions_by_specialty")
+            artifacts.append(artifact_path)
+            print(f"   ✅ Saved {Path(artifact_path).name}")
+
+    # 6) Save CSV snapshots used by Streamlit for parity
+    if not rules.empty:
+        rules.to_csv(report_dir / "rules_p1_18_structured.copy.csv", index=False)
+    if not gaps.empty:
+        gaps.to_csv(report_dir / "comprehensive_gaps_analysis.copy.csv", index=False)
+    if not contradictions.empty:
+        contradictions.to_csv(report_dir / "ai_contradictions.copy.csv", index=False)
+    print(f"   ✅ Saved CSV snapshots for parity verification")
+
+    # 7) Write comprehensive REPORT.md
+    md = []
+    md.append("# 🏥 Kenya SHIF Healthcare Policy Analysis - Headless Report\n")
+    md.append(f"**Generated**: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    md.append(f"**Submission mode**: {'✅ ENABLED (clean counts)' if kpis['submission_mode'] else '❌ DISABLED (may include historical data)'}")
+    md.append(f"**Output directory**: `{output_dir}`\n")
+    
+    md.append("## 📊 Key Performance Indicators\n")
+    md.append(f"- **Structured Services (Policy Pages 1-18)**: **{kpis['structured_services']}**")
+    md.append(f"- **Annex Procedures (Pages 19-54)**: **{kpis['annex_procedures']}**")  
+    md.append(f"- **Coverage Gaps (Deduplicated)**: **{kpis['gaps_dedup_current_run']}**")
+    md.append(f"- **AI Contradictions**: **{kpis['contradictions_current_run']}**\n")
+    
+    md.append("## 📈 Generated Visualizations\n")
+    if artifacts:
+        for artifact in artifacts:
+            filename = Path(artifact).name
+            chart_type = filename.replace('_', ' ').replace('.png', '').replace('.html', '').title()
+            md.append(f"- **{chart_type}**: `{filename}`")
+    else:
+        md.append("- No charts generated (missing data or Plotly unavailable)")
+    
+    md.append("\n## 📁 Evidence Files\n")
+    evidence_files = []
+    for csv_file in [rules_csv, annex_csv, gaps_csv, contr_csv]:
+        if csv_file.exists():
+            evidence_files.append(f"- `{csv_file.name}` ({len(pd.read_csv(csv_file))} records)")
+    if evidence_files:
+        md.extend(evidence_files)
+    else:
+        md.append("- No CSV evidence files found")
+    
+    md.append(f"\n## 🎯 Data Quality Verification\n")
+    
+    # Check for key phrase
+    phrase_found = False
+    if not rules.empty:
+        for col in rules.columns:
+            if rules[col].dtype == 'object':
+                if rules[col].str.contains("Health education and wellness, counselling", na=False).any():
+                    phrase_found = True
+                    break
+    
+    md.append(f"- **Key Phrase Present**: {'✅ CONFIRMED' if phrase_found else '❌ NOT FOUND'}")
+    if phrase_found:
+        md.append("  - \"Health education and wellness, counselling, and ongoing support as needed\"")
+    
+    # Check for dialysis contradiction
+    dialysis_found = False
+    if not contradictions.empty and "description" in contradictions.columns:
+        dialysis_found = contradictions["description"].str.contains("dialysis", case=False, na=False).any()
+    
+    md.append(f"- **Dialysis Contradiction**: {'✅ PRESENT' if dialysis_found else '❌ NOT FOUND'}")
+    
+    md.append(f"\n## 🔧 Technical Details\n")
+    md.append(f"- **Analysis Run**: {results.get('analysis_metadata', {}).get('run_number', 'N/A')}")
+    md.append(f"- **Timestamp**: {results.get('analysis_metadata', {}).get('completion_time', 'N/A')}")
+    md.append(f"- **OpenAI Enabled**: {'✅' if results.get('ai_analysis') else '❌'}")
+    
+    report_path = report_dir / "REPORT.md"
+    report_path.write_text("\n".join(md))
+    print(f"   ✅ Saved comprehensive REPORT.md")
+    
+    print(f"\n🎯 Headless report complete! Files available in: {report_dir}")
+    return report_dir
+
 if __name__ == "__main__":
+    args = parse_args()
+    
+    # Set submission mode if requested
+    if args.submission:
+        os.environ["SUBMISSION_MODE"] = "1"
+        print("📝 Submission mode enabled via CLI argument")
+    
+    # Disable OpenAI if requested
+    if args.no_openai:
+        os.environ["DISABLE_OPENAI"] = "1"
+        print("🤖 OpenAI analysis disabled via CLI argument")
+    
+    # Run main analysis
     results = main()
+    
+    # Generate headless report if requested
+    if args.headless_report and results:
+        output_dir = results.get("analysis_metadata", {}).get("output_directory")
+        if output_dir:
+            generate_headless_report(output_dir, results)
+        else:
+            print("⚠️ Could not generate headless report - output directory not found")
+    
+    print(f"\n🎉 Analysis complete! Use --headless-report for comprehensive charts and artifacts.")
