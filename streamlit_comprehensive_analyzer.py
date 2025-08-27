@@ -28,7 +28,7 @@ import zipfile
 from io import BytesIO
 import json
 from dotenv import load_dotenv
-from demo_enhancement import DemoEnhancer
+# from demo_enhancement import DemoEnhancer  # Not needed for core functionality
 
 # Load environment variables from root .env
 load_dotenv('.env')
@@ -99,7 +99,7 @@ class SHIFHealthcarePolicyAnalyzer:
         self.openai_client = None
         self.primary_model = "gpt-5-mini"  # Primary model as specified
         self.fallback_model = "gpt-4.1-mini"  # Fallback model as specified
-        self.demo_enhancer = DemoEnhancer()  # Demo capabilities
+        # self.demo_enhancer = DemoEnhancer()  # Demo capabilities - disabled for core testing
         self.setup_openai()
     
     def setup_openai(self):
@@ -111,7 +111,7 @@ class SHIFHealthcarePolicyAnalyzer:
             load_dotenv('.env', override=True)
             api_key = os.getenv('OPENAI_API_KEY')
             if not api_key:
-                api_key = ""OPENAI_API_KEY_REMOVED""
+                api_key = "OPENAI_API_KEY_REQUIRED"
             self.openai_client = openai.OpenAI(api_key=api_key)
             
             # Test the client with specified models (try primary first, then fallback)
