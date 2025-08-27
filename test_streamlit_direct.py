@@ -19,8 +19,8 @@ if output_dirs:
     latest_dir = sorted(output_dirs, key=lambda x: x.stat().st_mtime)[-1]
     print(f"   Latest: {latest_dir}")
     
-    # Check for key files
-    key_files = ['structured_rules.json', 'contradictions.json', 'gaps.json']
+    # Check for key files (updated to match actual output)
+    key_files = ['rules_p1_18_structured.csv', 'comprehensive_gaps_analysis.csv', 'ai_contradictions.csv']
     found_files = []
     for file in key_files:
         if (latest_dir / file).exists():

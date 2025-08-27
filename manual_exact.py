@@ -108,7 +108,70 @@ def deglue_dynamic(text: str) -> str:
     s = re.sub(r"[ \t]+", " ", s).strip()
     return s
 
-def _clean_cell(s): return deglue_dynamic(s)
+def simple_deglue_fixed(text: str) -> str:
+    """WORKING simple deglue - same as integrated_comprehensive_analyzer.py"""
+    if not isinstance(text, str) or not text.strip():
+        return ""
+    
+    # Basic cleanup
+    text = text.replace("\r", " ").replace("\n", " ")
+    text = re.sub(r"[ \t]+", " ", text).strip()
+    
+    # Common word fixes - handle the most problematic cases
+    fixes = {
+        "Healtheducationandwellness": "Health education and wellness",
+        "supportas": "support as", 
+        "sup portas": "support as",
+        "suppo rtas": "support as",
+        "Prescribedlaboratory": "Prescribed laboratory",
+        "Pre scri bed": "Prescribed",
+        "Basicradiological": "Basic radiological",
+        "drugadministration": "drug administration", 
+        "ManagementofNCDs": "Management of NCDs",
+        "Man age men tofNCDs": "Management of NCDs",
+        "neglectedtropical": "neglected tropical",
+        "familyplanning": "family planning",
+        "family plan ning": "family planning",
+        "antimalarials": "anti-malarials",
+        "anti mal ari als": "anti-malarials",
+        "antiTBs": "anti-TBs",
+        "guidelines": "guidelines",
+        "guide lines": "guidelines",
+        "Eachfacilitywillbemappedtoa": "Each facility will be mapped to a",
+        "bemappedtoa": "be mapped to a",
+        "bemappe dtoa": "be mapped to a",
+        "Allregisteredhouseholdswillbe": "All registered households will be",
+        "household swillbe": "households will be",
+        "all ocated": "allocated",
+        "all ocat ion": "allocation",
+        "DistributionoftheFundsshallbe": "Distribution of the Funds shall be",
+        "Distributionof the Fund sshallbe": "Distribution of the Funds shall be",
+        "associatedtests": "associated tests",
+        "Health educa tion": "Health education",
+        "well ness": "wellness",
+        "counsel ling": "counselling",
+        "Cons ulta tion": "Consultation",
+        "diagn osis": "diagnosis", 
+        "treat ment": "treatment",
+        "Prescri bed": "Prescribed",
+        "labora tory": "laboratory",
+        "inve sti gations": "investigations",
+    }
+    
+    for old, new in fixes.items():
+        text = text.replace(old, new)
+    
+    # Fix spacing around punctuation
+    text = re.sub(r",(?=\S)", ", ", text)
+    text = re.sub(r";(?=\S)", "; ", text)
+    text = re.sub(r":(?=\S)", ": ", text)
+    text = re.sub(r"(?<=\w)/(?=\w)", " / ", text)
+    text = re.sub(r"\s+([,.;:])", r"\1", text)
+    text = re.sub(r"[ \t]+", " ", text).strip()
+    
+    return text
+
+def _clean_cell(s): return simple_deglue_fixed(s)
 
 # ========== Pages 1–18 extraction ==========
 FUND_RE    = re.compile(r"FUND$", re.I)

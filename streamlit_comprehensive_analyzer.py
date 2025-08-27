@@ -385,12 +385,12 @@ class SHIFHealthcarePolicyAnalyzer:
                 
             status_placeholder.info("✅ PDF found - ready for extraction")
             
-            # Phase 2: Initialize Analyzer (10%)
-            progress_text.text("🔧 Phase 2: Initializing comprehensive medical analyzer...")
+            # Phase 2: Use Integrated Analyzer (10%)  
+            progress_text.text("🔧 Phase 2: Preparing integrated comprehensive analyzer...")
             main_progress.progress(10)
             
-            analyzer = SHIFHealthcarePolicyAnalyzer()
-            sub_text.text("📊 Analyzer initialized with validated extraction methods")
+            # No nested analyzer creation - rely on subprocess that runs integrated_comprehensive_analyzer.py
+            sub_text.text("📊 Will use integrated analyzer subprocess for validated extraction")
             
             # Phase 3: LIVE PDF Extraction (40%)
             progress_text.text("📊 Phase 3: LIVE PDF Extraction (validated approach)")
