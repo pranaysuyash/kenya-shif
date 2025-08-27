@@ -120,7 +120,8 @@ class SHIFHealthcarePolicyAnalyzer:
                     model=self.primary_model,
                     messages=[{"role": "user", "content": "Hi"}]
                 )
-                st.sidebar.success(f"✅ OpenAI Ready: {self.primary_model}")
+                if hasattr(st.sidebar, 'success'):
+                    st.sidebar.success(f"✅ OpenAI Ready: {self.primary_model}")
             except Exception as primary_e:
                 try:
                     # Try fallback model (gpt-4.1-mini)
@@ -128,18 +129,23 @@ class SHIFHealthcarePolicyAnalyzer:
                         model=self.fallback_model,
                         messages=[{"role": "user", "content": "Hi"}]
                     )
-                    st.sidebar.success(f"✅ OpenAI Ready: {self.fallback_model} (fallback)")
+                    if hasattr(st.sidebar, 'success'):
+                        st.sidebar.success(f"✅ OpenAI Ready: {self.fallback_model} (fallback)")
                 except Exception as fallback_e:
                     if 'quota' in str(fallback_e).lower():
-                        st.sidebar.warning("⚠️ OpenAI quota exceeded. Analysis functions will be disabled.")
+                        if hasattr(st.sidebar, 'warning'):
+                            st.sidebar.warning("⚠️ OpenAI quota exceeded. Analysis functions will be disabled.")
                     elif 'api_key' in str(fallback_e).lower() or 'invalid' in str(fallback_e).lower():
-                        st.sidebar.warning("⚠️ Please set OPENAI_API_KEY environment variable for AI insights")
+                        if hasattr(st.sidebar, 'warning'):
+                            st.sidebar.warning("⚠️ Please set OPENAI_API_KEY environment variable for AI insights")
                     else:
-                        st.sidebar.warning(f"⚠️ OpenAI models unavailable: {self.primary_model}, {self.fallback_model}")
+                        if hasattr(st.sidebar, 'warning'):
+                            st.sidebar.warning(f"⚠️ OpenAI models unavailable: {self.primary_model}, {self.fallback_model}")
                     self.openai_client = None
                 
         except Exception as e:
-            st.sidebar.warning("⚠️ OpenAI not available. Core functionality will work without AI insights.")
+            if hasattr(st.sidebar, 'warning'):
+                st.sidebar.warning("⚠️ OpenAI not available. Core functionality will work without AI insights.")
             self.openai_client = None
     
     def make_openai_request(self, messages):
@@ -804,27 +810,27 @@ class SHIFHealthcarePolicyAnalyzer:
     def task1_structure_rules(self):
         """Extract and structure rules from the analysis results"""
         if hasattr(self, 'results') and self.results:
-            return self.results.get('structured_rules', [])
+            return self.results.get('task1_structured_rules', self.results.get('structured_rules', []))
         return []
     
     def task2_detect_contradictions_and_gaps(self):
         """Get contradictions and gaps from analysis results"""
         if hasattr(self, 'results') and self.results:
-            contradictions = self.results.get('contradictions', [])
-            gaps = self.results.get('gaps', [])
+            contradictions = self.results.get('task2_contradictions', self.results.get('contradictions', []))
+            gaps = self.results.get('task2_gaps', self.results.get('gaps', []))
             return contradictions, gaps
         return [], []
     
     def task3_kenya_shif_context(self):
         """Get Kenya SHIF context analysis"""
         if hasattr(self, 'results') and self.results:
-            return self.results.get('context_analysis', {})
+            return self.results.get('task3_context_analysis', self.results.get('context_analysis', {}))
         return {}
     
     def task4_create_dashboard(self):
         """Create dashboard data structure"""
         if hasattr(self, 'results') and self.results:
-            return self.results.get('dashboard', {})
+            return self.results.get('task4_dashboard', self.results.get('dashboard', {}))
         return {}
 
     def load_existing_results(self):
@@ -1392,11 +1398,16 @@ class SHIFHealthcarePolicyAnalyzer:
         
         st.markdown('<div class="task-header"><h2>📋 Task 1: Structured Rules Analysis</h2></div>', unsafe_allow_html=True)
         
-        if not self.results or 'structured_rules' not in self.results:
+        if not self.results:
             st.info("📂 Load results to see structured rules analysis")
             return
+            
+        # Try both possible keys for structured rules
+        structured_rules = self.results.get('task1_structured_rules', self.results.get('structured_rules', []))
         
-        structured_rules = self.results['structured_rules']
+        if not structured_rules:
+            st.info("📂 No structured rules found. Run extraction first.")
+            return
         
         st.markdown(f"""
         **🎯 Task 1 Results:**
@@ -1408,7 +1419,12 @@ class SHIFHealthcarePolicyAnalyzer:
         col1, col2 = st.columns(2)
         
         with col1:
-            facility_levels = Counter(rule.get('facility_level', 'Unknown') for rule in structured_rules)
+            # Extract facility levels from access_point field
+            facility_levels = Counter(
+                rule.get('access_point', 'Unknown')[:20] + '...' if len(rule.get('access_point', '')) > 20 
+                else rule.get('access_point', 'Unknown') 
+                for rule in structured_rules
+            )
             
             fig = px.bar(
                 x=list(facility_levels.keys()),
@@ -1420,13 +1436,13 @@ class SHIFHealthcarePolicyAnalyzer:
             st.plotly_chart(fig, use_container_width=True)
         
         with col2:
-            # Payment method analysis
-            payment_methods = Counter(rule.get('payment_method', 'Unknown') for rule in structured_rules)
+            # Fund analysis (replacing payment method)
+            funds = Counter(rule.get('fund', 'Unknown') for rule in structured_rules)
             
             fig = px.pie(
-                values=list(payment_methods.values()),
-                names=list(payment_methods.keys()),
-                title="Payment Method Distribution"
+                values=list(funds.values()),
+                names=list(funds.keys()),
+                title="Healthcare Fund Distribution"
             )
             st.plotly_chart(fig, use_container_width=True)
         
@@ -1460,14 +1476,18 @@ class SHIFHealthcarePolicyAnalyzer:
             # Create display dataframe
             display_rules = []
             for rule in structured_rules[:20]:  # Show first 20
+                # Use correct field mappings from actual data structure
+                service_name = rule.get('service', rule.get('scope_item', ''))
+                tariff = rule.get('block_tariff', rule.get('item_tariff', 0))
+                
                 display_rules.append({
-                    'Service Name': rule.get('service_name', '')[:50] + '...' if len(rule.get('service_name', '')) > 50 else rule.get('service_name', ''),
-                    'Rule Type': rule.get('rule_type', ''),
-                    'Facility Level': rule.get('facility_level', ''),
-                    'Tariff Amount': f"KES {rule.get('tariff_amount', 0):,.0f}" if rule.get('tariff_amount') else 'N/A',
-                    'Payment Method': rule.get('payment_method', ''),
-                    'Conditions Count': len(rule.get('conditions', [])),
-                    'Exclusions Count': len(rule.get('exclusions', []))
+                    'Service Name': service_name[:50] + '...' if len(service_name) > 50 else service_name,
+                    'Rule Type': rule.get('mapping_type', ''),
+                    'Facility Level': rule.get('access_point', '')[:30] + '...' if len(rule.get('access_point', '')) > 30 else rule.get('access_point', ''),
+                    'Tariff Amount': f"KES {tariff:,.0f}" if tariff and not pd.isna(tariff) else 'N/A',
+                    'Fund': rule.get('fund', ''),
+                    'Item Label': rule.get('item_label', 'N/A') if not pd.isna(rule.get('item_label')) else 'N/A',
+                    'Rules Available': 'Yes' if rule.get('block_rules') or rule.get('item_rules') else 'No'
                 })
             
             df_display = pd.DataFrame(display_rules)
@@ -1892,14 +1912,17 @@ class SHIFHealthcarePolicyAnalyzer:
         st.markdown("---")
         
         # Add deterministic checker integration
-        self.demo_enhancer.render_deterministic_checker_section()
+        if hasattr(self, 'demo_enhancer'):
+            self.demo_enhancer.render_deterministic_checker_section()
         
         # Add raw JSON fallbacks
         if self.results:
-            self.demo_enhancer.render_raw_json_fallbacks(self.results)
+            if hasattr(self, 'demo_enhancer'):
+                self.demo_enhancer.render_raw_json_fallbacks(self.results)
         
         # Add screenshot helpers
-        self.demo_enhancer.render_screenshot_helpers()
+        if hasattr(self, 'demo_enhancer'):
+            self.demo_enhancer.render_screenshot_helpers()
     
     def render_task3_kenya_context(self):
         """Render Task 3 - Kenya/SHIF Context"""
@@ -3126,7 +3149,8 @@ curl -X POST https://api.openai.com/v1/chat/completions \\
         
         # Add demo enhancer prompt pack download
         st.markdown("---")
-        self.demo_enhancer.render_prompt_pack_download()
+        if hasattr(self, 'demo_enhancer'):
+            self.demo_enhancer.render_prompt_pack_download()
 
 def main():
     """Main application entry point"""
