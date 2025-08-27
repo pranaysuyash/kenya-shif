@@ -48,6 +48,8 @@ def simple_deglue(text: str) -> str:
         "DistributionoftheFundsshallbe": "Distribution of the Funds shall be",
         "Distributionof the Fund sshallbe": "Distribution of the Funds shall be",
         "associatedtests": "associated tests",
+        "andongoingsupport": "and ongoing support", 
+        "radiologicalexaminations": "radiological examinations",
     }
     
     # Apply fixes
