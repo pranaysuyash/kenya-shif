@@ -57,7 +57,11 @@ class UniqueInsightTracker:
                 print(f"⚠️ Could not load existing insights: {e}")
         
         # Also scan all output folders for additional insights
-        self.scan_output_folders()
+        # Skip folder scanning in submission mode to avoid accumulating old runs
+        if os.getenv("SUBMISSION_MODE") == "1":
+            print("📝 Submission mode: Skipping historical folder scan to ensure clean counts")
+        else:
+            self.scan_output_folders()
     
     def scan_output_folders(self):
         """Scan all output folders to collect insights from previous runs"""

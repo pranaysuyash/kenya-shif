@@ -11,13 +11,13 @@ print()
 
 try:
     # Import streamlit components
-    from streamlit_comprehensive_analyzer import PolicyAnalyzerApp
+    from streamlit_comprehensive_analyzer import SHIFHealthcarePolicyAnalyzer
     
-    print("1. Creating PolicyAnalyzerApp instance...")
-    app = PolicyAnalyzerApp()
+    print("1. Creating SHIFHealthcarePolicyAnalyzer instance...")
+    app = SHIFHealthcarePolicyAnalyzer()
     
     print("2. Loading results...")
-    app.load_results()
+    app.load_existing_results()
     
     print("3. Checking loaded data structure...")
     if hasattr(app, 'results') and app.results:

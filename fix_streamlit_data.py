@@ -9,11 +9,15 @@ from pathlib import Path
 print("=== FIXING STREAMLIT DATA STRUCTURE ===")
 print()
 
-# Load our comprehensive analysis
-input_file = "outputs/integrated_comprehensive_analysis.json"
+# Load our comprehensive analysis from latest outputs_run_* folder
+latest_candidates = sorted(Path('.').glob('outputs_run_*/integrated_comprehensive_analysis.json'), key=lambda p: p.stat().st_mtime)
+if not latest_candidates:
+    raise FileNotFoundError("No outputs_run_*/integrated_comprehensive_analysis.json found")
+
+input_file = str(latest_candidates[-1])
 output_file = "outputs/shif_healthcare_pattern_complete_analysis.json"
 
-print(f"1. Loading analysis from: {input_file}")
+print(f"1. Loading analysis from latest: {input_file}")
 with open(input_file, 'r') as f:
     our_data = json.load(f)
 
@@ -28,8 +32,12 @@ if 'policy_results' in our_data:
     # Try to parse the structured data
     policy_results = our_data['policy_results']
     
-    # Check if we have CSV files we can load instead
-    structured_csv = Path("outputs_run_20250827_215550/rules_p1_18_structured.csv")
+    # Load from latest outputs_run_* directory dynamically
+    latest_run_dirs = sorted(Path('.').glob('outputs_run_*'), key=lambda p: p.stat().st_mtime)
+    if latest_run_dirs:
+        structured_csv = latest_run_dirs[-1] / "rules_p1_18_structured.csv"
+    else:
+        structured_csv = Path("outputs_run_20250827_215550/rules_p1_18_structured.csv")  # fallback
     if structured_csv.exists():
         print("   Loading from CSV for better structure...")
         import pandas as pd
@@ -39,22 +47,34 @@ if 'policy_results' in our_data:
     else:
         print("   ⚠️  Using JSON string data (limited)")
         
-# Extract AI analysis
+# Extract AI analysis and merge gaps
 print()
-print("3. Extracting AI analysis...")
+print("3. Extracting and merging AI analysis...")
 ai_gaps = our_data.get('ai_analysis', {}).get('gaps', [])
 ai_contradictions = our_data.get('ai_analysis', {}).get('contradictions', [])
 
+# Coverage analysis is a dict with 'coverage_gaps' key
+coverage_analysis = our_data.get('coverage_analysis', {})
+coverage_gaps = coverage_analysis.get('coverage_gaps', []) if isinstance(coverage_analysis, dict) else []
+
 print(f"   ✅ Found {len(ai_gaps)} AI gaps")
+print(f"   ✅ Found {len(coverage_gaps)} coverage gaps")
 print(f"   ✅ Found {len(ai_contradictions)} AI contradictions")
+
+# Merge clinical gaps (ai_analysis.gaps) + coverage gaps (coverage_analysis.coverage_gaps)
+print()
+print("4. Merging and deduplicating gaps...")
+merged_gaps_set = {json.dumps(g, sort_keys=True) for g in (ai_gaps + coverage_gaps)}
+task2_gaps = [json.loads(x) for x in merged_gaps_set]
+print(f"   ✅ Merged to {len(task2_gaps)} unique gaps (~20 expected)")
 
 # Create Streamlit-compatible structure
 print()
-print("4. Creating Streamlit-compatible structure...")
+print("5. Creating Streamlit-compatible structure...")
 streamlit_data = {
     # Core analysis results
     'task1_structured_rules': structured_rules,
-    'task2_gaps': ai_gaps,
+    'task2_gaps': task2_gaps,  # now merged (~20)
     'task2_contradictions': ai_contradictions,
     
     # Context analysis
