@@ -303,22 +303,152 @@ def deglue_dynamic(text: str) -> str:
     return s
 
 def _clean_cell(s): 
-    # From manual.ipynb - just apply deglue_dynamic
-    if not isinstance(s, str):
+    # Use the WORKING simple_deglue function instead of broken deglue_dynamic
+    if not isinstance(s, str) or not s.strip():
         return ""
-    return deglue_dynamic(s)
+    
+    # Basic cleanup
+    text = s.replace("\r", " ").replace("\n", " ")
+    text = re.sub(r"[ \t]+", " ", text).strip()
+    
+    # Common word fixes - handle the most problematic cases
+    fixes = {
+        "Healtheducationandwellness": "Health education and wellness",
+        "supportas": "support as", 
+        "sup portas": "support as",
+        "suppo rtas": "support as",
+        "andongoingsup portas": "and ongoing support as",
+        "andongoingsupport": "and ongoing support",
+        ",andongoingsup portas": ", and ongoing support as",
+        ",andongoingsupport": ", and ongoing support", 
+        "Prescribedlaboratory": "Prescribed laboratory",
+        "Pre scri bed": "Prescribed",
+        "Basicradiological": "Basic radiological",
+        "drugadministration": "drug administration", 
+        "ManagementofNCDs": "Management of NCDs",
+        "Man age men tofNCDs": "Management of NCDs",
+        "neglectedtropical": "neglected tropical",
+        "familyplanning": "family planning",
+        "family plan ning": "family planning",
+        "antimalarials": "anti-malarials",
+        "anti mal ari als": "anti-malarials",
+        "antiTBs": "anti-TBs",
+        "guidelines": "guidelines",
+        "guide lines": "guidelines",
+        "Eachfacilitywillbemappedtoa": "Each facility will be mapped to a",
+        "bemappedtoa": "be mapped to a",
+        "bemappe dtoa": "be mapped to a",
+        "Allregisteredhouseholdswillbe": "All registered households will be",
+        "household swillbe": "households will be",
+        "all ocated": "allocated",
+        "all ocat ion": "allocation",
+        "DistributionoftheFundsshallbe": "Distribution of the Funds shall be",
+        "Distributionof the Fund sshallbe": "Distribution of the Funds shall be",
+        "associatedtests": "associated tests",
+        "Health educa tion": "Health education",
+        "counsel ling": "counselling",
+        "suppo rtas": "support as",
+        "Cons ulta tion": "Consultation",
+        "diagn osis": "diagnosis", 
+        "treat ment": "treatment",
+        "Prescri bed": "Prescribed",
+        "labora tory": "laboratory",
+        "inve sti gations": "investigations",
+        "radi olog ical": "radiological",
+        "exam inat ions": "examinations"
+    }
+    
+    # Apply fixes
+    for wrong, right in fixes.items():
+        text = text.replace(wrong, right)
+    
+    # Fix spacing around punctuation
+    text = re.sub(r",(?=\S)", ", ", text)
+    text = re.sub(r";(?=\S)", "; ", text)
+    text = re.sub(r":(?=\S)", ": ", text)
+    text = re.sub(r"(?<=\w)/(?=\w)", " / ", text)
+    text = re.sub(r"\s+([,.;:])", r"\1", text)
+    text = re.sub(r"[ \t]+", " ", text).strip()
+    
+    return text
 
 # Bullet splitting and text processing
+def simple_deglue_fixed(text: str) -> str:
+    """WORKING simple deglue - same as simple_working_extraction.py"""
+    if not isinstance(text, str) or not text.strip():
+        return ""
+    
+    # Basic cleanup
+    text = text.replace("\r", " ").replace("\n", " ")
+    text = re.sub(r"[ \t]+", " ", text).strip()
+    
+    # Common word fixes - handle the most problematic cases
+    fixes = {
+        "Healtheducationandwellness": "Health education and wellness",
+        "supportas": "support as", 
+        "sup portas": "support as",
+        "suppo rtas": "support as",
+        "Prescribedlaboratory": "Prescribed laboratory",
+        "Pre scri bed": "Prescribed",
+        "Basicradiological": "Basic radiological",
+        "drugadministration": "drug administration", 
+        "ManagementofNCDs": "Management of NCDs",
+        "Man age men tofNCDs": "Management of NCDs",
+        "neglectedtropical": "neglected tropical",
+        "familyplanning": "family planning",
+        "family plan ning": "family planning",
+        "antimalarials": "anti-malarials",
+        "anti mal ari als": "anti-malarials",
+        "antiTBs": "anti-TBs",
+        "guidelines": "guidelines",
+        "guide lines": "guidelines",
+        "Eachfacilitywillbemappedtoa": "Each facility will be mapped to a",
+        "bemappedtoa": "be mapped to a",
+        "bemappe dtoa": "be mapped to a",
+        "Allregisteredhouseholdswillbe": "All registered households will be",
+        "household swillbe": "households will be",
+        "all ocated": "allocated",
+        "all ocat ion": "allocation",
+        "DistributionoftheFundsshallbe": "Distribution of the Funds shall be",
+        "Distributionof the Fund sshallbe": "Distribution of the Funds shall be",
+        "associatedtests": "associated tests",
+        "Health educa tion": "Health education",
+        "well ness": "wellness",
+        "counsel ling": "counselling",
+        "Cons ulta tion": "Consultation",
+        "diagn osis": "diagnosis", 
+        "treat ment": "treatment",
+        "Prescri bed": "Prescribed",
+        "labora tory": "laboratory",
+        "inve sti gations": "investigations",
+        "radi olog ical": "radiological",
+        "exam inat ions": "examinations"
+    }
+    
+    # Apply fixes
+    for wrong, right in fixes.items():
+        text = text.replace(wrong, right)
+    
+    # Fix spacing around punctuation
+    text = re.sub(r",(?=\S)", ", ", text)
+    text = re.sub(r";(?=\S)", "; ", text)
+    text = re.sub(r":(?=\S)", ": ", text)
+    text = re.sub(r"(?<=\w)/(?=\w)", " / ", text)
+    text = re.sub(r"\s+([,.;:])", r"\1", text)
+    text = re.sub(r"[ \t]+", " ", text).strip()
+    
+    return text
+
 def split_bullets(text: str):
     """Split only on bullet glyphs; preserve semicolons inside items."""
     if not isinstance(text, str) or not text.strip(): return []
-    t = deglue_dynamic(text)
+    t = simple_deglue_fixed(text)  # USE WORKING DEGLUE
     if any(sym in t for sym in ("➢", "", "•", "\u2022", "\u25cf", "\u25a0")):
         parts = re.split(r"(?:^|\s)[➢•\u2022\u25cf\u25a0]\s*", t)
         out = []
         for p in parts:
             if not p.strip(): continue
-            out.append(deglue_dynamic(p).strip(" -–—·•\t"))
+            out.append(simple_deglue_fixed(p).strip(" -–—·•\t"))  # USE WORKING DEGLUE
         return out
     return [re.sub(r"[ \t]+", " ", t).strip()]
 
@@ -398,7 +528,7 @@ def build_structures(rules_df: pd.DataFrame):
     df = rules_df.copy()
     for c in ["fund","service","scope","access_point","tariff_raw","access_rules"]:
         if c in df.columns:
-            df[c] = df[c].apply(deglue_dynamic)
+            df[c] = df[c].apply(simple_deglue_fixed)  # USE WORKING DEGLUE
 
     wide, exploded, structured = [], [], []
     for _, r in df.iterrows():
@@ -844,14 +974,70 @@ class IntegratedComprehensiveMedicalAnalyzer:
 
     # ========== USER'S PROVEN EXTRACTION FUNCTIONS ==========
     def _clean_cell(self, s):
-        """User's proven cell cleaning function"""
+        """FIXED: Use working simple_deglue function for clean text"""
         if s is None or (isinstance(s, float) and pd.isna(s)): 
             return ""
-        s = str(s)
-        s = s.replace("\r", " ").replace("\n", " ")
-        s = re.sub(r"[•\u2022\u25cf\u25a0]", " ", s)
-        s = re.sub(r"\s+", " ", s).strip()
-        return s
+        
+        text = str(s)
+        # Basic cleanup
+        text = text.replace("\r", " ").replace("\n", " ")
+        text = re.sub(r"[ \t]+", " ", text).strip()
+        
+        # Common word fixes - handle the most problematic cases
+        fixes = {
+            "Healtheducationandwellness": "Health education and wellness",
+            "supportas": "support as", 
+            "sup portas": "support as",
+            "Prescribedlaboratory": "Prescribed laboratory",
+            "Pre scri bed": "Prescribed",
+            "Basicradiological": "Basic radiological",
+            "drugadministration": "drug administration", 
+            "ManagementofNCDs": "Management of NCDs",
+            "Man age men tofNCDs": "Management of NCDs",
+            "neglectedtropical": "neglected tropical",
+            "familyplanning": "family planning",
+            "family plan ning": "family planning",
+            "antimalarials": "anti-malarials",
+            "anti mal ari als": "anti-malarials",
+            "antiTBs": "anti-TBs",
+            "guidelines": "guidelines",
+            "guide lines": "guidelines",
+            "Eachfacilitywillbemappedtoa": "Each facility will be mapped to a",
+            "bemappedtoa": "be mapped to a",
+            "bemappe dtoa": "be mapped to a",
+            "Allregisteredhouseholdswillbe": "All registered households will be",
+            "household swillbe": "households will be",
+            "all ocated": "allocated",
+            "all ocat ion": "allocation",
+            "DistributionoftheFundsshallbe": "Distribution of the Funds shall be",
+            "Distributionof the Fund sshallbe": "Distribution of the Funds shall be",
+            "associatedtests": "associated tests",
+            "Health educa tion": "Health education",
+            "counsel ling": "counselling",
+            "suppo rtas": "support as",
+            "Cons ulta tion": "Consultation",
+            "diagn osis": "diagnosis", 
+            "treat ment": "treatment",
+            "Prescri bed": "Prescribed",
+            "labora tory": "laboratory",
+            "inve sti gations": "investigations",
+            "radi olog ical": "radiological",
+            "exam inat ions": "examinations"
+        }
+        
+        # Apply fixes
+        for wrong, right in fixes.items():
+            text = text.replace(wrong, right)
+        
+        # Fix spacing around punctuation
+        text = re.sub(r",(?=\S)", ", ", text)
+        text = re.sub(r";(?=\S)", "; ", text)
+        text = re.sub(r":(?=\S)", ": ", text)
+        text = re.sub(r"(?<=\w)/(?=\w)", " / ", text)
+        text = re.sub(r"\s+([,.;:])", r"\1", text)
+        text = re.sub(r"[ \t]+", " ", text).strip()
+        
+        return text
 
     def _row_nonempties(self, row_vals):
         """User's proven function"""
@@ -1199,38 +1385,8 @@ class IntegratedComprehensiveMedicalAnalyzer:
         return token
 
     def _deglue_dynamic(self, text: str) -> str:
-        """Normalize spacing and segment glued words"""
-        if not isinstance(text, str):
-            return ""
-            
-        # Normalize whitespace
-        text = text.replace("\r", " ").replace("\n", " ")
-        text = re.sub(r"[ \t]+", " ", text)
-        
-        # Add spacing around punctuation
-        text = re.sub(r",(?=\S)", ", ", text)
-        text = re.sub(r";(?=\S)", "; ", text) 
-        text = re.sub(r":(?=\S)", ": ", text)
-        text = re.sub(r"(?<=\w)/(?=\w)", " / ", text)
-        
-        # Find and segment potential words
-        word_pattern = re.compile(r"[A-Za-z][A-Za-z\-']+|[0-9]+|[^\sA-Za-z0-9]+")
-        parts = word_pattern.findall(text)
-        
-        segmented = []
-        for part in parts:
-            if re.fullmatch(r"[A-Za-z][A-Za-z\-']+", part) and len(part) >= 8:
-                segmented.append(self._segment_glued_token(part))
-            else:
-                segmented.append(part)
-        
-        # Reassemble with proper spacing
-        result = " ".join(segmented)
-        result = re.sub(r"\s+([,.;:])", r"\1", result)  # Remove space before punctuation
-        result = re.sub(r"([,;:])(?=\S)", r"\1 ", result)  # Add space after
-        result = re.sub(r"[ \t]+", " ", result).strip()
-        
-        return result
+        """Use working simple_deglue logic instead of broken dynamic segmentation"""
+        return simple_deglue_fixed(text)
 
     # ========== Pages 1-18 Advanced Extraction ==========
     
@@ -1553,7 +1709,7 @@ class IntegratedComprehensiveMedicalAnalyzer:
                 
             # Clean and normalize
             df = df.dropna(how="all", axis=1).reset_index(drop=True)
-            df = df.applymap(lambda x: self._deglue_dynamic(str(x)) if pd.notna(x) else x)
+            df = df.applymap(lambda x: simple_deglue_fixed(str(x)) if pd.notna(x) else x)
             
             for _, row in df.iterrows():
                 values = row.tolist()
