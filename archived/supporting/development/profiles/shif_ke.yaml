@@ -1,0 +1,57 @@
+name: shif_ke
+description: Default Kenya SHIF profile for dynamic parsing and categorization
+
+# Trigger keywords to consider a line/row as candidate healthcare rule
+trigger_keywords:
+  - dialysis
+  - haemodialysis
+  - hemodialysis
+  - consultation
+  - scan
+  - surgery
+  - procedure
+  - treatment
+  - imaging
+  - maternity
+  - delivery
+  - oncology
+  - chemotherapy
+  - radiotherapy
+  - emergency
+
+# Additional currency markers or formats to recognize
+currency_patterns:
+  - "(?:KES|Ksh|KSH|Kshs)\\.?\\s*([\\d,]+(?:\\.\\d+)?)"
+  - "([\\d,]+(?:\\.\\d+)?)\\s*(?:KES|Ksh|KSH|Kshs)"
+  - "([\\d,]+(?:\\.\\d+)?)\\s*/\\-"
+
+# Extra exclusion phrases (lowercase, regex allowed)
+exclusion_phrases:
+  - "not covered"
+  - "excluded"
+  - "not payable"
+  - "no reimbursement"
+  - "not available at level"
+  - "excluded at level"
+  - "subject to referral"
+  - "pre-authorization required"
+
+# Service categories and synonyms (extend defaults)
+service_categories:
+  DIALYSIS: [dialysis, haemodialysis, hemodialysis, renal, kidney, ckd]
+  MATERNITY: [maternity, delivery, caesarean, antenatal, postnatal]
+  ONCOLOGY: [cancer, chemotherapy, radiotherapy, oncology]
+  IMAGING: [mri, ct scan, x-ray, ultrasound, imaging]
+  SURGERY: [surgery, surgical, operation, theatre]
+  MENTAL: [mental, psychiatric, psychology, counseling]
+  STROKE: [stroke, rehabilitation, physiotherapy, rehab]
+  OUTPATIENT: [consultation, opd, outpatient, clinic]
+  EMERGENCY: [emergency, casualty, ambulance, accident]
+
+# Optional section anchors to help grouping (not yet used heavily)
+section_anchors:
+  - "benefit package"
+  - "tariffs"
+  - "exclusions"
+  - "facility levels"
+

@@ -46,7 +46,7 @@ echo $OPENAI_API_KEY
 
 Your `.env` file should contain:
 ```
-OPENAI_API_KEY=OPENAI_API_KEY_REMOVED
+OPENAI_API_KEY="OPENAI_API_KEY_REMOVED"
 ```
 
 ---

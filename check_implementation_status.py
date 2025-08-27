@@ -94,7 +94,7 @@ def main():
             if "OPENAI_API_KEY" in env_content:
                 print("✅ OPENAI_API_KEY found in .env")
                 key_line = [line for line in env_content.split('\n') if 'OPENAI_API_KEY' in line][0]
-                if key_line.startswith('OPENAI_API_KEY=sk-proj-'):
+                if key_line.startswith('OPENAI_API_KEY="OPENAI_API_KEY_REMOVED"'):
                     print("✅ API key format looks correct")
                 else:
                     print("⚠️ API key format might be incorrect")

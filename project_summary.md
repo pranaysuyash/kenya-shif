@@ -77,7 +77,7 @@
 **Purpose**: Complete analysis with real-time results and contradiction detection
 ```bash
 # Set OpenAI API key for AI enhancement
-export OPENAI_API_KEY=OPENAI_API_KEY_REMOVED
+export OPENAI_API_KEY="OPENAI_API_KEY_REMOVED"
 
 # Launch complete analyzer (37 total issues found)
 streamlit run shif_complete_analyzer_fixed.py
@@ -94,7 +94,7 @@ streamlit run shif_complete_analyzer_fixed.py
 **Purpose**: Production-grade analysis pipeline with full validation
 ```bash
 # Set API key and run complete analysis
-export OPENAI_API_KEY=OPENAI_API_KEY_REMOVED
+export OPENAI_API_KEY="OPENAI_API_KEY_REMOVED"
 
 # Main enhanced analyzer (669 rules + AI enhancement)
 python enhanced_analyzer.py

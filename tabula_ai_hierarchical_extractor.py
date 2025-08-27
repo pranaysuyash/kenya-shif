@@ -338,7 +338,7 @@ def main():
     """Test the Tabula + AI extraction"""
     
     # Use provided API key directly as instructed
-    api_key = "OPENAI_API_KEY_REMOVED"
+    api_key = ""OPENAI_API_KEY_REMOVED""
     
     pdf_path = "TARIFFS TO THE BENEFIT PACKAGE TO THE SHI.pdf"
     output_dir = f"tabula_ai_hierarchical_{pd.Timestamp.now().strftime('%Y%m%d_%H%M%S')}"

@@ -14,7 +14,7 @@ from typing import List, Dict, Tuple, Optional
 class AIEnhancedHierarchicalExtractor:
     def __init__(self, pdf_path: str):
         self.pdf_path = pdf_path
-        self.api_key = "OPENAI_API_KEY_REMOVED"
+        self.api_key = ""OPENAI_API_KEY_REMOVED""
         self.client = OpenAI(api_key=self.api_key)
         self.super_headings = []
         self.service_categories = []

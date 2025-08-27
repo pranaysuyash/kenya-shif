@@ -1,8 +1,8 @@
 # Python
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
+*$py.class
+*.so
 .Python
 build/
 develop-eggs/
@@ -19,12 +19,29 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-
-# Virtual Environment
+MANIFEST
 .venv/
 venv/
 ENV/
 env/
+*.pyc
+
+# Environment variables and secrets
+.env
+.env.local
+.env.*.local
+*.env
+secrets.txt
+*_api_key.txt
+*_api_keys.txt
+config.ini
+credentials.json
+
+# API Keys - NEVER commit these
+*api_key*
+*apikey*
+*API_KEY*
+*APIKEY*
 
 # IDE
 .vscode/
@@ -32,59 +49,112 @@ env/
 *.swp
 *.swo
 *~
-
-# OS
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.hypothesis/
 
 # Logs
 *.log
 logs/
+*.out
+*.err
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Cache
+ai_cache/
+__pycache__/
+.cache/
 
 # Temporary files
+tmp/
+temp/
 *.tmp
 *.temp
-temp/
+*.bak
+*.backup
+*~
 
-# Environment variables (keep template but not actual keys)
-.env.local
-.env.production
+# Output files that may contain sensitive data
+outputs/integrated_comprehensive_analysis.json
+*comprehensive_analysis.json
 
-# Output directories (keep sample but not all runs)
-outputs_*/
-!outputs_generalized_20250825_110447/
-!outputs_generalized_20250825_102835/
+# Personal/sensitive documents
+personal/
+private/
+confidential/
 
-# Development/testing files
-test_*.py
-*_test.py
-debug_*.py
+# Large files
+*.pdf
+*.zip
+*.tar.gz
+*.rar
 
-# Archived/deprecated files
-archived/
-obsolete_docs/
-development/
-old_outputs/
+# Streamlit
+.streamlit/secrets.toml
 
-# Jupyter notebooks
-.ipynb_checkpoints/
-*.ipynb
+# Node (if using any JS tools)
+node_modules/
+package-lock.json
+yarn.lock
 
-# Coverage reports
-htmlcov/
-.coverage
-.coverage.*
-coverage.xml
+# OS files
+Thumbs.db
+.DS_Store
+desktop.ini
 
-# pytest
-.pytest_cache/
+# Persistence files with potential sensitive data
+persistent_insights.json
+validation_cache.json
 
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
+# Output directories - contain analysis results
+outputs/
+outputs_manual/
+sample_outputs/
+sample_outputs_fresh/
+demo_release_*/
+test_outputs/
+*_outputs/
+
+# Test files
+test_*.csv
+test_*.json
+*_test.csv
+*_test.json
+
+# Screenshots  
+screenshots/
+screenshots_*/
+*.png
+*.jpg
+*.jpeg
+
+# Execution reports
+execution_report*.md
+execution_report*.json
+final_validation*.json
+validation_results*.json
+
+# Deterministic checks
+deterministic_checks.json
+deterministic_checks.md
+
+# All CSV outputs
+*.csv
+
+# Demo and release directories
+demo_*/
+release_*/
+submission_*/
