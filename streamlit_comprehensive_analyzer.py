@@ -389,8 +389,8 @@ class SHIFHealthcarePolicyAnalyzer:
             progress_text.text("🔧 Phase 2: Preparing integrated comprehensive analyzer...")
             main_progress.progress(10)
             
-            # No nested analyzer creation - rely on subprocess that runs integrated_comprehensive_analyzer.py
-            sub_text.text("📊 Will use integrated analyzer subprocess for validated extraction")
+            # Use self for result loading - no need for separate analyzer instance
+            sub_text.text("📊 Ready for result loading and subprocess extraction")
             
             # Phase 3: LIVE PDF Extraction (40%)
             progress_text.text("📊 Phase 3: LIVE PDF Extraction (validated approach)")
@@ -411,9 +411,9 @@ class SHIFHealthcarePolicyAnalyzer:
             sub_text.text("Extracting from PDF using integrated comprehensive analyzer...")
             
             # Try to load existing results first, then run analysis if needed
-            analyzer.load_existing_results()
+            self.load_existing_results()
             
-            if hasattr(analyzer, 'results') and analyzer.results:
+            if hasattr(self, 'results') and self.results:
                 st.write("✅ Found existing analysis results!")
                 dataset = True
             elif integrated_available:
@@ -427,7 +427,7 @@ class SHIFHealthcarePolicyAnalyzer:
                     if result.returncode == 0:
                         st.write("✅ Analysis completed successfully!")
                         # Now load the fresh results
-                        analyzer.load_existing_results()
+                        self.load_existing_results()
                         dataset = True
                     else:
                         st.error(f"❌ Analysis failed: {result.stderr}")
