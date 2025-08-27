@@ -48,7 +48,6 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 # Import our analyzers
 try:
     from integrated_comprehensive_analyzer import IntegratedComprehensiveMedicalAnalyzer
-    from shif_healthcare_pattern_analyzer import SHIFHealthcarePatternAnalyzer
     integrated_available = True
 except ImportError as e:
     integrated_available = False
@@ -384,7 +383,7 @@ class SHIFHealthcarePolicyAnalyzer:
             progress_text.text("🔧 Phase 2: Initializing comprehensive medical analyzer...")
             main_progress.progress(10)
             
-            analyzer = SHIFHealthcarePatternAnalyzer()
+            analyzer = SHIFHealthcarePolicyAnalyzer()
             sub_text.text("📊 Analyzer initialized with validated extraction methods")
             
             # Phase 3: LIVE PDF Extraction (40%)
