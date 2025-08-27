@@ -801,6 +801,32 @@ class SHIFHealthcarePolicyAnalyzer:
         ui['structured_rules'] = structured_rules
         return ui
     
+    def task1_structure_rules(self):
+        """Extract and structure rules from the analysis results"""
+        if hasattr(self, 'results') and self.results:
+            return self.results.get('structured_rules', [])
+        return []
+    
+    def task2_detect_contradictions_and_gaps(self):
+        """Get contradictions and gaps from analysis results"""
+        if hasattr(self, 'results') and self.results:
+            contradictions = self.results.get('contradictions', [])
+            gaps = self.results.get('gaps', [])
+            return contradictions, gaps
+        return [], []
+    
+    def task3_kenya_shif_context(self):
+        """Get Kenya SHIF context analysis"""
+        if hasattr(self, 'results') and self.results:
+            return self.results.get('context_analysis', {})
+        return {}
+    
+    def task4_create_dashboard(self):
+        """Create dashboard data structure"""
+        if hasattr(self, 'results') and self.results:
+            return self.results.get('dashboard', {})
+        return {}
+
     def load_existing_results(self):
         """Load existing analysis results"""
         
