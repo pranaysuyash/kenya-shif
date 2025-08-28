@@ -10,7 +10,8 @@
 
 This submission delivers a **comprehensive healthcare policy analysis system** for Kenya's Social Health Insurance Fund (SHIF) policy document. The system successfully analyzes 97 healthcare services, identifies 7 critical policy contradictions, detects 26 coverage gaps, and provides actionable insights through both CLI and interactive web interfaces.
 
-### Key Achievements:
+### Key Achievements
+
 - ✅ **Complete PDF Analysis**: Successfully processed 54-page SHIF policy document
 - ✅ **Rule Extraction**: Structured 97 healthcare services with tariff information
 - ✅ **AI-Enhanced Analysis**: Identified 7 contradictions (6 high/critical severity)  
@@ -22,7 +23,7 @@ This submission delivers a **comprehensive healthcare policy analysis system** f
 
 ## 🏗️ System Architecture
 
-### Core Components:
+### Core Components
 
 1. **Integrated Comprehensive Analyzer** (`integrated_comprehensive_analyzer.py`)
    - Main CLI analysis engine
@@ -45,7 +46,7 @@ This submission delivers a **comprehensive healthcare policy analysis system** f
 
 ## 📊 Analysis Results Summary
 
-### Healthcare Services Analysis:
+### Healthcare Services Analysis
 - **Total Services**: 97 structured healthcare services
 - **Service Types**: Primary healthcare, maternity, specialized care
 - **Tariff Coverage**: 98.8% of services have defined pricing
@@ -53,7 +54,7 @@ This submission delivers a **comprehensive healthcare policy analysis system** f
 
 ### Policy Issues Identified:
 
-#### 🚨 Critical Contradictions (7 found):
+#### 🚨 Critical Contradictions (7 found)
 1. **Dialysis Session Frequency Inconsistency** (CRITICAL)
    - HD: 3 sessions/week vs HDF: 2 sessions/week for equivalent treatment
    - Patient safety impact: Inadequate dialysis frequency
@@ -65,7 +66,7 @@ This submission delivers a **comprehensive healthcare policy analysis system** f
 
 3. **Additional contradictions** in tariff structures and access rules
 
-#### 🔍 Coverage Gaps (26 identified):
+#### 🔍 Coverage Gaps (26 identified)
 1. **Emergency Obstetric Care** (HIGH PRIORITY)
    - Uneven EmONC availability
    - Rural access challenges
@@ -82,14 +83,16 @@ This submission delivers a **comprehensive healthcare policy analysis system** f
 
 ## 🚀 Technical Implementation
 
-### PDF Processing Pipeline:
-```
+### PDF Processing Pipeline
+
+```text
 PDF Input → Text Extraction (Pages 1-18) → Rule Structuring
          → Tabula Processing (Pages 19-54) → Data Integration
          → AI Analysis → JSON/CSV Output
 ```
 
-### AI Enhancement Features:
+### AI Enhancement Features
+
 - **OpenAI GPT Integration**: Advanced contradiction detection
 - **Kenya-Specific Context**: Local healthcare system considerations
 - **Clinical Validation**: Medical accuracy verification
