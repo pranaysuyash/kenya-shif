@@ -119,8 +119,11 @@ class SHIFHealthcarePolicyAnalyzer:
             import os
             load_dotenv('.env', override=True)
             api_key = os.getenv('OPENAI_API_KEY')
-            if not api_key:
-                api_key = "OPENAI_API_KEY_REQUIRED"
+            if not api_key or api_key == "OPENAI_API_KEY_REQUIRED":
+                self.openai_client = None
+                if hasattr(st.sidebar, 'warning'):
+                    st.sidebar.warning("⚠️ Please set OPENAI_API_KEY environment variable for AI insights")
+                return
             self.openai_client = openai.OpenAI(api_key=api_key)
             
             # Test the client with specified models (try primary first, then fallback)
@@ -872,10 +875,108 @@ class SHIFHealthcarePolicyAnalyzer:
                     st.success(f"✅ Loaded results from {file_path}")
                     break
             else:
-                st.warning("No existing results found. Run extraction first.")
+                # Try automatic conversion from latest outputs_run_* folder
+                st.info("📄 No processed results found. Attempting automatic data conversion...")
+                try:
+                    self._auto_convert_data()
+                    # Try loading again after conversion
+                    for file_path in results_files:
+                        if Path(file_path).exists():
+                            with open(file_path, 'r') as f:
+                                data = json.load(f)
+                            
+                            # Transform data structure for compatibility
+                            self.results = {
+                                'structured_rules': data.get('task1_structured_rules', []),
+                                'contradictions': data.get('task2_contradictions', []),
+                                'gaps': data.get('task2_gaps', []),
+                                'context_analysis': data.get('task3_context_analysis', {}),
+                                'dashboard': data.get('task4_dashboard', {}),
+                                'dataset': data.get('extraction_results', {}),
+                                'timestamp': data.get('analysis_metadata', {}).get('analysis_timestamp', 'Unknown')
+                            }
+                            
+                            st.success(f"✅ Auto-converted and loaded results from {file_path}")
+                            return
+                    
+                    st.warning("⚠️ No results found even after conversion. Run integrated analyzer first.")
+                except Exception as conv_e:
+                    st.warning(f"⚠️ Auto-conversion failed: {conv_e}. Run extraction first.")
                 
         except Exception as e:
             st.error(f"Failed to load results: {str(e)}")
+    
+    def _auto_convert_data(self):
+        """Automatically convert data from latest outputs_run_* folder"""
+        import glob
+        
+        # Find the latest outputs_run_* folder with integrated analysis
+        latest_candidates = sorted(Path('.').glob('outputs_run_*/integrated_comprehensive_analysis.json'), 
+                                 key=lambda p: p.stat().st_mtime)
+        if not latest_candidates:
+            raise FileNotFoundError("No outputs_run_*/integrated_comprehensive_analysis.json found")
+        
+        input_file = str(latest_candidates[-1])
+        output_file = "outputs/shif_healthcare_pattern_complete_analysis.json"
+        
+        # Load the integrated analysis data
+        with open(input_file, 'r') as f:
+            our_data = json.load(f)
+        
+        # Extract structured rules from policy_results
+        structured_rules = []
+        policy_results = our_data.get('policy_results', {})
+        if 'structured' in policy_results:
+            structured = policy_results['structured']
+            if hasattr(structured, 'to_dict'):
+                structured_data = structured.to_dict('records')
+            elif isinstance(structured, list):
+                structured_data = structured
+            else:
+                structured_data = []
+            structured_rules = structured_data
+
+        # Extract AI analysis and merge gaps
+        ai_gaps = our_data.get('ai_analysis', {}).get('gaps', [])
+        ai_contradictions = our_data.get('ai_analysis', {}).get('contradictions', [])
+        coverage_analysis = our_data.get('coverage_analysis', {})
+        coverage_gaps = coverage_analysis.get('coverage_gaps', []) if isinstance(coverage_analysis, dict) else []
+        
+        # Merge and deduplicate gaps
+        merged_gaps_set = {json.dumps(g, sort_keys=True) for g in (ai_gaps + coverage_gaps)}
+        task2_gaps = [json.loads(x) for x in merged_gaps_set]
+        
+        # Create Streamlit-compatible structure
+        streamlit_data = {
+            'task1_structured_rules': structured_rules,
+            'task2_gaps': task2_gaps,
+            'task2_contradictions': ai_contradictions,
+            'task3_context_analysis': {
+                'total_services': our_data.get('total_policy_services', 0),
+                'total_procedures': our_data.get('total_annex_procedures', 0),
+                'coverage_gaps': our_data.get('total_coverage_gaps', 0)
+            },
+            'task4_dashboard': {
+                'metrics_overview': {
+                    'total_rules': len(structured_rules),
+                    'total_gaps': len(task2_gaps),  # Use merged gaps count
+                    'total_contradictions': len(ai_contradictions)
+                }
+            },
+            'extraction_results': our_data.get('policy_results', {}),
+            'analysis_metadata': {
+                'analysis_timestamp': our_data.get('analysis_metadata', {}).get('timestamp', 'Unknown'),
+                'total_ai_gaps': our_data.get('total_ai_gaps', len(ai_gaps)),
+                'total_ai_contradictions': our_data.get('total_ai_contradictions', len(ai_contradictions))
+            }
+        }
+        
+        # Ensure outputs directory exists
+        Path('outputs').mkdir(exist_ok=True)
+        
+        # Save the converted data
+        with open(output_file, 'w') as f:
+            json.dump(streamlit_data, f, indent=2)
     
     def get_total_services(self):
         """Get total number of services"""
