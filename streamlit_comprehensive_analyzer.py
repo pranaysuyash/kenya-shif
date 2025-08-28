@@ -2440,6 +2440,54 @@ class SHIFHealthcarePolicyAnalyzer:
                 help="AI insights tailored to Kenya's healthcare context"
             )
 
+        # Advanced comprehensive analysis options
+        st.markdown("### 🔬 Advanced Comprehensive Analysis")
+        st.markdown("**Additional AI analysis using comprehensive medical prompts:**")
+        
+        adv_col1, adv_col2, adv_col3 = st.columns(3)
+        
+        with adv_col1:
+            analyze_annex_quality = st.button(
+                "📊 Annex Quality Analysis",
+                help="AI analysis of annex procedure quality and completeness"
+            )
+            analyze_facility_validation = st.button(
+                "🏥 Facility Level Validation", 
+                help="Validate facility-level service mappings and capabilities"
+            )
+            analyze_equity = st.button(
+                "⚖️ Healthcare Equity Analysis",
+                help="Kenya-specific equity analysis across 47 counties"
+            )
+        
+        with adv_col2:
+            analyze_policy_alignment = st.button(
+                "🔗 Policy-Annex Alignment",
+                help="Analyze alignment between policy structure and annex procedures"
+            )
+            analyze_tariff_outliers = st.button(
+                "💰 Tariff Outlier Detection",
+                help="Identify unusual patterns in healthcare tariffs"  
+            )
+            analyze_batch_services = st.button(
+                "📋 Batch Service Analysis",
+                help="Comprehensive analysis of multiple services simultaneously"
+            )
+        
+        with adv_col3:
+            analyze_section_summaries = st.button(
+                "📄 Section Summaries",
+                help="Generate detailed summaries of policy sections"
+            )
+            analyze_name_canonicalization = st.button(
+                "🔤 Service Name Standardization", 
+                help="Standardize and canonicalize healthcare service names"
+            )
+            analyze_conversational = st.button(
+                "💬 Interactive Analysis",
+                help="Conversational AI analysis with custom questions"
+            )
+
         # Predictive scenario input
         st.markdown("### 🔮 Predictive Scenario Analysis")
         scen_col1, scen_col2 = st.columns([2,1])
@@ -2482,6 +2530,61 @@ class SHIFHealthcarePolicyAnalyzer:
                 st.warning("⚠️ OpenAI not available")
             else:
                 self.generate_ai_predictive_analysis(user_scenario)
+        
+        # Handle advanced comprehensive analysis buttons
+        if analyze_annex_quality:
+            if not self.openai_client:
+                st.warning("⚠️ OpenAI not available")
+            else:
+                self.generate_annex_quality_analysis()
+                
+        if analyze_facility_validation:
+            if not self.openai_client:
+                st.warning("⚠️ OpenAI not available") 
+            else:
+                self.generate_facility_validation_analysis()
+                
+        if analyze_equity:
+            if not self.openai_client:
+                st.warning("⚠️ OpenAI not available")
+            else:
+                self.generate_equity_analysis()
+                
+        if analyze_policy_alignment:
+            if not self.openai_client:
+                st.warning("⚠️ OpenAI not available")
+            else:
+                self.generate_policy_alignment_analysis()
+                
+        if analyze_tariff_outliers:
+            if not self.openai_client:
+                st.warning("⚠️ OpenAI not available")
+            else:
+                self.generate_tariff_outlier_analysis()
+                
+        if analyze_batch_services:
+            if not self.openai_client:
+                st.warning("⚠️ OpenAI not available")
+            else:
+                self.generate_batch_service_analysis()
+                
+        if analyze_section_summaries:
+            if not self.openai_client:
+                st.warning("⚠️ OpenAI not available")
+            else:
+                self.generate_section_summaries_analysis()
+                
+        if analyze_name_canonicalization:
+            if not self.openai_client:
+                st.warning("⚠️ OpenAI not available")
+            else:
+                self.generate_name_canonicalization_analysis()
+                
+        if analyze_conversational:
+            if not self.openai_client:
+                st.warning("⚠️ OpenAI not available")
+            else:
+                self.generate_conversational_analysis()
 
         # Show integrated extended AI outputs if present
         if isinstance(getattr(self, 'results', None), dict) and (
@@ -3351,6 +3454,280 @@ curl -X POST https://api.openai.com/v1/chat/completions \\
         st.markdown("---")
         if hasattr(self, 'demo_enhancer'):
             self.demo_enhancer.render_prompt_pack_download()
+    
+    # ========== COMPREHENSIVE AI ANALYSIS METHODS ==========
+    
+    def generate_annex_quality_analysis(self):
+        """Generate AI analysis of annex quality"""
+        with st.spinner("🤖 Analyzing annex procedure quality..."):
+            try:
+                from updated_prompts import UpdatedHealthcareAIPrompts as P
+                
+                # Prepare annex data summary
+                if 'structured_rules' in self.results:
+                    annex_services = [r for r in self.results['structured_rules'] if r.get('mapping_type') == 'itemized']
+                    annex_summary = f"Annex contains {len(annex_services)} itemized procedures with detailed tariff information"
+                    sample_procedures = str(annex_services[:5]) if annex_services else "No itemized procedures found"
+                else:
+                    annex_summary = "No structured rules available for annex analysis"
+                    sample_procedures = ""
+                
+                prompt = P.get_annex_quality_prompt(annex_summary, sample_procedures)
+                ai_analysis, model_used = self.make_openai_request([{"role": "user", "content": prompt}])
+                
+                st.markdown("### 🤖 AI Analysis: Annex Quality")
+                st.info(f"Analysis generated using {model_used}")
+                st.markdown(ai_analysis)
+                
+                if not hasattr(self, 'ai_insights'):
+                    self.ai_insights = {}
+                self.ai_insights['annex_quality'] = ai_analysis
+                
+            except Exception as e:
+                st.error(f"Annex quality analysis failed: {str(e)}")
+    
+    def generate_facility_validation_analysis(self):
+        """Generate facility-level validation analysis"""
+        with st.spinner("🤖 Validating facility-level service mappings..."):
+            try:
+                from updated_prompts import UpdatedHealthcareAIPrompts as P
+                
+                # Prepare facility data
+                if 'structured_rules' in self.results:
+                    facility_data = [{'service': r.get('service', ''), 'access_point': r.get('access_point', ''), 'fund': r.get('fund', '')} 
+                                   for r in self.results['structured_rules'][:10]]
+                    facility_json = str(facility_data)
+                else:
+                    facility_json = "No facility data available"
+                
+                prompt = P.get_facility_level_validation_prompt(facility_json)
+                ai_analysis, model_used = self.make_openai_request([{"role": "user", "content": prompt}])
+                
+                st.markdown("### 🤖 AI Analysis: Facility Level Validation")
+                st.info(f"Analysis generated using {model_used}")
+                st.markdown(ai_analysis)
+                
+                if not hasattr(self, 'ai_insights'):
+                    self.ai_insights = {}
+                self.ai_insights['facility_validation'] = ai_analysis
+                
+            except Exception as e:
+                st.error(f"Facility validation analysis failed: {str(e)}")
+    
+    def generate_equity_analysis(self):
+        """Generate healthcare equity analysis"""
+        with st.spinner("🤖 Analyzing healthcare equity across Kenya..."):
+            try:
+                from updated_prompts import UpdatedHealthcareAIPrompts as P
+                
+                # Prepare coverage summary
+                total_services = len(self.results.get('structured_rules', []))
+                gaps_count = len(self.results.get('gaps', []))
+                coverage_summary = f"SHIF covers {total_services} services with {gaps_count} identified coverage gaps"
+                county_note = "Kenya has 47 counties with 70% rural, 30% urban population distribution"
+                
+                prompt = P.get_equity_analysis_prompt(coverage_summary, county_note)
+                ai_analysis, model_used = self.make_openai_request([{"role": "user", "content": prompt}])
+                
+                st.markdown("### 🤖 AI Analysis: Healthcare Equity")
+                st.info(f"Analysis generated using {model_used}")
+                st.markdown(ai_analysis)
+                
+                if not hasattr(self, 'ai_insights'):
+                    self.ai_insights = {}
+                self.ai_insights['equity_analysis'] = ai_analysis
+                
+            except Exception as e:
+                st.error(f"Equity analysis failed: {str(e)}")
+    
+    def generate_policy_alignment_analysis(self):
+        """Generate policy-annex alignment analysis"""
+        with st.spinner("🤖 Analyzing policy-annex alignment..."):
+            try:
+                from updated_prompts import UpdatedHealthcareAIPrompts as P
+                
+                # Prepare summaries
+                policy_services = len([r for r in self.results.get('structured_rules', []) if r.get('mapping_type') == 'block'])
+                annex_services = len([r for r in self.results.get('structured_rules', []) if r.get('mapping_type') == 'itemized'])
+                
+                policy_summary = f"Policy structure contains {policy_services} block-level services"
+                annex_summary = f"Annex contains {annex_services} itemized procedures with detailed tariffs"
+                
+                prompt = P.get_policy_annex_alignment_prompt(policy_summary, annex_summary)
+                ai_analysis, model_used = self.make_openai_request([{"role": "user", "content": prompt}])
+                
+                st.markdown("### 🤖 AI Analysis: Policy-Annex Alignment")
+                st.info(f"Analysis generated using {model_used}")
+                st.markdown(ai_analysis)
+                
+                if not hasattr(self, 'ai_insights'):
+                    self.ai_insights = {}
+                self.ai_insights['policy_alignment'] = ai_analysis
+                
+            except Exception as e:
+                st.error(f"Policy alignment analysis failed: {str(e)}")
+    
+    def generate_tariff_outlier_analysis(self):
+        """Generate tariff outlier analysis"""
+        with st.spinner("🤖 Analyzing tariff patterns and outliers..."):
+            try:
+                from updated_prompts import UpdatedHealthcareAIPrompts as P
+                
+                # Calculate basic tariff statistics
+                tariffs = []
+                for rule in self.results.get('structured_rules', []):
+                    if rule.get('block_tariff') and str(rule.get('block_tariff')).replace('.','').isdigit():
+                        tariffs.append(float(rule.get('block_tariff')))
+                
+                if tariffs:
+                    import statistics
+                    tariff_stats = {
+                        'count': len(tariffs),
+                        'mean': statistics.mean(tariffs),
+                        'median': statistics.median(tariffs),
+                        'min': min(tariffs),
+                        'max': max(tariffs),
+                        'std_dev': statistics.stdev(tariffs) if len(tariffs) > 1 else 0
+                    }
+                    stats_json = str(tariff_stats)
+                else:
+                    stats_json = "No valid tariff data available for analysis"
+                
+                prompt = P.get_tariff_outlier_prompt(stats_json)
+                ai_analysis, model_used = self.make_openai_request([{"role": "user", "content": prompt}])
+                
+                st.markdown("### 🤖 AI Analysis: Tariff Outliers")
+                st.info(f"Analysis generated using {model_used}")
+                st.markdown(ai_analysis)
+                
+                if not hasattr(self, 'ai_insights'):
+                    self.ai_insights = {}
+                self.ai_insights['tariff_outliers'] = ai_analysis
+                
+            except Exception as e:
+                st.error(f"Tariff outlier analysis failed: {str(e)}")
+    
+    def generate_batch_service_analysis(self):
+        """Generate batch service analysis"""
+        with st.spinner("🤖 Performing batch service analysis..."):
+            try:
+                from updated_prompts import UpdatedHealthcareAIPrompts as P
+                
+                # Prepare services data
+                services_data = self.results.get('structured_rules', [])[:20]  # First 20 services
+                services_json = str(services_data)
+                context = "Kenya SHIF healthcare policy with 6-tier facility system"
+                
+                prompt = P.get_batch_service_analysis_prompt(services_json, context)
+                ai_analysis, model_used = self.make_openai_request([{"role": "user", "content": prompt}])
+                
+                st.markdown("### 🤖 AI Analysis: Batch Services")
+                st.info(f"Analysis generated using {model_used}")
+                st.markdown(ai_analysis)
+                
+                if not hasattr(self, 'ai_insights'):
+                    self.ai_insights = {}
+                self.ai_insights['batch_service'] = ai_analysis
+                
+            except Exception as e:
+                st.error(f"Batch service analysis failed: {str(e)}")
+    
+    def generate_section_summaries_analysis(self):
+        """Generate section summaries analysis"""
+        with st.spinner("🤖 Generating policy section summaries..."):
+            try:
+                from updated_prompts import UpdatedHealthcareAIPrompts as P
+                
+                # Group services by fund for section analysis
+                services_by_fund = {}
+                for rule in self.results.get('structured_rules', []):
+                    fund = rule.get('fund', 'Unknown Fund')
+                    if fund not in services_by_fund:
+                        services_by_fund[fund] = []
+                    services_by_fund[fund].append(rule)
+                
+                # Take first 10 from each fund
+                section_data = []
+                for fund, services in services_by_fund.items():
+                    section_data.extend(services[:10])
+                
+                policy_rows_json = str(section_data[:30])  # Limit to 30 total
+                
+                prompt = P.get_section_summaries_prompt(policy_rows_json)
+                ai_analysis, model_used = self.make_openai_request([{"role": "user", "content": prompt}])
+                
+                st.markdown("### 🤖 AI Analysis: Section Summaries")
+                st.info(f"Analysis generated using {model_used}")
+                st.markdown(ai_analysis)
+                
+                if not hasattr(self, 'ai_insights'):
+                    self.ai_insights = {}
+                self.ai_insights['section_summaries'] = ai_analysis
+                
+            except Exception as e:
+                st.error(f"Section summaries analysis failed: {str(e)}")
+    
+    def generate_name_canonicalization_analysis(self):
+        """Generate service name canonicalization analysis"""
+        with st.spinner("🤖 Standardizing healthcare service names..."):
+            try:
+                from updated_prompts import UpdatedHealthcareAIPrompts as P
+                
+                # Extract unique service names
+                service_names = []
+                for rule in self.results.get('structured_rules', []):
+                    if rule.get('service'):
+                        service_names.append(rule.get('service'))
+                
+                # Remove duplicates and take first 50
+                unique_services = list(set(service_names))[:50]
+                services_list_json = str(unique_services)
+                
+                prompt = P.get_name_canonicalization_prompt(services_list_json)
+                ai_analysis, model_used = self.make_openai_request([{"role": "user", "content": prompt}])
+                
+                st.markdown("### 🤖 AI Analysis: Service Name Standardization")
+                st.info(f"Analysis generated using {model_used}")
+                st.markdown(ai_analysis)
+                
+                if not hasattr(self, 'ai_insights'):
+                    self.ai_insights = {}
+                self.ai_insights['name_canonicalization'] = ai_analysis
+                
+            except Exception as e:
+                st.error(f"Name canonicalization analysis failed: {str(e)}")
+    
+    def generate_conversational_analysis(self):
+        """Generate conversational analysis"""
+        st.markdown("### 💬 Interactive Analysis")
+        
+        user_question = st.text_input(
+            "Ask a question about the healthcare policy analysis:",
+            placeholder="e.g., What are the main gaps in pediatric care coverage?"
+        )
+        
+        if st.button("🤖 Get AI Answer") and user_question:
+            with st.spinner("🤖 Processing your question..."):
+                try:
+                    from updated_prompts import UpdatedHealthcareAIPrompts as P
+                    
+                    # Prepare context data
+                    context_data = {
+                        'total_services': len(self.results.get('structured_rules', [])),
+                        'contradictions': len(self.results.get('contradictions', [])),
+                        'gaps': len(self.results.get('gaps', [])),
+                        'sample_services': [r.get('service', '') for r in self.results.get('structured_rules', [])[:10]]
+                    }
+                    
+                    prompt = P.get_conversational_analysis_prompt(user_question, str(context_data))
+                    ai_analysis, model_used = self.make_openai_request([{"role": "user", "content": prompt}])
+                    
+                    st.markdown("### 🤖 AI Response")
+                    st.info(f"Analysis generated using {model_used}")
+                    st.markdown(ai_analysis)
+                    
+                except Exception as e:
+                    st.error(f"Conversational analysis failed: {str(e)}")
 
 def main():
     """Main application entry point"""
