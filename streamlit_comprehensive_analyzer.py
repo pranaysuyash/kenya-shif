@@ -101,6 +101,16 @@ class SHIFHealthcarePolicyAnalyzer:
         # self.demo_enhancer = DemoEnhancer()  # Demo capabilities - disabled for core testing
         self.setup_openai()
     
+    def _safe_truncate(self, value, max_length):
+        """Safely truncate a value to max_length, handling floats and None values"""
+        if isinstance(value, float) or value is None or pd.isna(value):
+            return 'Unknown'
+        
+        value_str = str(value)
+        if len(value_str) > max_length:
+            return value_str[:max_length] + '...'
+        return value_str
+    
     def setup_openai(self):
         """Setup OpenAI client with user-specified models (gpt-5-mini, gpt-4.1-mini)"""
         try:
@@ -461,7 +471,7 @@ class SHIFHealthcarePolicyAnalyzer:
             sub_progress.progress(0)
             sub_text.text("Task 1: Structuring 825+ extracted rules with pattern analysis...")
             
-            structured_rules = analyzer.task1_structure_rules()
+            structured_rules = self.task1_structure_rules()
             sub_progress.progress(100)
             
             status_placeholder.success(f"✅ Task 1 Complete: {len(structured_rules)} rules structured")
@@ -471,7 +481,7 @@ class SHIFHealthcarePolicyAnalyzer:
             sub_progress.progress(0)
             sub_text.text("Task 2: Detecting contradictions and coverage gaps...")
             
-            contradictions, gaps = analyzer.task2_detect_contradictions_and_gaps()
+            contradictions, gaps = self.task2_detect_contradictions_and_gaps()
             sub_progress.progress(100)
             
             status_placeholder.success(f"✅ Task 2 Complete: {len(contradictions)} contradictions, {len(gaps)} gaps found")
@@ -481,7 +491,7 @@ class SHIFHealthcarePolicyAnalyzer:
             sub_progress.progress(0)
             sub_text.text("Task 3: Integrating Kenya healthcare system context...")
             
-            context_analysis = analyzer.task3_kenya_shif_context()
+            context_analysis = self.task3_kenya_shif_context()
             sub_progress.progress(100)
             
             status_placeholder.success("✅ Task 3 Complete: Kenya/SHIF context integrated")
@@ -491,7 +501,7 @@ class SHIFHealthcarePolicyAnalyzer:
             sub_progress.progress(0)
             sub_text.text("Task 4: Creating comprehensive dashboard and CSV files...")
             
-            dashboard = analyzer.task4_create_dashboard()
+            dashboard = self.task4_create_dashboard()
             sub_progress.progress(100)
             
             status_placeholder.success("✅ Task 4 Complete: Dashboard and all CSV files generated")
@@ -881,24 +891,65 @@ class SHIFHealthcarePolicyAnalyzer:
     def show_quick_summary(self):
         """Show a quick summary of available results"""
         
-        # Check for existing result files (clean format from manual.ipynb logic)
+        # Find the latest output folder dynamically  
+        import glob
+        latest_run = None
+        run_dirs = glob.glob('outputs_run_*')
+        if run_dirs:
+            latest_run = sorted(run_dirs)[-1]  # Get the most recent folder
+        
+        # Check for existing result files in both outputs/ and latest run folder
         result_files = {
             'Policy Services (Clean)': 'outputs/rules_p1_18_structured.csv',
-            'Annex Procedures (Clean)': 'outputs/annex_procedures.csv',
-            'AI Contradictions': 'outputs_run_*/contradictions_analysis.csv',
-            'AI Gaps Analysis': 'outputs_run_*/gaps_analysis.csv',
-            'Analysis Summary': 'outputs_run_*/analysis_summary.csv'
+            'Annex Procedures (Clean)': f'{latest_run}/annex_procedures.csv' if latest_run else None,
+            'AI Contradictions': f'{latest_run}/ai_contradictions.csv' if latest_run else None,
+            'AI Gaps Analysis': f'{latest_run}/all_gaps_final.csv' if latest_run else None,
+            'Analysis Summary': f'{latest_run}/integrated_comprehensive_analysis.json' if latest_run else None
         }
         
         st.markdown("### 📋 Available Analysis Results")
+        if latest_run:
+            st.info(f"📁 Using results from: {latest_run}")
         
         available_files = []
         for name, path in result_files.items():
-            if Path(path).exists():
+            if path and Path(path).exists():
                 file_size = Path(path).stat().st_size
                 available_files.append(f"✅ **{name}** ({file_size:,} bytes)")
             else:
-                available_files.append(f"❌ **{name}** (Not found)")
+                # Try alternative file names for common files
+                alternative_found = False
+                if latest_run:
+                    if 'Annex' in name:
+                        alt_path = f'{latest_run}/annex_procedures.csv'
+                        if Path(alt_path).exists():
+                            file_size = Path(alt_path).stat().st_size  
+                            available_files.append(f"✅ **{name}** ({file_size:,} bytes)")
+                            alternative_found = True
+                    elif 'AI Contradictions' in name:
+                        alt_path = f'{latest_run}/ai_contradictions.csv'
+                        if Path(alt_path).exists():
+                            file_size = Path(alt_path).stat().st_size
+                            available_files.append(f"✅ **{name}** ({file_size:,} bytes)")
+                            alternative_found = True
+                    elif 'AI Gaps' in name:
+                        # Try multiple gap file names
+                        gap_files = [f'{latest_run}/all_gaps_final.csv', f'{latest_run}/gaps_analysis.csv', f'{latest_run}/ai_gaps.csv']
+                        for gap_file in gap_files:
+                            if Path(gap_file).exists():
+                                file_size = Path(gap_file).stat().st_size
+                                available_files.append(f"✅ **{name}** ({file_size:,} bytes)")
+                                alternative_found = True
+                                break
+                    elif 'Summary' in name:
+                        alt_path = f'{latest_run}/integrated_comprehensive_analysis.json'
+                        if Path(alt_path).exists():
+                            file_size = Path(alt_path).stat().st_size
+                            available_files.append(f"✅ **{name}** ({file_size:,} bytes)")
+                            alternative_found = True
+                
+                if not alternative_found:
+                    available_files.append(f"❌ **{name}** (Not found)")
         
         for file_info in available_files:
             st.markdown(file_info)
@@ -963,13 +1014,13 @@ class SHIFHealthcarePolicyAnalyzer:
         
         with col2:
             total_contradictions = len(self.results.get('contradictions', []))
-            high_severity = sum(1 for c in self.results.get('contradictions', []) if c.get('severity') == 'high')
+            high_severity = sum(1 for c in self.results.get('contradictions', []) if c.get('clinical_severity', c.get('severity', '')).lower() in ('high', 'critical'))
             st.metric("Contradictions", total_contradictions, delta=f"{high_severity} high severity")
         
         with col3:
             # Fixed gap metrics from mapped data structure
             total_gaps = len(self.results.get('gaps', []))
-            high_impact = sum(1 for g in self.results.get('gaps', []) if g.get('impact') == 'high')
+            high_impact = sum(1 for g in self.results.get('gaps', []) if g.get('clinical_priority', g.get('impact', '')).lower() in ('high', 'critical'))
             st.metric("Healthcare Gaps", total_gaps, delta=f"{high_impact} high impact")
         
         with col4:
@@ -999,8 +1050,8 @@ class SHIFHealthcarePolicyAnalyzer:
             contradictions = self.results.get('contradictions', [])
             gaps = self.results.get('gaps', [])
             
-            high_severity_contradictions = [c for c in contradictions if str(c.get('severity','')).lower() in ('high','critical')]
-            high_impact_gaps = [g for g in gaps if g.get('impact') == 'high']
+            high_severity_contradictions = [c for c in contradictions if str(c.get('clinical_severity', c.get('severity', ''))).lower() in ('high','critical')]
+            high_impact_gaps = [g for g in gaps if g.get('clinical_priority', g.get('impact', '')).lower() in ('high', 'critical')]
             
             if high_severity_contradictions:
                 st.markdown(f"- 🚨 {len(high_severity_contradictions)} high-severity contradictions")
@@ -1356,7 +1407,7 @@ class SHIFHealthcarePolicyAnalyzer:
             # Contradiction severity distribution
             contradictions = self.results.get('contradictions', [])
             if contradictions:
-                severity_counts = Counter(c.get('severity', 'unknown') for c in contradictions)
+                severity_counts = Counter(c.get('clinical_severity', c.get('severity', 'unknown')) for c in contradictions)
                 
                 fig = px.pie(
                     values=list(severity_counts.values()),
@@ -1370,7 +1421,7 @@ class SHIFHealthcarePolicyAnalyzer:
             # Gap impact distribution
             gaps = self.results.get('gaps', [])
             if gaps:
-                impact_counts = Counter(g.get('impact', 'unknown') for g in gaps)
+                impact_counts = Counter(g.get('clinical_priority', g.get('impact', 'unknown')) for g in gaps)
                 
                 fig = px.pie(
                     values=list(impact_counts.values()),
@@ -1383,7 +1434,7 @@ class SHIFHealthcarePolicyAnalyzer:
         # Rule type distribution
         structured_rules = self.results.get('structured_rules', [])
         if structured_rules:
-            rule_types = Counter(rule.get('rule_type', 'unknown') for rule in structured_rules)
+            rule_types = Counter(rule.get('mapping_type', rule.get('rule_type', 'unknown')) for rule in structured_rules)
             
             fig = px.bar(
                 x=list(rule_types.keys()),
@@ -1419,12 +1470,23 @@ class SHIFHealthcarePolicyAnalyzer:
         col1, col2 = st.columns(2)
         
         with col1:
-            # Extract facility levels from access_point field
-            facility_levels = Counter(
-                rule.get('access_point', 'Unknown')[:20] + '...' if len(rule.get('access_point', '')) > 20 
-                else rule.get('access_point', 'Unknown') 
-                for rule in structured_rules
-            )
+            # Extract facility levels from access_point field with type safety
+            facility_levels = Counter()
+            for rule in structured_rules:
+                access_point = rule.get('access_point', 'Unknown')
+                # Handle float/NaN values from pandas
+                if isinstance(access_point, float) or access_point is None:
+                    access_point_str = 'Unknown'
+                else:
+                    access_point_str = str(access_point)
+                
+                # Truncate long strings
+                if len(access_point_str) > 20:
+                    display_value = access_point_str[:20] + '...'
+                else:
+                    display_value = access_point_str
+                
+                facility_levels[display_value] += 1
             
             fig = px.bar(
                 x=list(facility_levels.keys()),
@@ -1483,7 +1545,7 @@ class SHIFHealthcarePolicyAnalyzer:
                 display_rules.append({
                     'Service Name': service_name[:50] + '...' if len(service_name) > 50 else service_name,
                     'Rule Type': rule.get('mapping_type', ''),
-                    'Facility Level': rule.get('access_point', '')[:30] + '...' if len(rule.get('access_point', '')) > 30 else rule.get('access_point', ''),
+                    'Facility Level': self._safe_truncate(rule.get('access_point', ''), 30),
                     'Tariff Amount': f"KES {tariff:,.0f}" if tariff and not pd.isna(tariff) else 'N/A',
                     'Fund': rule.get('fund', ''),
                     'Item Label': rule.get('item_label', 'N/A') if not pd.isna(rule.get('item_label')) else 'N/A',
@@ -1523,7 +1585,7 @@ class SHIFHealthcarePolicyAnalyzer:
             st.metric("Total Contradictions", len(contradictions))
         
         with col2:
-            high_severity = sum(1 for c in contradictions if c.get('severity') == 'high')
+            high_severity = sum(1 for c in contradictions if c.get('clinical_severity', c.get('severity', '')).lower() in ('high', 'critical'))
             st.metric("High Severity", high_severity)
         
         with col3:
@@ -1544,15 +1606,15 @@ class SHIFHealthcarePolicyAnalyzer:
         
         if contradictions:
             # Show high-severity contradictions first
-            high_severity_contradictions = [c for c in contradictions if c.get('severity') == 'high']
+            high_severity_contradictions = [c for c in contradictions if c.get('clinical_severity', c.get('severity', '')).lower() in ('high', 'critical')]
             
             if high_severity_contradictions:
                 st.markdown("#### ⚠️ High Severity Contradictions (Immediate Action Required)")
                 
                 for i, contradiction in enumerate(high_severity_contradictions, 1):
-                    ctype = contradiction.get('type') or contradiction.get('contradiction_type') or 'Unknown'
-                    desc = contradiction.get('description') or contradiction.get('medical_rationale') or 'No description'
-                    details = contradiction.get('details') or contradiction.get('provider_impact') or ''
+                    ctype = contradiction.get('contradiction_type') or contradiction.get('type') or 'Unknown'
+                    desc = contradiction.get('description') or 'No description'  
+                    details = contradiction.get('medical_analysis', {}).get('clinical_rationale', '') or contradiction.get('details', '') or ''
                     svc_count = len(contradiction.get('services_involved', [])) if isinstance(contradiction.get('services_involved'), list) else 0
                     st.markdown(f"""
                     <div class=\"contradiction-high\">\n
@@ -1564,7 +1626,7 @@ class SHIFHealthcarePolicyAnalyzer:
                     """, unsafe_allow_html=True)
             
             # Contradiction type distribution
-            contradiction_types = Counter((c.get('type') or c.get('contradiction_type') or 'unknown') for c in contradictions)
+            contradiction_types = Counter((c.get('contradiction_type') or c.get('type') or 'unknown') for c in contradictions)
             
             fig = px.bar(
                 x=list(contradiction_types.keys()),
@@ -1599,7 +1661,7 @@ class SHIFHealthcarePolicyAnalyzer:
                     """, unsafe_allow_html=True)
             
             # Gap type distribution
-            gap_types = Counter(g.get('gap_type', 'unknown') for g in gaps)
+            gap_types = Counter(g.get('gap_category', g.get('gap_type', 'unknown')) for g in gaps)
             
             fig = px.bar(
                 x=list(gap_types.keys()),
@@ -1633,7 +1695,7 @@ class SHIFHealthcarePolicyAnalyzer:
             
             with col2:
                 contradictions = self.results.get('contradictions', [])
-                high_severity = sum(1 for c in contradictions if c.get('severity') == 'high')
+                high_severity = sum(1 for c in contradictions if c.get('clinical_severity', c.get('severity', '')).lower() in ('high', 'critical'))
                 st.markdown(f"""
                 <div style='background-color: #f0f8f0; padding: 15px; border-radius: 10px; border-left: 5px solid #2ca02c;'>
                 <h4 style='color: #2ca02c; margin: 0;'>📊 Policy Contradictions</h4>
@@ -2855,15 +2917,15 @@ Focus on actionable, evidence-based insights that consider Kenya's unique challe
         high_severity = []
         
         for c in contradictions:
-            by_type[c.get('type', 'unknown')].append(c)
-            if c.get('severity') == 'high':
+            by_type[c.get('contradiction_type', c.get('type', 'unknown'))].append(c)
+            if c.get('clinical_severity', c.get('severity', '')).lower() in ('high', 'critical'):
                 high_severity.append(c)
         
         summary += f"HIGH SEVERITY CONTRADICTIONS ({len(high_severity)} critical issues):\n"
         for i, item in enumerate(high_severity, 1):
             summary += f"{i}. {item.get('description', 'No description')}\n"
             summary += f"   Details: {item.get('details', 'No details')}\n"
-            summary += f"   Type: {item.get('type', 'unknown').replace('_', ' ').title()}\n\n"
+            summary += f"   Type: {item.get('contradiction_type', item.get('type', 'unknown')).replace('_', ' ').title()}\n\n"
         
         summary += "CONTRADICTION BREAKDOWN BY TYPE:\n"
         for contradiction_type, items in by_type.items():
@@ -2881,12 +2943,12 @@ Focus on actionable, evidence-based insights that consider Kenya's unique challe
         # Group by type and impact
         by_type = defaultdict(list)
         for g in gaps:
-            by_type[g.get('gap_type', 'unknown')].append(g)
+            by_type[g.get('gap_category', g.get('gap_type', 'unknown'))].append(g)
         
         for gap_type, items in by_type.items():
             summary += f"{gap_type.upper().replace('_', ' ')} ({len(items)} gaps):\n"
             for item in items:
-                summary += f"- {item.get('description', 'No description')} (Impact: {item.get('impact', 'unknown')})\n"
+                summary += f"- {item.get('description', 'No description')} (Impact: {item.get('clinical_priority', item.get('impact', 'unknown'))})\n"
                 summary += f"  Affected: {item.get('affected_population', 'Not specified')}\n"
             summary += "\n"
         
@@ -2921,15 +2983,15 @@ TOP MEDICAL SPECIALTIES:
 {dict(specialties.most_common(5))}
 
 CRITICAL QUALITY ISSUES IDENTIFIED:
-- Total Contradictions: {len(contradictions)} ({sum(1 for c in contradictions if c.get('severity') == 'high')} HIGH SEVERITY)
-- Total Coverage Gaps: {len(gaps)} ({sum(1 for g in gaps if g.get('impact') == 'high')} HIGH IMPACT)
+- Total Contradictions: {len(contradictions)} ({sum(1 for c in contradictions if c.get('clinical_severity', c.get('severity', '')).lower() in ('high', 'critical'))} HIGH SEVERITY)
+- Total Coverage Gaps: {len(gaps)} ({sum(1 for g in gaps if g.get('clinical_priority', g.get('impact', '')).lower() in ('high', 'critical'))} HIGH IMPACT)
 
-CONTRADICTION TYPES: {dict(Counter(c.get('type', 'unknown') for c in contradictions).most_common(3))}
-GAP TYPES: {dict(Counter(g.get('gap_type', 'unknown') for g in gaps).most_common(3))}
+CONTRADICTION TYPES: {dict(Counter(c.get('contradiction_type', c.get('type', 'unknown')) for c in contradictions).most_common(3))}
+GAP TYPES: {dict(Counter(g.get('gap_category', g.get('gap_type', 'unknown')) for g in gaps).most_common(3))}
 
 IMPLEMENTATION CONCERNS:
 - {sum(1 for r in structured_rules if r.get('facility_level') == 'Not specified')} services lack facility level specification
-- {len([c for c in contradictions if 'tariff' in c.get('type', '')])} tariff contradictions affecting pricing consistency
+- {len([c for c in contradictions if 'tariff' in c.get('contradiction_type', c.get('type', ''))])} tariff contradictions affecting pricing consistency
 """
         
         return summary
