@@ -2496,6 +2496,9 @@ class SHIFHealthcarePolicyAnalyzer:
                 with st.expander("🧩 Summaries, Canonicalization, Facility Validation, Alignment, Equity"):
                     st.json(self.results['even_more_ai'])
         
+        # Show comprehensive AI analysis results from latest run
+        self.display_comprehensive_ai_results()
+        
         # Show cached AI insights if available
         if hasattr(self, 'ai_insights'):
             st.markdown("### 💡 Previous AI Insights")
@@ -2503,6 +2506,141 @@ class SHIFHealthcarePolicyAnalyzer:
             for insight_type, content in self.ai_insights.items():
                 with st.expander(f"🤖 {insight_type.replace('_', ' ').title()}"):
                     st.markdown(content)
+    
+    def display_comprehensive_ai_results(self):
+        """Display comprehensive AI analysis results from existing files"""
+        st.markdown("---")
+        st.markdown("### 🏥 Comprehensive Medical AI Analysis Results")
+        
+        # Find the latest run folder dynamically  
+        import glob
+        latest_run = None
+        run_dirs = glob.glob('outputs_run_*')
+        if run_dirs:
+            latest_run = sorted(run_dirs)[-1]
+            st.info(f"📁 Displaying AI analysis from: {latest_run}")
+        
+        if not latest_run:
+            st.warning("No comprehensive AI analysis results found. Run the integrated analyzer first.")
+            return
+        
+        # Display comprehensive contradiction analysis
+        ai_contradictions_path = Path(latest_run) / 'ai_contradictions.csv'
+        if ai_contradictions_path.exists():
+            try:
+                import pandas as pd
+                df_contradictions = pd.read_csv(ai_contradictions_path)
+                
+                st.markdown("#### 🚨 AI Medical Contradiction Analysis")
+                st.markdown(f"**{len(df_contradictions)} critical policy contradictions** identified by AI medical analysis:")
+                
+                for idx, row in df_contradictions.head(3).iterrows():  # Show top 3
+                    severity = row.get('clinical_severity', 'Unknown')
+                    specialty = row.get('medical_specialty', 'Unknown')
+                    description = row.get('description', 'No description available')
+                    
+                    severity_color = "🔴" if severity == "CRITICAL" else "🟡" if severity == "HIGH" else "🟢"
+                    
+                    with st.expander(f"{severity_color} {severity} - {specialty.title()} Issue"):
+                        st.markdown(f"**Description:** {description}")
+                        
+                        # Show medical analysis if available
+                        if 'medical_analysis' in row and pd.notna(row['medical_analysis']):
+                            try:
+                                import ast
+                                medical_analysis = ast.literal_eval(str(row['medical_analysis']))
+                                if isinstance(medical_analysis, dict):
+                                    st.markdown("**🩺 Medical Analysis:**")
+                                    for key, value in medical_analysis.items():
+                                        st.markdown(f"• **{key.replace('_', ' ').title()}:** {value}")
+                            except:
+                                pass
+                        
+                        # Show patient safety impact
+                        if 'patient_safety_impact' in row and pd.notna(row['patient_safety_impact']):
+                            try:
+                                import ast
+                                safety_impact = ast.literal_eval(str(row['patient_safety_impact']))
+                                if isinstance(safety_impact, dict):
+                                    st.markdown("**🚑 Patient Safety Impact:**")
+                                    for key, value in safety_impact.items():
+                                        st.markdown(f"• **{key.replace('_', ' ').title()}:** {value}")
+                            except:
+                                pass
+                
+                if len(df_contradictions) > 3:
+                    st.info(f"Showing 3 of {len(df_contradictions)} contradictions. Full analysis available in CSV download.")
+                
+            except Exception as e:
+                st.error(f"Error loading AI contradictions: {e}")
+        
+        # Display comprehensive gap analysis  
+        ai_gaps_path = Path(latest_run) / 'ai_gaps.csv'
+        if ai_gaps_path.exists():
+            try:
+                import pandas as pd
+                df_gaps = pd.read_csv(ai_gaps_path)
+                
+                st.markdown("#### 🔍 AI Coverage Gap Analysis")
+                st.markdown(f"**{len(df_gaps)} healthcare coverage gaps** identified by AI analysis:")
+                
+                for idx, row in df_gaps.head(3).iterrows():  # Show top 3
+                    priority = row.get('clinical_priority', 'Unknown')
+                    category = row.get('gap_category', 'Unknown')
+                    description = row.get('description', 'No description available')
+                    
+                    priority_color = "🔴" if priority == "HIGH" else "🟡" if priority == "MEDIUM" else "🟢"
+                    
+                    with st.expander(f"{priority_color} {priority} Priority - {category.replace('_', ' ').title()}"):
+                        st.markdown(f"**Description:** {description}")
+                        
+                        # Show affected populations
+                        if 'affected_populations' in row and pd.notna(row['affected_populations']):
+                            st.markdown(f"**👥 Affected Populations:** {row['affected_populations']}")
+                        
+                        # Show recommended interventions
+                        if 'recommended_interventions' in row and pd.notna(row['recommended_interventions']):
+                            try:
+                                import ast
+                                interventions = ast.literal_eval(str(row['recommended_interventions']))
+                                if isinstance(interventions, list):
+                                    st.markdown("**💡 Recommended Interventions:**")
+                                    for intervention in interventions[:3]:  # Show first 3
+                                        st.markdown(f"• {intervention}")
+                            except:
+                                st.markdown(f"**💡 Recommended Interventions:** {row['recommended_interventions']}")
+                
+                if len(df_gaps) > 3:
+                    st.info(f"Showing 3 of {len(df_gaps)} coverage gaps. Full analysis available in CSV download.")
+                    
+            except Exception as e:
+                st.error(f"Error loading AI gaps analysis: {e}")
+        
+        # Show summary metrics
+        if ai_contradictions_path.exists() or ai_gaps_path.exists():
+            st.markdown("#### 📊 AI Analysis Summary")
+            col1, col2, col3 = st.columns(3)
+            
+            with col1:
+                if ai_contradictions_path.exists():
+                    try:
+                        df_c = pd.read_csv(ai_contradictions_path)
+                        critical_count = len(df_c[df_c['clinical_severity'] == 'CRITICAL'])
+                        st.metric("Critical Issues", critical_count, f"out of {len(df_c)} total")
+                    except:
+                        st.metric("Critical Issues", "Error loading")
+            
+            with col2:
+                if ai_gaps_path.exists():
+                    try:
+                        df_g = pd.read_csv(ai_gaps_path)
+                        high_priority = len(df_g[df_g['clinical_priority'] == 'HIGH'])
+                        st.metric("High Priority Gaps", high_priority, f"out of {len(df_g)} total")
+                    except:
+                        st.metric("High Priority Gaps", "Error loading")
+            
+            with col3:
+                st.metric("AI Analysis Status", "✅ Complete", "Comprehensive medical review")
     
     def generate_ai_contradiction_analysis(self):
         """Generate AI analysis of contradictions"""
