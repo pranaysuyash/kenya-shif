@@ -2487,6 +2487,10 @@ class SHIFHealthcarePolicyAnalyzer:
                 "💬 Interactive Analysis",
                 help="Conversational AI analysis with custom questions"
             )
+            analyze_rules_contradiction_map = st.button(
+                "🗺️ Rules Contradiction Map",
+                help="Create visual map of contradictions across fund sections"
+            )
 
         # Predictive scenario input
         st.markdown("### 🔮 Predictive Scenario Analysis")
@@ -2585,6 +2589,12 @@ class SHIFHealthcarePolicyAnalyzer:
                 st.warning("⚠️ OpenAI not available")
             else:
                 self.generate_conversational_analysis()
+                
+        if analyze_rules_contradiction_map:
+            if not self.openai_client:
+                st.warning("⚠️ OpenAI not available")
+            else:
+                self.generate_rules_contradiction_map_analysis()
 
         # Show integrated extended AI outputs if present
         if isinstance(getattr(self, 'results', None), dict) and (
@@ -3728,6 +3738,64 @@ curl -X POST https://api.openai.com/v1/chat/completions \\
                     
                 except Exception as e:
                     st.error(f"Conversational analysis failed: {str(e)}")
+
+    def generate_rules_contradiction_map_analysis(self):
+        """Generate rules contradiction mapping analysis"""
+        st.markdown("### 🗺️ Rules Contradiction Map")
+        
+        with st.spinner("🗺️ Creating contradiction map across fund sections..."):
+            try:
+                from updated_prompts import UpdatedHealthcareAIPrompts as P
+                
+                # Prepare policy summary and sample rules
+                policy_summary = "Kenya SHIF Healthcare Policy with structured rules across funds and services"
+                sample_rules = self.results.get('structured_rules', [])[:20]  # First 20 rules as sample
+                sample_rules_str = str(sample_rules)
+                
+                prompt = P.get_rules_contradiction_map_prompt(policy_summary, sample_rules_str)
+                ai_analysis, model_used = self.make_openai_request([{"role": "user", "content": prompt}])
+                
+                st.markdown("### 🗺️ Rules Contradiction Map Analysis")
+                st.info(f"Analysis generated using {model_used}")
+                
+                # Try to parse JSON structure for better display
+                try:
+                    import json
+                    import re
+                    
+                    # Extract JSON from the response
+                    json_match = re.search(r'\{.*\}', ai_analysis, re.DOTALL)
+                    if json_match:
+                        contradiction_data = json.loads(json_match.group())
+                        
+                        if 'contradictions' in contradiction_data:
+                            contradictions = contradiction_data['contradictions']
+                            st.markdown(f"**Found {len(contradictions)} mapped contradictions:**")
+                            
+                            for i, contradiction in enumerate(contradictions, 1):
+                                severity = contradiction.get('severity', 'UNKNOWN')
+                                severity_color = "🔴" if severity == "CRITICAL" else "🟡" if severity == "HIGH" else "🔵" if severity == "MEDIUM" else "🟢"
+                                
+                                with st.expander(f"{severity_color} {contradiction.get('fund', 'Unknown Fund')} - {contradiction.get('service', 'Unknown Service')}"):
+                                    st.markdown(f"**Type:** {contradiction.get('type', 'Unknown')}")
+                                    st.markdown(f"**Description:** {contradiction.get('description', 'No description')}")
+                                    st.markdown(f"**Severity:** {severity}")
+                                    
+                                    examples = contradiction.get('examples', [])
+                                    if examples:
+                                        st.markdown("**Evidence:**")
+                                        for example in examples:
+                                            st.markdown(f"• {example}")
+                        else:
+                            st.markdown(ai_analysis)
+                    else:
+                        st.markdown(ai_analysis)
+                        
+                except (json.JSONDecodeError, KeyError):
+                    st.markdown(ai_analysis)
+                    
+            except Exception as e:
+                st.error(f"Rules contradiction map analysis failed: {str(e)}")
 
 def main():
     """Main application entry point"""
