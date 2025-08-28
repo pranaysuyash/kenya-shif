@@ -88,7 +88,7 @@ streamlit_data = {
     'task4_dashboard': {
         'metrics_overview': {
             'total_rules': len(structured_rules),
-            'total_gaps': len(ai_gaps),
+            'total_gaps': len(task2_gaps),  # Use merged gaps count instead of just AI gaps
             'total_contradictions': len(ai_contradictions)
         }
     },
