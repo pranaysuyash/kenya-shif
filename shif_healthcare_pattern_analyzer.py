@@ -212,21 +212,40 @@ class SHIFHealthcarePatternAnalyzer:
             print(f"   🔄 Attempting to load cached results as fallback...")
             
             # Fallback to cached data if live extraction fails
-            try:
-                with open('outputs/integrated_comprehensive_analysis.json', 'r') as f:
-                    results = json.load(f)
-                
-                self.policy_services = results['extraction_results']['policy_structure']['data']
-                self.annex_procedures = results['extraction_results']['annex_procedures']['data']
-                
-                total_services = len(self.policy_services) + len(self.annex_procedures)
-                
-                print(f"   ⚠️ Using cached data: {total_services} services/procedures")
-                return results
-                
-            except Exception as fallback_e:
-                print(f"   ❌ Fallback also failed: {fallback_e}")
-                return {}
+            # Try multiple potential locations for cached results
+            fallback_paths = [
+                'outputs_run_20250827_215550/integrated_comprehensive_analysis.json',
+                'outputs_run_20250827_194421/integrated_comprehensive_analysis.json', 
+                'outputs/integrated_comprehensive_analysis.json',
+                'outputs_generalized/generalized_complete_analysis.json'
+            ]
+            
+            for path in fallback_paths:
+                try:
+                    if Path(path).exists():
+                        print(f"   🔄 Trying fallback: {path}")
+                        with open(path, 'r') as f:
+                            results = json.load(f)
+                        
+                        # Handle different result formats
+                        if 'extraction_results' in results:
+                            self.policy_services = results['extraction_results']['policy_structure']['data']
+                            self.annex_procedures = results['extraction_results']['annex_procedures']['data']
+                        else:
+                            # Handle alternative format
+                            self.policy_services = results.get('policy_structure', {}).get('data', [])
+                            self.annex_procedures = results.get('annex_procedures', {}).get('data', [])
+                        
+                        total_services = len(self.policy_services) + len(self.annex_procedures)
+                        print(f"   ✅ Loaded cached data from {path}: {total_services} services/procedures")
+                        return results
+                        
+                except Exception as e:
+                    print(f"   ❌ Failed to load {path}: {e}")
+                    continue
+            
+            print(f"   ❌ All fallback attempts failed")
+            return {}
 
     # ========== TASK 1: EXTRACT RULES INTO STRUCTURED FORMAT ==========
     
