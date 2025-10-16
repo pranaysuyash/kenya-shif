@@ -1958,8 +1958,22 @@ class SHIFHealthcarePolicyAnalyzer:
                 if st.checkbox("⚠️ Show Full JSON (Large - may be slow)"):
                     st.json(self.results)
                 
-                # Download option
-                full_json = json.dumps(self.results, indent=2)
+                # Download option - convert DataFrames to JSON-serializable format
+                def make_serializable(obj):
+                    """Convert DataFrames and other non-serializable objects to JSON-compatible format"""
+                    if isinstance(obj, dict):
+                        return {k: make_serializable(v) for k, v in obj.items()}
+                    elif isinstance(obj, list):
+                        return [make_serializable(item) for item in obj]
+                    elif hasattr(obj, 'to_dict'):  # DataFrame or Series
+                        return obj.to_dict('records') if hasattr(obj, 'to_dict') and callable(getattr(obj, 'to_dict')) else str(obj)
+                    elif hasattr(obj, '__dict__'):
+                        return str(obj)
+                    else:
+                        return obj
+                
+                serializable_results = make_serializable(self.results)
+                full_json = json.dumps(serializable_results, indent=2)
                 st.download_button(
                     label="📥 Download Complete Results JSON",
                     data=full_json,
