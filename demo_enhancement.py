@@ -27,7 +27,7 @@ class DemoEnhancer:
         
     def render_deterministic_checker_section(self):
         """Add deterministic checker integration to Task 2"""
-        st.markdown("### 🔍 Deterministic Verification (Non-AI)")
+        st.markdown("### � Deterministic Verification (Non-AI)")
         st.markdown("Verify system behavior using rule-based checks that don't require AI.")
         
         col1, col2 = st.columns([1, 3])
@@ -87,7 +87,7 @@ class DemoEnhancer:
             results = st.session_state['deterministic_results']
             
             if results.get('success'):
-                with st.expander("📋 Deterministic Check Results", expanded=True):
+                with st.expander("� Deterministic Check Results", expanded=True):
                     st.text(results['stdout'])
                     st.caption(f"Last run: {results['timestamp']}")
             else:
@@ -250,7 +250,7 @@ if __name__ == "__main__":
         if Path("outputs/ai_prompt_pack.zip").exists():
             with open("outputs/ai_prompt_pack.zip", "rb") as f:
                 st.download_button(
-                    "💾 Download AI Prompt Pack",
+                    "� Download AI Prompt Pack",
                     f.read(),
                     "ai_prompt_pack.zip",
                     "application/zip"
@@ -318,7 +318,7 @@ from datetime import datetime
 import subprocess
 
 def main():
-    print("📖 GENERATING DEMO PDF")
+    print("� GENERATING DEMO PDF")
     print("=" * 40)
     
     # Create demo documentation
