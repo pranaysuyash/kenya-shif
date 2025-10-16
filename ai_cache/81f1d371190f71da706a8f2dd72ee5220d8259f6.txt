@@ -1,0 +1,44 @@
+{
+  "alignment_issues": [
+    {
+      "type": "missing_mapping",
+      "example": "No policy or annex content was provided/extracted, so no mappings between policy sections (pages 1–18) and annex procedures (pages 19–54) could be verified.",
+      "recommendation": "Provide the extracted text or upload the two documents. Create a Policy↔Annex mapping matrix (columns: Policy ID, Policy Title, Policy Page, Annex Procedure ID, Annex Procedure Title, Annex Page, Owner, Status). Populate the matrix and run a row-by-row verification to identify gaps."
+    },
+    {
+      "type": "missing_mapping",
+      "example": "Policy sections that typically require procedures (eligibility, enrollment, claims processing, appeals, privacy/compliance, roles & responsibilities) have not been confirmed as having corresponding annex procedures.",
+      "recommendation": "For each high-level policy section, require at least one annex procedure. If a policy section is purely descriptive, mark it explicitly. Use the mapping matrix to ensure every policy section has either an annex procedure or a documented reason for omission."
+    },
+    {
+      "type": "naming_mismatch",
+      "example": "Policy uses names/IDs like 'Claims Processing - 4.2' while annex uses different labels such as 'Procedure C-3 Claim Handling' (no consistent identifier linking the two).",
+      "recommendation": "Adopt canonical identifiers across both documents (e.g., P4.2 and A19.3) and include a cross-reference tag in each annex procedure ('Related Policy ID: P4.2'). Update both documents to use the canonical IDs and re-run the mapping matrix."
+    },
+    {
+      "type": "inconsistent_inclusion",
+      "example": "Annex contains procedures that are not referenced anywhere in the policy (orphan annex procedures), and/or the policy references process steps that do not appear in the annex.",
+      "recommendation": "Identify orphan annex items and either: (a) update the policy to reference and authorize them, (b) absorb them into existing policy sections, or (c) remove them if redundant. Conversely, add annex procedures for any policy-required processes currently missing."
+    },
+    {
+      "type": "contradiction",
+      "example": "Potential conflicts (e.g., policy requires Manager approval for claims over $X, while an annex procedure indicates Team Lead approval) cannot be confirmed because source content was not supplied.",
+      "recommendation": "Perform a targeted contradiction check: extract decision rules (approval thresholds, escalation paths, SLAs) from both documents and compare line-by-line. Where differences exist, resolve to a single authoritative rule and update both policy and annex with version-controlled amendments."
+    },
+    {
+      "type": "naming_mismatch",
+      "example": "Role/title mismatches between documents (policy refers to 'Benefits Administrator'; annex refers to 'Plan Administrator' or 'Claims Lead') leading to unclear responsibilities.",
+      "recommendation": "Standardize role names and maintain a Role Mapping appendix (Role ID, Canonical Name, Alternate Names, Responsibilities, Contact). Update policy and annex to reference Role IDs rather than free-text titles."
+    },
+    {
+      "type": "inconsistent_inclusion",
+      "example": "No evidence (from provided input) that annex procedures include cross-references to policy version, effective dates, or change history; this can lead to applying outdated procedures.",
+      "recommendation": "Require each annex procedure header to include: Related Policy ID(s), Policy version/effective date, Procedure effective date, Last updated, and Owner. Enforce a single-source change control practice so policy and annex remain synchronized."
+    },
+    {
+      "type": "missing_mapping",
+      "example": "No traceability matrix, tags, or appendices provided to demonstrate alignment between document sections and annex procedures.",
+      "recommendation": "Produce a traceability matrix (or add a mapped annex index) as part of the deliverable. Where automated tools are available, run a text-matching or metadata mapping to pre-populate the matrix, then validate manually."
+    }
+  ]
+}

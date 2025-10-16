@@ -1,0 +1,2521 @@
+{
+  "super_headings": [
+    {
+      "heading_text": "Cardiology Services",
+      "heading_type": "super_heading",
+      "page_number": 19,
+      "services_count": 21,
+      "categories_count": 2,
+      "extraction_method": "ai_enhanced"
+    },
+    {
+      "heading_text": "Cardiothoracic and Vascular Services",
+      "heading_type": "super_heading",
+      "page_number": 20,
+      "services_count": 62,
+      "categories_count": 0,
+      "extraction_method": "ai_enhanced"
+    },
+    {
+      "heading_text": "Cardiotothoracic and Vascular Services",
+      "heading_type": "super_heading",
+      "page_number": 23,
+      "services_count": 21,
+      "categories_count": 0,
+      "extraction_method": "ai_enhanced"
+    },
+    {
+      "heading_text": "Ear Nose & Throat Services",
+      "heading_type": "super_heading",
+      "page_number": 24,
+      "services_count": 124,
+      "categories_count": 0,
+      "extraction_method": "ai_enhanced"
+    }
+  ],
+  "service_categories": [
+    {
+      "category_name": "Cardiology",
+      "super_heading": "Cardiology Services",
+      "page_number": 20,
+      "has_column_structure": true,
+      "services_count": 0,
+      "extraction_method": "ai_enhanced"
+    },
+    {
+      "category_name": "Cardiothoracic and Vascular",
+      "super_heading": "Cardiology Services",
+      "page_number": 20,
+      "has_column_structure": true,
+      "services_count": 228,
+      "extraction_method": "ai_enhanced"
+    }
+  ],
+  "services": [
+    {
+      "service_name": "Aortic Valvuloplasty",
+      "super_heading": null,
+      "service_category": null,
+      "page_number": 19,
+      "tariff": "620,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "ASD percutaneous device closure",
+      "super_heading": null,
+      "service_category": null,
+      "page_number": 19,
+      "tariff": "414,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Atrial Septostomy",
+      "super_heading": null,
+      "service_category": null,
+      "page_number": 19,
+      "tariff": "201,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiac Resynchronization Therapy Defibrillator (CRT- D) device",
+      "super_heading": null,
+      "service_category": null,
+      "page_number": 19,
+      "tariff": "504,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiac Resynchronization Therapy Pacemaker (CRT-P)",
+      "super_heading": null,
+      "service_category": null,
+      "page_number": 19,
+      "tariff": "537,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Coronary angiography (diagnostic)",
+      "super_heading": null,
+      "service_category": null,
+      "page_number": 19,
+      "tariff": "78,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Coronary Angioplasty (with single or Multiple Stents)",
+      "super_heading": null,
+      "service_category": null,
+      "page_number": 19,
+      "tariff": "537,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Diagnostic catheterization",
+      "super_heading": null,
+      "service_category": null,
+      "page_number": 19,
+      "tariff": "78,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Dual Chamber pacemaker insertion (permanent)",
+      "super_heading": null,
+      "service_category": null,
+      "page_number": 19,
+      "tariff": "280,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Implantable Converter Defibrillator (ICD) Dual chamber insertion",
+      "super_heading": null,
+      "service_category": null,
+      "page_number": 19,
+      "tariff": "504,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Implantable Converter Defibrillator (ICD) Single chamber insertion",
+      "super_heading": null,
+      "service_category": null,
+      "page_number": 19,
+      "tariff": "504,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Intra- Aortic Balloon Pump",
+      "super_heading": null,
+      "service_category": null,
+      "page_number": 19,
+      "tariff": "168,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "IVC Filter insertion",
+      "super_heading": null,
+      "service_category": null,
+      "page_number": 19,
+      "tariff": "168,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Loop recorder - reveal link",
+      "super_heading": null,
+      "service_category": null,
+      "page_number": 19,
+      "tariff": "537,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Loop recorder-reveal xt",
+      "super_heading": null,
+      "service_category": null,
+      "page_number": 19,
+      "tariff": "358,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Mitral Valvoplasty",
+      "super_heading": null,
+      "service_category": null,
+      "page_number": 19,
+      "tariff": "392,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "PDA percutaneous device closure",
+      "super_heading": null,
+      "service_category": null,
+      "page_number": 19,
+      "tariff": "414,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Peripheral Angiography",
+      "super_heading": null,
+      "service_category": null,
+      "page_number": 19,
+      "tariff": "56,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Peripheral Angioplasty",
+      "super_heading": "Cardiology Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 20,
+      "tariff": "280,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Pulmonary artery catheterization",
+      "super_heading": "Cardiology Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 20,
+      "tariff": "78,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Pulmonary Valvoplasty",
+      "super_heading": "Cardiology Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 20,
+      "tariff": "448,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Renal artery stenting",
+      "super_heading": "Cardiology Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 20,
+      "tariff": "280,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Retrival of Foreign bodies",
+      "super_heading": "Cardiology Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 20,
+      "tariff": "145,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Right and Left Catheterization",
+      "super_heading": "Cardiology Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 20,
+      "tariff": "145,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Single Chamber pacemaker insertion (permanent)",
+      "super_heading": "Cardiology Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 20,
+      "tariff": "224,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Single pacemaker insertion (temporary)",
+      "super_heading": "Cardiology Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 20,
+      "tariff": "44,800",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Thoracic endovascular aortic repair (TEVAR)",
+      "super_heading": "Cardiology Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 20,
+      "tariff": "504,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "VSD percutanoeus device closure",
+      "super_heading": "Cardiology Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 20,
+      "tariff": "414,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Abdominal Aortic Aneurym Repair (Open)",
+      "super_heading": "Cardiology Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 20,
+      "tariff": "392,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Achalasia cardia/Diverticulum",
+      "super_heading": "Cardiology Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 20,
+      "tariff": "280,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Anterior Chest Wall Mass Excision and Reconstruction",
+      "super_heading": "Cardiology Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 20,
+      "tariff": "599,200",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Anterior Mediastinal Mass Resection",
+      "super_heading": "Cardiology Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 20,
+      "tariff": "599,200",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Aortic Valve Replacement (AVR)",
+      "super_heading": "Cardiology Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 20,
+      "tariff": "1,064,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Arteriovenous Malformation Resection",
+      "super_heading": "Cardiology Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 20,
+      "tariff": "386,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Atrial Septal Defect Closure",
+      "super_heading": "Cardiology Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 20,
+      "tariff": "784,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "AV Fistula Take down",
+      "super_heading": "Cardiology Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 20,
+      "tariff": "33,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Bentall's Procedure",
+      "super_heading": "Cardiology Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 20,
+      "tariff": "1,358,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Bidirectional Glenn Shunt",
+      "super_heading": "Cardiology Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 20,
+      "tariff": "954,800",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Blalock Taussig (BT) Shunt",
+      "super_heading": "Cardiology Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 20,
+      "tariff": "688,800",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Bronchopleural fistula repair",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 21,
+      "tariff": "562800",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Bronchoscopy and removal of FB",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 21,
+      "tariff": "78400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "CABG + Double Valve Replacement",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 21,
+      "tariff": "1442000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "CABG + MWR/AVR",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 21,
+      "tariff": "1220800",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Carotid Artery Endarterectomy",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 21,
+      "tariff": "145600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Carotid Body Tumour Excision",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 21,
+      "tariff": "246400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Carotid Body Tumour Redo Surgery",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 21,
+      "tariff": "646800",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Closed valvotomy",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 21,
+      "tariff": "192000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Coarctation of Aorta repair with graft",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 21,
+      "tariff": "280000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Coarctation of Aorta repair without graft",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 21,
+      "tariff": "280000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Complete Atrioventricular Canal Defect Repair",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 21,
+      "tariff": "1024800",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Complex repair for congenital heart disease",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 21,
+      "tariff": "1248800",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Congenital AV fistula malformation Resection",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 21,
+      "tariff": "201600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Conventional Elephant Trunk (CET) Procedure",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 21,
+      "tariff": "1302000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Coronary artery Bypass Grafting (CABG)",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 21,
+      "tariff": "868000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cox Maze IV Procedure",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 21,
+      "tariff": "513000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Diaphragmatic Hernia Repair",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 21,
+      "tariff": "224000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Dissected Aortic Aneurysm Repair (Open)",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 21,
+      "tariff": "392000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Double Valve Replacement",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 21,
+      "tariff": "1248800",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Endovascular Aneurysm Repair (EVAR)",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 21,
+      "tariff": "1626800",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Esophagostomy",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 21,
+      "tariff": "470400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular ESRD AV Fistula Creation",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 22,
+      "tariff": "78,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular ESRD AV Graft Surgery",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 22,
+      "tariff": "168,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular Excision of Mediastinal Tumour",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 22,
+      "tariff": "280,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular Fontan procedure",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 22,
+      "tariff": "954,800",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular Frozen Elephant Trunk (FET) Procedure",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 22,
+      "tariff": "1,411,200",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular Gastrostomy/Jejunostomy",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 22,
+      "tariff": "89,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular Heller's myotomy",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 22,
+      "tariff": "386,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular Insertion of MB tube",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 22,
+      "tariff": "44,800",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular Lung decortication",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 22,
+      "tariff": "224,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular Mitral Valve Replacement (MVR)",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 22,
+      "tariff": "1,064,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular Mitral Valvotomy / Balloon",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 22,
+      "tariff": "224,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular Myocardial Biopsy",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 22,
+      "tariff": "44,800",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular Oesophageal perforation Repair",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 22,
+      "tariff": "554,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular Oesophagectomy",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 22,
+      "tariff": "747,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular Open Lobectomy",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 22,
+      "tariff": "590,800",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular Open Lung Biopsy",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 22,
+      "tariff": "350,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular Open Patent Ductus Arteriosus (PDA) surgery",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 22,
+      "tariff": "313,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular Open Pneumonectomy",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 22,
+      "tariff": "280,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular Open Removal of Esophageal Foreign Body",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 22,
+      "tariff": "554,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular Open Removal of Tracheal/Bronchial Foreign Body",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 22,
+      "tariff": "554,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular Other aneurysms repair",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 22,
+      "tariff": "392,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiotothoracic and Vascular Pacemaker Change of battery",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 23,
+      "tariff": "134,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiotothoracic and Vascular Partial Atrioventricular Canal Defect Repair",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 23,
+      "tariff": "784,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiotothoracic and Vascular Pericardial Catheterization",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 23,
+      "tariff": "89,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiotothoracic and Vascular Pericardial Window",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 23,
+      "tariff": "89,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiotothoracic and Vascular Pericardiectomy",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 23,
+      "tariff": "554,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiotothoracic and Vascular Pericardiocentesis",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 23,
+      "tariff": "56,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiotothoracic and Vascular Peripheral Vascular Disease (PAD) Bypass Grafting",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 23,
+      "tariff": "392,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiotothoracic and Vascular Peripheral Vascular Disease (PAD) Embolectomy",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 23,
+      "tariff": "168,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiotothoracic and Vascular Peripheral Vascular Disease (PAD) Endovascular Balloon Angioplasty",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 23,
+      "tariff": "280,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiotothoracic and Vascular Peripheral Vascular Disease (PAD) Endovascular Stenting",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 23,
+      "tariff": "280,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiotothoracic and Vascular Peripheral Vascular Disease (PAD) Vascular Amputation",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 23,
+      "tariff": "350,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiotothoracic and Vascular Pleurodesis",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 23,
+      "tariff": "144,200",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiotothoracic and Vascular Primary Open Pacemaker implantation",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 23,
+      "tariff": "224,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiotothoracic and Vascular Pulmonary Artery Banding",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 23,
+      "tariff": "481,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiotothoracic and Vascular Repair of Ruptured Diaphragm",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 23,
+      "tariff": "145,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiotothoracic and Vascular Simple Thoracotomy-Retained Haemothrax/Duct ligation/pleurodesis/FB removal",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 23,
+      "tariff": "201,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiotothoracic and Vascular Simple tracheal/Bronchial fistula repairs",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 23,
+      "tariff": "224,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiotothoracic and Vascular Splenorenal shunt",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 23,
+      "tariff": "112,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiotothoracic and Vascular Subfascial DVT ligation + skin graft",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 23,
+      "tariff": "89,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiotothoracic and Vascular Tetralogy of Fallot Repair",
+      "super_heading": "Cardiothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 23,
+      "tariff": "952,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular Thoracic Aortic Aneurysm Repair (Open)",
+      "super_heading": "Cardiotothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 24,
+      "tariff": "392,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular Thoracic Endovascular Aneurysm Repair (TEVAR)",
+      "super_heading": "Cardiotothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 24,
+      "tariff": "2,186,800",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular Thoracotomy",
+      "super_heading": "Cardiotothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 24,
+      "tariff": "350,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular Tracheal Stenosis Resection and Anastomosis",
+      "super_heading": "Cardiotothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 24,
+      "tariff": "747,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular Tracheal/Bronchial Reconstruction",
+      "super_heading": "Cardiotothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 24,
+      "tariff": "358,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular Transcatheter percutaneous device PDA closure",
+      "super_heading": "Cardiotothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 24,
+      "tariff": "414,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular Traumatic Tracheal/Bronchial Disruption repair and anastomosis",
+      "super_heading": "Cardiotothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 24,
+      "tariff": "747,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular Traumatic Vascular Injury Repair",
+      "super_heading": "Cardiotothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 24,
+      "tariff": "145,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular Tube Thoracostomy",
+      "super_heading": "Cardiotothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 24,
+      "tariff": "144,200",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular Vascular Exposure and Safeguarding for Anterior Lumbar Interbody Fusion",
+      "super_heading": "Cardiotothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 24,
+      "tariff": "498,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular Venous Insufficiency Laser Ablation",
+      "super_heading": "Cardiotothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 24,
+      "tariff": "263,200",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular Venous Insufficiency Perforator Ligation",
+      "super_heading": "Cardiotothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 24,
+      "tariff": "229,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular Venous Insufficiency Radiofrequency Ablation",
+      "super_heading": "Cardiotothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 24,
+      "tariff": "271,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular Venous Insufficiency Stripping",
+      "super_heading": "Cardiotothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 24,
+      "tariff": "229,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular Ventricular Septal Defect Closure",
+      "super_heading": "Cardiotothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 24,
+      "tariff": "868,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular Vessel bypass Surgery",
+      "super_heading": "Cardiotothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 24,
+      "tariff": "246,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular Video Assisted Thoracoscopic Surgery (VATS) Decortication",
+      "super_heading": "Cardiotothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 24,
+      "tariff": "224,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular Video Assisted Thoracoscopic Surgery (VATS) Lobectomy",
+      "super_heading": "Cardiotothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 24,
+      "tariff": "590,800",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cardiothoracic and Vascular Video Assisted Thoracoscopic Surgery (VATS) Pneumonectomy",
+      "super_heading": "Cardiotothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 24,
+      "tariff": "280,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Ear Nose & Throat Block dissection of the neck",
+      "super_heading": "Cardiotothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 24,
+      "tariff": "224,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Ear Nose & Throat Cochlea operations",
+      "super_heading": "Cardiotothoracic and Vascular Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 24,
+      "tariff": "358,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Excision and reconstruction of head and neck tumours",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 25,
+      "tariff": "257,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Excision of pharyngeal diverticulum",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 25,
+      "tariff": "168,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Facial nerve decompression",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 25,
+      "tariff": "358,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Laryngectomy (Partial)",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 25,
+      "tariff": "201,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Laryngectomy (Total)",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 25,
+      "tariff": "280,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Laryngectomy with radical neck dissection",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 25,
+      "tariff": "336,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Middle ear tumour excision",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 25,
+      "tariff": "224,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Total/ Radical parotidectomy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 25,
+      "tariff": "168,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "EUA and biopsy of nasopharynx, ears, nose",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 25,
+      "tariff": "28,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Frontal sinus trephination",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 25,
+      "tariff": "22,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Maxillary Artery Ligation",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 25,
+      "tariff": "67,200",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "MUA # nose",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 25,
+      "tariff": "33,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Removal of FB in ear or nose (paediatrics under GA)",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 25,
+      "tariff": "61,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Adenoidectomy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 25,
+      "tariff": "72,240",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Adenotonsillectomy (Ts 7 As)",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 25,
+      "tariff": "77,840",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Cricotracheal reconstruction",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 25,
+      "tariff": "89,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Direct laryngoscopy and biopsy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 25,
+      "tariff": "50,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Excision of submandibular gland",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 25,
+      "tariff": "89,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Frontal mucocele",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 25,
+      "tariff": "78,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Functional endoscopic sinus surgery (FESS)",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 25,
+      "tariff": "123,200",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Hemiglossectomy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 25,
+      "tariff": "89,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Intranasal ethmoidectomy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 26,
+      "tariff": "112,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Laryngocele excision",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 26,
+      "tariff": "89,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Lateral Rhinotomy (due to tumour, scars or congenital)",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 26,
+      "tariff": "67,200",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Maxillectomy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 26,
+      "tariff": "134,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Myringoplasty",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 26,
+      "tariff": "67,200",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Myringotomy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 26,
+      "tariff": "44,800",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Nasal polypectomy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 26,
+      "tariff": "67,200",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Radical mastoidectomy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 26,
+      "tariff": "145,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Rhinoplasty: Soft and bony tissue (Tumours, congenital, trauma)",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 26,
+      "tariff": "89,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Rhinoplasty: Soft tissue (Tumors, congenital, trauma)",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 26,
+      "tariff": "89,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Septoplasty (Tumors, congenital, trauma)",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 26,
+      "tariff": "44,800",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Simple mastoidectomy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 26,
+      "tariff": "44,800",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Submucous resection of nasal septum",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 26,
+      "tariff": "44,800",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Superficial Parotidectomy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 26,
+      "tariff": "89,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "T.I.T. and Intranasal Antrostomy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 26,
+      "tariff": "100,800",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "T.I.T. and Turbinoplasty",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 26,
+      "tariff": "100,800",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Tonsillectomy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 26,
+      "tariff": "56,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Transplatatal excision of Choanal atresia",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 26,
+      "tariff": "89,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Tympanoplasty",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 26,
+      "tariff": "78,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Uvulopalatopharyngoplasty",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 26,
+      "tariff": "78,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Vocal Cord lateralisation",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 26,
+      "tariff": "112,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Abdominoperineal resection (APR-tumor)",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 27,
+      "tariff": "134,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Anterior Resection of Rectum",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 27,
+      "tariff": "123,200",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Appendicectomy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 27,
+      "tariff": "67,200",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Bilateral Herniotomy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 27,
+      "tariff": "56,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Bilateral Herniotomy + orchidopexy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 27,
+      "tariff": "56,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Bilateral inguinal herniorrapphy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 27,
+      "tariff": "56,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Bilateral Orchidopexy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 27,
+      "tariff": "56,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Bowel resection and anastomosis",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 27,
+      "tariff": "112,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Breast Lumpectomy under GA",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 27,
+      "tariff": "22,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Cervical lymph node biopsy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 27,
+      "tariff": "11,200",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Cholecystectomy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 27,
+      "tariff": "89,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Closure of Colostomy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 27,
+      "tariff": "89,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Colostomy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 27,
+      "tariff": "89,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General diathermy excision of warts or subcutaneous tissue",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 27,
+      "tariff": "8,960",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Drainage of Breast abscess (only under GA)",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 27,
+      "tariff": "11,200",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Excision of Liver hydatid cyst",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 27,
+      "tariff": "134,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Excision of Thyroglossal cyst",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 27,
+      "tariff": "89,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Exploration of retroperitoneal mass",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 27,
+      "tariff": "112,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Exploratory Laparotomy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 27,
+      "tariff": "67,200",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General gastrojejunostomy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 27,
+      "tariff": "134,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Haemorrhoidectomy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 27,
+      "tariff": "44,800",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Hemicolectomy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 28,
+      "tariff": "134,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Incision & Drainage (Peri anal Abscess)",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 28,
+      "tariff": "14,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Incision & Drainage Under GA",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 28,
+      "tariff": "11,200",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Incision +drainage head and neck abscess (I&D) under GA",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 28,
+      "tariff": "11,200",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Incision and drainage of ocular abscess or cyst (I&D)",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 28,
+      "tariff": "5,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Insertion of chest tube / chest aspiration",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 28,
+      "tariff": "8,960",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Intestinal resection + anastomosis",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 28,
+      "tariff": "134,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Laparoscopic Niessens fundoplication",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 28,
+      "tariff": "212,800",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Laparotomy for Pyloric stenosis",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 28,
+      "tariff": "134,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Lateral Sphincterotomy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 28,
+      "tariff": "44,800",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Lumbar puncture",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 28,
+      "tariff": "5,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Lymph node biopsy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 28,
+      "tariff": "11,200",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Minor Surgical Toilet Under GA",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 28,
+      "tariff": "11,200",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Needle biopsy: liver",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 28,
+      "tariff": "16,800",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Nerve release and decompression",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 28,
+      "tariff": "44,800",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Oesophagoscopy and removal of FB",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 28,
+      "tariff": "8,960",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Orchidectomy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 28,
+      "tariff": "44,800",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Paediatric (below 6 years) Circumcision only under GA (phymosis)",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 28,
+      "tariff": "22,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Paracentesis",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 28,
+      "tariff": "5,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Partial Gastrectomy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 28,
+      "tariff": "123,200",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Primary repair of incisional hernia laparoscopic",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 28,
+      "tariff": "56,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Radical Mastectomy (To include lymph nodes clearance)",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 29,
+      "tariff": "134,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Repair minor scalp wounds/lacerations under GA",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 29,
+      "tariff": "11,200",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Repair of burst abdomen",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 29,
+      "tariff": "44,800",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Repair of epigastric hernia",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 29,
+      "tariff": "56,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Repair of hiatus hernia",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 29,
+      "tariff": "168,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Repair of incisional hernia (with mesh)",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 29,
+      "tariff": "78,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Repair of perforated duodenal ulcer",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 29,
+      "tariff": "134,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Repair of previous incision in abdominal wall",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 29,
+      "tariff": "78,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Repair of strangulated hernias",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 29,
+      "tariff": "89,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Repair of umbilical hernia (with mesh)",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 29,
+      "tariff": "44,800",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Simple Mastectomy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 29,
+      "tariff": "89,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Skin biopsy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 29,
+      "tariff": "8,960",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Splenectomy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 29,
+      "tariff": "134,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Stripping of bilateral varicose veins",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 29,
+      "tariff": "78,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Subdural haematoma Evacuation",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 29,
+      "tariff": "134,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Surgical Debridement/Escharectomy: (Minor, Medium & Major), traumatic, pressure sores, diabetic and burns (Under GA)",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 29,
+      "tariff": "33,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Surgical toilet under GA",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 29,
+      "tariff": "11,200",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Thyroidectomy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 29,
+      "tariff": "134,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Total Gastrectomy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 29,
+      "tariff": "134,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Total Oesophagectomy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 29,
+      "tariff": "504,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Tracheostomy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 30,
+      "tariff": "44,800",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Transverse Colectomy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 30,
+      "tariff": "134,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Unilateral Adrenalectomy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 30,
+      "tariff": "168,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Unilateral femoral herniorrhaphy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 30,
+      "tariff": "56,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Unilateral gynaecomastia correction",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 30,
+      "tariff": "56,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Unilateral Herniotomy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 30,
+      "tariff": "56,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Unilateral Herniotomy + orchidopexy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 30,
+      "tariff": "56,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Unilateral Orchidopexy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 30,
+      "tariff": "56,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Unilateral sympathectomy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 30,
+      "tariff": "56,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "General Vagotomy + drainage",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 30,
+      "tariff": "56,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Interventional Radiology 4-vessel cerebral Angiography / Carotid Angiography (unilateral or bilateral)",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 30,
+      "tariff": "61,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Interventional Radiology Balloon Angioplasty",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 30,
+      "tariff": "145,600",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Interventional Radiology Bilateral nephrostomy tube insertion",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 30,
+      "tariff": "72,800",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Interventional Radiology Biliary stenting",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 30,
+      "tariff": "112,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Interventional Radiology CT guided bone biopsy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 30,
+      "tariff": "22,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Interventional Radiology CT guided lung biopsy",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 30,
+      "tariff": "22,400",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Interventional Radiology DJ stenting bilateral",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 30,
+      "tariff": "56,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Interventional Radiology DJ stenting unilateral",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 30,
+      "tariff": "56,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Interventional Radiology Embolization/Carotid/Renal/Hepatic (no coils)",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 30,
+      "tariff": "224,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    },
+    {
+      "service_name": "Interventional Radiology Embolization/Carotid/Renal/Hepatic (no coils, embolization material and microcatheter)",
+      "super_heading": "Ear Nose & Throat Services",
+      "service_category": "Cardiothoracic and Vascular",
+      "page_number": 30,
+      "tariff": "168,000",
+      "access_rules": null,
+      "facility_level": null,
+      "extraction_method": "ai_enhanced_hierarchical"
+    }
+  ],
+  "summary": {
+    "total_super_headings": 4,
+    "total_service_categories": 2,
+    "total_services": 246
+  }
+}

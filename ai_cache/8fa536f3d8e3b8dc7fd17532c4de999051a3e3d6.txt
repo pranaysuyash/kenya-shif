@@ -1,0 +1,402 @@
+[
+  {
+    "service_name": "Functional Orthognathic surgeries of the Maxilla / Mandible",
+    "specialty": "Maxillofacial",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Complex elective surgery requiring specialist team, long OR time, potential ICU/post‑op care — best at tertiary centres; tariff unlikely to cover total resource use."
+  },
+  {
+    "service_name": "Lip shave and mucosal advancement flap",
+    "specialty": "Maxillofacial",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Moderate reconstructive procedure suitable for county hospitals with OR; tariff appears commensurate with resource needs."
+  },
+  {
+    "service_name": "Mandibular fractures (ORIF)",
+    "specialty": "Maxillofacial",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Requires OR, implants and specialist skills — appropriate for county referral and national hospitals; tariff likely adequate for standard ORIF."
+  },
+  {
+    "service_name": "Mandibular / Maxillary Autogenous bone graft",
+    "specialty": "Maxillofacial",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Donor‑site and recipient site surgery requiring OR and post‑op monitoring; fits county/tertiary hospitals and tariff appears reasonable."
+  },
+  {
+    "service_name": "Mandibulectomy plus Reconstruction / Plating",
+    "specialty": "Maxillofacial",
+    "recommended_facility_level": [6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Major ablative and reconstructive oncologic surgery with airway, blood loss and implant needs — best at tertiary centres; tariff is likely inadequate."
+  },
+  {
+    "service_name": "Mandibulectomy / Maxillectomy plus Microvascular Bone graft",
+    "specialty": "Maxillofacial",
+    "recommended_facility_level": [6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Requires microvascular team, long theatre time and ICU-level postop care — should be at national referral centres; coverage likely insufficient."
+  },
+  {
+    "service_name": "Maxillectomy + Obturator",
+    "specialty": "Maxillofacial",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Major resection with prosthetic rehabilitation and multidisciplinary care — county or tertiary level required; tariff unlikely to cover prosthesis & care."
+  },
+  {
+    "service_name": "Mid face fractures",
+    "specialty": "Maxillofacial",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "ORIF of midface requires specialist OR and implants; appropriate for county referral hospitals; tariff consistent with expected resource use."
+  },
+  {
+    "service_name": "Oral / facial / Catilage Onlay graft",
+    "specialty": "Maxillofacial",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Moderate reconstructive procedure feasible at level 4/5 with adequate theatre and anaesthesia support; tariff appears appropriate."
+  },
+  {
+    "service_name": "Panfacial fractures",
+    "specialty": "Maxillofacial",
+    "recommended_facility_level": [6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Highly complex, multi‑specialty airway and reconstructive needs; requires tertiary centre with ICU — tariff is likely inadequate."
+  },
+  {
+    "service_name": "Post condylar cartilage Bilateral graft",
+    "specialty": "Maxillofacial",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Specialist reconstructive procedure requiring OR and expertise; suitable for county/tertiary hospitals; tariff appears reasonable."
+  },
+  {
+    "service_name": "Reduction of Alveolar fracture closed",
+    "specialty": "Maxillofacial",
+    "recommended_facility_level": [3,4,5],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Simple closed reduction can be performed at health centre/primary hospital with minor theatre capability; tariff is modest and appropriate."
+  },
+  {
+    "service_name": "Reduction of Alveolar fracture Open",
+    "specialty": "Maxillofacial",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Open reduction requires OR and basic maxillofacial expertise — fits county hospitals; tariff aligns with expected resource needs."
+  },
+  {
+    "service_name": "Removal of Bone plates",
+    "specialty": "Maxillofacial",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Minor elective procedure for patients with healed fractures; can be done at primary/secondary hospitals with OR access."
+  },
+  {
+    "service_name": "Removal of branchial cyst / sinus / Ranula",
+    "specialty": "Maxillofacial",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Routine ENT/maxillofacial procedures suitable for county hospitals; tariff covers expected operative and anaesthetic needs."
+  },
+  {
+    "service_name": "Revision Cleft Lip / Nose",
+    "specialty": "Maxillofacial",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Requires experienced reconstructive surgeon and anaesthesia; best at referral hospitals with appropriate pediatric support; tariff reasonable."
+  },
+  {
+    "service_name": "Revision Palatoplasty - MicroVascular and Donor site graft",
+    "specialty": "Maxillofacial",
+    "recommended_facility_level": [6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Microvascular work plus donor site care needs tertiary centre and prolonged resources; tariff unlikely to cover full costs."
+  },
+  {
+    "service_name": "Revision Palatoplasty - Rotational Flap",
+    "specialty": "Maxillofacial",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Complex but non‑microvascular procedure; fits county/tertiary hospitals; tariff consistent with resource needs."
+  },
+  {
+    "service_name": "Revision Vestibulopalsty + Skin graft",
+    "specialty": "Maxillofacial",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Requires experienced surgical team and graft care; appropriate for referral hospitals; tariff appears reasonable."
+  },
+  {
+    "service_name": "RMND+ Mandibulectomy / Maxillectomy with Microvascular Free Flap",
+    "specialty": "Maxillofacial",
+    "recommended_facility_level": [6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Extensive resection + free flap reconstruction needs multidisciplinary tertiary care and ICU; tariff is likely inadequate."
+  },
+  {
+    "service_name": "RMND+Pedicled Flap Mandibulectomy / Maxillectomy + / - Implant",
+    "specialty": "Maxillofacial",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Major ablative and reconstructive surgery with potential implants; county referral or tertiary setting required; tariff probably underestimates total costs."
+  },
+  {
+    "service_name": "Salivary Duct Redirection (Wilkie procedure)",
+    "specialty": "Maxillofacial",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Relatively minor ENT/oral surgery performed under general anaesthesia; suitable for county hospitals; tariff adequate."
+  },
+  {
+    "service_name": "Secondary Craniofacial Reconstruction",
+    "specialty": "Maxillofacial",
+    "recommended_facility_level": [6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Complex reconstructive craniofacial surgery requiring multidisciplinary tertiary resources; tariff unlikely to be sufficient."
+  },
+  {
+    "service_name": "Segmental Osteotomy Mandible / Maxilla",
+    "specialty": "Maxillofacial",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Orthognathic osteotomies need specialist teams, fixation hardware and follow‑up — tariff appears low for full care."
+  },
+  {
+    "service_name": "Sequestrectomy / Decortication Mandible Maxilla",
+    "specialty": "Maxillofacial",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Requires OR and sometimes prolonged antibiotics; manageable at county hospitals; tariff is modest but generally appropriate."
+  },
+  {
+    "service_name": "Simple Nerve exploration + repair",
+    "specialty": "Maxillofacial",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Specialist microsurgical skill required though simpler repairs can be done at county referral hospitals; tariff reasonable for limited procedures."
+  },
+  {
+    "service_name": "Simple Salivary Gland Sialedonectomy / Sialolithectomy",
+    "specialty": "Maxillofacial",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Routine ENT/oral surgery suitable for county hospitals with OR; tariff aligns with expected resource use."
+  },
+  {
+    "service_name": "Simple Vestibulopalsty + Skin graft",
+    "specialty": "Maxillofacial",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Small reconstructive procedure manageable at county hospital level; tariff appropriate."
+  },
+  {
+    "service_name": "Superficial Parotidectomy",
+    "specialty": "Maxillofacial",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Facial nerve risk and specialist care required; tariff appears low relative to required expertise and monitoring."
+  },
+  {
+    "service_name": "Temporalis / Masseter Myotomy",
+    "specialty": "Maxillofacial",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Specialist procedure for trismus — county referral centres can provide care; tariff seems appropriate."
+  },
+  {
+    "service_name": "TMJ Arthroscopy",
+    "specialty": "Maxillofacial",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Minimally invasive procedure requiring arthroscopy equipment and trained surgeons — level 5/6 suitable; tariff is modest but acceptable."
+  },
+  {
+    "service_name": "Torticollis / Fibromatosis Colli Correction",
+    "specialty": "Maxillofacial",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Pediatric/neck procedure requiring anaesthesia and experienced surgeons; county referral hospitals appropriate; tariff reasonable."
+  },
+  {
+    "service_name": "Acrylic Cranioplasty",
+    "specialty": "Neurosurgery",
+    "recommended_facility_level": [6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Requires neurosurgical OR and implant materials; best performed at tertiary centres — tariff likely underestimates implant/material costs."
+  },
+  {
+    "service_name": "Anterior cervical fusion - AO plating / POSTERIOR DECOMPRESSION",
+    "specialty": "Neurosurgery",
+    "recommended_facility_level": [6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Spinal fixation with implants and perioperative support required; tertiary spine capability needed and tariff likely inadequate."
+  },
+  {
+    "service_name": "Application of skull calipers",
+    "specialty": "Neurosurgery",
+    "recommended_facility_level": [3,4,5],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Minor technical procedure (often measurement/helmet fitting) suitable at lower referral levels; tariff adequate for limited resource use."
+  },
+  {
+    "service_name": "Brain abscess",
+    "specialty": "Neurosurgery",
+    "recommended_facility_level": [6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Often requires stereotactic aspiration/craniotomy, prolonged antibiotics and ICU support; tertiary care required and tariff unlikely to cover full cost."
+  },
+  {
+    "service_name": "Brain Biopsy procedure",
+    "specialty": "Neurosurgery",
+    "recommended_facility_level": [6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Stereotactic or open biopsy needs specialized equipment and pathology support — tertiary centre required; tariff appears low for full pathway."
+  },
+  {
+    "service_name": "Clipping of cerebral artery",
+    "specialty": "Neurosurgery",
+    "recommended_facility_level": [6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Vascular neurosurgery with high resource intensity and ICU needs; only national referral centres should provide; tariff insufficient."
+  },
+  {
+    "service_name": "Craniotomy for Aneurysm",
+    "specialty": "Neurosurgery",
+    "recommended_facility_level": [6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Complex vascular procedure with high morbidity/mortality risk and ICU care — tertiary level required; tariff inadequate."
+  },
+  {
+    "service_name": "Craniotomy for AV malformation",
+    "specialty": "Neurosurgery",
+    "recommended_facility_level": [6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Complex intracranial vascular surgery requiring specialist team and infrastructure; tariff unlikely to cover full cost."
+  },
+  {
+    "service_name": "Craniotomy for Intracelebral haematoma",
+    "specialty": "Neurosurgery",
+    "recommended_facility_level": [6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Emergency craniotomy with ICU care — tertiary centre preferred; tariff unlikely to cover high-intensity emergency resources."
+  },
+  {
+    "service_name": "Craniotomy for Brain Tumour",
+    "specialty": "Neurosurgery",
+    "recommended_facility_level": [6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Complex tumour resections require advanced neuro‑anaesthesia, monitoring and ICU/rehab — tariff appears insufficient."
+  },
+  {
+    "service_name": "Elevation of depressed skull fracture",
+    "specialty": "Neurosurgery",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Often urgent but technically straightforward elevation; can be managed at well-equipped county hospitals or tertiary centres; tariff reasonable."
+  },
+  {
+    "service_name": "Endoscopic Third Ventriculostomy w Choroid Plexux Cauterization (ETV / CPC)",
+    "specialty": "Neurosurgery",
+    "recommended_facility_level": [6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Requires endoscopic neurosurgical equipment and experience (often pediatric neurosurgery) — best at tertiary centres; tariff likely low for equipment costs."
+  },
+  {
+    "service_name": "EVD Insertion / ICP Monitoring",
+    "specialty": "Neurosurgery",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Critical care neurosurgical intervention with monitoring and infection risk — should be provided at referral hospitals; tariff unlikely to cover ICU/hardware fully."
+  },
+  {
+    "service_name": "Excision of intracranial nerve lesions",
+    "specialty": "Neurosurgery",
+    "recommended_facility_level": [6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Microsurgical cranial nerve work requires tertiary expertise and intraoperative monitoring; tariff appears insufficient."
+  },
+  {
+    "service_name": "Excision of spinal tumours",
+    "specialty": "Neurosurgery",
+    "recommended_facility_level": [6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Complex spinal oncology often needs specialized instrumentation, neuromonitoring and ICU — tertiary level required; tariff inadequate."
+  },
+  {
+    "service_name": "Extradural haematoma",
+    "specialty": "Neurosurgery",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Emergency evacuation demands rapid neurosurgical capacity and postoperative critical care; tariff likely insufficient to cover urgent high-resource care."
+  },
+  {
+    "service_name": "Laminectomy for cervical / thoracic / or lumbar spine",
+    "specialty": "Neurosurgery",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Common spinal decompression suitable for county referral and tertiary hospitals; tariff generally aligns with typical resource use."
+  },
+  {
+    "service_name": "Microdiscectomy",
+    "specialty": "Neurosurgery",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Minimally invasive spinal procedure feasible at well‑equipped county hospitals; tariff is consistent with expected costs."
+  }
+]

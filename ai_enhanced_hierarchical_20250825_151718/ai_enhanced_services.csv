@@ -1,0 +1,247 @@
+service_name,super_heading,service_category,page_number,tariff,access_rules,facility_level,extraction_method
+Aortic Valvuloplasty,,,19,"620,000",,,ai_enhanced_hierarchical
+ASD percutaneous device closure,,,19,"414,400",,,ai_enhanced_hierarchical
+Atrial Septostomy,,,19,"201,600",,,ai_enhanced_hierarchical
+Cardiac Resynchronization Therapy Defibrillator (CRT- D) device,,,19,"504,000",,,ai_enhanced_hierarchical
+Cardiac Resynchronization Therapy Pacemaker (CRT-P),,,19,"537,600",,,ai_enhanced_hierarchical
+Coronary angiography (diagnostic),,,19,"78,400",,,ai_enhanced_hierarchical
+Coronary Angioplasty (with single or Multiple Stents),,,19,"537,600",,,ai_enhanced_hierarchical
+Diagnostic catheterization,,,19,"78,400",,,ai_enhanced_hierarchical
+Dual Chamber pacemaker insertion (permanent),,,19,"280,000",,,ai_enhanced_hierarchical
+Implantable Converter Defibrillator (ICD) Dual chamber insertion,,,19,"504,000",,,ai_enhanced_hierarchical
+Implantable Converter Defibrillator (ICD) Single chamber insertion,,,19,"504,000",,,ai_enhanced_hierarchical
+Intra- Aortic Balloon Pump,,,19,"168,000",,,ai_enhanced_hierarchical
+IVC Filter insertion,,,19,"168,000",,,ai_enhanced_hierarchical
+Loop recorder - reveal link,,,19,"537,600",,,ai_enhanced_hierarchical
+Loop recorder-reveal xt,,,19,"358,400",,,ai_enhanced_hierarchical
+Mitral Valvoplasty,,,19,"392,000",,,ai_enhanced_hierarchical
+PDA percutaneous device closure,,,19,"414,400",,,ai_enhanced_hierarchical
+Peripheral Angiography,,,19,"56,000",,,ai_enhanced_hierarchical
+Peripheral Angioplasty,Cardiology Services,Cardiothoracic and Vascular,20,"280,000",,,ai_enhanced_hierarchical
+Pulmonary artery catheterization,Cardiology Services,Cardiothoracic and Vascular,20,"78,400",,,ai_enhanced_hierarchical
+Pulmonary Valvoplasty,Cardiology Services,Cardiothoracic and Vascular,20,"448,000",,,ai_enhanced_hierarchical
+Renal artery stenting,Cardiology Services,Cardiothoracic and Vascular,20,"280,000",,,ai_enhanced_hierarchical
+Retrival of Foreign bodies,Cardiology Services,Cardiothoracic and Vascular,20,"145,600",,,ai_enhanced_hierarchical
+Right and Left Catheterization,Cardiology Services,Cardiothoracic and Vascular,20,"145,600",,,ai_enhanced_hierarchical
+Single Chamber pacemaker insertion (permanent),Cardiology Services,Cardiothoracic and Vascular,20,"224,000",,,ai_enhanced_hierarchical
+Single pacemaker insertion (temporary),Cardiology Services,Cardiothoracic and Vascular,20,"44,800",,,ai_enhanced_hierarchical
+Thoracic endovascular aortic repair (TEVAR),Cardiology Services,Cardiothoracic and Vascular,20,"504,000",,,ai_enhanced_hierarchical
+VSD percutanoeus device closure,Cardiology Services,Cardiothoracic and Vascular,20,"414,400",,,ai_enhanced_hierarchical
+Abdominal Aortic Aneurym Repair (Open),Cardiology Services,Cardiothoracic and Vascular,20,"392,000",,,ai_enhanced_hierarchical
+Achalasia cardia/Diverticulum,Cardiology Services,Cardiothoracic and Vascular,20,"280,000",,,ai_enhanced_hierarchical
+Anterior Chest Wall Mass Excision and Reconstruction,Cardiology Services,Cardiothoracic and Vascular,20,"599,200",,,ai_enhanced_hierarchical
+Anterior Mediastinal Mass Resection,Cardiology Services,Cardiothoracic and Vascular,20,"599,200",,,ai_enhanced_hierarchical
+Aortic Valve Replacement (AVR),Cardiology Services,Cardiothoracic and Vascular,20,"1,064,000",,,ai_enhanced_hierarchical
+Arteriovenous Malformation Resection,Cardiology Services,Cardiothoracic and Vascular,20,"386,400",,,ai_enhanced_hierarchical
+Atrial Septal Defect Closure,Cardiology Services,Cardiothoracic and Vascular,20,"784,000",,,ai_enhanced_hierarchical
+AV Fistula Take down,Cardiology Services,Cardiothoracic and Vascular,20,"33,600",,,ai_enhanced_hierarchical
+Bentall's Procedure,Cardiology Services,Cardiothoracic and Vascular,20,"1,358,000",,,ai_enhanced_hierarchical
+Bidirectional Glenn Shunt,Cardiology Services,Cardiothoracic and Vascular,20,"954,800",,,ai_enhanced_hierarchical
+Blalock Taussig (BT) Shunt,Cardiology Services,Cardiothoracic and Vascular,20,"688,800",,,ai_enhanced_hierarchical
+Bronchopleural fistula repair,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,21,562800,,,ai_enhanced_hierarchical
+Bronchoscopy and removal of FB,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,21,78400,,,ai_enhanced_hierarchical
+CABG + Double Valve Replacement,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,21,1442000,,,ai_enhanced_hierarchical
+CABG + MWR/AVR,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,21,1220800,,,ai_enhanced_hierarchical
+Carotid Artery Endarterectomy,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,21,145600,,,ai_enhanced_hierarchical
+Carotid Body Tumour Excision,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,21,246400,,,ai_enhanced_hierarchical
+Carotid Body Tumour Redo Surgery,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,21,646800,,,ai_enhanced_hierarchical
+Closed valvotomy,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,21,192000,,,ai_enhanced_hierarchical
+Coarctation of Aorta repair with graft,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,21,280000,,,ai_enhanced_hierarchical
+Coarctation of Aorta repair without graft,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,21,280000,,,ai_enhanced_hierarchical
+Complete Atrioventricular Canal Defect Repair,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,21,1024800,,,ai_enhanced_hierarchical
+Complex repair for congenital heart disease,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,21,1248800,,,ai_enhanced_hierarchical
+Congenital AV fistula malformation Resection,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,21,201600,,,ai_enhanced_hierarchical
+Conventional Elephant Trunk (CET) Procedure,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,21,1302000,,,ai_enhanced_hierarchical
+Coronary artery Bypass Grafting (CABG),Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,21,868000,,,ai_enhanced_hierarchical
+Cox Maze IV Procedure,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,21,513000,,,ai_enhanced_hierarchical
+Diaphragmatic Hernia Repair,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,21,224000,,,ai_enhanced_hierarchical
+Dissected Aortic Aneurysm Repair (Open),Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,21,392000,,,ai_enhanced_hierarchical
+Double Valve Replacement,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,21,1248800,,,ai_enhanced_hierarchical
+Endovascular Aneurysm Repair (EVAR),Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,21,1626800,,,ai_enhanced_hierarchical
+Esophagostomy,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,21,470400,,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular ESRD AV Fistula Creation,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,22,"78,400",,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular ESRD AV Graft Surgery,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,22,"168,000",,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular Excision of Mediastinal Tumour,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,22,"280,000",,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular Fontan procedure,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,22,"954,800",,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular Frozen Elephant Trunk (FET) Procedure,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,22,"1,411,200",,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular Gastrostomy/Jejunostomy,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,22,"89,600",,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular Heller's myotomy,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,22,"386,400",,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular Insertion of MB tube,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,22,"44,800",,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular Lung decortication,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,22,"224,000",,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular Mitral Valve Replacement (MVR),Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,22,"1,064,000",,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular Mitral Valvotomy / Balloon,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,22,"224,000",,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular Myocardial Biopsy,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,22,"44,800",,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular Oesophageal perforation Repair,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,22,"554,400",,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular Oesophagectomy,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,22,"747,600",,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular Open Lobectomy,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,22,"590,800",,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular Open Lung Biopsy,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,22,"350,000",,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular Open Patent Ductus Arteriosus (PDA) surgery,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,22,"313,600",,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular Open Pneumonectomy,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,22,"280,000",,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular Open Removal of Esophageal Foreign Body,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,22,"554,400",,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular Open Removal of Tracheal/Bronchial Foreign Body,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,22,"554,400",,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular Other aneurysms repair,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,22,"392,000",,,ai_enhanced_hierarchical
+Cardiotothoracic and Vascular Pacemaker Change of battery,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,23,"134,400",,,ai_enhanced_hierarchical
+Cardiotothoracic and Vascular Partial Atrioventricular Canal Defect Repair,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,23,"784,000",,,ai_enhanced_hierarchical
+Cardiotothoracic and Vascular Pericardial Catheterization,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,23,"89,600",,,ai_enhanced_hierarchical
+Cardiotothoracic and Vascular Pericardial Window,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,23,"89,600",,,ai_enhanced_hierarchical
+Cardiotothoracic and Vascular Pericardiectomy,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,23,"554,400",,,ai_enhanced_hierarchical
+Cardiotothoracic and Vascular Pericardiocentesis,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,23,"56,000",,,ai_enhanced_hierarchical
+Cardiotothoracic and Vascular Peripheral Vascular Disease (PAD) Bypass Grafting,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,23,"392,000",,,ai_enhanced_hierarchical
+Cardiotothoracic and Vascular Peripheral Vascular Disease (PAD) Embolectomy,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,23,"168,000",,,ai_enhanced_hierarchical
+Cardiotothoracic and Vascular Peripheral Vascular Disease (PAD) Endovascular Balloon Angioplasty,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,23,"280,000",,,ai_enhanced_hierarchical
+Cardiotothoracic and Vascular Peripheral Vascular Disease (PAD) Endovascular Stenting,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,23,"280,000",,,ai_enhanced_hierarchical
+Cardiotothoracic and Vascular Peripheral Vascular Disease (PAD) Vascular Amputation,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,23,"350,000",,,ai_enhanced_hierarchical
+Cardiotothoracic and Vascular Pleurodesis,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,23,"144,200",,,ai_enhanced_hierarchical
+Cardiotothoracic and Vascular Primary Open Pacemaker implantation,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,23,"224,000",,,ai_enhanced_hierarchical
+Cardiotothoracic and Vascular Pulmonary Artery Banding,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,23,"481,600",,,ai_enhanced_hierarchical
+Cardiotothoracic and Vascular Repair of Ruptured Diaphragm,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,23,"145,600",,,ai_enhanced_hierarchical
+Cardiotothoracic and Vascular Simple Thoracotomy-Retained Haemothrax/Duct ligation/pleurodesis/FB removal,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,23,"201,600",,,ai_enhanced_hierarchical
+Cardiotothoracic and Vascular Simple tracheal/Bronchial fistula repairs,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,23,"224,000",,,ai_enhanced_hierarchical
+Cardiotothoracic and Vascular Splenorenal shunt,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,23,"112,000",,,ai_enhanced_hierarchical
+Cardiotothoracic and Vascular Subfascial DVT ligation + skin graft,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,23,"89,600",,,ai_enhanced_hierarchical
+Cardiotothoracic and Vascular Tetralogy of Fallot Repair,Cardiothoracic and Vascular Services,Cardiothoracic and Vascular,23,"952,000",,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular Thoracic Aortic Aneurysm Repair (Open),Cardiotothoracic and Vascular Services,Cardiothoracic and Vascular,24,"392,000",,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular Thoracic Endovascular Aneurysm Repair (TEVAR),Cardiotothoracic and Vascular Services,Cardiothoracic and Vascular,24,"2,186,800",,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular Thoracotomy,Cardiotothoracic and Vascular Services,Cardiothoracic and Vascular,24,"350,000",,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular Tracheal Stenosis Resection and Anastomosis,Cardiotothoracic and Vascular Services,Cardiothoracic and Vascular,24,"747,600",,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular Tracheal/Bronchial Reconstruction,Cardiotothoracic and Vascular Services,Cardiothoracic and Vascular,24,"358,400",,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular Transcatheter percutaneous device PDA closure,Cardiotothoracic and Vascular Services,Cardiothoracic and Vascular,24,"414,400",,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular Traumatic Tracheal/Bronchial Disruption repair and anastomosis,Cardiotothoracic and Vascular Services,Cardiothoracic and Vascular,24,"747,600",,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular Traumatic Vascular Injury Repair,Cardiotothoracic and Vascular Services,Cardiothoracic and Vascular,24,"145,600",,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular Tube Thoracostomy,Cardiotothoracic and Vascular Services,Cardiothoracic and Vascular,24,"144,200",,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular Vascular Exposure and Safeguarding for Anterior Lumbar Interbody Fusion,Cardiotothoracic and Vascular Services,Cardiothoracic and Vascular,24,"498,400",,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular Venous Insufficiency Laser Ablation,Cardiotothoracic and Vascular Services,Cardiothoracic and Vascular,24,"263,200",,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular Venous Insufficiency Perforator Ligation,Cardiotothoracic and Vascular Services,Cardiothoracic and Vascular,24,"229,600",,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular Venous Insufficiency Radiofrequency Ablation,Cardiotothoracic and Vascular Services,Cardiothoracic and Vascular,24,"271,600",,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular Venous Insufficiency Stripping,Cardiotothoracic and Vascular Services,Cardiothoracic and Vascular,24,"229,600",,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular Ventricular Septal Defect Closure,Cardiotothoracic and Vascular Services,Cardiothoracic and Vascular,24,"868,000",,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular Vessel bypass Surgery,Cardiotothoracic and Vascular Services,Cardiothoracic and Vascular,24,"246,400",,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular Video Assisted Thoracoscopic Surgery (VATS) Decortication,Cardiotothoracic and Vascular Services,Cardiothoracic and Vascular,24,"224,000",,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular Video Assisted Thoracoscopic Surgery (VATS) Lobectomy,Cardiotothoracic and Vascular Services,Cardiothoracic and Vascular,24,"590,800",,,ai_enhanced_hierarchical
+Cardiothoracic and Vascular Video Assisted Thoracoscopic Surgery (VATS) Pneumonectomy,Cardiotothoracic and Vascular Services,Cardiothoracic and Vascular,24,"280,000",,,ai_enhanced_hierarchical
+Ear Nose & Throat Block dissection of the neck,Cardiotothoracic and Vascular Services,Cardiothoracic and Vascular,24,"224,000",,,ai_enhanced_hierarchical
+Ear Nose & Throat Cochlea operations,Cardiotothoracic and Vascular Services,Cardiothoracic and Vascular,24,"358,400",,,ai_enhanced_hierarchical
+Excision and reconstruction of head and neck tumours,Ear Nose & Throat Services,Cardiothoracic and Vascular,25,"257,600",,,ai_enhanced_hierarchical
+Excision of pharyngeal diverticulum,Ear Nose & Throat Services,Cardiothoracic and Vascular,25,"168,000",,,ai_enhanced_hierarchical
+Facial nerve decompression,Ear Nose & Throat Services,Cardiothoracic and Vascular,25,"358,400",,,ai_enhanced_hierarchical
+Laryngectomy (Partial),Ear Nose & Throat Services,Cardiothoracic and Vascular,25,"201,600",,,ai_enhanced_hierarchical
+Laryngectomy (Total),Ear Nose & Throat Services,Cardiothoracic and Vascular,25,"280,000",,,ai_enhanced_hierarchical
+Laryngectomy with radical neck dissection,Ear Nose & Throat Services,Cardiothoracic and Vascular,25,"336,000",,,ai_enhanced_hierarchical
+Middle ear tumour excision,Ear Nose & Throat Services,Cardiothoracic and Vascular,25,"224,000",,,ai_enhanced_hierarchical
+Total/ Radical parotidectomy,Ear Nose & Throat Services,Cardiothoracic and Vascular,25,"168,000",,,ai_enhanced_hierarchical
+"EUA and biopsy of nasopharynx, ears, nose",Ear Nose & Throat Services,Cardiothoracic and Vascular,25,"28,000",,,ai_enhanced_hierarchical
+Frontal sinus trephination,Ear Nose & Throat Services,Cardiothoracic and Vascular,25,"22,400",,,ai_enhanced_hierarchical
+Maxillary Artery Ligation,Ear Nose & Throat Services,Cardiothoracic and Vascular,25,"67,200",,,ai_enhanced_hierarchical
+MUA # nose,Ear Nose & Throat Services,Cardiothoracic and Vascular,25,"33,600",,,ai_enhanced_hierarchical
+Removal of FB in ear or nose (paediatrics under GA),Ear Nose & Throat Services,Cardiothoracic and Vascular,25,"61,600",,,ai_enhanced_hierarchical
+Adenoidectomy,Ear Nose & Throat Services,Cardiothoracic and Vascular,25,"72,240",,,ai_enhanced_hierarchical
+Adenotonsillectomy (Ts 7 As),Ear Nose & Throat Services,Cardiothoracic and Vascular,25,"77,840",,,ai_enhanced_hierarchical
+Cricotracheal reconstruction,Ear Nose & Throat Services,Cardiothoracic and Vascular,25,"89,600",,,ai_enhanced_hierarchical
+Direct laryngoscopy and biopsy,Ear Nose & Throat Services,Cardiothoracic and Vascular,25,"50,400",,,ai_enhanced_hierarchical
+Excision of submandibular gland,Ear Nose & Throat Services,Cardiothoracic and Vascular,25,"89,600",,,ai_enhanced_hierarchical
+Frontal mucocele,Ear Nose & Throat Services,Cardiothoracic and Vascular,25,"78,400",,,ai_enhanced_hierarchical
+Functional endoscopic sinus surgery (FESS),Ear Nose & Throat Services,Cardiothoracic and Vascular,25,"123,200",,,ai_enhanced_hierarchical
+Hemiglossectomy,Ear Nose & Throat Services,Cardiothoracic and Vascular,25,"89,600",,,ai_enhanced_hierarchical
+Intranasal ethmoidectomy,Ear Nose & Throat Services,Cardiothoracic and Vascular,26,"112,000",,,ai_enhanced_hierarchical
+Laryngocele excision,Ear Nose & Throat Services,Cardiothoracic and Vascular,26,"89,600",,,ai_enhanced_hierarchical
+"Lateral Rhinotomy (due to tumour, scars or congenital)",Ear Nose & Throat Services,Cardiothoracic and Vascular,26,"67,200",,,ai_enhanced_hierarchical
+Maxillectomy,Ear Nose & Throat Services,Cardiothoracic and Vascular,26,"134,400",,,ai_enhanced_hierarchical
+Myringoplasty,Ear Nose & Throat Services,Cardiothoracic and Vascular,26,"67,200",,,ai_enhanced_hierarchical
+Myringotomy,Ear Nose & Throat Services,Cardiothoracic and Vascular,26,"44,800",,,ai_enhanced_hierarchical
+Nasal polypectomy,Ear Nose & Throat Services,Cardiothoracic and Vascular,26,"67,200",,,ai_enhanced_hierarchical
+Radical mastoidectomy,Ear Nose & Throat Services,Cardiothoracic and Vascular,26,"145,600",,,ai_enhanced_hierarchical
+"Rhinoplasty: Soft and bony tissue (Tumours, congenital, trauma)",Ear Nose & Throat Services,Cardiothoracic and Vascular,26,"89,600",,,ai_enhanced_hierarchical
+"Rhinoplasty: Soft tissue (Tumors, congenital, trauma)",Ear Nose & Throat Services,Cardiothoracic and Vascular,26,"89,600",,,ai_enhanced_hierarchical
+"Septoplasty (Tumors, congenital, trauma)",Ear Nose & Throat Services,Cardiothoracic and Vascular,26,"44,800",,,ai_enhanced_hierarchical
+Simple mastoidectomy,Ear Nose & Throat Services,Cardiothoracic and Vascular,26,"44,800",,,ai_enhanced_hierarchical
+Submucous resection of nasal septum,Ear Nose & Throat Services,Cardiothoracic and Vascular,26,"44,800",,,ai_enhanced_hierarchical
+Superficial Parotidectomy,Ear Nose & Throat Services,Cardiothoracic and Vascular,26,"89,600",,,ai_enhanced_hierarchical
+T.I.T. and Intranasal Antrostomy,Ear Nose & Throat Services,Cardiothoracic and Vascular,26,"100,800",,,ai_enhanced_hierarchical
+T.I.T. and Turbinoplasty,Ear Nose & Throat Services,Cardiothoracic and Vascular,26,"100,800",,,ai_enhanced_hierarchical
+Tonsillectomy,Ear Nose & Throat Services,Cardiothoracic and Vascular,26,"56,000",,,ai_enhanced_hierarchical
+Transplatatal excision of Choanal atresia,Ear Nose & Throat Services,Cardiothoracic and Vascular,26,"89,600",,,ai_enhanced_hierarchical
+Tympanoplasty,Ear Nose & Throat Services,Cardiothoracic and Vascular,26,"78,400",,,ai_enhanced_hierarchical
+Uvulopalatopharyngoplasty,Ear Nose & Throat Services,Cardiothoracic and Vascular,26,"78,400",,,ai_enhanced_hierarchical
+Vocal Cord lateralisation,Ear Nose & Throat Services,Cardiothoracic and Vascular,26,"112,000",,,ai_enhanced_hierarchical
+General Abdominoperineal resection (APR-tumor),Ear Nose & Throat Services,Cardiothoracic and Vascular,27,"134,400",,,ai_enhanced_hierarchical
+General Anterior Resection of Rectum,Ear Nose & Throat Services,Cardiothoracic and Vascular,27,"123,200",,,ai_enhanced_hierarchical
+General Appendicectomy,Ear Nose & Throat Services,Cardiothoracic and Vascular,27,"67,200",,,ai_enhanced_hierarchical
+General Bilateral Herniotomy,Ear Nose & Throat Services,Cardiothoracic and Vascular,27,"56,000",,,ai_enhanced_hierarchical
+General Bilateral Herniotomy + orchidopexy,Ear Nose & Throat Services,Cardiothoracic and Vascular,27,"56,000",,,ai_enhanced_hierarchical
+General Bilateral inguinal herniorrapphy,Ear Nose & Throat Services,Cardiothoracic and Vascular,27,"56,000",,,ai_enhanced_hierarchical
+General Bilateral Orchidopexy,Ear Nose & Throat Services,Cardiothoracic and Vascular,27,"56,000",,,ai_enhanced_hierarchical
+General Bowel resection and anastomosis,Ear Nose & Throat Services,Cardiothoracic and Vascular,27,"112,000",,,ai_enhanced_hierarchical
+General Breast Lumpectomy under GA,Ear Nose & Throat Services,Cardiothoracic and Vascular,27,"22,400",,,ai_enhanced_hierarchical
+General Cervical lymph node biopsy,Ear Nose & Throat Services,Cardiothoracic and Vascular,27,"11,200",,,ai_enhanced_hierarchical
+General Cholecystectomy,Ear Nose & Throat Services,Cardiothoracic and Vascular,27,"89,600",,,ai_enhanced_hierarchical
+General Closure of Colostomy,Ear Nose & Throat Services,Cardiothoracic and Vascular,27,"89,600",,,ai_enhanced_hierarchical
+General Colostomy,Ear Nose & Throat Services,Cardiothoracic and Vascular,27,"89,600",,,ai_enhanced_hierarchical
+General diathermy excision of warts or subcutaneous tissue,Ear Nose & Throat Services,Cardiothoracic and Vascular,27,"8,960",,,ai_enhanced_hierarchical
+General Drainage of Breast abscess (only under GA),Ear Nose & Throat Services,Cardiothoracic and Vascular,27,"11,200",,,ai_enhanced_hierarchical
+General Excision of Liver hydatid cyst,Ear Nose & Throat Services,Cardiothoracic and Vascular,27,"134,400",,,ai_enhanced_hierarchical
+General Excision of Thyroglossal cyst,Ear Nose & Throat Services,Cardiothoracic and Vascular,27,"89,600",,,ai_enhanced_hierarchical
+General Exploration of retroperitoneal mass,Ear Nose & Throat Services,Cardiothoracic and Vascular,27,"112,000",,,ai_enhanced_hierarchical
+General Exploratory Laparotomy,Ear Nose & Throat Services,Cardiothoracic and Vascular,27,"67,200",,,ai_enhanced_hierarchical
+General gastrojejunostomy,Ear Nose & Throat Services,Cardiothoracic and Vascular,27,"134,400",,,ai_enhanced_hierarchical
+General Haemorrhoidectomy,Ear Nose & Throat Services,Cardiothoracic and Vascular,27,"44,800",,,ai_enhanced_hierarchical
+General Hemicolectomy,Ear Nose & Throat Services,Cardiothoracic and Vascular,28,"134,400",,,ai_enhanced_hierarchical
+General Incision & Drainage (Peri anal Abscess),Ear Nose & Throat Services,Cardiothoracic and Vascular,28,"14,000",,,ai_enhanced_hierarchical
+General Incision & Drainage Under GA,Ear Nose & Throat Services,Cardiothoracic and Vascular,28,"11,200",,,ai_enhanced_hierarchical
+General Incision +drainage head and neck abscess (I&D) under GA,Ear Nose & Throat Services,Cardiothoracic and Vascular,28,"11,200",,,ai_enhanced_hierarchical
+General Incision and drainage of ocular abscess or cyst (I&D),Ear Nose & Throat Services,Cardiothoracic and Vascular,28,"5,600",,,ai_enhanced_hierarchical
+General Insertion of chest tube / chest aspiration,Ear Nose & Throat Services,Cardiothoracic and Vascular,28,"8,960",,,ai_enhanced_hierarchical
+General Intestinal resection + anastomosis,Ear Nose & Throat Services,Cardiothoracic and Vascular,28,"134,400",,,ai_enhanced_hierarchical
+General Laparoscopic Niessens fundoplication,Ear Nose & Throat Services,Cardiothoracic and Vascular,28,"212,800",,,ai_enhanced_hierarchical
+General Laparotomy for Pyloric stenosis,Ear Nose & Throat Services,Cardiothoracic and Vascular,28,"134,400",,,ai_enhanced_hierarchical
+General Lateral Sphincterotomy,Ear Nose & Throat Services,Cardiothoracic and Vascular,28,"44,800",,,ai_enhanced_hierarchical
+General Lumbar puncture,Ear Nose & Throat Services,Cardiothoracic and Vascular,28,"5,600",,,ai_enhanced_hierarchical
+General Lymph node biopsy,Ear Nose & Throat Services,Cardiothoracic and Vascular,28,"11,200",,,ai_enhanced_hierarchical
+General Minor Surgical Toilet Under GA,Ear Nose & Throat Services,Cardiothoracic and Vascular,28,"11,200",,,ai_enhanced_hierarchical
+General Needle biopsy: liver,Ear Nose & Throat Services,Cardiothoracic and Vascular,28,"16,800",,,ai_enhanced_hierarchical
+General Nerve release and decompression,Ear Nose & Throat Services,Cardiothoracic and Vascular,28,"44,800",,,ai_enhanced_hierarchical
+General Oesophagoscopy and removal of FB,Ear Nose & Throat Services,Cardiothoracic and Vascular,28,"8,960",,,ai_enhanced_hierarchical
+General Orchidectomy,Ear Nose & Throat Services,Cardiothoracic and Vascular,28,"44,800",,,ai_enhanced_hierarchical
+General Paediatric (below 6 years) Circumcision only under GA (phymosis),Ear Nose & Throat Services,Cardiothoracic and Vascular,28,"22,400",,,ai_enhanced_hierarchical
+General Paracentesis,Ear Nose & Throat Services,Cardiothoracic and Vascular,28,"5,600",,,ai_enhanced_hierarchical
+General Partial Gastrectomy,Ear Nose & Throat Services,Cardiothoracic and Vascular,28,"123,200",,,ai_enhanced_hierarchical
+General Primary repair of incisional hernia laparoscopic,Ear Nose & Throat Services,Cardiothoracic and Vascular,28,"56,000",,,ai_enhanced_hierarchical
+General Radical Mastectomy (To include lymph nodes clearance),Ear Nose & Throat Services,Cardiothoracic and Vascular,29,"134,400",,,ai_enhanced_hierarchical
+General Repair minor scalp wounds/lacerations under GA,Ear Nose & Throat Services,Cardiothoracic and Vascular,29,"11,200",,,ai_enhanced_hierarchical
+General Repair of burst abdomen,Ear Nose & Throat Services,Cardiothoracic and Vascular,29,"44,800",,,ai_enhanced_hierarchical
+General Repair of epigastric hernia,Ear Nose & Throat Services,Cardiothoracic and Vascular,29,"56,000",,,ai_enhanced_hierarchical
+General Repair of hiatus hernia,Ear Nose & Throat Services,Cardiothoracic and Vascular,29,"168,000",,,ai_enhanced_hierarchical
+General Repair of incisional hernia (with mesh),Ear Nose & Throat Services,Cardiothoracic and Vascular,29,"78,400",,,ai_enhanced_hierarchical
+General Repair of perforated duodenal ulcer,Ear Nose & Throat Services,Cardiothoracic and Vascular,29,"134,400",,,ai_enhanced_hierarchical
+General Repair of previous incision in abdominal wall,Ear Nose & Throat Services,Cardiothoracic and Vascular,29,"78,400",,,ai_enhanced_hierarchical
+General Repair of strangulated hernias,Ear Nose & Throat Services,Cardiothoracic and Vascular,29,"89,600",,,ai_enhanced_hierarchical
+General Repair of umbilical hernia (with mesh),Ear Nose & Throat Services,Cardiothoracic and Vascular,29,"44,800",,,ai_enhanced_hierarchical
+General Simple Mastectomy,Ear Nose & Throat Services,Cardiothoracic and Vascular,29,"89,600",,,ai_enhanced_hierarchical
+General Skin biopsy,Ear Nose & Throat Services,Cardiothoracic and Vascular,29,"8,960",,,ai_enhanced_hierarchical
+General Splenectomy,Ear Nose & Throat Services,Cardiothoracic and Vascular,29,"134,400",,,ai_enhanced_hierarchical
+General Stripping of bilateral varicose veins,Ear Nose & Throat Services,Cardiothoracic and Vascular,29,"78,400",,,ai_enhanced_hierarchical
+General Subdural haematoma Evacuation,Ear Nose & Throat Services,Cardiothoracic and Vascular,29,"134,400",,,ai_enhanced_hierarchical
+"General Surgical Debridement/Escharectomy: (Minor, Medium & Major), traumatic, pressure sores, diabetic and burns (Under GA)",Ear Nose & Throat Services,Cardiothoracic and Vascular,29,"33,600",,,ai_enhanced_hierarchical
+General Surgical toilet under GA,Ear Nose & Throat Services,Cardiothoracic and Vascular,29,"11,200",,,ai_enhanced_hierarchical
+General Thyroidectomy,Ear Nose & Throat Services,Cardiothoracic and Vascular,29,"134,400",,,ai_enhanced_hierarchical
+General Total Gastrectomy,Ear Nose & Throat Services,Cardiothoracic and Vascular,29,"134,400",,,ai_enhanced_hierarchical
+General Total Oesophagectomy,Ear Nose & Throat Services,Cardiothoracic and Vascular,29,"504,000",,,ai_enhanced_hierarchical
+General Tracheostomy,Ear Nose & Throat Services,Cardiothoracic and Vascular,30,"44,800",,,ai_enhanced_hierarchical
+General Transverse Colectomy,Ear Nose & Throat Services,Cardiothoracic and Vascular,30,"134,400",,,ai_enhanced_hierarchical
+General Unilateral Adrenalectomy,Ear Nose & Throat Services,Cardiothoracic and Vascular,30,"168,000",,,ai_enhanced_hierarchical
+General Unilateral femoral herniorrhaphy,Ear Nose & Throat Services,Cardiothoracic and Vascular,30,"56,000",,,ai_enhanced_hierarchical
+General Unilateral gynaecomastia correction,Ear Nose & Throat Services,Cardiothoracic and Vascular,30,"56,000",,,ai_enhanced_hierarchical
+General Unilateral Herniotomy,Ear Nose & Throat Services,Cardiothoracic and Vascular,30,"56,000",,,ai_enhanced_hierarchical
+General Unilateral Herniotomy + orchidopexy,Ear Nose & Throat Services,Cardiothoracic and Vascular,30,"56,000",,,ai_enhanced_hierarchical
+General Unilateral Orchidopexy,Ear Nose & Throat Services,Cardiothoracic and Vascular,30,"56,000",,,ai_enhanced_hierarchical
+General Unilateral sympathectomy,Ear Nose & Throat Services,Cardiothoracic and Vascular,30,"56,000",,,ai_enhanced_hierarchical
+General Vagotomy + drainage,Ear Nose & Throat Services,Cardiothoracic and Vascular,30,"56,000",,,ai_enhanced_hierarchical
+Interventional Radiology 4-vessel cerebral Angiography / Carotid Angiography (unilateral or bilateral),Ear Nose & Throat Services,Cardiothoracic and Vascular,30,"61,600",,,ai_enhanced_hierarchical
+Interventional Radiology Balloon Angioplasty,Ear Nose & Throat Services,Cardiothoracic and Vascular,30,"145,600",,,ai_enhanced_hierarchical
+Interventional Radiology Bilateral nephrostomy tube insertion,Ear Nose & Throat Services,Cardiothoracic and Vascular,30,"72,800",,,ai_enhanced_hierarchical
+Interventional Radiology Biliary stenting,Ear Nose & Throat Services,Cardiothoracic and Vascular,30,"112,000",,,ai_enhanced_hierarchical
+Interventional Radiology CT guided bone biopsy,Ear Nose & Throat Services,Cardiothoracic and Vascular,30,"22,400",,,ai_enhanced_hierarchical
+Interventional Radiology CT guided lung biopsy,Ear Nose & Throat Services,Cardiothoracic and Vascular,30,"22,400",,,ai_enhanced_hierarchical
+Interventional Radiology DJ stenting bilateral,Ear Nose & Throat Services,Cardiothoracic and Vascular,30,"56,000",,,ai_enhanced_hierarchical
+Interventional Radiology DJ stenting unilateral,Ear Nose & Throat Services,Cardiothoracic and Vascular,30,"56,000",,,ai_enhanced_hierarchical
+Interventional Radiology Embolization/Carotid/Renal/Hepatic (no coils),Ear Nose & Throat Services,Cardiothoracic and Vascular,30,"224,000",,,ai_enhanced_hierarchical
+"Interventional Radiology Embolization/Carotid/Renal/Hepatic (no coils, embolization material and microcatheter)",Ear Nose & Throat Services,Cardiothoracic and Vascular,30,"168,000",,,ai_enhanced_hierarchical

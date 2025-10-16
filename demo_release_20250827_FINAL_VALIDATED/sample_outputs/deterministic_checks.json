@@ -1,0 +1,152 @@
+{
+  "timestamp": "2025-08-27T15:12:22.141307",
+  "extraction_parity": {
+    "manual_file_exists": true,
+    "integrated_count": 0,
+    "manual_count": 728,
+    "match_percentage": 0,
+    "sample_differences": []
+  },
+  "rishi_examples": {
+    "dialysis_contradictions_found": 0,
+    "hypertension_gap_found": true,
+    "dialysis_services_detected": {}
+  },
+  "contradictions": {
+    "dialysis": [],
+    "facility_exclusions": [],
+    "total": 0
+  },
+  "gaps": {
+    "disease_coverage": [
+      {
+        "disease": "hypertension",
+        "type": "missing_disease_coverage",
+        "description": "Common disease 'hypertension' not found in extracted services",
+        "matches_rishi_example": true
+      },
+      {
+        "disease": "diabetes",
+        "type": "missing_disease_coverage",
+        "description": "Common disease 'diabetes' not found in extracted services",
+        "matches_rishi_example": false
+      },
+      {
+        "disease": "pneumonia",
+        "type": "missing_disease_coverage",
+        "description": "Common disease 'pneumonia' not found in extracted services",
+        "matches_rishi_example": false
+      },
+      {
+        "disease": "malaria",
+        "type": "missing_disease_coverage",
+        "description": "Common disease 'malaria' not found in extracted services",
+        "matches_rishi_example": false
+      },
+      {
+        "disease": "tuberculosis",
+        "type": "missing_disease_coverage",
+        "description": "Common disease 'tuberculosis' not found in extracted services",
+        "matches_rishi_example": false
+      },
+      {
+        "disease": "tb",
+        "type": "missing_disease_coverage",
+        "description": "Common disease 'tb' not found in extracted services",
+        "matches_rishi_example": false
+      },
+      {
+        "disease": "hiv",
+        "type": "missing_disease_coverage",
+        "description": "Common disease 'hiv' not found in extracted services",
+        "matches_rishi_example": false
+      },
+      {
+        "disease": "aids",
+        "type": "missing_disease_coverage",
+        "description": "Common disease 'aids' not found in extracted services",
+        "matches_rishi_example": false
+      },
+      {
+        "disease": "asthma",
+        "type": "missing_disease_coverage",
+        "description": "Common disease 'asthma' not found in extracted services",
+        "matches_rishi_example": false
+      },
+      {
+        "disease": "stroke",
+        "type": "missing_disease_coverage",
+        "description": "Common disease 'stroke' not found in extracted services",
+        "matches_rishi_example": false
+      },
+      {
+        "disease": "heart disease",
+        "type": "missing_disease_coverage",
+        "description": "Common disease 'heart disease' not found in extracted services",
+        "matches_rishi_example": false
+      },
+      {
+        "disease": "cancer",
+        "type": "missing_disease_coverage",
+        "description": "Common disease 'cancer' not found in extracted services",
+        "matches_rishi_example": false
+      },
+      {
+        "disease": "depression",
+        "type": "missing_disease_coverage",
+        "description": "Common disease 'depression' not found in extracted services",
+        "matches_rishi_example": false
+      },
+      {
+        "disease": "anxiety",
+        "type": "missing_disease_coverage",
+        "description": "Common disease 'anxiety' not found in extracted services",
+        "matches_rishi_example": false
+      },
+      {
+        "disease": "epilepsy",
+        "type": "missing_disease_coverage",
+        "description": "Common disease 'epilepsy' not found in extracted services",
+        "matches_rishi_example": false
+      },
+      {
+        "disease": "kidney disease",
+        "type": "missing_disease_coverage",
+        "description": "Common disease 'kidney disease' not found in extracted services",
+        "matches_rishi_example": false
+      },
+      {
+        "disease": "liver disease",
+        "type": "missing_disease_coverage",
+        "description": "Common disease 'liver disease' not found in extracted services",
+        "matches_rishi_example": false
+      }
+    ],
+    "total": 17,
+    "diseases_found": [],
+    "diseases_missing": [
+      "hypertension",
+      "diabetes",
+      "pneumonia",
+      "malaria",
+      "tuberculosis",
+      "tb",
+      "hiv",
+      "aids",
+      "asthma",
+      "stroke",
+      "heart disease",
+      "cancer",
+      "depression",
+      "anxiety",
+      "epilepsy",
+      "kidney disease",
+      "liver disease"
+    ]
+  },
+  "summary_stats": {
+    "total_services_analyzed": 0,
+    "policy_rules_analyzed": 0,
+    "ai_analysis_available": false
+  }
+}

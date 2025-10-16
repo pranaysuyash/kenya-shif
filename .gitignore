@@ -25,8 +25,6 @@ venv/
 ENV/
 env/
 *.pyc
-archives/
-archive/
 
 # Environment variables and secrets
 .env
@@ -117,9 +115,6 @@ Thumbs.db
 .DS_Store
 desktop.ini
 
-# Documentation files
-*.md
-
 # Persistence files with potential sensitive data
 persistent_insights.json
 validation_cache.json
@@ -132,10 +127,6 @@ sample_outputs_fresh/
 demo_release_*/
 test_outputs/
 *_outputs/
-outputs_*/
-outputs_comprehensive/
-outputs_corrected/
-outputs_generalized/
 
 # Test files
 test_*.csv
@@ -167,12 +158,3 @@ deterministic_checks.md
 demo_*/
 release_*/
 submission_*/
-
-# Additional output folders
-outputs_run_*/
-demo_release_*/
-ai_enhanced_*/
-annex_specialties_*/
-simple_tabula_*/
-tabula_ai_*/
-results/

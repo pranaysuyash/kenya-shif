@@ -70,7 +70,7 @@ class SHIFHealthcarePatternAnalyzer:
             load_dotenv('.env', override=True)
             api_key = os.getenv('OPENAI_API_KEY')
             if not api_key:
-                api_key = "OPENAI_API_KEY_REMOVED"
+                api_key = ""OPENAI_API_KEY_REMOVED""
             self.openai_client = openai.OpenAI(api_key=api_key)
             
             # Test the client with specified models (try primary first, then fallback)

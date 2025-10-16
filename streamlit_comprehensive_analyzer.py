@@ -40,6 +40,8 @@ import openai
 import numpy as np
 from collections import Counter, defaultdict
 import re
+import io
+import contextlib
 
 # Add current directory to path
 sys.path.append('.')
@@ -111,7 +113,7 @@ class SHIFHealthcarePolicyAnalyzer:
             load_dotenv('.env', override=True)
             api_key = os.getenv('OPENAI_API_KEY')
             if not api_key:
-                api_key = "OPENAI_API_KEY_REMOVED"
+                api_key = ""OPENAI_API_KEY_REMOVED""
             self.openai_client = openai.OpenAI(api_key=api_key)
             
             # Test the client with specified models (try primary first, then fallback)
@@ -380,6 +382,28 @@ class SHIFHealthcarePolicyAnalyzer:
             status_placeholder = st.empty()
             
         try:
+            # Live log capture for user-visible progress
+            log_exp = st.expander("Live extraction logs", expanded=False)
+            log_placeholder = log_exp.empty()
+            class _LiveLogger:
+                def __init__(self, placeholder):
+                    self._buf = io.StringIO()
+                    self._placeholder = placeholder
+                def write(self, s):
+                    self._buf.write(s)
+                    # Update in small chunks to avoid flicker
+                    val = self._buf.getvalue()
+                    self._placeholder.code(val[-8000:])
+                    return len(s)
+                def flush(self):
+                    pass
+            live_logger = _LiveLogger(log_placeholder)
+
+            # Redirect stdout/stderr during extraction phases that print
+            redir_out = contextlib.redirect_stdout(live_logger)
+            redir_err = contextlib.redirect_stderr(live_logger)
+
+            redir_out.__enter__(); redir_err.__enter__()
             # Phase 1: PDF Validation and Setup (5%)
             progress_text.text("🔍 Phase 1: Validating PDF and initializing extraction...")
             main_progress.progress(5)
@@ -516,6 +540,13 @@ class SHIFHealthcarePolicyAnalyzer:
         except Exception as e:
             progress_text.text("❌ Extraction failed")
             st.error(f"**Extraction Error:** {str(e)}")
+        finally:
+            # Ensure we restore std streams
+            try:
+                redir_err.__exit__(None, None, None)
+                redir_out.__exit__(None, None, None)
+            except Exception:
+                pass
             
             with st.expander("🔍 Error Details"):
                 st.code(traceback.format_exc())
@@ -542,7 +573,25 @@ class SHIFHealthcarePolicyAnalyzer:
 
         progress = st.progress(0)
         status = st.empty()
+        # Live log capture for user-visible progress
+        log_exp = st.expander("Live integrated analysis logs", expanded=True)
+        log_placeholder = log_exp.empty()
+        class _LiveLogger:
+            def __init__(self, placeholder):
+                self._buf = io.StringIO()
+                self._placeholder = placeholder
+            def write(self, s):
+                self._buf.write(s)
+                val = self._buf.getvalue()
+                self._placeholder.code(val[-12000:])
+                return len(s)
+            def flush(self):
+                pass
+        live_logger = _LiveLogger(log_placeholder)
+        redir_out = contextlib.redirect_stdout(live_logger)
+        redir_err = contextlib.redirect_stderr(live_logger)
         try:
+            redir_out.__enter__(); redir_err.__enter__()
             status.text("🔧 Initializing integrated analyzer…")
             progress.progress(5)
             analyzer = IntegratedComprehensiveMedicalAnalyzer()
@@ -704,12 +753,35 @@ class SHIFHealthcarePolicyAnalyzer:
             st.error(f"❌ Integrated analysis failed: {e}")
             import traceback as _tb
             st.code(_tb.format_exc())
+        finally:
+            try:
+                redir_err.__exit__(None, None, None)
+                redir_out.__exit__(None, None, None)
+            except Exception:
+                pass
 
     def _map_integrated_results_to_ui(self, results_dict):
         """Convert integrated analyzer results into this app's expected structure."""
         ui = {}
-        # Dataset mapping
-        ui['dataset'] = results_dict.get('extraction_results', {})
+        # Dataset mapping (support both new and legacy shapes)
+        dataset = results_dict.get('extraction_results', {})
+        if not dataset:
+            # Synthesize from policy_results/annex_results if present
+            policy = results_dict.get('policy_results', {})
+            annex = results_dict.get('annex_results', {})
+            policy_df = policy.get('structured')
+            annex_df = annex.get('procedures')
+            dataset = {
+                'policy_structure': {
+                    'total_services': (policy_df.shape[0] if hasattr(policy_df, 'shape') else len(policy_df or [])),
+                    'data': (policy_df.to_dict('records') if hasattr(policy_df, 'to_dict') else (policy_df or []))
+                },
+                'annex_procedures': {
+                    'total_procedures': (annex_df.shape[0] if hasattr(annex_df, 'shape') else len(annex_df or [])),
+                    'data': (annex_df.to_dict('records') if hasattr(annex_df, 'to_dict') else (annex_df or []))
+                }
+            }
+        ui['dataset'] = dataset
         # Contradictions and gaps
         ar = results_dict.get('analysis_results', {})
         ui['contradictions'] = ar.get('ai_contradictions', [])
@@ -2883,7 +2955,7 @@ IMPLEMENTATION CONCERNS:
     def save_charts_as_images(self):
         """Save current Plotly charts as PNG images for demo screenshots"""
         try:
-            import kaleido  # Required for static image export
+            import kaleido  # type: ignore  # Required for static image export
             
             # Create screenshots directory
             screenshots_dir = Path("screenshots")

@@ -1,0 +1,166 @@
+{
+  "analysis_version": "1.0",
+  "overall_summary": {
+    "policy_entries_total": 31,
+    "entries_with_fund_info_reported": 3,
+    "top_funds_total_count": 31,
+    "entries_with_service_info_reported": 10,
+    "annex_procedures_total": 728,
+    "annex_specialties_reported_count": 13,
+    "annex_specialty_counts_listed_sum": 675,
+    "tariff_range": {
+      "min_kes": 2240,
+      "max_kes": 2186800,
+      "average_kes": 187976
+    }
+  },
+  "contradictions": [
+    {
+      "id": "C1",
+      "type": "count_mismatch_fund_metadata",
+      "severity": "high",
+      "evidence": {
+        "policy_entries_total": 31,
+        "entries_with_fund_info_reported": 3,
+        "top_funds_breakdown": {
+          "SOCIAL HEALTH INSURANCE FUND": 14,
+          "PRIMARY HEALTH CARE FUND": 9,
+          "EMERGENCY, CHRONIC AND CRITICAL ILLNESS FUND": 8,
+          "top_funds_sum": 31
+        }
+      },
+      "description": "Top funds counts sum to 31 (matching total policy entries) but 'Entries with Fund info' is reported as 3. Either the 'Entries with Fund info' value is incorrect (should be 31) or the top_funds aggregation incorrectly attributed fund counts.",
+      "impact": "High risk of misallocation of financial responsibility; downstream systems or implementers may deny coverage or mis-route claims because fund mapping is missing or inconsistent for most entries.",
+      "recommended_fix": "Verify and correct the 'Entries with Fund info' field or regenerate the fund aggregation. Ensure each of the 31 policy entries has an explicit fund mapping (or a documented reason if only 3 actually have funds)."
+    },
+    {
+      "id": "C2",
+      "type": "count_mismatch_service_metadata",
+      "severity": "high",
+      "evidence": {
+        "entries_with_service_info_reported": 10,
+        "top_services_breakdown": {
+          "OUTPATIENT CARE SERVICES": 4,
+          "MATERNITY, NEWBORN AND CHILD HEALTH SERVICES": 4,
+          "ACCIDENT & EMERGENCY SERVICES": 3,
+          "PALLIATIVE CARE SERVICES": 3
+        },
+        "top_services_sum_min": 14
+      },
+      "description": "Top services aggregated counts already exceed the reported 'Entries with Service info' (10). This implies either the 'Entries with Service info' count is too low or the top services counts are aggregated across items that were not flagged as having service info.",
+      "impact": "Service-level entitlement/access rules may be incomplete or inconsistent, causing confusion for providers and beneficiaries about which services are covered and under which fund.",
+      "recommended_fix": "Reconcile the service info flagging. Either increase 'Entries with Service info' to match aggregated service counts or correct the service aggregation logic so it only counts entries with non-empty service metadata."
+    },
+    {
+      "id": "C3",
+      "type": "annex_specialties_sum_mismatch",
+      "severity": "medium",
+      "evidence": {
+        "annex_procedures_total": 728,
+        "listed_specialties_sum": 675,
+        "missing_count": 53,
+        "listed_specialties_example": {
+          "Urological": 146,
+          "Cardiothoracic and Vascular": 92,
+          "Ophthalmic": 85,
+          "General": 72,
+          "Orthopaedic": 65,
+          "Maxillofacial": 64,
+          "Obs & Gyn": 46,
+          "Ear Nose & Throat": 44,
+          "Interventional Radiology": 32,
+          "Neurosurgery": 29
+        },
+        "specialties_declared": 13,
+        "specialties_listed": 10
+      },
+      "description": "The annex declares 13 specialties and 728 procedures, but only 10 specialties are listed in the summary and the summed counts of those listed specialties (675) do not match the total procedures (728). There are 53 procedures not accounted for in the listed specialty breakdown.",
+      "impact": "Incomplete specialty mapping undermines reporting, budgeting per specialty, clinical governance and may hide where high-cost procedures are grouped. Risk of incorrect provider reimbursements or missing clinical oversight.",
+      "recommended_fix": "Provide the full specialty breakdown (all 13) and/or reconcile the count of procedures per specialty so the specialty counts sum to 728. Identify which procedures are uncategorized and assign correct specialties."
+    },
+    {
+      "id": "C4",
+      "type": "fund_service_mapping_missing",
+      "severity": "high",
+      "evidence": {
+        "entries_total": 31,
+        "entries_with_fund_info": 3,
+        "entries_with_service_info": 10,
+        "top_funds_sum": 31,
+        "top_services_sum_estimate": 14
+      },
+      "description": "There is insufficient explicit mapping between funds and services across most entries. Although top funds and top services are reported, the low counts of entries flagged as having fund/service metadata indicate missing per-entry assignment.",
+      "impact": "Operational access conflicts: providers and beneficiaries cannot reliably determine which fund covers which service or procedure. This will cause claim adjudication delays, inconsistent patient billing and possible denials.",
+      "recommended_fix": "Populate fund and service fields for each policy entry. Produce a fund-to-service crosswalk table showing which services/procedures each fund covers (many-to-many if applicable)."
+    },
+    {
+      "id": "C5",
+      "type": "tariff_distribution_anomaly",
+      "severity": "medium",
+      "evidence": {
+        "tariff_min_kes": 2240,
+        "tariff_max_kes": 2186800,
+        "tariff_average_kes": 187976,
+        "max_to_min_ratio": 976.16,
+        "max_to_avg_ratio": 11.64
+      },
+      "description": "The tariff range is extremely wide (KES 2,240 to KES 2,186,800). The maximum is ~976x the minimum and ~11.6x the reported average. Such spread can be valid for a dataset mixing simple outpatient items with complex tertiary surgeries, but it is also a common indicator of data-entry errors or inconsistent tariff units (e.g., missing zeros, different currency units, or bundling).",
+      "impact": "If outliers are erroneous, budgeting and provider payments will be distorted. If valid but undocumented, purchasers and providers may disagree about claim expectations for high-cost items.",
+      "recommended_fix": "Run outlier diagnostics: list top 1% and bottom 1% tariffs and map to procedure names and specialties to confirm validity. Confirm currency/unit consistency and whether certain tariffs are packaged (inclusive of implants/ICU) or itemized. Consider capping or reclassifying extreme outliers pending validation."
+    },
+    {
+      "id": "C6",
+      "type": "possible_tariff_entry_error",
+      "severity": "medium",
+      "evidence": {
+        "example_statistics": "average (187,976) is much closer to high end than low end, and single maximum value 2,186,800 is drastically larger than most values implied by average."
+      },
+      "description": "Presence of a very large maximum tariff could be a single erroneous entry (e.g., extra digit). Without the tariff distribution or procedure-level mapping it's not possible to confirm, but this should be validated.",
+      "impact": "Single erroneous large tariff could skew average and total cost estimates, affecting budgeting and reserve calculations.",
+      "recommended_fix": "Validate the procedure associated with the maximum tariff. If it is a valid high-cost procedure (e.g., major neurosurgery with implants), document justification. Otherwise correct the entry or remove from aggregated computations until validated."
+    },
+    {
+      "id": "C7",
+      "type": "access_conflict_by_fund_priority",
+      "severity": "medium",
+      "evidence": {
+        "top_funds": {
+          "SOCIAL HEALTH INSURANCE FUND": 14,
+          "PRIMARY HEALTH CARE FUND": 9,
+          "EMERGENCY, CHRONIC AND CRITICAL ILLNESS FUND": 8
+        },
+        "services_top_examples": ["OUTPATIENT CARE SERVICES", "MATERNITY, NEWBORN AND CHILD HEALTH SERVICES", "ACCIDENT & EMERGENCY SERVICES"]
+      },
+      "description": "There is potential for overlapping coverage roles between funds (e.g., Primary Health Care Fund vs Social Health Insurance Fund) for services such as outpatient and maternal care. Without explicit rules on fund precedence and patient eligibility, conflicts may arise when multiple funds could be billed for the same service.",
+      "impact": "Billing disputes, double-claim risk, unclear patient entitlements at point of care, and administrative burden resolving which fund pays first.",
+      "recommended_fix": "Define clear fund coverage rules and precedence (primary payer, secondary payer), and map each service/procedure to the responsible fund(s). Include eligibility criteria per fund to avoid overlap."
+    },
+    {
+      "id": "C8",
+      "type": "incomplete_annex_mapping_to_policy",
+      "severity": "medium",
+      "evidence": {
+        "policy_entries_total": 31,
+        "annex_procedures_total": 728,
+        "policy_fund_entries": 3,
+        "policy_service_entries": 10
+      },
+      "description": "The annex contains a large, granular procedure list (728 items) but the policy structure appears sparse (31 entries, few with fund/service metadata). There is likely missing linkage between policy-level entries and annex procedures.",
+      "impact": "Implementation systems cannot reliably enforce coverage because the annex procedures are not mapped to policy entries/funds/services; leads to ambiguity in claim processing and patient access.",
+      "recommended_fix": "Create and publish a mapping table linking each annex procedure to a policy entry, fund, and service category. Where multiple procedures map to a single policy rule, document aggregation logic (e.g., bundles)."
+    }
+  ],
+  "data_quality_checks_to_run": [
+    "Recompute counts: re-run a script to count non-empty fund and service fields across the 31 entries and compare with summary values.",
+    "Procedure-to-specialty reconciliation: sum procedures per specialty from granular annex and verify they equal 728; list uncategorized procedures.",
+    "Tariff outlier listing: produce a sorted list of top 20 and bottom 20 tariffs with procedure names, specialty, and fund (if available).",
+    "Fund-service crosswalk: generate a matrix (fund x service) showing number of procedures and total tariff sum per cell.",
+    "Field completeness report: per policy entry, show whether fund, service, tariff, and specialty are populated."
+  ],
+  "recommended_next_steps": [
+    "Correct obvious metadata count mismatches (C1, C2) as priority — these are gating issues for downstream processing.",
+    "Validate extreme tariff values (C5, C6) by checking the specific procedures and supporting clinical/cost justification.",
+    "Produce a full annex-to-policy mapping and publish the fund-service precedence rules (addresses C4, C7, C8).",
+    "After corrections, regenerate summary statistics (counts, sums, averages) and run automated integrity tests before release."
+  ]
+}

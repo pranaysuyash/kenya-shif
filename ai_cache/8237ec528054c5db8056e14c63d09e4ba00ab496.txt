@@ -1,0 +1,232 @@
+{
+  "validation_summary": {
+    "total_services_reviewed": 45,
+    "appropriate_assignments": 38,
+    "capability_mismatches": 7,
+    "safety_concerns": 3,
+    "optimization_opportunities": 12
+  },
+  "capability_mismatches": [
+    {
+      "service": "Cardiac Catheterization",
+      "assigned_levels": [4, 5],
+      "appropriate_levels": [6],
+      "mismatch_type": "over_assignment",
+      "clinical_evidence": "Requires interventional cardiology team, dedicated cardiac catheterisation laboratory, advanced hemodynamic monitoring and immediate cardiothoracic surgical backup available only at Level 6 referral centres.",
+      "safety_concerns": "High risk of life-threatening complications (vascular injury, cardiac tamponade) without specialised staff/equipment; inadequate post-procedure critical care increases mortality.",
+      "recommended_action": "Restrict service to Level 6; where procedures are currently performed at Level 5, stop elective cases and create rapid referral/transfer agreements. Invest in tele-review and patient funneling to Level 6.",
+      "confidence": 0.97
+    },
+    {
+      "service": "Neonatal Intensive Care (Level 3 assigned)",
+      "assigned_levels": [3, 4],
+      "appropriate_levels": [5, 6],
+      "mismatch_type": "over_assignment",
+      "clinical_evidence": "Level 3-4 facilities generally lack continuous invasive monitoring, ventilators for neonates, neonatal nurse:patient ratios and specialist neonatology oversight required for true NICU-level care.",
+      "safety_concerns": "Inappropriate care for very preterm/critically ill neonates leading to high morbidity/mortality; infection and equipment failure risks.",
+      "recommended_action": "Designate Level 3 for basic newborn care and stabilization only; consolidate NICU services at Level 5 with clear referral and transport (KMC and CPAP at Level 4 where feasible).",
+      "confidence": 0.94
+    },
+    {
+      "service": "Maintenance Hemodialysis",
+      "assigned_levels": [4],
+      "appropriate_levels": [5],
+      "mismatch_type": "over_assignment",
+      "clinical_evidence": "Routine dialysis requires nephrology oversight, water treatment plants, backup power, trained dialysis nurses and capacity for vascular access surgery—standards typically met only at Level 5 hospitals.",
+      "safety_concerns": "Risk of inadequate infection control, fluid/electrolyte mismanagement, and catastrophic machine failure without proper engineering/biomedical support.",
+      "recommended_action": "Consolidate dialysis to Level 5; where Level 4 currently provides dialysis, immediately audit infection control and back-transfer stable maintenance patients to Level 5.",
+      "confidence": 0.92
+    },
+    {
+      "service": "Complex Oncology Chemotherapy Infusions",
+      "assigned_levels": [3, 4],
+      "appropriate_levels": [5],
+      "mismatch_type": "over_assignment",
+      "clinical_evidence": "Administration of cytotoxic therapy for complex regimens requires oncology team input, safe infusion suites, hazard waste management and emergency management for reactions—facilities at Level 5 meet these requirements.",
+      "safety_concerns": "Risk of infusion reactions, extravasation injuries and improper handling of cytotoxic agents leading to staff exposure.",
+      "recommended_action": "Limit complex chemotherapy to Level 5; allow oral or low-risk regimens at Level 3-4 after training with strict SOPs and referral links.",
+      "confidence": 0.90
+    },
+    {
+      "service": "CT-guided interventional procedures",
+      "assigned_levels": [4, 5],
+      "appropriate_levels": [5, 6],
+      "mismatch_type": "partial_misassignment",
+      "clinical_evidence": "Requires CT interventional suites, radiologist with interventional competency, sedation/anaesthesia support and sterile procedure spaces—typically available at Level 5 upwards.",
+      "safety_concerns": "Procedural complications (bleeding, pneumothorax) are high-risk when post-procedure observation and imaging are limited.",
+      "recommended_action": "Ensure Level 4s without CT do not attempt such procedures. Where Level 5 lacks trained radiologists, refer to Level 5/6 or invest in training and infrastructure before scaling.",
+      "confidence": 0.89
+    },
+    {
+      "service": "Major Orthopaedic Reconstructions and Complex Trauma Surgery",
+      "assigned_levels": [4],
+      "appropriate_levels": [5],
+      "mismatch_type": "over_assignment",
+      "clinical_evidence": "Complex reconstructions require orthopaedic specialists, implants inventory, C-arm imaging, and rehabilitation services not consistently available at Level 4.",
+      "safety_concerns": "Poor functional outcomes, infection, need for reoperation when performed without specialist teams and implants.",
+      "recommended_action": "Limit Level 4 to damage-control orthopaedics and basic operative management; strengthen referral pathways to Level 5 and establish outreach specialist lists.",
+      "confidence": 0.91
+    },
+    {
+      "service": "Endoscopic procedures with deep sedation (ERCP/Advanced Gastroscopy)",
+      "assigned_levels": [3],
+      "appropriate_levels": [4, 5],
+      "mismatch_type": "over_assignment",
+      "clinical_evidence": "Endoscopy requiring deep sedation/anaesthesia and potential therapeutic interventions needs anaesthesia support, recovery areas and endoscopy reprocessing—Level 3 lacks these standards.",
+      "safety_concerns": "Airway complications, inadequate monitoring/recovery leading to severe morbidity.",
+      "recommended_action": "Cease deep-sedation endoscopy at Level 3; provide basic diagnostic endoscopy at Level 3 with local anaesthesia and quick referral for therapeutic procedures.",
+      "confidence": 0.88
+    }
+  ],
+  "under_utilization_opportunities": [
+    {
+      "service": "Basic Wound Care and Dressing Clinics",
+      "currently_assigned": [4, 5, 6],
+      "expansion_potential": [2, 3],
+      "capacity_requirements": "Basic wound care supplies, dressings, trained nursing staff and simple suture kits; clinical protocols for wound assessment and referral triggers.",
+      "access_impact": "Reduced referrals for trivial wound care, faster healing times and improved access in rural settings.",
+      "implementation_needs": "Short courses for nurses/clinical officers, guaranteed supply chain for consumables, supportive supervision from Level 4.",
+      "confidence": 0.90
+    },
+    {
+      "service": "Routine Antenatal Care (ANC) and Basic Obstetric Risk Screening",
+      "currently_assigned": [3, 4, 5],
+      "expansion_potential": [2],
+      "capacity_requirements": "Trained midwives, BP machines, Urine dipsticks, basic labs (HB, malaria), and referral criteria; privacy and counselling space.",
+      "access_impact": "Increased early ANC uptake, earlier identification of high-risk pregnancies and decongestion of higher-level clinics.",
+      "implementation_needs": "Training for Level 2 staff, community mobilization, strengthened referral for identified high-risk clients.",
+      "confidence": 0.87
+    },
+    {
+      "service": "Chronic Disease Follow-up (hypertension, stable diabetes)",
+      "currently_assigned": [4, 5],
+      "expansion_potential": [2, 3],
+      "capacity_requirements": "Trained nurses/clinical officers, essential medicines, BP machines, glucose monitoring (glucometers), record-keeping and simplified protocols.",
+      "access_impact": "Better continuity of care, reduced travel/time costs for patients, earlier detection of complications.",
+      "implementation_needs": "Task-shifting protocols, medicine resupply reliability, mentorship and referral thresholds.",
+      "confidence": 0.86
+    }
+  ],
+  "safety_concerns": [
+    {
+      "service": "Emergency Surgery",
+      "facility_level": 3,
+      "safety_issue": "No blood banking, limited anaesthesia services and inadequate post-operative monitoring space.",
+      "risk_assessment": "High mortality risk for complicated abdominal, obstetric and trauma emergencies when blood transfusion and anaesthesia support are unavailable.",
+      "mitigation_strategy": "Implement immediate stabilization protocols, strengthen formal referral and transport (ambulance), upskill staff in basic anaesthesia and blood transfusion emergency procedures where possible.",
+      "timeline": "Immediate review required",
+      "confidence": 0.92
+    },
+    {
+      "service": "Obstetric Emergency Care (Labour Complications)",
+      "facility_level": 3,
+      "safety_issue": "Theatre not available 24/7, shortages of skilled birth attendants and oxytocin/antibiotic stock-outs.",
+      "risk_assessment": "Elevated risk of maternal morbidity and mortality from PPH, obstructed labour and sepsis.",
+      "mitigation_strategy": "Ensure 24/7 skilled delivery coverage at designated facilities, stock management, enforce decision-to-delivery time targets and strengthen referral ambulances.",
+      "timeline": "3 months for critical fixes; ongoing monitoring",
+      "confidence": 0.93
+    },
+    {
+      "service": "Oxygen-dependent Care (Pneumonia, Severe Malaria)",
+      "facility_level": 4,
+      "safety_issue": "Unreliable oxygen supply, lack of pulse oximeters, and poor maintenance of concentrators/cylinders.",
+      "risk_assessment": "Increased avoidable deaths in children and adults requiring oxygen therapy.",
+      "mitigation_strategy": "Prioritise oxygen system assessments, procurement of pulse oximeters, robust biomedical maintenance contracts and cylinder/refill logistics.",
+      "timeline": "Immediate procurement + 3-6 months to stabilise supply chain",
+      "confidence": 0.91
+    }
+  ],
+  "resource_gaps": [
+    {
+      "service_category": "Laboratory Services",
+      "affected_levels": [2, 3],
+      "gap_description": "Limited basic testing (HB, malaria, urinalysis, glucometry) and lack of QA systems restrict diagnostic capability.",
+      "impact_assessment": "Delays in diagnosis, unnecessary referrals and empirical treatment with potential for poor outcomes.",
+      "resource_solution": "Deploy point-of-care testing (POCT) platforms, train laboratory technicians/health workers, establish external quality assessment (EQA) links to higher-level labs.",
+      "cost_estimate": "KSh 2-5M per facility",
+      "confidence": 0.85
+    },
+    {
+      "service_category": "Oxygen and Respiratory Support",
+      "affected_levels": [3, 4],
+      "gap_description": "Insufficient concentrators/cylinder availability, lack of pulse oximeters and piped oxygen in theatres/wards.",
+      "impact_assessment": "High risk for hypoxic patients; increased referrals and avoidable deaths.",
+      "resource_solution": "Investment in solar-capable oxygen concentrators, cylinder logistics, pulse oximeters and maintenance contracts.",
+      "cost_estimate": "KSh 1-3M per facility depending on scale",
+      "confidence": 0.88
+    },
+    {
+      "service_category": "Blood Services",
+      "affected_levels": [3, 4],
+      "gap_description": "No onsite safe blood storage/crossmatch capability; reliance on ad-hoc blood delivery.",
+      "impact_assessment": "Delays in transfusion for emergencies; increased maternal mortality risk.",
+      "resource_solution": "Cold chain upgrades, basic compatibility testing at Level 4, coordinated blood delivery schedules with regional blood transfusion services.",
+      "cost_estimate": "KSh 1-4M per facility",
+      "confidence": 0.86
+    },
+    {
+      "service_category": "Biomedical Maintenance and Consumables",
+      "affected_levels": [2, 3, 4, 5],
+      "gap_description": "No formal biomedical engineering support leading to prolonged equipment downtime.",
+      "impact_assessment": "Diagnostic and therapeutic equipment unusable; lost service days and patient risk.",
+      "resource_solution": "Establish county-level biomedical teams, preventive maintenance schedules and spare-parts inventory.",
+      "cost_estimate": "KSh 1-6M (setup) with annual maintenance budgets",
+      "confidence": 0.87
+    }
+  ],
+  "optimization_recommendations": [
+    {
+      "recommendation_type": "service_redistribution",
+      "current_issue": "Specialist services concentrated at Level 5-6 causing travel burden and delayed care.",
+      "proposed_solution": "Structured outreach specialist clinics to Level 4 facilities (monthly surgical, obstetric, paediatric, and mental health outreaches).",
+      "expected_benefits": "Improved access, reduced referral costs, capacity building for Level 4 staff.",
+      "implementation_requirements": "Transport/logistics, scheduling systems, telemedicine support and funding for outreach allowances.",
+      "timeline": "6-12 months",
+      "confidence": 0.87
+    },
+    {
+      "recommendation_type": "task_shifting_and_training",
+      "current_issue": "Underutilisation of Level 2-3 for chronic care and basic procedures.",
+      "proposed_solution": "Adopt task-shifting protocols (nurse-led chronic disease clinics; clinical officer minor surgery) with certification and mentorship.",
+      "expected_benefits": "Reduced congestion at higher levels, improved continuity of care.",
+      "implementation_requirements": "Curriculum development, mentorship by Level 4/5 specialists, supervisory visits.",
+      "timeline": "3-9 months",
+      "confidence": 0.86
+    },
+    {
+      "recommendation_type": "supply_chain_optimization",
+      "current_issue": "Frequent stock-outs of essential medicines and consumables.",
+      "proposed_solution": "Centralised pooled procurement at county level, buffer stocks for emergency drugs and use of real-time stock management systems.",
+      "expected_benefits": "Fewer service interruptions and better planning.",
+      "implementation_requirements": "ICT adoption, training of pharmacy managers, initial working capital.",
+      "timeline": "6-12 months",
+      "confidence": 0.88
+    }
+  ],
+  "referral_pathway_enhancements": [
+    {
+      "pathway": "Emergency to definitive care",
+      "current_gaps": "Delayed transfers, inadequate pre-transfer stabilization and communication between facilities.",
+      "enhancement_strategy": "Establish county ambulance networks with standardised referral forms, pre-transfer stabilisation protocols and a single emergency communications hub.",
+      "quality_metrics": "Transfer time, clinical outcomes at 24/72 hours, patient satisfaction, refer-back rates.",
+      "resource_needs": "Ambulances, emergency kits, training, interoperable communication platforms.",
+      "confidence": 0.90
+    },
+    {
+      "pathway": "Maternal referral chain",
+      "current_gaps": "Unclear decision-to-refer criteria, transport delays and lack of blood availability at receiving facilities.",
+      "enhancement_strategy": "Implement standardised early warning tools in labour wards, dedicated maternal transport and priority reception at referral hospitals.",
+      "quality_metrics": "Decision-to-delivery interval, maternal morbidity/mortality, PPH case fatality rate.",
+      "resource_needs": "Training, ambulances, blood coordination and maternity emergency packs.",
+      "confidence": 0.92
+    },
+    {
+      "pathway": "Paediatric critical care transfers",
+      "current_gaps": "No paediatric stabilisation protocols at lower levels and limited neonatal transport capacity.",
+      "enhancement_strategy": "Create neonatal/pediatric stabilization teams, equip ambulances with neonatal support (CPAP, incubator) and link to Level 5 NICUs.",
+      "quality_metrics": "Neonatal transfer survival, time to specialised care, adherence to stabilisation checklists.",
+      "resource_needs": "Specialised transport equipment, training and referral coordination.",
+      "confidence": 0.89
+    }
+  ]
+}

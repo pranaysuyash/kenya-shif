@@ -1,0 +1,382 @@
+[
+  {
+    "contradiction_id": "DIAL_001_CRITICAL",
+    "medical_specialty": "nephrology",
+    "contradiction_type": "session_frequency_medical_inconsistency",
+    "clinical_severity": "CRITICAL",
+    "description": "Policy permits haemodialysis (HD) at 3 sessions/week but restricts haemodiafiltration (HDF) to 2 sessions/week for equivalent end-stage renal disease (ESRD) indications.",
+    "medical_analysis": {
+      "clinical_rationale": "HD and HDF are renal replacement modalities intended to provide equivalent solute and fluid clearance for chronic dialysis patients. Adequate weekly dialysis dose (Kt/V or equivalent) typically requires a minimum of thrice-weekly sessions for the majority of chronic HD patients.",
+      "medical_standards": "KDOQI and international nephrology guidance define thrice-weekly dialysis as the standard baseline frequency for chronic maintenance dialysis unless individualized reasons exist (e.g., residual renal function, home dialysis regimens).",
+      "clinical_equivalence": "There is no physiologic justification to mandate fewer sessions for HDF vs HD when the clinical goal is maintenance dialysis clearance and volume control.",
+      "contraindication_assessment": "No documented clinical contraindication in the dataset supports limiting HDF to 2x/week; such a restriction appears arbitrary and not evidence-based."
+    },
+    "patient_safety_impact": {
+      "immediate_risk": "Patients assigned to HDF under a 2x/week limit risk inadequate clearance and fluid removal.",
+      "clinical_consequences": "Uremia, fluid overload, hyperkalemia, worsening hypertension, increased hospitalization for cardiovascular/volume complications.",
+      "survival_impact": "Lower dialysis dose and frequency are associated with higher morbidity and mortality in chronic dialysis populations.",
+      "quality_of_life": "Increased symptoms (fatigue, pruritus, cognitive impairment) and diminished functional status."
+    },
+    "kenya_health_system_impact": {
+      "facility_level_effects": "Level 4-6 hospitals (where dialysis is provided) will face clinical conflict in modality prescribing and reimbursement.",
+      "geographic_access": "Rural patients (70% of population) with limited facility choice may be forced onto a modality with insufficient sessions if policy-bound.",
+      "resource_allocation": "Potential underutilization or misallocation of advanced HDF equipment; risk of perverse incentives to prefer HD despite clinical indications.",
+      "provider_training": "Need immediate guidance to clarify modality-neutral frequency standards across 47 counties and multiple provider cadres."
+    },
+    "epidemiological_context": {
+      "disease_burden": "CKD burden is rising alongside hypertension prevalence (24% adults), increasing dialysis demand.",
+      "population_impact": "Large rural population dependent on few Level 4-6 centers will be disproportionately harmed.",
+      "health_system_capacity": "Limited number of facilities offering renal replacement therapy increases the harm from restrictive modality rules."
+    },
+    "evidence_documentation": {
+      "policy_text_hd": "Maximum of 3 sessions per week for haemodialysis",
+      "policy_text_hdf": "Maximum of 2 sessions per week for hemodiafiltration",
+      "page_references": [
+        "p8_renal_care",
+        "p8_advanced_dialysis"
+      ],
+      "clinical_guidelines": "KDOQI Clinical Practice Guidelines (maintenance dialysis frequency standards)"
+    },
+    "recommended_resolution": {
+      "immediate_action": "Issue interim directive allowing equivalence: both HD and HDF eligible for minimum 3 sessions/week where clinically indicated.",
+      "policy_revision": "Amend benefit package to remove modality-based frequency caps; state frequency decisions are clinician-determined per KDOQI/locally adapted protocols.",
+      "implementation_steps": [
+        "Distribute rapid clarification memo to all contracting facilities and county health directors.",
+        "Update SHIF tariff/enrolment guidance to reflect 3x/week baseline for maintenance dialysis.",
+        "Train nephrology teams and dialysis unit managers across Level 4-6 facilities on corrected policy."
+      ],
+      "timeline": "Immediate (0–30 days) for interim guidance; formal policy revision within 90 days."
+    },
+    "quality_metrics": {
+      "detection_confidence": 0.98,
+      "clinical_impact_score": 9.6,
+      "urgency_level": "CRITICAL_IMMEDIATE_ACTION",
+      "validation_method": "clinical_guideline_cross_reference; internal policy text comparison"
+    }
+  },
+  {
+    "contradiction_id": "MAT_002_CRITICAL",
+    "medical_specialty": "obstetrics",
+    "contradiction_type": "maternal_emergency_facility_mismatch",
+    "clinical_severity": "CRITICAL",
+    "description": "Maternity services (including normal and assisted deliveries) are authorized at lower-level facilities (Level 2-3) while emergency operative delivery (caesarean section) access is effectively limited to higher-level facilities (Level 4-6), risking delays in emergency obstetric care.",
+    "medical_analysis": {
+      "clinical_rationale": "Obstetric emergencies (obstructed labour, fetal distress, postpartum hemorrhage) require timely access to comprehensive emergency obstetric and neonatal care (CEmONC), including 24/7 capability for cesarean delivery and blood transfusion.",
+      "medical_standards": "WHO and national maternal health standards require that facilities providing births either be equipped and staffed to provide CEmONC or have reliable, rapid referral and transport to such facilities.",
+      "clinical_equivalence": "Allowing deliveries at facilities without guaranteed on-site operative delivery or robust emergency transfer protocols creates unacceptable clinical risk.",
+      "contraindication_assessment": "Permitting routine deliveries at lower-level sites is acceptable only with strict criteria and ensured rapid referral — the policy data lacks those safeguards."
+    },
+    "patient_safety_impact": {
+      "immediate_risk": "Delays to cesarean delivery for obstructed labour or fetal distress with increased risk of fetal hypoxia, birth asphyxia, maternal hemorrhage and death.",
+      "clinical_consequences": "Higher rates of maternal morbidity (uterine rupture, PPH), perinatal mortality, neonatal encephalopathy.",
+      "survival_impact": "Timely access to CEmONC is a determinant of maternal and neonatal survival; mismatch increases avoidable deaths.",
+      "quality_of_life": "Long-term disability in survivors (neurologic impairment) with socioeconomic consequences for families."
+    },
+    "kenya_health_system_impact": {
+      "facility_level_effects": "Lower-level facilities (Level 2-3) commonly lack surgical theatres, blood transfusion services and specialist obstetric/anesthesia teams.",
+      "geographic_access": "Rural majority (70%) are more likely to deliver at nearest lower-level facility; referral distances/time to Level 4-6 centers exacerbate risk.",
+      "resource_allocation": "Risk of inadequate investments in referral transport and obstetric emergency systems if policy appears to permit local delivery without requirements.",
+      "provider_training": "Midwives and clinicians need clear triage, referral and stabilization protocols aligned to facility capability."
+    },
+    "epidemiological_context": {
+      "disease_burden": "Maternal and neonatal complications remain a leading cause of morbidity; pneumonia and CVD prominent causes of mortality but maternal outcomes remain a critical area.",
+      "population_impact": "Counties with sparse Level 4-6 coverage will show higher maternal/perinatal adverse outcomes if policy contradictions are not resolved.",
+      "health_system_capacity": "Only a subset of Level 4-6 facilities (~9 service access entries) designated for higher-level care — insufficient without defined referral networks."
+    },
+    "evidence_documentation": {
+      "policy_text_maternity": "Ante-natal care, delivery by ways of normal delivery, assisted delivery and caesarean section as necessary...",
+      "access_points_concern": "Access points list 'Level 2-3' for some maternity packages while 'Level 4-6' are listed elsewhere for maternal services",
+      "page_references": [
+        "p3_maternity_package",
+        "pX_facility_access_matrix"
+      ],
+      "clinical_guidelines": "WHO CEmONC standards; Kenya Ministry of Health Emergency Obstetric Care guidelines"
+    },
+    "recommended_resolution": {
+      "immediate_action": "Issue urgent guidance: facilities offering deliveries must either provide on-site CEmONC or implement formal 2-hour (ideally <1 hour) guaranteed referral/transport arrangements; suspend unsupported facility-level delivery authorizations until compliance demonstrated.",
+      "policy_revision": "Define explicit facility criteria for offering normal delivery vs. operative delivery and mandatory stabilization/transfer protocols in the benefit package.",
+      "implementation_steps": [
+        "Map facilities by county to confirm which meet CEmONC criteria.",
+        "Mandate documented referral agreements and transport readiness for Level 2-3 sites.",
+        "Deploy training on active management of third stage of labour, neonatal resuscitation and triage."
+      ],
+      "timeline": "Immediate interim guidance (0–14 days); full mapping and policy amendment within 60–120 days."
+    },
+    "quality_metrics": {
+      "detection_confidence": 0.95,
+      "clinical_impact_score": 9.4,
+      "urgency_level": "CRITICAL_IMMEDIATE_ACTION",
+      "validation_method": "policy_file_cross-check; alignment with WHO/MoH standards"
+    }
+  },
+  {
+    "contradiction_id": "EMERG_003_CRITICAL",
+    "medical_specialty": "emergency_medicine",
+    "contradiction_type": "emergency_response_availability_ambiguity",
+    "clinical_severity": "CRITICAL",
+    "description": "Accident & Emergency services are listed but access descriptors include 'Where available' and mainly Level 4-6 — the policy fails to mandate minimum emergency response capability or transfer timeframe for lower-level sites providing emergency care.",
+    "medical_analysis": {
+      "clinical_rationale": "Time-sensitive emergencies (trauma, acute MI, stroke, sepsis) require immediate stabilization and either definitive care on site or rapid transfer with documented timelines and capability.",
+      "medical_standards": "Emergency care standards recommend 24/7 triage, immediate resuscitation capacity (airway, breathing, circulation), and protocols for time-critical transfers (e.g., 30–60 minute stabilisation-to-transfer targets depending on condition).",
+      "clinical_equivalence": "Ambiguous 'where available' language creates inconsistent emergency capability across counties and facilities.",
+      "contraindication_assessment": "No clinical justification for optional emergency availability where population coverage is expected; lack of mandated stabilization capacity is unsafe."
+    },
+    "patient_safety_impact": {
+      "immediate_risk": "Unstabilized patients at under-resourced facilities may deteriorate prior to transfer, increasing morbidity/mortality.",
+      "clinical_consequences": "Increased deaths from trauma, MI, respiratory failure, time-sensitive neurologic events; preventable complications during delayed transfers.",
+      "survival_impact": "Mortality for many emergency conditions is highly time-dependent — inconsistent emergency services will increase avoidable deaths.",
+      "quality_of_life": "Survivors with delayed care have higher disability burden."
+    },
+    "kenya_health_system_impact": {
+      "facility_level_effects": "Level 2-3 centers may be expected to receive emergencies but are neither uniformly equipped nor mandated to stabilise, causing county-level variability.",
+      "geographic_access": "Rural patients face long transport times; unclear facility responsibilities will widen inequities across 47 counties.",
+      "resource_allocation": "Without clear policy, counties may underinvest in ambulances, oxygen, basic resuscitation equipment and training.",
+      "provider_training": "Clinicians lack clear authority to perform emergency interventions (e.g., intubation, blood transfusion) under SHIF coverage if emergency fund/access rules unclear."
+    },
+    "epidemiological_context": {
+      "disease_burden": "CVD (25% admissions) and pneumonia leading causes; both require timely emergency response for acute exacerbations.",
+      "population_impact": "Large rural share increases the absolute number at risk from emergency access ambiguity.",
+      "health_system_capacity": "Only a subset of higher-level facilities designated; referral network weakness is a critical vulnerability."
+    },
+    "evidence_documentation": {
+      "policy_text_emergency": "ACCIDENT & EMERGENCY SERVICES listed among top services; some entries annotated 'Where available' or limited to 'Level 4-6'",
+      "page_references": [
+        "p5_accident_emergency",
+        "pX_access_points"
+      ],
+      "clinical_guidelines": "WHO emergency care systems recommendations; Kenyan emergency care protocols"
+    },
+    "recommended_resolution": {
+      "immediate_action": "Mandate minimum emergency stabilization requirements for any facility offering emergency services (triage, oxygen, IV access, hemorrhage control, basic airway) and require documented transfer protocols.",
+      "policy_revision": "Replace 'Where available' with explicit capabilities and transfer time targets. Define which emergency procedures are covered without pre-authorization.",
+      "implementation_steps": [
+        "Issue a rapid standard operating procedure for emergency stabilization and referral to all facilities.",
+        "Require counties to certify facilities that meet minimum emergency readiness every 6 months.",
+        "Provide targeted investment/technical assistance to Level 2-3 hubs to meet stabilization standards."
+      ],
+      "timeline": "Immediate interim SOP (0–14 days); certification and resource planning within 90 days."
+    },
+    "quality_metrics": {
+      "detection_confidence": 0.94,
+      "clinical_impact_score": 9.2,
+      "urgency_level": "CRITICAL_IMMEDIATE_ACTION",
+      "validation_method": "policy text ambiguity review and emergency standards comparison"
+    }
+  },
+  {
+    "contradiction_id": "PED_004_HIGH",
+    "medical_specialty": "pediatrics",
+    "contradiction_type": "age_specific_service_undercoverage_and_facility_mismatch",
+    "clinical_severity": "HIGH",
+    "description": "Pediatric services are under-represented in the annex (12 pediatric procedures) while many complex surgical and anesthetic procedures are listed without pediatric-specific facility or staffing requirements — risk of applying adult protocols to children.",
+    "medical_analysis": {
+      "clinical_rationale": "Paediatric patients require age-appropriate surgical, anesthetic, and postoperative care (different dosing, equipment sizes, neonatal resuscitation capabilities). Adult protocols are not directly transferable.",
+      "medical_standards": "WHO and paediatric surgical societies recommend distinct paediatric surgery pathways, staffing (paediatric anesthetist or trained provider), and equipment for safe paediatric operations.",
+      "clinical_equivalence": "Listing procedures generically without pediatric caveats may implicitly permit performance at facilities lacking pediatric capability.",
+      "contraindication_assessment": "Performing pediatric procedures in non-paediatric-ready settings increases anesthesia and surgical risk; no policy safeguards identified in the dataset."
+    },
+    "patient_safety_impact": {
+      "immediate_risk": "Incorrect drug dosing, lack of appropriately sized equipment, inadequate postoperative monitoring leading to perioperative morbidity and mortality.",
+      "clinical_consequences": "Respiratory complications, fluid/electrolyte errors, delayed recognition of deterioration.",
+      "survival_impact": "Increased perioperative mortality and long-term disability in neonates and young children.",
+      "quality_of_life": "Potential for lifelong disability or impaired development from perioperative insults."
+    },
+    "kenya_health_system_impact": {
+      "facility_level_effects": "Level 2-4 facilities may be designated to perform paediatric procedures without paediatric anesthetic coverage; county hospitals must clarify scope.",
+      "geographic_access": "Centralization of pediatric surgical capability without facilitated access widens inequities for rural children.",
+      "resource_allocation": "Mismatch may lead to adverse outcomes and legal/compensation burdens on facilities.",
+      "provider_training": "Urgent need for paediatric-specific clinical pathways and skill upgrades for clinicians in non-specialist sites."
+    },
+    "epidemiological_context": {
+      "disease_burden": "High pediatric infectious and surgical burden; delayed or unsafe care contributes to mortality/morbidity.",
+      "population_impact": "Children in rural counties are most vulnerable due to limited pediatric centers.",
+      "health_system_capacity": "Paediatric specialty capacity concentrated; policy must reflect realistic facility capabilities."
+    },
+    "evidence_documentation": {
+      "policy_text_pediatric": "Paediatric specialty procedures constitute only 12 entries in annex of 728 procedures; no explicit pediatric-only facility/access matrix present.",
+      "page_references": [
+        "annex_procedures_index",
+        "pX_paediatric_section_missing_details"
+      ],
+      "clinical_guidelines": "WHO Safe Surgery for Children; Paediatric Anaesthesia Society recommendations"
+    },
+    "recommended_resolution": {
+      "immediate_action": "Issue guidance requiring that paediatric surgeries are undertaken only in facilities meeting paediatric readiness criteria (staffing, equipment, pediatric ICU/observation or ensured transfer).",
+      "policy_revision": "Expand pediatric procedure listings with explicit facility and staffing level requirements, and include neonatal surgery/anaesthesia specifics.",
+      "implementation_steps": [
+        "Map paediatric surgical capacity by county and designate referral centers.",
+        "Train and credential providers in paediatric perioperative care where gaps identified.",
+        "Provide critical paediatric equipment bundles to certified facilities."
+      ],
+      "timeline": "Immediate interim clarification (0–30 days); capacity mapping and policy update within 90 days."
+    },
+    "quality_metrics": {
+      "detection_confidence": 0.90,
+      "clinical_impact_score": 8.6,
+      "urgency_level": "HIGH_PRIORITY_ACTION",
+      "validation_method": "annex content review vs pediatric safety standards"
+    }
+  },
+  {
+    "contradiction_id": "NEURO_005_HIGH",
+    "medical_specialty": "neurosurgery",
+    "contradiction_type": "complex_procedure_facility_capability_mismatch",
+    "clinical_severity": "HIGH",
+    "description": "Neurosurgical procedures (29 entries) and high-complexity cardiothoracic/vascular procedures are present but the policy access matrix predominantly limits complex procedures to 'Level 4-6' while some procedure entries lack explicit facility-level requirement — creates risk that complex neurosurgeries may be authorized at under-equipped sites.",
+    "medical_analysis": {
+      "clinical_rationale": "Complex neurosurgery requires neurosurgeons, neuro-anesthesia, intraoperative imaging/monitoring, ICU-level postoperative care and blood product availability; these are not present at all Level 4 facilities unless explicitly designated.",
+      "medical_standards": "Neurosurgery societies and WHO Safe Surgery guidelines specify facility capability matrices for complex neurosurgical care (operating microscope, neuro-monitoring, ventilated ICU beds, imaging).",
+      "clinical_equivalence": "Failure to specify the subset of Level 4-6 facilities with neurosurgical capability risks inappropriate case distribution.",
+      "contraindication_assessment": "Transferring or operating in non-designated centers increases intra- and postoperative complications; dataset lacks designation detail."
+    },
+    "patient_safety_impact": {
+      "immediate_risk": "Intraoperative complications without specialist backup, inadequate postoperative monitoring leading to hemorrhage, raised intracranial pressure not managed.",
+      "clinical_consequences": "Higher rates of neurologic deficit, secondary brain injury, reoperation and death.",
+      "survival_impact": "Substantial increase in avoidable morbidity/mortality for complex neurosurgical conditions if done in under-resourced settings.",
+      "quality_of_life": "Increased long-term disability burden (motor, cognitive, seizure disorders)."
+    },
+    "kenya_health_system_impact": {
+      "facility_level_effects": "Unclear designation may result in some Level 4 centers attempting complex cases without requisite ICU or blood bank support.",
+      "geographic_access": "Centralized neurosurgical capacity concentrated in a few counties; poor referral enforcement will affect rural patients.",
+      "resource_allocation": "Potential for catastrophic adverse events increasing litigation and resource strain on referral centers.",
+      "provider_training": "Need for credentialing and center-of-excellence designation for neurosurgical services across counties."
+    },
+    "epidemiological_context": {
+      "disease_burden": "Trauma, neurovascular disease and tumours contribute to neurosurgical demand; delays or unsafe surgery worsen outcomes.",
+      "population_impact": "Rural trauma victims may be taken to nearest hospital lacking neurosurgical capability if policy permits.",
+      "health_system_capacity": "29 neurosurgery entries vs unclear designated centers indicates mismatch between listed services and real-world capability."
+    },
+    "evidence_documentation": {
+      "policy_text_neurosurgery": "Annex includes 29 neurosurgical procedures but access points and facility-level designations are not consistently mapped to each procedure.",
+      "page_references": [
+        "annex_neurosurgery",
+        "pX_facility_access_matrix"
+      ],
+      "clinical_guidelines": "World Federation of Neurosurgical Societies guidance; WHO Safe Surgery checklist"
+    },
+    "recommended_resolution": {
+      "immediate_action": "Require all neurosurgical procedures to be performed only in facilities that have documented neurosurgical capability and ICU support; suspend authorization for complex neurosurgery at non-designated facilities.",
+      "policy_revision": "Add explicit facility-level designations for neurosurgical procedure categories (elective minor vs complex emergency neurosurgery) and credentialing requirements for providers.",
+      "implementation_steps": [
+        "Establish and publish a registry of designated neurosurgical centers by county.",
+        "Implement pre-authorization criteria that verify facility capability for complex cases.",
+        "Strengthen transfer agreements and critical care capacity at referral centers."
+      ],
+      "timeline": "Immediate interim restriction (0–30 days); center designation and policy update within 120 days."
+    },
+    "quality_metrics": {
+      "detection_confidence": 0.88,
+      "clinical_impact_score": 8.8,
+      "urgency_level": "HIGH_PRIORITY_ACTION",
+      "validation_method": "annex vs facility mapping gap analysis"
+    }
+  },
+  {
+    "contradiction_id": "AUTH_006_MODERATE",
+    "medical_specialty": "health_systems/administration",
+    "contradiction_type": "authorization_and_emergency_access_conflict",
+    "clinical_severity": "MODERATE",
+    "description": "Only a small fraction of services explicitly list fund source (3/36 entries with Fund info) while an 'Emergency, Chronic and Critical Illness Fund' exists — the policy lacks clear rules for pre-authorization exceptions in emergencies, creating provider confusion and potential delays.",
+    "medical_analysis": {
+      "clinical_rationale": "Emergency care must not be delayed by administrative pre-authorization. Policies should explicitly exempt lifesaving interventions from prior authorization while establishing retrospective review.",
+      "medical_standards": "Standard health financing best practice requires clear emergency exception clauses and defined processes for post-hoc authorization and reimbursement.",
+      "clinical_equivalence": "Lack of clarity risks clinicians being unable to act promptly or fearing non-reimbursement.",
+      "contraindication_assessment": "No clinical justification for requiring pre-authorization prior to emergency interventions."
+    },
+    "patient_safety_impact": {
+      "immediate_risk": "Delay in care from administrative uncertainty or hesitation to perform necessary emergency interventions.",
+      "clinical_consequences": "Worse outcomes for time-critical conditions (cardiac arrest, major trauma, obstetric emergencies).",
+      "survival_impact": "Potential increase in preventable mortality where clinicians defer procedures pending authorization.",
+      "quality_of_life": "Increased morbidity in survivors due to treatment delays."
+    },
+    "kenya_health_system_impact": {
+      "facility_level_effects": "All facility levels affected; smaller facilities may be especially uncertain about funding for stabilizing emergency care.",
+      "geographic_access": "Rural clinicians without rapid authorization channels may be constrained to transfer rather than treat, worsening outcomes.",
+      "resource_allocation": "Potential for underuse of available emergency funds and overreliance on out-of-pocket payments by patients.",
+      "provider_training": "Need clear administrative SOPs and legal protection for emergency actions."
+    },
+    "epidemiological_context": {
+      "disease_burden": "High burden of CVD admissions (25%) and trauma requiring emergency interventions.",
+      "population_impact": "Broad population risk given prevalence of emergencies across counties.",
+      "health_system_capacity": "Limited explicit fund mapping (3/36) increases systemic risk of inconsistent reimbursement practices."
+    },
+    "evidence_documentation": {
+      "policy_text_funds": "Entries with Fund info: 3 (non-empty). Top funds identified include 'SOCIAL HEALTH INSURANCE FUND' (20), 'PRIMARY HEALTHCARE FUND' (9), 'EMERGENCY, CHRONIC AND CRITICAL ILLNESS FUND' (7).",
+      "page_references": [
+        "pX_funding_matrix",
+        "pY_emergency_fund"
+      ],
+      "clinical_guidelines": "Health financing best practices re: emergency exception clauses."
+    },
+    "recommended_resolution": {
+      "immediate_action": "Publish an emergency-exemption policy: lifesaving care may be delivered without prior authorization and facilities will seek retrospective review within defined timeframe (e.g., 72 hours).",
+      "policy_revision": "Define clear mapping of funds to service categories and explicit emergency fund activation/claiming procedures.",
+      "implementation_steps": [
+        "Create a simple emergency claim form and fast-track reimbursement workflow.",
+        "Train facility administrators and clinicians on emergency-exemption processes.",
+        "Audit retrospective claims regularly to detect misuse but protect legitimate emergency care."
+      ],
+      "timeline": "Immediate interim emergency-exemption (0–14 days); fund mapping update within 60 days."
+    },
+    "quality_metrics": {
+      "detection_confidence": 0.86,
+      "clinical_impact_score": 7.2,
+      "urgency_level": "MODERATE_PRIORITY",
+      "validation_method": "fund metadata review and administrative best practice comparison"
+    }
+  },
+  {
+    "contradiction_id": "PAY_007_MODERATE",
+    "medical_specialty": "health_financing",
+    "contradiction_type": "coverage_and_tariff_inconsistency",
+    "clinical_severity": "MODERATE",
+    "description": "Tariffs are present for 20 entries with a very wide range (KES 2,240 to 2,186,800) and the same or similar services appear under different funds (Social Health Insurance Fund, Primary Healthcare Fund, Emergency Fund) without unified payment method guidance — risk of provider confusion and patient cost unpredictability.",
+    "medical_analysis": {
+      "clinical_rationale": "Consistent, transparent tariffs and defined payment mechanisms are necessary to ensure providers are reimbursed and patients are not exposed to unexpected charges, which can delay care seeking.",
+      "medical_standards": "Health financing frameworks recommend standardized tariffs for covered services and clear delineation of payer responsibility for levels of care and emergency cases.",
+      "clinical_equivalence": "Same clinical service should have consistent coverage and pre-authorization rules irrespective of which fund is nominally referenced.",
+      "contraindication_assessment": "No clinical reason for multiple conflicting tariff assignments for identical procedures."
+    },
+    "patient_safety_impact": {
+      "immediate_risk": "Patients may be asked to pay out-of-pocket if facility perceives non-coverage or delayed reimbursement.",
+      "clinical_consequences": "Care delays, incomplete treatments, or refusal of services due to payment uncertainty.",
+      "survival_impact": "For emergencies and essential chronic therapies (e.g., dialysis, oncology), payment barriers directly increase mortality risk.",
+      "quality_of_life": "Financial toxicity leading to treatment interruption and worsening chronic disease outcomes."
+    },
+    "kenya_health_system_impact": {
+      "facility_level_effects": "Providers may restrict services or prioritize privately paying patients if reimbursement is uncertain.",
+      "geographic_access": "Rural patients less able to absorb unexpected costs; inequity widened.",
+      "resource_allocation": "Administrative burden for facilities to determine correct fund and tariff per patient increases costs and slows care.",
+      "provider_training": "Need for clear billing guidance and harmonized tariffs across funds."
+    },
+    "epidemiological_context": {
+      "disease_burden": "High chronic disease burden (CKD, CVD, cancer) requires predictable long-term financing to maintain continuity of care.",
+      "population_impact": "Large rural and low-income populations disproportionately affected by tariff unpredictability.",
+      "health_system_capacity": "Complex tariff matrix (728 procedures; 36 services) requires coherent payment policy to be implementable."
+    },
+    "evidence_documentation": {
+      "policy_text_tariffs": "Annex Procedures: 728 total, Tariff Range: KES 2,240 - 2,186,800, Average: KES 187,976. Entries with Fund info: 3 out of 36; Top Funds listed.",
+      "page_references": [
+        "annex_tariff_table",
+        "pX_funding_overview"
+      ],
+      "clinical_guidelines": "Health financing best practice literature"
+    },
+    "recommended_resolution": {
+      "immediate_action": "Issue interim billing guidance: for any ambiguity, emergency services and defined essential chronic treatments are covered under Emergency or Social Health Insurance Fund pending retrospective fund allocation.",
+      "policy_revision": "Harmonize tariffs across funds, publish a single payer schedule per service and define fund-responsibility rules (primary payer) and secondary payer pathways.",
+      "implementation_steps": [
+        "Convene a tariff harmonization task force (MoH, SHIF, county reps) to reconcile overlapping coverage.",
+        "Standardize codes and mapping between annex procedures and fund/tariff lines.",
+        "Deploy training and an updated billing manual to providers."
+      ],
+      "timeline": "Interim billing SOP within 30 days; tariff harmonization and publication within 120 days."
+    },
+    "quality_metrics": {
+      "detection_confidence": 0.84,
+      "clinical_impact_score": 6.8,
+      "urgency_level": "MODERATE_PRIORITY",
+      "validation_method": "tariff matrix review and fund-mapping analysis"
+    }
+  }
+]

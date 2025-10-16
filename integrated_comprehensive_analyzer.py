@@ -1279,8 +1279,12 @@ class IntegratedComprehensiveMedicalAnalyzer:
             return {'raw': pd.DataFrame(), 'structured': pd.DataFrame(), 'wide': pd.DataFrame(), 'exploded': pd.DataFrame()}
 
     def _extract_rules_manual_exact(self, pdf_path: str) -> pd.DataFrame:
-        """EXACT code from manual.ipynb - NO MODIFICATIONS"""
-        import tabula
+        """EXACT code from manual.ipynb - adapted to use optional tabula import"""
+        # Use the optional top-level tabula import; fail gracefully if unavailable
+        global tabula
+        if tabula is None:
+            print("❌ tabula-py not available — cannot extract rules for pages 1-18 in this mode")
+            return pd.DataFrame()
         
         # EXACT read_tables_raw from manual.ipynb
         def read_tables_raw(pages="1-18"):
@@ -1392,8 +1396,11 @@ class IntegratedComprehensiveMedicalAnalyzer:
 
     def _extract_rules_pdfplumber_p1_18_BROKEN(self, pdf_path: str) -> pd.DataFrame:
         """EXACT manual.ipynb extraction - using exact code from manual.ipynb"""
+        # Guarded access to optional tabula import
         try:
-            import tabula
+            global tabula
+            if tabula is None:
+                raise ImportError()
         except ImportError:
             print("❌ tabula-py not available")
             return pd.DataFrame()
@@ -2600,6 +2607,21 @@ Focus on identifying 15-25 systematic coverage gaps that complement the existing
             },
             'unique_insights_summary': self.unique_tracker.get_summary()
         }
+        # Add legacy-compatible keys for UI consumption
+        try:
+            legacy_pack = self._save_final_outputs(policy_results, annex_results, ai_analysis)
+            if isinstance(legacy_pack, dict):
+                results['extraction_results'] = legacy_pack.get('extraction_results', {})
+                # Normalize analysis_results to expected form
+                analysis_results = legacy_pack.get('analysis_results', {})
+                if analysis_results:
+                    results['analysis_results'] = analysis_results
+                # Include summary statistics if helpful
+                if 'summary_statistics' in legacy_pack:
+                    results['summary_statistics'] = legacy_pack['summary_statistics']
+        except Exception:
+            # Non-fatal if packing fails; UI has fallbacks
+            pass
         
         return results
     
@@ -2662,93 +2684,8 @@ Focus on identifying 15-25 systematic coverage gaps that complement the existing
         print("\n" + "=" * 70)
         print("✅ ANALYSIS COMPLETE - Data ready for use!")
         print("=" * 70)
-        
-        # Enhanced conversational text parsing for structured gap analysis
-        print(f"   🔍 Parsing conversational gap analysis...")
-        
-        # Look for numbered priority gaps (like "1) Cardiovascular disease...")  
-        priority_pattern = r'(\d+)\)\s*([^\n—]*?)(?:\s*—\s*([^\n]+))?'
-        priority_matches = re.findall(priority_pattern, analysis_text, re.MULTILINE)
-        
-        print(f"   🔍 Found {len(priority_matches)} priority patterns")
-        
-        for match in priority_matches:
-            priority_num, title, subtitle = match
-            if title.strip() and len(title.strip()) > 10:  # Only meaningful titles
-                
-                # Look for the rationale after this priority item
-                rationale = ""
-                why_pattern = rf"{priority_num}\).*?(?:-\s*Why:\s*)([^\n]+)"
-                why_match = re.search(why_pattern, analysis_text, re.DOTALL | re.IGNORECASE)
-                if why_match:
-                    rationale = why_match.group(1).strip()
-                
-                gap = {
-                    'gap_id': f"PRIORITY_{priority_num.zfill(2)}",
-                    'gap_category': title.strip(),
-                    'gap_type': 'priority_service_gap',
-                    'clinical_priority': f"PRIORITY_{priority_num}",
-                    'description': f"{title.strip()}" + (f" - {subtitle.strip()}" if subtitle.strip() else ""),
-                    'rationale': rationale if rationale else f"Priority {priority_num} gap identified in Kenya health system analysis",
-                    'detection_method': 'ai_priority_parsing',
-                    'kenya_context': True
-                }
-                gaps.append(gap)
-                print(f"      • Priority {priority_num}: {title.strip()}")
-        
-        # If no priority gaps found, look for bullet points or section headers
-        if not gaps:
-            # Look for sections like "Top priority gaps", "Key gaps", etc.
-            section_pattern = r'(?:top\s+)?(?:priority\s+)?gaps?\s*[:\-]?\s*(.*?)(?=\n\n|\n[A-Z]|\Z)'
-            sections = re.findall(section_pattern, analysis_text, re.IGNORECASE | re.DOTALL)
-            
-            for section in sections:
-                # Look for bullet points or numbered items
-                item_pattern = r'(?:[•\-\*]|\d+[\.\)])\s*([^\n]+)'
-                items = re.findall(item_pattern, section)
-                
-                for i, item in enumerate(items[:10]):  # Limit to 10 gaps
-                    if len(item.strip()) > 20:  # Only meaningful gaps
-                        gaps.append({
-                            'gap_id': f"GAP_{i+1:02d}",
-                            'gap_category': 'service_gap',
-                            'gap_type': 'identified_gap',
-                            'description': item.strip(),
-                            'detection_method': 'ai_bullet_parsing',
-                            'kenya_context': True
-                        })
-        
-        # If still no gaps, extract from the full text by looking for gap indicators
-        if not gaps:
-            # Look for sentences containing gap indicators
-            gap_indicators = ['missing', 'absent', 'lacking', 'insufficient', 'gap', 'not covered', 'unavailable']
-            sentences = re.split(r'[.!?]+', analysis_text)
-            
-            for sentence in sentences:
-                sentence = sentence.strip()
-                if len(sentence) > 30 and any(indicator in sentence.lower() for indicator in gap_indicators):
-                    if not sentence.lower().startswith(('the', 'this', 'that', 'it')):  # Avoid unclear references
-                        gaps.append({
-                            'gap_id': f"IDENTIFIED_{len(gaps)+1:02d}",
-                            'gap_category': 'service_gap',
-                            'gap_type': 'textual_gap',
-                            'description': sentence,
-                            'detection_method': 'ai_semantic_parsing',
-                            'kenya_context': True
-                        })
-                        if len(gaps) >= 8:  # Limit to prevent too many low-quality gaps
-                            break
-        
-        print(f"   📋 Extracted {len(gaps)} AI gaps from conversational analysis")
-        
-        # Track unique gaps using the tracker
-        if gaps:
-            new_gaps_count = self.unique_tracker.add_gaps(gaps)
-            print(f"   🔍 Added {new_gaps_count} new unique gaps to tracker (Total: {len(self.unique_tracker.unique_gaps)})")
-            # Save the updated tracker
-            self.unique_tracker.save_insights()
-        
-        return gaps
+        # End of summary
+        return None
 
     def _extract_ai_insights(self, analysis_text: str) -> List[str]:
         """Extract insights from AI analysis"""

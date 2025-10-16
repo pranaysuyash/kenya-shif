@@ -4,473 +4,394 @@
     "gap_category": "cardiovascular_rehabilitation_services",
     "gap_type": "missing_essential_service",
     "clinical_priority": "HIGH",
-    "description": "Comprehensive cardiac rehabilitation and structured secondary prevention services are largely absent across most counties despite CVD causing 25% of hospital admissions and substantial mortality.",
+    "description": "Comprehensive cardiac rehabilitation and structured secondary prevention services are largely absent outside a few tertiary centres despite cardiovascular disease causing 25% of admissions and 13% of deaths.",
     "kenya_epidemiological_context": {
       "disease_burden": "CVD accounts for ~25% of hospital admissions and ~13% of deaths; hypertension prevalence ~24% of adults.",
-      "prevalence_data": "Estimated 13.4M adults with hypertension; rising ischemic heart disease burden in urban and peri-urban populations.",
-      "current_outcomes": "High readmission and disability rates; preventable mortality due to lack of rehabilitation and secondary prevention.",
-      "geographic_burden": "Specialist services concentrated in Nairobi, Mombasa and a few county referral centres; majority of 47 counties lack services."
+      "prevalence_data": "Estimated 13.4 million adults with hypertension; rising ischemic heart disease and heart failure admissions.",
+      "current_outcomes": "High readmission rates, prolonged disability, suboptimal risk-factor control.",
+      "geographic_burden": "Concentrated in urban and peri‑urban areas but expanding into rural counties as risk factors rise."
     },
     "affected_populations": {
-      "primary_population": "Post-acute cardiovascular patients (post-MI, post-PCI, heart failure patients)",
-      "estimated_annual_cases": "Conservative estimate: 200,000–350,000 admissions potentially benefiting annually",
-      "demographic_profile": "Adults >35 years concentrated in urban and peri-urban areas but increasing rural burden",
-      "vulnerable_groups": "Low-income, rural patients with poor access to outpatient care; women with delayed presentation"
+      "primary_population": "Patients post-acute coronary syndrome, heart failure, valve surgery and stroke needing secondary prevention and rehab.",
+      "estimated_annual_cases": "Approx. 250,000–320,000 admissions annually relevant for rehab (based on 25% of total admissions estimate).",
+      "demographic_profile": "Adults aged 40+ (rising burden in middle-aged adults); heavier burden in urban counties.",
+      "vulnerable_groups": "Rural patients with poor access to tertiary centres, low-income households, elderly."
     },
     "current_coverage_assessment": {
-      "existing_services": "Limited cardiac rehab programs at Kenyatta, Moi, Aga Khan and select private hospitals.",
-      "geographic_availability": "Available in <5 counties with functional multidisciplinary programs.",
-      "capacity_utilization": "Existing units over-subscribed; long waits (months) for enrolment.",
-      "wait_times": "4–8 months for non-urgent enrolment in national centres."
+      "existing_services": "Limited cardiac rehab programmes at KNH, MTRH and select private hospitals; few outpatient/community links.",
+      "geographic_availability": "Mostly Nairobi, Mombasa and a handful of county referral hospitals; >40 counties lack services.",
+      "capacity_utilization": "Tertiary sites operating over capacity with long waits for enrolment.",
+      "wait_times": "Assessment-to-enrolment waits reported 3–8 months in tertiary centres."
     },
     "health_system_impact_analysis": {
-      "level_1_2_impact": "No community-based secondary prevention or structured CHV linkages for cardiac patients.",
-      "level_3_impact": "Health centres lack equipment/staff for basic rehab and risk-factor management.",
-      "level_4_impact": "County hospitals lack dedicated outpatient cardiac rehab pathways.",
-      "level_5_6_impact": "Tertiary hospitals overwhelmed, providing both acute and chronic care without community follow-up.",
-      "referral_pathway_gaps": "No standardized discharge-to-community pathways or tele-rehab options."
+      "level_1_2_impact": "No community-based secondary prevention integration with CHVs and primary care.",
+      "level_3_impact": "Health centres cannot provide structured rehabilitation or risk-factor clinics.",
+      "level_4_impact": "County hospitals need dedicated rehab outpatient clinics and equipment.",
+      "level_5_6_impact": "Tertiary hospitals carry the bulk of complex rehab without community continuation.",
+      "referral_pathway_gaps": "No standardised discharge-to-community rehabilitation pathway; poor follow-up and adherence monitoring."
     },
     "clinical_evidence_base": {
-      "international_guidelines": "WHO PEN and international cardiology guidelines recommend structured cardiac rehab for secondary prevention.",
-      "clinical_effectiveness": "Rehabilitation reduces all-cause mortality (13–20%) and readmissions (~25%).",
-      "timing_criticality": "First 12 weeks post-event are highest-yield for rehabilitation.",
-      "cost_effectiveness": "Demonstrated long-term savings through reduced readmissions and disability."
+      "international_guidelines": "WHO PEN and ESC guidelines recommend structured cardiac rehab and risk-factor management.",
+      "clinical_effectiveness": "Cardiac rehab reduces mortality 13–20% and readmissions ~25% in meta-analyses.",
+      "timing_criticality": "Optimal within first 12 weeks post-event for maximal functional recovery.",
+      "cost_effectiveness": "Demonstrated reductions in long-term costs through fewer readmissions and improved productivity."
     },
     "recommended_interventions": {
       "immediate_additions": [
-        "Establish outpatient cardiac rehab programmes at all Level 5-6 hospitals",
-        "Integrate risk-factor management into Level 3 outpatient clinics",
-        "Pilot community-based cardiac rehab linked to CHVs and telehealth in 10 high-burden counties"
+        "Establish cardiac rehab units at all Level 5–6 hospitals and pilot community rehab in 10 high-burden counties.",
+        "Integrate outpatient secondary prevention clinics at Level 4–5 with tele-rehab components.",
+        "Standardised discharge plans linking patients to CHVs and county NCD clinics."
       ],
       "service_specifications": [
-        "12-week minimum structured programme (exercise, education, psychosocial support)",
-        "Multidisciplinary teams: cardiology, physiotherapy, dietetics, psychology, nursing",
-        "Standardized referral and discharge protocols with community follow-up"
+        "12-week structured programme: supervised exercise, risk-factor counselling, psychosocial support, medication optimisation.",
+        "Multidisciplinary teams: cardiologist/physician, physiotherapist, nurse, nutritionist, psychologist.",
+        "Monitoring and referral protocols with clear KPIs."
       ],
       "implementation_phases": [
-        "Phase 1 (0–6 months): Pilot in 10 high-burden counties",
-        "Phase 2 (6–18 months): Scale to all Level 5-6 hospitals",
-        "Phase 3 (18–36 months): Roll-out community-based modules across counties"
+        "Phase 1 (0–6 months): Pilot 10 county hospitals + training of multidisciplinary teams.",
+        "Phase 2 (6–18 months): Scale to all Level 5 facilities and select Level 4 centres with high caseloads.",
+        "Phase 3 (18–36 months): Community-based continuation in all counties; telehealth integration for remote follow‑up."
       ]
     },
     "resource_requirements": {
-      "human_resources": "Train ~800 physiotherapists and 400 cardiac rehab focal staff nationwide; upskill existing nurses.",
-      "infrastructure": "Adapted outpatient space, basic exercise equipment, monitoring devices, telehealth platforms.",
-      "training_needs": "Short-course certification in cardiac rehab for multidisciplinary teams.",
-      "estimated_cost": "KES ~4.2B over 3 years (national scale-up estimate including training and basic infrastructure)."
+      "human_resources": "Training for ~800 physiotherapists, 400 cardiac rehab nurses and 200 specialists countrywide.",
+      "infrastructure": "Exercise areas, ECG monitoring, basic rehab equipment, telehealth kits for remote follow-up.",
+      "training_needs": "Short-course cardiac rehab certification, CME for primary care on secondary prevention.",
+      "estimated_cost": "KES 4.2 billion over 3 years for phased national rollout (capital + recurrent + training)."
     },
     "implementation_feasibility": {
-      "technical_feasibility": "HIGH — can leverage existing cardiology units and primary care platforms.",
-      "financial_feasibility": "MEDIUM — upfront costs with favorable medium-term ROI from reduced admissions.",
-      "political_feasibility": "HIGH — aligns with national NCD and UHC priorities.",
-      "timeline_realistic": "3 years for nationwide phased implementation."
+      "technical_feasibility": "HIGH — builds on existing cardiology and physiotherapy cadres with scalable telehealth options.",
+      "financial_feasibility": "MEDIUM — upfront capital, but high ROI via reduced admissions and improved productivity.",
+      "political_feasibility": "HIGH — aligns with county NCD priorities and UHC agenda.",
+      "timeline_realistic": "3 years for meaningful nationwide coverage with pilots in Year 1."
     },
     "success_metrics": {
-      "process_indicators": "Number of facilities offering rehab, patients enrolled, CHV linkages established.",
-      "outcome_indicators": "30-day and 1-year readmission rates, BP and lipid control rates.",
-      "impact_indicators": "CVD mortality, DALYs averted, quality-of-life improvements.",
-      "equity_indicators": "Access by county, urban/rural distribution, enrolment of low-income patients."
+      "process_indicators": "Number of facilities offering cardiac rehab; patients enrolled and completing 12-week programmes.",
+      "outcome_indicators": "30‑day and 1‑year readmission rates, BP and lipid control rates at 6 months.",
+      "impact_indicators": "Reduction in CVD mortality and hospital bed-days attributable to CVD.",
+      "equity_indicators": "Proportion of counties with functioning rehab services; rural vs urban enrolment rates."
     },
     "kenya_context_integration": {
-      "county_variations": "Urban counties require advanced programmes; rural counties require basic community modules.",
-      "cultural_considerations": "Family-inclusive rehab models and task-shifting to community health volunteers.",
-      "integration_opportunities": "Link with existing NCD clinics, NHIF reimbursements, and PHC fund.",
-      "sustainability_factors": "County budget allocation, NHIF coverage of rehab packages, local training institutions."
+      "county_variations": "Urban counties require advanced programmes; poorer/rural counties require basic home/community rehab models.",
+      "cultural_considerations": "Family‑centred rehab messaging and use of CHVs to support adherence.",
+      "integration_opportunities": "Link with existing NCD clinics, community health strategy and NHIF benefit packages.",
+      "sustainability_factors": "County ownership, incorporation into NHIF and PHC fund lines, task‑shifting to nurses and CHVs."
     }
   },
   {
-    "gap_id": "CANCER_EARLYTX_002",
-    "gap_category": "cancer_screening_and_oncology_services",
-    "gap_type": "incomplete_service_package",
+    "gap_id": "CANCER_EARLY_DETECTION_002",
+    "gap_category": "cancer_early_detection_and_access_to_curative_treatment",
+    "gap_type": "insufficient_service_coverage",
     "clinical_priority": "HIGH",
-    "description": "Limited early detection, diagnostic capacity and affordable oncology treatment (surgery, chemo, radiotherapy) resulting in late presentation and high cancer mortality.",
+    "description": "Late diagnosis and limited access to diagnostic imaging, pathology and radiotherapy contribute to high cancer mortality; early detection and treatment capacity is inadequate across most counties.",
     "kenya_epidemiological_context": {
-      "disease_burden": "Cancer is the 2nd leading cause of registered deaths in Kenya; rising incidence in breast, cervical, prostate and esophageal cancers.",
-      "prevalence_data": "Increasing age-adjusted incidence with urban concentration; cervical cancer remains high in some counties.",
-      "current_outcomes": "Late-stage presentation common; high out-of-pocket costs for diagnostics and treatment leading to treatment abandonment.",
-      "geographic_burden": "Radiotherapy centres and oncology specialists concentrated in a few tertiary centres."
+      "disease_burden": "Cancer is the second leading cause of registered deaths in Kenya; high-case fatality from late-stage presentations.",
+      "prevalence_data": "Estimated new cancer cases annually ~40,000–50,000 (growing trend); common cancers include breast, cervical, prostate, esophageal).",
+      "current_outcomes": "Low 5‑year survival for common cancers due to late presentation and limited curative services.",
+      "geographic_burden": "Diagnostic and treatment services concentrated in major urban centres (Nairobi, Mombasa, Eldoret)."
     },
     "affected_populations": {
-      "primary_population": "Adults with suspected cancer and patients needing chemotherapy, radiotherapy, surgery",
-      "estimated_annual_cases": "Projected tens of thousands new cases annually; many require multi-modality care",
-      "demographic_profile": "Adults 30–70 years, both sexes; increased burden in urban and peri-urban areas but significant rural mortality",
-      "vulnerable_groups": "Women (cervical, breast), rural patients, low-income who cannot afford transport and treatment"
+      "primary_population": "Adults with screening-detectable cancers (breast, cervical) and symptomatic patients needing diagnostics and radiotherapy.",
+      "estimated_annual_cases": "Approx. 40,000–50,000 new cases annually; ~60–70% present at late stage requiring complex care.",
+      "demographic_profile": "Adults aged 30–70; disparity with poorer outcomes in rural and low-income groups.",
+      "vulnerable_groups": "Women (screening access), rural populations, patients requiring high-cost therapies."
     },
     "current_coverage_assessment": {
-      "existing_services": "Limited screening (cervical VIA in some counties), diagnostic imaging/biopsy limited to Level 4-6 hospitals, radiotherapy centres few.",
-      "geographic_availability": "Radiotherapy available in <5 locations; chemotherapy available in some county hospitals but with stock-outs.",
-      "capacity_utilization": "High patient loads at national referral hospitals; long queues for radiotherapy.",
-      "wait_times": "Weeks to months for radiotherapy and specialized oncology consultations."
+      "existing_services": "Limited organised screening (county pilot sites), few pathology labs with capacity, 4–6 radiotherapy centres mostly urban.",
+      "geographic_availability": "Majority of counties lack radiotherapy and comprehensive oncology services.",
+      "capacity_utilization": "Radiotherapy centres operate at high utilisation with long queues.",
+      "wait_times": "Delays from referral to diagnostic biopsy and to initiation of therapy commonly 1–6 months."
     },
     "health_system_impact_analysis": {
-      "level_1_2_impact": "Primary prevention (HPV vaccination) and community awareness low in some counties.",
-      "level_3_impact": "Health centres inconsistently perform screening and referral.",
-      "level_4_impact": "County hospitals lack full diagnostic and treatment packages.",
-      "level_5_6_impact": "Tertiary hospitals overburdened with advanced cases.",
-      "referral_pathway_gaps": "Inconsistent pathways and no standardized oncology package across counties."
+      "level_1_2_impact": "Limited community awareness and screening outreach; CHVs underutilised for cancer education.",
+      "level_3_impact": "Health centres lack capacity for visual inspection for cervical cancer, clinical breast exam training.",
+      "level_4_impact": "County hospitals lack pathology turnaround, chemotherapy safety infrastructure and radiotherapy.",
+      "level_5_6_impact": "Tertiary centres overwhelmed with advanced cases; limited palliative care integration.",
+      "referral_pathway_gaps": "Weak referral coordination, limited patient navigators, high out-of-pocket costs causing treatment interruption."
     },
     "clinical_evidence_base": {
-      "international_guidelines": "WHO recommends HPV vaccination, cervical screening, early detection programmes and timely multimodal treatment.",
-      "clinical_effectiveness": "Screening/early treatment reduces mortality substantially (e.g., cervical cancer).",
-      "timing_criticality": "Early detection dramatically improves survival and reduces treatment complexity.",
-      "cost_effectiveness": "Vaccination and screening are highly cost-effective; investing in radiotherapy yields high survival benefits."
+      "international_guidelines": "WHO recommends organised cervical screening (HPV testing/VIA) and breast awareness with timely referral; radiotherapy is essential for curative care.",
+      "clinical_effectiveness": "Screening and early treatment markedly reduce mortality (cervical screening can reduce incidence by >50%).",
+      "timing_criticality": "Early-stage treatment window narrow — delays shift patients to palliative care.",
+      "cost_effectiveness": "Screening (HPV/VIA) and timely radiotherapy/chemotherapy are cost-effective relative to late-stage care and palliative-only approaches."
     },
     "recommended_interventions": {
       "immediate_additions": [
-        "Scale-up HPV vaccination and cervical screening to all counties",
-        "Strengthen diagnostic pathology and imaging at Level 4-5 hospitals",
-        "Expand chemotherapy delivery capacity and decentralize selected oncology services"
+        "Scale national cervical and breast screening to all counties using HPV testing/VIA and clinical breast exam with referral pathways.",
+        "Expand diagnostic pathology capacity via hub-and-spoke models and telepathology.",
+        "Increase radiotherapy capacity (additional LINACs) and decentralise chemotherapy to Level 5 hospitals with safe infusion units."
       ],
       "service_specifications": [
-        "Standardized referral pathways, county oncology hubs for chemo, regional radiotherapy planning",
-        "Essential diagnostics: pathology turnaround targets, imaging (CT/MRI access via hub-and-spoke)",
-        "NHIF-covered oncology packages and defined tariffs"
+        "Screening: target women 25–49 for cervical screening and organised recall systems.",
+        "Diagnostics: 7–14 day pathology turnaround for priority cancers; imaging access (mammography, CT, MRI) in regional hubs.",
+        "Treatment: standardised oncology protocols, chemotherapy safety standards, radiotherapy planning and maintenance schedules."
       ],
       "implementation_phases": [
-        "Phase 1 (0–12 months): HPV vaccine catch-up, strengthen VIA services in 20 priority counties",
-        "Phase 2 (12–36 months): Upgrade pathology and chemo centres in all Level 5 hospitals",
-        "Phase 3 (36–60 months): Plan equitable radiotherapy access via 2–3 additional regional centres"
+        "Phase 1 (0–12 months): Scale screening in 15 high-burden counties and upgrade pathology hubs; strengthen referral navigation.",
+        "Phase 2 (12–36 months): Procure and commission additional radiotherapy units and chemotherapy capacity in regional centres.",
+        "Phase 3 (36–60 months): Full national coverage with tele-oncology support and integration into NHIF benefit packages."
       ]
     },
     "resource_requirements": {
-      "human_resources": "Train oncologists, oncology nurses, pathologists; task-shift chemo delivery to trained county teams.",
-      "infrastructure": "Pathology labs, CT/MRI access, chemotherapy infusion centres, investment in radiotherapy bunkers (high-cost).",
-      "training_needs": "Short- and long-term oncology training, telepathology linkages.",
-      "estimated_cost": "Incremental oncology package scale-up KES ~8–12B over 5 years (including radiotherapy planning)."
+      "human_resources": "Train pathologists (increase workforce by 50%), oncology nurses, radiotherapy physicists, clinical oncologists.",
+      "infrastructure": "Additional LINACs, pathology labs, cold chain for HPV samples, mammography units in regional hubs.",
+      "training_needs": "In-service training for screening, biopsy techniques, chemotherapy safety, telepathology systems.",
+      "estimated_cost": "KES 12 billion over 5 years for phased scale-up (screening, diagnostics, radiotherapy expansion)."
     },
     "implementation_feasibility": {
-      "technical_feasibility": "MEDIUM — requires significant specialized capacity and investment.",
-      "financial_feasibility": "LOW–MEDIUM — radiotherapy capital-intensive; prioritize cost-effective screening and decentralizing chemo first.",
-      "political_feasibility": "HIGH — cancer is recognized priority; strong public support for vaccination and screening.",
-      "timeline_realistic": "5+ years for full equitable radiotherapy coverage; shorter for screening/vaccination/chemo decentralization."
+      "technical_feasibility": "MEDIUM — requires capital equipment, workforce development and maintenance contracts.",
+      "financial_feasibility": "MEDIUM to LOW — high capital costs but high impact; financing through public–private partnerships and NHIF possible.",
+      "political_feasibility": "HIGH — cancer control is a political priority with public support.",
+      "timeline_realistic": "5 years for meaningful improvement in early detection and treatment capacity."
     },
     "success_metrics": {
-      "process_indicators": "HPV vaccine coverage, number of screening tests performed, pathology turnaround times.",
-      "outcome_indicators": "Stage at diagnosis distribution, treatment completion rates.",
-      "impact_indicators": "Cancer-specific mortality and 5-year survival rates.",
-      "equity_indicators": "Service availability across counties and reduced out-of-pocket expenditure for oncology care."
+      "process_indicators": "Proportion of eligible women screened annually; pathology turnaround times; LINAC operational hours.",
+      "outcome_indicators": "Stage distribution at diagnosis (shift to earlier stages), time from diagnosis to treatment.",
+      "impact_indicators": "Cancer-specific mortality rates and 5‑year survival for common cancers.",
+      "equity_indicators": "Screening coverage by county and socio-economic quintile; rural access to diagnostic hubs."
     },
     "kenya_context_integration": {
-      "county_variations": "High-burden counties and those with limited pathology services prioritized for upgrades.",
-      "cultural_considerations": "Community education to reduce stigma and encourage screening (especially for cervical and breast cancer).",
-      "integration_opportunities": "Link screening with maternal and child health clinics and CHV networks.",
-      "sustainability_factors": "NHIF package design, public–private partnerships for radiotherapy, county budgetary commitments."
+      "county_variations": "High-burden and urban counties need advanced oncology; pastoral and remote counties need mobile screening and specimen transport.",
+      "cultural_considerations": "Community sensitisation to counter stigma, use of CHVs and women's groups to increase uptake.",
+      "integration_opportunities": "Integrate cervical screening into maternal & child health clinics and HIV platforms; use existing lab networks.",
+      "sustainability_factors": "NHIF reimbursement for screening and treatment, county budget lines for maintenance and workforce retention."
     }
   },
   {
-    "gap_id": "PNEUMONIA_OXYGEN_VACCINE_003",
-    "gap_category": "pneumonia_prevention_and_acute_management",
-    "gap_type": "service_gap_supply_chain_and_infrastructure",
+    "gap_id": "PNEUMONIA_PREVENTION_TREATMENT_003",
+    "gap_category": "pneumonia_prevention_and_oxygen_therapy",
+    "gap_type": "insufficient_service_coverage",
     "clinical_priority": "HIGH",
-    "description": "Pneumonia remains the leading cause of registered deaths; gaps exist in vaccination coverage (PCV), timely antibiotic access, oxygen therapy and pulse oximetry at lower-level facilities.",
+    "description": "Pneumonia is the leading registered cause of death yet gaps exist in preventive interventions (vaccination, nutrition), diagnosis, oxygen systems and community case management, especially for children and the elderly in rural areas.",
     "kenya_epidemiological_context": {
-      "disease_burden": "Pneumonia top cause of registered deaths in 2024, with high impact on children under 5 and elderly.",
-      "prevalence_data": "Under-5 mortality still influenced by pneumonia and modifiable risk factors (malnutrition, indoor air pollution).",
-      "current_outcomes": "Preventable deaths due to delayed care, inconsistent oxygen access and limited diagnostics.",
-      "geographic_burden": "Rural and arid counties show higher under-5 mortality and limited facility oxygen availability."
+      "disease_burden": "Pneumonia is the foremost registered cause of death across age groups; major contributor to under-5 mortality.",
+      "prevalence_data": "High incidence among children under 5 and increased vulnerability among adults with COPD, HIV and the elderly.",
+      "current_outcomes": "Mortality remains high where oxygen therapy and timely antibiotics are not available.",
+      "geographic_burden": "Rural counties and informal urban settlements have higher case-fatality due to delayed care and weak referral."
     },
     "affected_populations": {
-      "primary_population": "Children under 5, elderly, and adults with comorbidities (HIV, malnutrition).",
-      "estimated_annual_cases": "Hundreds of thousands of pneumonia episodes annually; tens of thousands of severe cases requiring oxygen.",
-      "demographic_profile": "Children <5 and elderly disproportionately affected; rural households with limited access to health facilities.",
-      "vulnerable_groups": "Malnourished children, low-income rural families, remote communities."
+      "primary_population": "Children under 5, elderly, and adults with chronic lung disease or immunosuppression.",
+      "estimated_annual_cases": "Estimated severe pneumonia cases requiring admission in children and adults in the tens to hundreds of thousands annually (countrywide).",
+      "demographic_profile": "Predominantly rural children under 5 and older adults across counties with low vaccination/nutrition coverage.",
+      "vulnerable_groups": "Children <5, malnourished children, HIV-positive individuals, elderly, low-income households."
     },
     "current_coverage_assessment": {
-      "existing_services": "PCV included in immunization schedule but coverage gaps persist; oxygen concentrators/pulse oximeters not routinely available at Level 2–3 facilities.",
-      "geographic_availability": "Oxygen and uninterrupted supply limited mainly to Level 4-6 hospitals.",
-      "capacity_utilization": "Referral hospitals see clusters of severe pneumonia cases; primary care manages many without oxygen.",
-      "wait_times": "Delays in referral and transport result in late presentations."
+      "existing_services": "Routine childhood immunisation exists but gaps in PCV/HiB coverage in some counties; oxygen supply unreliable in many facilities.",
+      "geographic_availability": "Functional oxygen and pulse oximetry available in tertiary centres and some county hospitals; many Level 3–4 facilities lack equipment.",
+      "capacity_utilization": "Referral hospitals overwhelmed during peaks (e.g., seasonal spikes).",
+      "wait_times": "Delays in referral due to transport and bed shortages; limited community-level antibiotic availability for severe cases."
     },
     "health_system_impact_analysis": {
-      "level_1_2_impact": "Community case management under-resourced; CHVs lack basic diagnostics and referral tools.",
-      "level_3_impact": "Health centres often lack oxygen therapy and pulse oximetry for triage.",
-      "level_4_impact": "County hospitals have intermittent oxygen supply and limited oxygen maintenance capacity.",
-      "level_5_6_impact": "Tertiary care manages severe cases but preventable progression increases burden.",
-      "referral_pathway_gaps": "No standardized oxygen referral/transfer protocols and weak biomedical maintenance systems."
+      "level_1_2_impact": "Community health volunteers not fully enabled for pneumonia identification and early referral; oral antibiotics inconsistent.",
+      "level_3_impact": "Health centres lack pulse oximeters and continuous oxygen sources.",
+      "level_4_impact": "County hospitals lack robust oxygen plants, concentrators maintenance and trained staff.",
+      "level_5_6_impact": "Tertiary hospitals provide critical care but are distant for many patients.",
+      "referral_pathway_gaps": "Weak emergency transport and triage; no standard oxygen maintenance plans at facility level."
     },
     "clinical_evidence_base": {
-      "international_guidelines": "WHO recommends oxygen therapy, pulse oximetry, prompt antibiotics and vaccination as core interventions.",
-      "clinical_effectiveness": "Oxygen therapy with pulse oximetry reduces pneumonia mortality significantly; PCV reduces incidence of severe disease in children.",
-      "timing_criticality": "Early oxygen administration and antibiotics markedly improve survival.",
-      "cost_effectiveness": "Oxygen systems and vaccines are highly cost-effective, especially when maintained properly."
+      "international_guidelines": "WHO IMCI and oxygen therapy guidelines recommend pulse oximetry and oxygen for hypoxaemia; PCV and Hib vaccines reduce severe pneumonia.",
+      "clinical_effectiveness": "Pulse oximetry and reliable oxygen reduce pneumonia mortality substantially; vaccination reduces incidence markedly.",
+      "timing_criticality": "Hypoxaemia identification and oxygen within hours can be life-saving.",
+      "cost_effectiveness": "Oxygen systems, pulse oximetry and vaccination are highly cost-effective interventions."
     },
     "recommended_interventions": {
       "immediate_additions": [
-        "Scale-up pulse oximetry and oxygen concentrators to all Level 3 and above facilities with maintenance plans",
-        "Intensify PCV immunization outreach and catch-up campaigns in low-coverage counties",
-        "Strengthen community case management (training CHVs, pre-referral antibiotics and referral systems)"
+        "Nationwide roll-out of pulse oximetry and oxygen concentrators with maintenance plans to all Level 3–5 facilities.",
+        "Scale-up of PCV and Hib vaccination coverage and integrated management of childhood illness at community level.",
+        "Strengthen community case management (CHVs) for early detection and referral and ensure emergency transport links."
       ],
       "service_specifications": [
-        "Oxygen pipeline for Level 4-6 where feasible; standardized oxygen equipment list and maintenance schedules",
-        "Triage protocols using pulse oximetry; oxygen eligibility and transfer criteria",
-        "Integrated management of childhood illnesses (IMCI) strengthening"
+        "Oxygen systems: continuous supply, concentrator plus cylinder backups, biomedical maintenance contracts.",
+        "Community packages: IMCI-trained CHVs, stocked antibiotic kits, referral vouchers for transport.",
+        "Monitoring: oxygen usage logs, pulse oximetry screening for all suspected pneumonia cases."
       ],
       "implementation_phases": [
-        "Phase 1 (0–6 months): Oxygen/pulse oximeter rollout to high-burden Level 3 facilities and cold-chain for vaccines",
-        "Phase 2 (6–24 months): County-level oxygen hubs, biomedical engineering capacity building",
-        "Phase 3 (24–48 months): Nationwide maintenance systems and CHV integration"
+        "Phase 1 (0–6 months): Provide pulse oximeters and concentrators to high-burden counties and train staff/CHVs.",
+        "Phase 2 (6–24 months): Scale to all Level 3–5 facilities, establish maintenance contracts and oxygen plants where feasible.",
+        "Phase 3 (24–48 months): Integrate preventive measures (nutrition, vaccination) and strengthen long-term supply chains."
       ]
     },
     "resource_requirements": {
-      "human_resources": "Train biomedical engineers/technicians, nurses on oxygen therapy and IMCI refresher courses for CHVs.",
-      "infrastructure": "Pulse oximeters, oxygen concentrators, cylinders for remote sites, maintenance tools and spare parts.",
-      "training_needs": "IMCI retraining, oxygen therapy protocols, equipment maintenance training.",
-      "estimated_cost": "KES ~1.5–2.5B phased investment (equipment, training, maintenance) over 3 years."
+      "human_resources": "Train clinicians and CHVs in IMCI, oxygen therapy, and equipment maintenance; strengthen biomedical technicians.",
+      "infrastructure": "Purchase of pulse oximeters, oxygen concentrators, cylinders and maintenance tools; cold chain strengthening for vaccines.",
+      "training_needs": "IMCI refresher, oxygen therapy protocols, biomedical technician apprenticeships.",
+      "estimated_cost": "KES 2.5 billion over 3 years for equipment, training and maintenance in all counties."
     },
     "implementation_feasibility": {
-      "technical_feasibility": "HIGH — proven models exist in Kenya and neighbouring countries.",
-      "financial_feasibility": "MEDIUM — affordable with donor support and county co-financing; high cost-effectiveness.",
+      "technical_feasibility": "HIGH — proven technologies and delivery models with clear supply-chain and maintenance needs.",
+      "financial_feasibility": "HIGH — relatively low-cost interventions with strong mortality reduction potential.",
       "political_feasibility": "HIGH — aligns with child survival and UHC priorities.",
-      "timeline_realistic": "2–3 years for substantial coverage with robust maintenance."
+      "timeline_realistic": "2–3 years for widespread functional oxygen and pulse oximetry coverage."
     },
     "success_metrics": {
-      "process_indicators": "Number of facilities with functional oxygen and pulse oximetry, PCV coverage rates, CHV trained numbers.",
-      "outcome_indicators": "Under-5 pneumonia case fatality rates, time-to-oxygen administration.",
-      "impact_indicators": "Reduction in pneumonia deaths (registered deaths) and under-5 mortality.",
-      "equity_indicators": "Oxygen availability in rural vs urban facilities and vaccine coverage by county."
+      "process_indicators": "Proportion of facilities with functional pulse oximetry and continuous oxygen; vaccine coverage rates.",
+      "outcome_indicators": "Under-5 pneumonia case fatality rates, hypoxaemia detection rates and time-to-oxygen.",
+      "impact_indicators": "Reduction in pneumonia-attributable deaths across all ages.",
+      "equity_indicators": "Coverage of oxygen and vaccination in rural vs urban facilities; CHV reach in remote wards."
     },
     "kenya_context_integration": {
-      "county_variations": "Prioritize arid and high under-5 mortality counties for oxygen roll-out and vaccine catch-up.",
-      "cultural_considerations": "Community education on care-seeking and vaccination benefits; involve local leaders.",
-      "integration_opportunities": "Link with immunization programmes, CHS and PHC fund, and donor-supported child health initiatives.",
-      "sustainability_factors": "County biomedical units, pooled procurement of oxygen consumables, NHIF inclusion of oxygen-related tariffs."
+      "county_variations": "Arid and remote counties need solar-powered concentrators and stronger transport systems; high-density urban settlements need outreach vaccination drives.",
+      "cultural_considerations": "Community engagement to encourage early care-seeking and adherence to referral advice.",
+      "integration_opportunities": "Link oxygen and IMCI strengthening with existing maternal-child health and immunisation programmes.",
+      "sustainability_factors": "County budget allocation for biomedical maintenance, pooled procurement of concentrators and integration into NHIF essential packages."
     }
   },
   {
-    "gap_id": "MATERNAL_EMOC_004",
-    "gap_category": "emergency_obstetric_care",
-    "gap_type": "capacity_and_referral_gap",
+    "gap_id": "EMERGENCY_OBSTETRIC_CARE_004",
+    "gap_category": "emergency_obstetric_and_newborn_care",
+    "gap_type": "service_capacity_gap",
     "clinical_priority": "HIGH",
-    "description": "Persistently high maternal mortality (MMR ~130–170/100,000) with uneven county performance; gaps in comprehensive emergency obstetric care (CEmOC), blood transfusion services and timely referral systems.",
+    "description": "Emergency obstetric and neonatal care (EmONC) services are uneven across counties, contributing to persistently high maternal mortality ratio (130–170/100,000) and perinatal deaths; gaps include surgical capacity, blood transfusion, newborn resuscitation and referral systems.",
     "kenya_epidemiological_context": {
-      "disease_burden": "Maternal mortality remains unacceptably high with wide county disparities; obstetric hemorrhage and hypertensive disorders are leading causes.",
-      "prevalence_data": "Skilled birth attendance improving but not uniformly; facility capability for CEmOC limited in many counties.",
-      "current_outcomes": "Delays in reaching appropriate care, shortage of blood products and surgical capacity contribute to mortality.",
-      "geographic_burden": "Rural and remote counties have highest maternal mortality and longest referral times."
+      "disease_burden": "Maternal mortality remains high with substantial county variation; obstetric haemorrhage, sepsis and hypertensive disorders are major contributors.",
+      "prevalence_data": "Estimated annual births ~1.0–1.2 million; ~15% will experience obstetric complications needing EmONC.",
+      "current_outcomes": "Delays in receiving definitive care (second and third delays) drive mortality; perinatal mortality remains high in underserved counties.",
+      "geographic_burden": "Rural and remote counties show higher MMR and lower facility-based delivery rates."
     },
     "affected_populations": {
-      "primary_population": "Pregnant women with obstetric emergencies (PPH, eclampsia, obstructed labour).",
-      "estimated_annual_cases": "Thousands of women annually require CEmOC; estimate several thousand severe maternal outcomes.",
-      "demographic_profile": "Women of reproductive age across all counties; highest risk in remote, low-resource areas.",
-      "vulnerable_groups": "Adolescents, women in remote/rural counties, low socio-economic status."
+      "primary_population": "Pregnant women during labour and postpartum period and neonates requiring resuscitation or specialised care.",
+      "estimated_annual_cases": "Approximately 150,000–200,000 obstetric complications annually (estimated 15% of births).",
+      "demographic_profile": "Pregnant women across all reproductive-age groups with higher risk in adolescents and older mothers.",
+      "vulnerable_groups": "Rural women, adolescents, women in informal settlements, those with limited financial means."
     },
     "current_coverage_assessment": {
-      "existing_services": "CEmOC services concentrated in select Level 4-6 hospitals; many Level 4 facilities lack 24/7 theatre, blood banking and anaesthesia.",
-      "geographic_availability": "Uneven distribution of CEmOC and blood transfusion services across 47 counties.",
-      "capacity_utilization": "Referral hospitals overburdened; delays for theatre and blood provision common.",
-      "wait_times": "Delays of hours to critical interventions in some counties due to staffing and supply gaps."
+      "existing_services": "Some county referral hospitals provide basic and comprehensive EmONC but many Level 3–4 facilities lack signal functions (e.g., blood transfusion, C-section capacity).",
+      "geographic_availability": "C-section and blood transfusion services concentrated at Level 4–6 hospitals; many sub-counties lack timely access.",
+      "capacity_utilization": "Referral hospitals overwhelmed during peak delivery periods; shortages of skilled birth attendants.",
+      "wait_times": "Delays to surgery and blood transfusion measured in hours due to transport and availability."
     },
     "health_system_impact_analysis": {
-      "level_1_2_impact": "Poor birth preparedness and community referral planning; CHVs underutilized.",
-      "level_3_impact": "Health centres lack capability for emergency obstetric surgeries and blood transfusion.",
-      "level_4_impact": "County hospitals often serve as first-level CEmOC but lack consistent 24/7 capacity.",
-      "level_5_6_impact": "Tertiary centres manage complications but receive late referrals.",
-      "referral_pathway_gaps": "Weak ambulance coverage, poor communication and no standardized referral triage protocols."
+      "level_1_2_impact": "Community recognition and referral cues exist but transport and birth-preparedness limited.",
+      "level_3_impact": "Health centres often manage normal deliveries but lack capacity for obstetric emergencies.",
+      "level_4_impact": "County hospitals variably provide comprehensive EmONC; workforce gaps for obstetrics and anaesthesia.",
+      "level_5_6_impact": "Tertiary centres handle complex cases with referrals from multiple counties leading to overload.",
+      "referral_pathway_gaps": "Weak ambulance networks, no standard transfer protocols, limited blood bank networks at county level."
     },
     "clinical_evidence_base": {
-      "international_guidelines": "WHO ANC and intrapartum guidelines recommend access to CEmOC, blood transfusion and trained personnel.",
-      "clinical_effectiveness": "Timely access to CEmOC reduces maternal deaths from haemorrhage and hypertensive disorders substantially.",
-      "timing_criticality": "Minutes-to-hours critical for many obstetric emergencies.",
-      "cost_effectiveness": "Investment in CEmOC and blood systems is highly cost-effective in reducing maternal mortality."
+      "international_guidelines": "WHO and UN EmONC signal functions define life-saving interventions for maternal and newborn survival.",
+      "clinical_effectiveness": "Timely EmONC (C-section, blood transfusion, parenteral antibiotics) prevents majority of maternal deaths.",
+      "timing_criticality": "Interventions often needed within minutes to hours (e.g., postpartum haemorrhage management).",
+      "cost_effectiveness": "Strengthening EmONC is highly cost-effective with large mortality reductions per investment unit."
     },
     "recommended_interventions": {
       "immediate_additions": [
-        "Upgrade selected Level 4 hospitals to provide 24/7 CEmOC and basic blood transfusion services in each county",
-        "Establish maternity blood banks or efficient blood supply chains and emergency blood protocols",
-        "Strengthen referral networks with dedicated ambulances and tele-consultation hubs"
+        "Ensure all Level 4 hospitals provide comprehensive EmONC (6 signal functions), including 24/7 C-section and blood transfusion readiness.",
+        "Strengthen newborn care (resuscitation, KMC units) at Level 4–5 facilities.",
+        "Establish functional referral and emergency transport networks with standardised protocols."
       ],
       "service_specifications": [
-        "24/7 theatre, trained anaesthesia providers, obstetric surgeons, neonatal resuscitation capacity",
-        "Blood storage and cross-match capability at county hubs with cold-chain and testing",
-        "Standardized maternal emergency triage and transfer protocols"
+        "24/7 skilled birth attendants, obstetric theatre readiness, on-call anaesthesia, rapid blood transfusion protocols and neonatal resuscitation equipment.",
+        "Training: Emergency obstetric drills, obstetric anaesthesia skill enhancement, blood safety and storage protocols.",
+        "Referral: Ambulance dispatch, stabilisation checklists, teleconsultation back-up to tertiary centres."
       ],
       "implementation_phases": [
-        "Phase 1 (0–6 months): Map gaps, equip and staff 1 CEmOC per county in high-need areas",
-        "Phase 2 (6–24 months): Scale to ensure at least 1 fully functional CEmOC centre per 300,000 population",
-        "Phase 3 (24–48 months): Strengthen ambulance networks and blood supply reliability"
+        "Phase 1 (0–6 months): Map EmONC gaps, equip and staff 50 high-need Level 4 hospitals, establish blood storage hubs.",
+        "Phase 2 (6–24 months): Scale to remaining Level 4 hospitals and strengthen referral networks and transport vouchers for poorest women.",
+        "Phase 3 (24–48 months): Consolidate 24/7 services nationwide and integrate with maternal death surveillance and response (MDSR)."
       ]
     },
     "resource_requirements": {
-      "human_resources": "Train and deploy obstetricians, anaesthetists, theatre nurses, midwives; retention incentives for rural postings.",
-      "infrastructure": "Theatre upgrades, blood storage, emergency equipment, ambulance fleet expansion.",
-      "training_needs": "EmOC simulation training, blood transfusion safety, neonatal resuscitation.",
-      "estimated_cost": "KES ~3–6B phased over 3 years (equipment, staffing, ambulance procurement and blood system strengthening)."
+      "human_resources": "Train additional obstetricians, anaesthetists, midwives and neonatal nurses; deploy anaesthesia technicians to county hospitals.",
+      "infrastructure": "Theatres, blood storage and cold chain, neonatal units (KMC, CPAP), ambulances and communication systems.",
+      "training_needs": "Advanced Life Support in Obstetrics, neonatal resuscitation, blood transfusion safety and surgical mentorship programs.",
+      "estimated_cost": "KES 6 billion over 3 years for upgrades to 47 counties (theatre upgrades, staffing, ambulances and blood hubs)."
     },
     "implementation_feasibility": {
-      "technical_feasibility": "MEDIUM — requires multi-sector coordination and skilled staff deployment.",
-      "financial_feasibility": "MEDIUM — could be prioritized within PHC fund and county budgets with donor support.",
-      "political_feasibility": "HIGH — maternal health is a visible political priority with public support.",
-      "timeline_realistic": "2–4 years for meaningful reductions with phased upgrades and referral strengthening."
+      "technical_feasibility": "HIGH — uses well-established EmONC models with clear signal functions.",
+      "financial_feasibility": "MEDIUM — requires capital and recurrent staffing investments but substantial mortality reduction supports prioritisation.",
+      "political_feasibility": "HIGH — maternal health is a top political and development priority across counties.",
+      "timeline_realistic": "3 years to reach functional 24/7 EmONC in most county referral hospitals with phased investment."
     },
     "success_metrics": {
-      "process_indicators": "Number of functional CEmOC sites per county, blood units available, ambulance response times.",
-      "outcome_indicators": "Case fatality rate for obstetric haemorrhage and eclampsia, maternal near-miss rates.",
-      "impact_indicators": "Reduction in county-level MMR and facility-based maternal deaths.",
-      "equity_indicators": "Access to CEmOC by remote populations and reduction in urban-rural MMR gap."
+      "process_indicators": "Proportion of facilities with all EmONC signal functions; number of functional ambulances per county.",
+      "outcome_indicators": "Facility maternal mortality ratio, case fatality rate for obstetric haemorrhage and sepsis.",
+      "impact_indicators": "Reduction in national MMR and perinatal mortality rates.",
+      "equity_indicators": "Proportion of sub-counties with timely access to C-section within 2 hours; financial protection for poorest women."
     },
     "kenya_context_integration": {
-      "county_variations": "Focus on high-MMR counties with large geographic access barriers; tailor workforce incentives accordingly.",
-      "cultural_considerations": "Engage traditional birth attendants and community leaders to improve timely referral.",
-      "integration_opportunities": "Link with NHIF maternal benefits, PHC fund, and county emergency services.",
-      "sustainability_factors": "County health budgets, public–private partnerships for ambulance and blood services, task-sharing policies."
+      "county_variations": "Arid and sparsely populated counties need tailored transport solutions; densely populated counties need more theatre throughput.",
+      "cultural_considerations": "Engage TBAs, CHVs and community leaders for birth preparedness and referral acceptance.",
+      "integration_opportunities": "Link EmONC strengthening with MNCH programmes, NHIF maternal packages and county emergency medical services.",
+      "sustainability_factors": "County budget lines for staffing and ambulance maintenance; mentorship networks to retain staff in remote counties."
     }
   },
   {
-    "gap_id": "MENTAL_HEALTH_SCALEUP_005",
-    "gap_category": "mental_health_services",
-    "gap_type": "service_availability_and_integration_gap",
+    "gap_id": "MENTAL_HEALTH_INTEGRATION_005",
+    "gap_category": "mental_health_services_integration",
+    "gap_type": "service_delivery_gap",
     "clinical_priority": "HIGH",
-    "description": "Growing burden of mental health disorders with severe shortages in service availability, workforce, and integration into primary care leading to untreated mental illness and associated morbidity.",
+    "description": "Mental health services remain fragmented with inadequate integration into primary care, severe workforce shortages and limited access to community-based care and inpatient psychiatric services, despite rising burden.",
     "kenya_epidemiological_context": {
-      "disease_burden": "Rising prevalence of depression, anxiety, and substance use disorders; mental health contributes to morbidity and suicide risk.",
-      "prevalence_data": "Estimates vary by county; urban areas report higher service demand and substance use-related disorders among youth.",
-      "current_outcomes": "High treatment gap; long delays to care and concentration of psychiatrists in a few urban centres.",
-      "geographic_burden": "Most counties lack inpatient psychiatric beds and community mental health teams."
+      "disease_burden": "Growing burden of common mental disorders and substance use disorders; severe mental illness prevalence estimated at 1–3% with higher rates of depression/anxiety.",
+      "prevalence_data": "Population-level estimates suggest substantial unmet need with many not accessing any care.",
+      "current_outcomes": "High morbidity, reduced productivity, increased comorbidity with NCDs and elevated suicide risk in some groups.",
+      "geographic_burden": "Specialist services concentrated in urban centres; rural counties have minimal or no psychiatric services."
     },
     "affected_populations": {
-      "primary_population": "Adolescents and adults with common and severe mental disorders; people with substance use disorders.",
-      "estimated_annual_cases": "Hundreds of thousands with common mental disorders needing intervention; thousands with severe mental illness requiring specialist care.",
-      "demographic_profile": "High burden among youth (15–29) and economically active adults; urban slums show higher substance use.",
-      "vulnerable_groups": "Orphans, persons with HIV, refugees, prisoners, and low-income urban populations."
+      "primary_population": "People with common mental disorders (depression, anxiety), severe mental illness (psychosis, bipolar), adolescents and substance users.",
+      "estimated_annual_cases": "Millions affected by common mental disorders; severe cases in the low hundreds of thousands needing specialised care.",
+      "demographic_profile": "Disproportionate impact on urban poor, young adults, and individuals with chronic NCDs or HIV.",
+      "vulnerable_groups": "Adolescents, HIV-positive patients, people in informal settlements, internally displaced populations."
     },
     "current_coverage_assessment": {
-      "existing_services": "Limited psychiatric units in few referral hospitals; primary care rarely integrates mental health screening/treatment.",
-      "geographic_availability": "Psychiatric specialists concentrated in Nairobi and a few counties; many counties without inpatient services.",
-      "capacity_utilization": "Existing psychiatric beds often occupied; long wait times for specialist outpatient clinics.",
-      "wait_times": "Weeks to months for specialist consultations; primary care staff have little training."
+      "existing_services": "Psychiatric hospitals and some county mental health units; limited outpatient counselling and community rehabilitation programmes.",
+      "geographic_availability": "Services largely in Nairobi and a few county referral hospitals; many counties have no psychiatrist or clinical psychologist.",
+      "capacity_utilization": "Existing specialist units overburdened; long waitlists for outpatient care.",
+      "wait_times": "Weeks to months for specialist appointments; primary care providers have limited capacity to manage mental health needs."
     },
     "health_system_impact_analysis": {
-      "level_1_2_impact": "Community health strategy underutilized for mental health promotion and early detection.",
-      "level_3_impact": "Health centres lack psychotropic medication stocks and trained staff for first-line management.",
-      "level_4_impact": "County hospitals lack dedicated mental health teams and rehabilitation services.",
-      "level_5_6_impact": "Referral hospitals manage severe cases but are overburdened and distant for many patients.",
-      "referral_pathway_gaps": "Weak referral and follow-up, minimal community-based rehabilitation and social support linkages."
+      "level_1_2_impact": "CHVs and primary care rarely trained to detect and manage common mental disorders or refer appropriately.",
+      "level_3_impact": "Health centres lack counselling services, psychotropic medication supply inconsistent.",
+      "level_4_impact": "County hospitals need integrated mental health clinics, liaison psychiatry and social support links.",
+      "level_5_6_impact": "Specialist hospitals handle complex cases but lack outreach and training programmes for counties.",
+      "referral_pathway_gaps": "No systematic stepped-care model; weak community rehabilitation and social support services leading to relapse and rehospitalisation."
     },
     "clinical_evidence_base": {
-      "international_guidelines": "WHO mhGAP recommends integration of mental health into primary care and task-sharing.",
-      "clinical_effectiveness": "Task-shared psychological and pharmacological interventions are effective for common mental disorders.",
-      "timing_criticality": "Early detection and community-based interventions reduce chronicity and socioeconomic impact.",
-      "cost_effectiveness": "Integration into primary care and use of CHVs is cost-effective and scalable."
+      "international_guidelines": "WHO mhGAP recommends task-shifting to integrate mental health into primary care and community-based services.",
+      "clinical_effectiveness": "Task-shared psychological interventions and psychotropic treatment in primary care reduce morbidity and are cost-effective.",
+      "timing_criticality": "Early detection and treatment reduce chronicity and suicide risk; adolescent interventions have long-term benefits.",
+      "cost_effectiveness": "Integration into PHC and task-shifting yields high returns via improved productivity and reduced inpatient costs."
     },
     "recommended_interventions": {
       "immediate_additions": [
-        "Implement mhGAP-based training for primary care clinicians and CHVs across all counties",
-        "Ensure essential psychotropic medications are included in county essential medicines lists and stocked at Level 3+ facilities",
-        "Pilot community mental health teams and telepsychiatry hubs linked to Level 4-6 referral centres"
+        "Implement mhGAP-based integration into all Level 3–5 facilities with task-shifting to nurses and clinical officers.",
+        "Establish county mental health units with outreach to primary care and CHV-supported community psychosocial programmes.",
+        "Ensure steady supply of essential psychotropic medicines in the national EML and county pharmacies."
       ],
       "service_specifications": [
-        "Screening and first-line management at Level 3 with clear referral pathways for severe cases",
-        "Community-based psychosocial rehabilitation, substance use services, and suicide prevention programmes",
-        "Data collection and integration into DHIS2 for monitoring mental health indicators"
+        "Stepped-care model: screening at community/primary care, brief psychosocial interventions, referral pathways to specialised care.",
+        "Multidisciplinary teams: psychiatric clinical officers, psychologists, social workers, peer support groups.",
+        "Digital/telepsychiatry support from tertiary centres for supervision and case management."
       ],
       "implementation_phases": [
-        "Phase 1 (0–6 months): National mhGAP roll-out plan and training-of-trainers",
-        "Phase 2 (6–24 months): County-level integration in 20 priority counties and medication supply chain strengthening",
-        "Phase 3 (24–48 months): Full national integration with community teams and telepsychiatry"
+        "Phase 1 (0–6 months): Pilot mhGAP training and supervision in 10 counties with highest service gaps.",
+        "Phase 2 (6–24 months): Scale mhGAP training nationwide, set up county mental health focal points and supply chains.",
+        "Phase 3 (24–48 months): Consolidate community rehabilitation, peer support and integrate mental health into NHIF benefit packages."
       ]
     },
     "resource_requirements": {
-      "human_resources": "Train thousands of primary care workers and CHVs in mhGAP modules; recruit psychiatric nurses and psychologists at county level.",
-      "infrastructure": "Telehealth platforms, community psychosocial spaces, secure medication storage.",
-      "training_needs": "mhGAP in-service training, supervision mechanisms from psychiatrists.",
-      "estimated_cost": "KES ~1–2B phased over 3 years (training, medicines, telepsychiatry set-up)."
+      "human_resources": "Scale training for ~2,500 primary care providers in mhGAP, recruit county-level psychiatric clinical officers and psychologists.",
+      "infrastructure": "Basic counselling spaces in primary care, telemedicine platforms for supervision, community rehabilitation centres.",
+      "training_needs": "mhGAP training, psychosocial interventions training, supervisory mentorship from psychiatrists.",
+      "estimated_cost": "KES 1.8 billion over 3 years for training, supervision, essential medicines and telepsychiatry platforms."
     },
     "implementation_feasibility": {
-      "technical_feasibility": "HIGH — proven task-shifting models exist and can be integrated with PHC.",
-      "financial_feasibility": "MEDIUM — modest recurrent costs for medicines and supervision; high value for money.",
-      "political_feasibility": "MEDIUM–HIGH — increasing political recognition but requires stigma-reduction efforts.",
-      "timeline_realistic": "2–4 years for broad primary care integration; longer for specialist workforce expansion."
+      "technical_feasibility": "HIGH — strong evidence for task-shifting models and digital supervision.",
+      "financial_feasibility": "MEDIUM — moderate recurrent costs; high value-for-money through reduced inpatient stays and improved productivity.",
+      "political_feasibility": "MEDIUM to HIGH — growing recognition but stigma and competing priorities require advocacy.",
+      "timeline_realistic": "3 years for functional integration into PHC with pilot-to-scale approach."
     },
     "success_metrics": {
-      "process_indicators": "Number of primary care staff trained, facilities stocking essential psychotropics, telepsychiatry consultations.",
-      "outcome_indicators": "Reduction in symptom scores, treatment retention rates, suicide attempt rates.",
-      "impact_indicators": "Reduction in DALYs attributable to mental disorders, improved productivity indicators.",
-      "equity_indicators": "Service availability in rural counties and uptake by vulnerable groups."
+      "process_indicators": "Number of primary care providers trained in mhGAP; proportion of facilities offering basic mental health services.",
+      "outcome_indicators": "Reduction in untreated prevalence, symptom score improvements for treated patients, suicide attempt rates.",
+      "impact_indicators": "Reduced psychiatric admissions for relapse, improved economic productivity indicators among beneficiaries.",
+      "equity_indicators": "Access to mental health services in rural vs urban counties, uptake among adolescents and women."
     },
     "kenya_context_integration": {
-      "county_variations": "Tailor models to urban informal settlements (substance use focus) and rural areas (depression/psychosocial support).",
-      "cultural_considerations": "Engage faith leaders and community elders to reduce stigma and support referral.",
-      "integration_opportunities": "Link with HIV clinics, maternal health services, and school health programmes.",
-      "sustainability_factors": "NHIF reimbursement for mental health services, county adoption of mhGAP into routine supervision."
-    }
-  },
-  {
-    "gap_id": "RURAL_REFERRAL_EMS_006",
-    "gap_category": "rural_referral_and_emergency_transport",
-    "gap_type": "access_and_logistics_gap",
-    "clinical_priority": "HIGH",
-    "description": "Weak emergency medical services (EMS) and referral transport systems impede timely access to definitive care for trauma, obstetric emergencies and severe medical conditions in rural Kenya.",
-    "kenya_epidemiological_context": {
-      "disease_burden": "Injuries are leading cause of death ages 15–29; delays in trauma care and referrals increase mortality and disability.",
-      "prevalence_data": "High motorcycle/road injuries in working-age adults; obstetric emergencies and severe infections also require rapid transfer.",
-      "current_outcomes": "Prolonged pre-hospital time, avoidable deaths and disability due to lack of reliable EMS.",
-      "geographic_burden": "70% rural population with poor road networks and sparse ambulance coverage in many counties."
-    },
-    "affected_populations": {
-      "primary_population": "Trauma victims, obstetric emergencies, severe acute medical cases requiring urgent transfer.",
-      "estimated_annual_cases": "Tens of thousands of emergency referrals annually; substantial unmet need in remote areas.",
-      "demographic_profile": "Youth and working-age adults disproportionately affected by injuries; pregnant women in remote areas at risk.",
-      "vulnerable_groups": "Rural residents, low-income people without private transport, persons in arid and remote counties."
-    },
-    "current_coverage_assessment": {
-      "existing_services": "Ambulance fleets concentrated in urban counties and national referral hospitals; inconsistent county EMS systems.",
-      "geographic_availability": "Many sub-counties lack functional ambulances or rapid-response capability.",
-      "capacity_utilization": "Available ambulances often used for administrative transfers rather than emergency response.",
-      "wait_times": "Long delays or reliance on private taxis/vehicles for emergency transfers."
-    },
-    "health_system_impact_analysis": {
-      "level_1_2_impact": "Community first responders and CHVs lack structured pre-hospital care training and equipment.",
-      "level_3_impact": "Health centres provide stabilization but cannot reliably transfer patients quickly.",
-      "level_4_impact": "County referral hospitals sometimes lack capacity to receive and manage high-acuity cases from remote areas.",
-      "level_5_6_impact": "Tertiary hospitals receive late referrals with greater severity and worse outcomes.",
-      "referral_pathway_gaps": "No national EMS standards for ambulance dispatch, triage and equipment; poor communication between facilities."
-    },
-    "clinical_evidence_base": {
-      "international_guidelines": "WHO Emergency Care Systems Framework recommends organized pre-hospital care, triage and referral.",
-      "clinical_effectiveness": "Structured EMS and pre-hospital interventions reduce mortality from trauma and time-critical conditions.",
-      "timing_criticality": "Golden hour in trauma and minutes-to-hours for obstetric hemorrhage or sepsis.",
-      "cost_effectiveness": "Strategic EMS investments (hub-and-spoke ambulances, community first responders) are cost-effective relative to lives saved and disability averted."
-    },
-    "recommended_interventions": {
-      "immediate_additions": [
-        "Establish county-level EMS coordination units with dedicated ambulances for emergency response",
-        "Equip ambulances with essential emergency kits and oxygen; implement dispatcher systems where feasible",
-        "Train CHVs and health workers in basic pre-hospital trauma care and stabilization protocols"
-      ],
-      "service_specifications": [
-        "Ambulance-to-population targets (e.g., 1 ambulance per 50,000–100,000 population in rural counties with optimized deployment)",
-        "Standard operating procedures for triage, transfer and inter-facility communication",
-        "Maintenance and fuel funding lines in county budgets"
-      ],
-      "implementation_phases": [
-        "Phase 1 (0–6 months): Pilot EMS coordination and ambulance upgrades in 10 high-need counties",
-        "Phase 2 (6–24 months): Scale ambulance coverage with dispatcher linkages and CHV training across more counties",
-        "Phase 3 (24–48 months): Nationwide EMS standards, integration with referral and NHIF reimbursement for emergency transport"
-      ]
-    },
-    "resource_requirements": {
-      "human_resources": "Train ambulance crews, dispatch operators, first responders; incentives for rural EMS staff.",
-      "infrastructure": "Purchase/refurbish ambulances, communication/dispatch tools, fuel and maintenance budgets.",
-      "training_needs": "Pre-hospital care, triage, obstetric emergency stabilization, trauma life support for non-physician providers.",
-      "estimated_cost": "KES ~2–4B over 3 years for phased national EMS strengthening (vehicles, training, dispatch)."
-    },
-    "implementation_feasibility": {
-      "technical_feasibility": "MEDIUM — logistical and maintenance challenges in remote areas but proven models exist.",
-      "financial_feasibility": "MEDIUM — recurrent costs (fuel/maintenance) require county commitment and possible NHIF emergency transport reimbursement.",
-      "political_feasibility": "HIGH — high public visibility and support for improved emergency services.",
-      "timeline_realistic": "2–4 years for meaningful coverage with phased roll-out and maintenance systems."
-    },
-    "success_metrics": {
-      "process_indicators": "Ambulance response times, number of trained pre-hospital personnel, functioning dispatch centres.",
-      "outcome_indicators": "Pre-hospital mortality rates for trauma, time-to-definitive-care metrics for obstetric emergencies.",
-      "impact_indicators": "Reduction in mortality and disability from time-critical conditions, DALYs averted.",
-      "equity_indicators": "Ambulance availability and response time stratified by rural/urban and county."
-    },
-    "kenya_context_integration": {
-      "county_variations": "Customize fleet size and deployment for sparsely populated arid counties vs dense rural counties.",
-      "cultural_considerations": "Community engagement to support ambulance acceptance and use; use community transport arrangements where ambulances impractical.",
-      "integration_opportunities": "Link EMS with referral hubs, NHIF emergency packages, and county disaster management units.",
-      "sustainability_factors": "County operational budgeting for fuel and maintenance, public–private partnerships for ambulance provision, community-based financing where relevant."
+      "county_variations": "Urban counties require youth-friendly mental health services; remote counties need telepsychiatry and CHV-led psychosocial support.",
+      "cultural_considerations": "Stigma reduction campaigns, engagement with faith and community leaders, use of local languages in counselling.",
+      "integration_opportunities": "Leverage HIV, maternal health and NCD platforms for screening and integrated care.",
+      "sustainability_factors": "Inclusion of mental health in county health strategic plans, NHIF reimbursement for psychosocial interventions and psychotropic medicines, local workforce retention incentives."
     }
   }
 ]

@@ -1,0 +1,42 @@
+{
+  "tables_extracted": 4,
+  "test_pages": [
+    5,
+    10,
+    15,
+    20,
+    25
+  ],
+  "first_table": {
+    "page": 5,
+    "table_index": 0,
+    "text_representation": "PAGE 5 - TABLE 0:\n\u27a2\rIntra-admissionconsultationand\rreviewsbybothgeneraland\rspecialistconsultants,Laboratory\rinvestigations,medicalimaging,\rprocedures, and medication.\r\u27a2\rBedsideservicesincluding\rphysiotherapy,occupational\rtherapy,oxygensupply,medical\rconsumables,andtherapeutic\rnutritional support.\r\u27a2\rCross-matchingand\radministration of blood and blood\rproducts;derivativesand\rcomponents,artificialblood\rproducts, and biological serum.\r\u27a2\rPost-dischargemedicationor\rfollow-upwithinthetreatment\rplan.\nSOCIAL HEALTH INSURANCE FUND\nOUTPATIENT CARE SERVICES\nScope | Access Point | Tariff | Access Rules\nHealth education and wellness,\rcounselling, and ongoing support as\rneeded\r\u27a2\rConsultation,diagnosis,and\rtreatment.\r\u27a2\rPrescribedlaboratory\rinvestigations.\r\u27a2\rBasicradiologicalexaminations\rincluding X-rays, ultrasounds.\r\u27a2\rPrescription, drug administration\rand dispensing | Level 4-6 | \u27a2\rKES 2,000\r\u27a2\rPPM: Fee for Service \u2013\rFixed Fee\r\u27a2\rARVs, HIV testing and\rfollow up tests, family\rplanning commodities, anti-\rmalarial medication and\rtesting, anti TBs and\rtesting, KEPI vaccines, as\rprovided in the guidelines, | \u27a2\rLimit: 4 Visits per year per person\r\u27a2\rARVs, antimalarials, anti TBs, and\rassociated tests, family planning\rcommodities, KEPI vaccines will be\rprovided at public facilities, and faith\rbased & private facilities that report\rto the health information system.",
+    "row_count": 5,
+    "col_count": 4
+  },
+  "ai_test_result": {
+    "super_heading": "SOCIAL HEALTH INSURANCE FUND",
+    "service_categories": [
+      {
+        "category_name": "OUTPATIENT CARE SERVICES",
+        "services": [
+          "Health education and wellness",
+          "Counselling",
+          "Consultation",
+          "Diagnosis",
+          "Treatment",
+          "Prescribed laboratory investigations",
+          "Basic radiological examinations (X-rays, ultrasounds)",
+          "Prescription, drug administration and dispensing",
+          "ARVs, HIV testing and follow up tests",
+          "Family planning commodities",
+          "Anti-malarial medication and testing",
+          "Anti TBs and testing",
+          "KEPI vaccines"
+        ]
+      }
+    ],
+    "analysis": "The table presents the hierarchical structure of a healthcare policy, with 'SOCIAL HEALTH INSURANCE FUND' as the major heading. Under this heading, the 'OUTPATIENT CARE SERVICES' category includes a variety of individual services, indicating a comprehensive approach to outpatient care, encompassing health education, diagnosis, treatment, and preventative measures."
+  },
+  "api_working": true
+}

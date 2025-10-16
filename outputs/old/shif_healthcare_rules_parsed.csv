@@ -1,0 +1,923 @@
+service_name,rule_type,specialty,facility_level,tariff_amount,payment_method,conditions_count,coverage_conditions_count,exclusions_count
+"Health education and wellness, counselling, and on...",policy,N/A,Level 2,900.0,Per Annum,2,1,0
+"Consultation, diagnosis, and treatment",policy,N/A,Level 2,900.0,Per Annum,1,1,0
+Prescribed laboratory inve sti gations,policy,N/A,Level 2,900.0,Per Annum,1,1,0
+"Basic radiological examinations including X-rays, ...",policy,N/A,Level 2,900.0,Per Annum,1,1,0
+"Prescription, drug administration and dispensing",policy,N/A,Level 2,900.0,Per Annum,1,1,0
+Management of acute and chronic conditions for end...,policy,N/A,Level 2,900.0,Per Annum,2,1,0
+"Management ofNCDs, enteric infections; neglectedtr...",policy,N/A,Level 2,900.0,Per Annum,2,1,0
+"diseases ( NTDs ), STI ’ sand HIV / AIDS",policy,N/A,Private,,Not specified,1,1,0
+Screening for common health conditions,policy,N/A,Private,,Not specified,1,1,0
+Minor surgical procedure sand medical procedures i...,policy,N/A,Private,,Not specified,1,1,0
+Immunization asper the KEPI schedule and recomme n...,policy,N/A,Private,,Not specified,1,1,0
+"Reproductive, Maternal and Child Health Services a...",policy,N/A,Private,,Not specified,2,1,0
+"MATERNITY, NEWBORN AND CHILD HEALTH SERVICES",policy,N/A,Not specified,,Not specified,1,1,0
+"Ante-natal care, delivery by ways of normal delive...",policy,N/A,Level 2,11.0,Not specified,3,1,0
+After care for the mother together with the newbor...,policy,N/A,Level 2,11.0,Not specified,3,1,0
+"Midwifery, including episio tomy care and nursing ...",policy,N/A,Level 2,11.0,Not specified,3,1,0
+"Operating, recovery, maternity wardand other treat...",policy,N/A,Level 2,11.0,Not specified,3,1,0
+Immunisation for the newborn.,policy,N/A,Level 2,11.0,Not specified,3,1,0
+"Vita minK for newborn, chlorhexidine administratio...",policy,N/A,Level 2,11.0,Not specified,3,1,0
+Provision of warmth and newborn resuscitation,policy,N/A,Level 2,11.0,Not specified,3,1,0
+Intra- admission and post- discharge medication.,policy,N/A,Not specified,,Not specified,1,1,0
+Diagnostic laboratory tests,policy,N/A,Not specified,,Not specified,1,1,0
+Administration of blood and blood products; deriva...,policy,N/A,Not specified,,Not specified,1,1,0
+"Medical supplies and equipment, including oxygen.",policy,N/A,Not specified,,Not specified,1,1,0
+Post natal family plan ning.,policy,N/A,Not specified,,Not specified,1,1,0
+Management ofpo stpa rtum infections and haemorrha...,policy,N/A,Not specified,,Not specified,4,1,0
+Mana geme ntof neonatal conditions.,policy,N/A,Not specified,,Not specified,1,1,0
+Obste tric and neonatal complications including in...,policy,N/A,Not specified,,Not specified,4,1,0
+Anti-D Serum for Rhesus-negative mothers.,policy,N/A,Not specified,,Not specified,1,1,0
+SCREENING & MANAGEMENT OF PRE- CANCE ROUS LESIONS,policy,N/A,Not specified,,Not specified,1,1,0
+"Screening for common cancers ( breast, cervix, pro...",policy,N/A,Level 2,3.0,Not specified,1,1,1
+Unnamed Service,policy,N/A,Not specified,3.0,Not specified,1,1,0
+OPTICAL HEALTH SERVICES,policy,N/A,Not specified,,Not specified,1,1,0
+Services covered include consultation and diagnosi...,policy,N/A,Level 2,935.0,Not specified,1,1,1
+Eye health education and counselling.,policy,N/A,Level 2,935.0,Not specified,1,1,1
+"Eye tests including fund oscopy, visual acuity tes...",policy,N/A,Level 2,935.0,Not specified,1,1,1
+Treatment of refractive errors through eyeglasses.,policy,N/A,Level 2,935.0,Not specified,1,1,1
+END OF LIFE SERVICES,policy,N/A,Not specified,,Not specified,1,1,0
+Preparation and storage of the body in mortuary,policy,N/A,Not specified,500.0,Not specified,1,1,0
+Preservation and storage of the body in mortuary.,policy,N/A,Not specified,500.0,Not specified,1,1,0
+MEDICAL INPATIENT SERVICES,policy,N/A,Not specified,,Not specified,1,1,0
+Inpatient services shall include management of dis...,policy,N/A,Level 3,2.0,Not specified,1,1,0
+Pre- admission evaluation.,policy,N/A,Level 3,2.0,Not specified,1,1,0
+"Hospital accommodation charges, meals and nursing ...",policy,N/A,Level 3,2.0,Not specified,1,1,0
+Intra- admission consultation and review sbyboth g...,policy,N/A,Not specified,,Not specified,1,1,0
+"Bed side services including physio therapy, occupa...",policy,N/A,Not specified,,Not specified,1,1,0
+Cross-matching and administration of blood and blo...,policy,N/A,Not specified,,Not specified,1,1,0
+Post - discharge medi cati onor follow-up within t...,policy,N/A,Not specified,,Not specified,1,1,0
+Unnamed Service,policy,N/A,Not specified,,Not specified,1,1,0
+OUTPATIENT CARE SERVICES,policy,N/A,Not specified,,Not specified,1,1,0
+"Health education and wellness, counselling, and on...",policy,N/A,Level 4,2.0,Not specified,2,1,0
+"Consultation, diagnosis, and treatment.",policy,N/A,Level 4,2.0,Not specified,1,1,0
+Prescribed laboratory inve sti gations.,policy,N/A,Level 4,2.0,Not specified,1,1,0
+"Basic radiological examinations including X-rays, ...",policy,N/A,Level 4,2.0,Not specified,1,1,0
+"Prescription, drug administration and dispensing",policy,N/A,Level 4,2.0,Not specified,1,1,0
+Management of acute and chronic conditions for end...,policy,N/A,Not specified,,Not specified,1,1,0
+"Management ofNCDs, enteric infections; neglectedtr...",policy,N/A,Not specified,,Not specified,1,1,0
+Screening for common health conditions,policy,N/A,Not specified,,Not specified,1,1,0
+Minor surgical procedure sand medical procedures,policy,N/A,Not specified,,Not specified,1,1,0
+Immunization asper the KEPI schedule and recomme n...,policy,N/A,Not specified,,Not specified,1,1,0
+"Reproductive, Maternal and Child Health Services a...",policy,N/A,Not specified,,Not specified,2,1,0
+MEDICAL INPATIENT SERVICES,policy,N/A,Not specified,,Not specified,1,1,0
+Inpatient services shall include management of dis...,policy,N/A,Level 4,3.0,Not specified,1,1,0
+Pre- admission evaluation,policy,N/A,Level 4,3.0,Not specified,1,1,0
+"Hospital accommodation charges, meals and nursing ...",policy,N/A,Level 4,3.0,Not specified,1,1,0
+Intra- admission consultation and review sbyboth g...,policy,N/A,Level 4,3.0,Not specified,1,1,0
+"Bed side services including physio therapy, occupa...",policy,N/A,Not specified,,Not specified,1,1,0
+Cross-matching and administration of blood and blo...,policy,N/A,Not specified,,Not specified,1,1,0
+Post - discharge medi cati onor follow-up within t...,policy,N/A,Not specified,,Not specified,1,1,0
+"MATERNITY, NEONATAL AND CHILD HEALTH SERVICES",policy,N/A,Not specified,,Not specified,1,1,0
+"Delivery by ways of normal delivery, assisted deli...",policy,N/A,Level 4,11.0,Not specified,1,1,0
+After care for the mother together with the newbor...,policy,N/A,Level 4,11.0,Not specified,1,1,0
+"Midwifery, including episio tomy care and nursing ...",policy,N/A,Level 4,11.0,Not specified,1,1,0
+"Operating, recovery, maternity ward and other trea...",policy,N/A,Level 4,11.0,Not specified,1,1,0
+Immunization for the newborn.,policy,N/A,Level 4,11.0,Not specified,2,1,0
+Intra- admission and post- discharge medication.,policy,N/A,Level 4,11.0,Not specified,1,1,0
+Diagnostic laboratory tests.,policy,N/A,Level 4,11.0,Not specified,1,1,0
+Admi nist rati onof blood and blood products; deri...,policy,N/A,Level 4,11.0,Not specified,1,1,0
+"components, artificial blood products, and biologi...",policy,N/A,Not specified,,Not specified,1,1,0
+"Medical supplies and equipment, including oxygen.",policy,N/A,Not specified,,Not specified,1,1,0
+Post natal family plan ning.,policy,N/A,Not specified,,Not specified,1,1,0
+Management ofpo stpa rtum infections and haemorrha...,policy,N/A,Not specified,,Not specified,4,1,0
+Mana geme ntof neonatal conditions.,policy,N/A,Not specified,,Not specified,1,1,0
+Obste tric and neonatal complications including in...,policy,N/A,Not specified,,Not specified,4,1,0
+RENAL CARE PACKAGE,policy,N/A,Not specified,,Not specified,1,1,0
+The management of kidney failure due tochronicd is...,policy,N/A,Level 4,10.0,Per Session,1,1,0
+Consultation and special ist's review.,policy,N/A,Level 4,10.0,Per Session,1,1,0
+Cost ofthe temporary catheter and insertion / remo...,policy,N/A,Level 4,10.0,Per Session,1,1,0
+Nursing care and dialysis services.,policy,N/A,Level 4,10.0,Per Session,1,1,0
+Routine laboratory inve sti gations.,policy,N/A,Level 4,10.0,Per Session,1,1,0
+"Dispensati onof medication and mainten ance drug, ...",policy,N/A,Level 4,10.0,Per Session,1,1,0
+Continuous intermit tent dialysis and other dialys...,policy,N/A,Not specified,,Not specified,1,1,0
+MENTAL WELLLNESS BENEFIT PACKAGE,policy,N/A,Not specified,,Not specified,1,1,0
+The mental health services cover caters for;,policy,N/A,Level 3,1.0,Per Session,1,1,1
+Mental Health education and counselling.,policy,N/A,Level 3,1.0,Per Session,2,1,1
+"Screening, management and referral for behavioral ...",policy,N/A,Level 3,1.0,Per Session,2,1,1
+Rehabilitation for substance related addictive dis...,policy,N/A,Level 3,1.0,Per Session,1,1,1
+SURGICAL SERVICES PACKAGE,policy,N/A,Not specified,,Not specified,1,1,0
+The Surgical Package covers the below list of surg...,policy,N/A,Level 2,,Not specified,2,1,0
+Pre- operative admission and care.,policy,N/A,Level 2,,Not specified,2,1,0
+"Minor, major and special ized surgical procedures ...",policy,N/A,Level 2,,Not specified,2,1,0
+Administration of blood and blood products; deriva...,policy,N/A,Level 2,,Not specified,2,1,0
+"components, artificial blood products, and biologi...",policy,N/A,Level 4,,Not specified,1,1,0
+Management of intra operative complications and co...,policy,N/A,Level 4,,Not specified,1,1,0
+All additional medical or surgical service require...,policy,N/A,Level 4,,Not specified,1,1,0
+Post operative visits - follow-up visits during th...,policy,N/A,Level 4,,Not specified,1,1,0
+Post - proce dure pain management.,policy,N/A,Level 4,,Not specified,1,1,0
+Post - opera tive ward physio therapy.,policy,N/A,Level 4,,Not specified,1,1,0
+Supplies - except for those identified as exclusio...,policy,N/A,Level 4,,Not specified,1,1,0
+Miscellaneous services - items such as dressing ch...,policy,N/A,Level 4,,Not specified,1,1,0
+Critical care services related to the surgical pro...,policy,N/A,Level 4,,Not specified,1,1,0
+"Diagnostic tests and procedure, including diagnost...",policy,N/A,Not specified,,Not specified,1,1,0
+Immunosuppressive therapy for organ transplants.,policy,N/A,Not specified,,Not specified,1,1,0
+ONCOLOGY SERVICES,policy,N/A,Not specified,,Not specified,1,1,0
+Oncology services shall entail screening and treat...,policy,N/A,Level 4,5.0,Per Session,2,1,0
+"Administration of Chemo therapy, Radio therapy, Br...",policy,N/A,Level 4,5.0,Per Session,1,1,0
+"Consumables, stoma appliances, premeds, and post m...",policy,N/A,Level 4,5.0,Per Session,1,1,0
+Chemo therapy pump,policy,N/A,Level 4,5.0,Per Session,1,1,0
+Routine and special ized laboratory inve sti gatio...,policy,N/A,Level 4,5.0,Per Session,1,1,0
+"Screening, cross-matching and administration of bl...",policy,N/A,Level 4,5.0,Per Session,1,1,0
+Treatment plan ning,policy,N/A,Level 4,5.0,Per Session,1,1,0
+Radioiodine therapy,policy,N/A,Level 4,5.0,Per Session,1,1,0
+Radiological services where necessary as part of o...,policy,N/A,Level 4,5.0,Per Session,1,1,0
+Management through surgical interventions,policy,N/A,Level 4,5.0,Per Session,1,1,0
+Management of pre- cancer conditions,policy,N/A,Not specified,,Not specified,1,1,0
+MEDICAL IMAGING AND OTHER INVE STI GATIONS PACKAGE,policy,N/A,Not specified,,Not specified,1,1,0
+Covers Prescribed special ized imaging services in...,policy,N/A,Level 2,11.0,Not specified,3,1,0
+MRI,policy,N/A,Level 2,11.0,Not specified,3,1,0
+CT scans,policy,N/A,Level 2,11.0,Not specified,3,1,0
+CT Angio,policy,N/A,Level 2,11.0,Not specified,3,1,0
+Fluoroscopy,policy,N/A,Level 2,11.0,Not specified,3,1,0
+Mammography,policy,N/A,Level 2,11.0,Not specified,3,1,0
+Special ized ultrasounds ( Dopplers ),policy,N/A,Level 2,11.0,Not specified,3,1,0
+Echo cardiog rams ( ECHO ),policy,N/A,Level 2,11.0,Not specified,3,1,0
+Electroencephalograms ( EEGs ) and,policy,N/A,Level 2,11.0,Not specified,3,1,0
+Review ingandinte rpre ting radiological images gi...,policy,N/A,Level 2,11.0,Not specified,3,1,0
+Unnamed Service,policy,N/A,Not specified,,Not specified,2,1,0
+PHARMACY PACKAGE,policy,N/A,Not specified,,Not specified,1,1,0
+Medicines for select chronic conditions:,policy,N/A,Not specified,,Not specified,1,1,0
+"Diabetes type 1 & 2,",policy,N/A,Not specified,,Not specified,1,1,0
+"Hypertension,",policy,N/A,Not specified,,Not specified,1,1,0
+"Asthma,",policy,N/A,Not specified,,Not specified,1,1,0
+Chronic renal disea seon dialysis,policy,N/A,Not specified,,Not specified,1,1,0
+Post transplant immunosuppressants,policy,N/A,Not specified,,Not specified,1,1,0
+"Chronic obstruc tive pulmonary disease,",policy,N/A,Not specified,,Not specified,1,1,0
+Sickle cell,policy,N/A,Not specified,,Not specified,1,1,0
+Oncology medicines,policy,N/A,Not specified,,Not specified,1,1,0
+Anti-D,policy,N/A,Not specified,,Not specified,1,1,0
+Anti Snake Venom,policy,N/A,Not specified,,Not specified,1,1,0
+Anti Rabies,policy,N/A,Not specified,,Not specified,1,1,0
+Mental Health long-ac ting medicines,policy,N/A,Not specified,,Not specified,1,1,0
+Epilepsy,policy,N/A,Not specified,,Not specified,1,1,0
+SPECIAL IZED LABORATORY SERVICE,policy,N/A,Not specified,,Not specified,1,1,0
+Special ized testing as captured in the essential ...,policy,N/A,Not specified,,Not specified,1,1,0
+"Diabetes type 1 & 2,",policy,N/A,Not specified,,Not specified,1,1,0
+"Hypertension,",policy,N/A,Not specified,,Not specified,1,1,0
+Asthma,policy,N/A,Not specified,,Not specified,1,1,0
+Chronic renal disea seon dialysis,policy,N/A,Not specified,,Not specified,1,1,0
+Post transplant immunosuppression,policy,N/A,Not specified,,Not specified,1,1,0
+Chronic obstruc tive pulmonary disease,policy,N/A,Not specified,,Not specified,1,1,0
+Sickle cell,policy,N/A,Not specified,,Not specified,1,1,0
+Oncology medicines,policy,N/A,Not specified,,Not specified,1,1,0
+Anti-D,policy,N/A,Not specified,,Not specified,1,1,0
+Anti Snake Venom,policy,N/A,Not specified,,Not specified,1,1,0
+Anti Rabies,policy,N/A,Not specified,,Not specified,1,1,0
+Mental Health long-ac ting medicines,policy,N/A,Not specified,,Not specified,1,1,0
+Epilepsy,policy,N/A,Not specified,,Not specified,1,1,0
+END OF LIFE SERVICES,policy,N/A,Not specified,,Not specified,1,1,0
+Preparation and storage of the body in mortuary,policy,N/A,Level 4,500.0,Not specified,1,1,0
+Unnamed Service,policy,N/A,Not specified,,Not specified,1,1,0
+AMBULANCE EVACUATION SERVICES,policy,N/A,Not specified,,Not specified,1,1,0
+Evacuation from the pointof the incident to the ne...,policy,N/A,Not specified,4.0,Not specified,1,1,0
+ACCIDENT & EMERGENCY SERVICES,policy,N/A,Not specified,,Not specified,1,1,0
+This cover includes resuscitation and stabilizatio...,policy,N/A,Level 2,5015.0,Not specified,1,1,0
+Cardiac and pulmonary arrest,policy,N/A,Level 2,5015.0,Not specified,1,1,0
+"Major trauma ( severe burns, head injuries, severe...",policy,N/A,Level 2,5015.0,Not specified,1,1,0
+"Shockstates ( Haemorrhagic, septic, dehydration )",policy,N/A,Level 2,5015.0,Not specified,1,1,0
+"Alteredlevelof consciousness ( unconsciousness, co...",policy,N/A,Level 2,5015.0,Not specified,1,1,0
+Seizures,policy,N/A,Level 2,5015.0,Not specified,1,1,0
+Chest pain ( Acute Coro nary Syndrome / Pulmonary ...,policy,N/A,Not specified,,Not specified,1,1,0
+Anti Snake Venom & Anti Rabies,policy,N/A,Not specified,,Not specified,1,1,0
+Unnamed Service,policy,N/A,Not specified,3.0,Not specified,1,1,0
+CRITICAL ILLNESS PACKAGE,policy,N/A,Not specified,,Not specified,1,1,0
+This will cater for Critical care admission sinI n...,policy,N/A,Level 4,35.0,Not specified,1,1,0
+PALLIATIVE CARE SERVICES,policy,N/A,Not specified,,Not specified,1,1,0
+This benefit aims at enhancing the quality of life...,policy,N/A,Level 4,5.0,Not specified,1,1,0
+CHRONIC ILLNESSES,policy,N/A,Not specified,,Not specified,1,1,0
+Longitudinalmanagementof chronic condition sand di...,policy,N/A,Level 4,,Not specified,1,1,0
+Management of cancers beyond the SHIF limit,policy,N/A,Level 4,,Not specified,1,1,0
+"Mana geme ntof mental, neur odev elop mental, affe...",policy,N/A,Level 4,,Not specified,1,1,0
+psychoactive disorders and substance addictive dis...,policy,N/A,Not specified,,Not specified,1,1,0
+Selected special ized surgeries,policy,N/A,Not specified,,Not specified,1,1,0
+ASSISTIVE DEVICES,policy,N/A,Not specified,,Not specified,1,1,0
+Provision of assistive devices to support patients...,policy,N/A,Level 4,55.0,Not specified,3,1,0
+Aortic Valvuloplasty,annex_procedure,Cardiology,Level 4+ (County Hospital or higher),620000.0,fee-for-service,1,1,2
+ASD percutaneous device closure,annex_procedure,Cardiology,Level 4+ (County Hospital or higher),414400.0,fee-for-service,1,1,2
+Atrial Septostomy,annex_procedure,Cardiology,Level 4+ (County Hospital or higher),201600.0,fee-for-service,1,1,3
+Cardiac Resynchronization Therapy Defibrillator (C...,annex_procedure,Cardiology,Level 4+ (County Hospital or higher),504000.0,fee-for-service,1,1,2
+Cardiac Resynchronization Therapy Pacemaker (CRT-P...,annex_procedure,Cardiology,Level 4+ (County Hospital or higher),537600.0,fee-for-service,1,1,2
+Coronary angiography (diagnostic),annex_procedure,Cardiology,Level 4+ (County Hospital or higher),78400.0,fee-for-service,1,1,2
+Coronary Angioplasty (with single or Multiple Sten...,annex_procedure,Cardiology,Level 4+ (County Hospital or higher),537600.0,fee-for-service,1,1,2
+Diagnostic catheterization,annex_procedure,Cardiology,Level 4+ (County Hospital or higher),78400.0,fee-for-service,1,1,2
+Dual Chamber pacemaker insertion (permanent),annex_procedure,Cardiology,Level 4+ (County Hospital or higher),280000.0,fee-for-service,1,1,2
+Implantable Converter Defibrillator (ICD) Dual cha...,annex_procedure,Cardiology,Level 4+ (County Hospital or higher),504000.0,fee-for-service,1,1,2
+ chamber insertion,annex_procedure,Cardiology,Level 4+ (County Hospital or higher),504000.0,fee-for-service,1,1,2
+Intra- Aortic Balloon Pump,annex_procedure,Cardiology,Level 4+ (County Hospital or higher),168000.0,fee-for-service,1,1,2
+IVC Filter insertion,annex_procedure,Cardiology,Level 4+ (County Hospital or higher),168000.0,fee-for-service,1,1,2
+Loop recorder - reveal link,annex_procedure,Cardiology,Level 4+ (County Hospital or higher),537600.0,fee-for-service,1,1,2
+Loop recorder-reveal xt,annex_procedure,Cardiology,Level 4+ (County Hospital or higher),358400.0,fee-for-service,1,1,2
+Mitral Valvoplasty,annex_procedure,Cardiology,Level 4+ (County Hospital or higher),392000.0,fee-for-service,1,1,2
+PDA percutaneous device closure,annex_procedure,Cardiology,Level 4+ (County Hospital or higher),414400.0,fee-for-service,1,1,2
+Peripheral Angiography,annex_procedure,Cardiology,Level 4+ (County Hospital or higher),56000.0,fee-for-service,1,1,2
+Peripheral Angioplasty,annex_procedure,Cardiology,Level 4+ (County Hospital or higher),280000.0,fee-for-service,1,1,2
+Pulmonary artery catheterization,annex_procedure,Cardiology,Level 4+ (County Hospital or higher),78400.0,fee-for-service,1,1,2
+Pulmonary Valvoplasty,annex_procedure,Cardiology,Level 4+ (County Hospital or higher),448000.0,fee-for-service,1,1,2
+Renal artery stenting,annex_procedure,Cardiology,Level 4+ (County Hospital or higher),280000.0,fee-for-service,1,1,2
+Retrival of Foreign bodies,annex_procedure,Cardiology,Level 4+ (County Hospital or higher),145600.0,fee-for-service,1,1,2
+Right and Left Catheterization,annex_procedure,Cardiology,Level 4+ (County Hospital or higher),145600.0,fee-for-service,1,1,2
+Single Chamber pacemaker insertion (permanent),annex_procedure,Cardiology,Level 4+ (County Hospital or higher),224000.0,fee-for-service,1,1,2
+Single pacemaker insertion (temporary),annex_procedure,Cardiology,Level 4+ (County Hospital or higher),44800.0,fee-for-service,1,1,2
+Thoracic endovascular aortic repair (TEVAR),annex_procedure,Cardiology,Level 4+ (County Hospital or higher),504000.0,fee-for-service,1,1,2
+VSD percutanoeus device closure,annex_procedure,Cardiology,Level 4+ (County Hospital or higher),414400.0,fee-for-service,1,1,2
+Abdominal Aortic Aneurym Repair (Open),annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),392000.0,fee-for-service,1,1,2
+Achalasia cardia/Diverticulum,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),280000.0,fee-for-service,1,1,2
+Anterior Chest Wall Mass Excision and Reconstructi...,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),599200.0,fee-for-service,1,1,2
+Anterior Mediastinal Mass Resection,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),599200.0,fee-for-service,1,1,2
+Aortic Valve Replacement (AVR),annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),1064000.0,fee-for-service,1,1,2
+Arteriovenous Malformation Resection,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),386400.0,fee-for-service,1,1,2
+Atrial Septal Defect Closure,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),784000.0,fee-for-service,1,1,3
+AV Fistula Take down,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),33600.0,fee-for-service,1,1,2
+Bentall's Procedure,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),1358000.0,fee-for-service,1,1,2
+Bidirectional Glenn Shunt,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),954800.0,fee-for-service,1,1,2
+Blalock Taussig (BT) Shunt,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),688800.0,fee-for-service,1,1,2
+Bronchopleural fistula repair,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),562800.0,fee-for-service,1,1,2
+Bronchoscopy and removal of FB,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),78400.0,fee-for-service,1,1,2
+CABG + Double Valve Replacement,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),1442000.0,fee-for-service,1,1,2
+CABG + MWR/AVR,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),1220800.0,fee-for-service,1,1,2
+Carotid Artery Endarterectomy,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),145600.0,fee-for-service,1,1,2
+Carotid Body Tumour Excision,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),246400.0,fee-for-service,1,1,2
+Carotid Body Tumour Redo Surgery,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),646800.0,fee-for-service,1,3,2
+Closed valvotomy,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),192000.0,fee-for-service,1,1,2
+Coarctation of Aorta repair with graft,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),280000.0,fee-for-service,1,1,2
+Coarctation of Aorta repair without graft,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),280000.0,fee-for-service,1,1,2
+Complete Atrioventricular Canal Defect Repair,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),1024800.0,fee-for-service,1,1,2
+Complex repair for congenital heart disease,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),1248800.0,fee-for-service,1,2,2
+Congenital AV fistula malformation Resection,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),201600.0,fee-for-service,1,1,2
+Conventional Elephant Trunk (CET) Procedure,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),1302000.0,fee-for-service,1,1,2
+Coronary artery Bypass Grafting (CABG),annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),868000.0,fee-for-service,1,1,2
+Cox Maze IV Procedure,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),513000.0,fee-for-service,1,1,2
+Diaphragmatic Hernia Repair,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),224000.0,fee-for-service,1,1,2
+Dissected Aortic Aneurysm Repair (Open),annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),392000.0,fee-for-service,1,1,2
+Double Valve Replacement,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),1248800.0,fee-for-service,1,1,2
+Endovascular Aneurysm Repair (EVAR),annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),1626800.0,fee-for-service,1,1,2
+Esophagostomy,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),470400.0,fee-for-service,1,1,2
+ESRD AV Fistula Creation,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),78400.0,fee-for-service,1,1,2
+ESRD AV Graft Surgery,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),168000.0,fee-for-service,1,3,2
+Excision of Mediastinal Tumour,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),280000.0,fee-for-service,1,1,2
+Fontan procedure,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),954800.0,fee-for-service,1,1,2
+Frozen Elephant Trunk (FET) Procedure,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),1411200.0,fee-for-service,1,1,2
+Gastrostomy/Jejunostomy,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),89600.0,fee-for-service,1,1,2
+Heller's myotomy,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),386400.0,fee-for-service,1,1,2
+Insertion of MB tube,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),44800.0,fee-for-service,1,1,2
+Lung decortication,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),224000.0,fee-for-service,1,1,2
+Mitral Valve Replacement (MVR),annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),1064000.0,fee-for-service,1,1,2
+Mitral Valvotomy / Balloon,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),224000.0,fee-for-service,1,1,2
+Myocardial Biopsy,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),44800.0,fee-for-service,1,1,2
+Oesophageal perforation Repair,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),554400.0,fee-for-service,1,1,2
+Oesophagectomy,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),747600.0,fee-for-service,1,1,2
+Open Lobectomy,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),590800.0,fee-for-service,1,1,2
+Open Lung Biopsy,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),350000.0,fee-for-service,1,1,2
+Open Patent Ductus Arteriosus (PDA) surgery,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),313600.0,fee-for-service,1,3,2
+Open Pneumonectomy,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),280000.0,fee-for-service,1,1,2
+Open Removal of Esophageal Foreign Body,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),554400.0,fee-for-service,1,1,2
+Open Removal of Tracheal/Bronchial Foreign Body,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),554400.0,fee-for-service,1,1,2
+Other aneurysms repair,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),392000.0,fee-for-service,1,1,2
+Pacemaker Change of battery,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),134400.0,fee-for-service,1,1,2
+Partial Atrioventricular Canal Defect Repair,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),784000.0,fee-for-service,1,1,2
+Pericardial Catheterization,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),89600.0,fee-for-service,1,1,2
+Pericardial Window,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),89600.0,fee-for-service,1,1,2
+Pericardiectomy,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),554400.0,fee-for-service,1,1,2
+Pericardiocentesis,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),56000.0,fee-for-service,1,1,2
+Peripheral Vascular Disease (PAD) Bypass Grafting,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),392000.0,fee-for-service,1,1,2
+Peripheral Vascular Disease (PAD) Embolectomy,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),168000.0,fee-for-service,1,1,2
+Peripheral Vascular Disease (PAD) Endovascular Bal...,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),280000.0,fee-for-service,1,1,2
+Peripheral Vascular Disease (PAD) Endovascular Ste...,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),280000.0,fee-for-service,1,1,2
+Peripheral Vascular Disease (PAD) Vascular Amputat...,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),350000.0,fee-for-service,1,1,2
+Pleurodesis,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),144200.0,fee-for-service,1,1,2
+Primary Open Pacemaker implantation,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),224000.0,fee-for-service,1,1,2
+Pulmonary Artery Banding,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),481600.0,fee-for-service,1,1,2
+Repair of Ruptured Diaphragm,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),145600.0,fee-for-service,1,1,2
+Simple Thoracotomy-Retained Haemothrax /Duct ligat...,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),201600.0,fee-for-service,1,1,2
+Simple tracheal/Bronchial fistula repairs,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),224000.0,fee-for-service,1,1,2
+Splenorenal shunt,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),112000.0,fee-for-service,1,1,2
+Subfascial DVT ligation + skin graft,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),89600.0,fee-for-service,1,1,2
+Tetralogy of Fallot Repair,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),952000.0,fee-for-service,1,1,2
+Thoracic Aortic Aneurysm Repair (Open),annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),392000.0,fee-for-service,1,1,2
+Thoracic Endovascular Aneurysm Repair (TEVAR),annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),2186800.0,fee-for-service,1,1,2
+Thoracotomy,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),350000.0,fee-for-service,1,1,2
+Tracheal Stenosis Resection and Anastomosis,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),747600.0,fee-for-service,1,1,2
+Tracheal/Bronchial Reconstruction,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),358400.0,fee-for-service,1,1,2
+Transcatheter percutaneous device PDA closure,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),414400.0,fee-for-service,1,1,2
+Traumatic Tracheal/Bronchial Disruption repair and...,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),747600.0,fee-for-service,2,1,2
+Traumatic Vascular Injury Repair,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),145600.0,fee-for-service,2,1,2
+Tube Thoracostomy,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),144200.0,fee-for-service,1,1,2
+Vascular Exposure and Safeguarding for Anterior Lu...,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),498400.0,fee-for-service,1,1,2
+Venous Insufficiency Laser Ablation,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),263200.0,fee-for-service,1,1,2
+Venous Insufficiency Perforator Ligation,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),229600.0,fee-for-service,1,1,2
+Venous Insufficiency Radiofrequency Ablation,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),271600.0,fee-for-service,1,1,2
+Venous Insufficiency Stripping,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),229600.0,fee-for-service,1,1,2
+Ventricular Septal Defect Closure,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),868000.0,fee-for-service,1,1,2
+Vessel bypass Surgery,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),246400.0,fee-for-service,1,3,2
+Video Assisted Thoracoscopic Surgery (VATS) Decort...,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),224000.0,fee-for-service,1,3,2
+Video Assisted Thoracoscopic Surgery (VATS) Lobect...,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),590800.0,fee-for-service,1,3,2
+Video Assisted Thoracoscopic Surgery (VATS) Pneumo...,annex_procedure,Cardiothoracic and Vascular,Level 5-6 (Specialized Hospital),280000.0,fee-for-service,1,3,2
+Block dissection of the neck,annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),224000.0,fee-for-service,1,1,2
+Cochlea operations,annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),358400.0,fee-for-service,1,3,2
+Excision and reconstruction of head and neck tumou...,annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),257600.0,fee-for-service,1,1,2
+Excision of pharyngeal diverticulum,annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),168000.0,fee-for-service,1,1,2
+Facial nerve decompression,annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),358400.0,fee-for-service,1,1,2
+Laryngectomy (Partial),annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),201600.0,fee-for-service,1,1,2
+Laryngectomy (Total),annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),280000.0,fee-for-service,1,1,2
+Laryngectomy with radical neck dissection,annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),336000.0,fee-for-service,1,1,2
+Middle ear tumour excision,annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),224000.0,fee-for-service,1,1,2
+Total/ Radical parotidectomy,annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),168000.0,fee-for-service,1,1,2
+"EUA and biopsy of nasopharynx, ears, nose",annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),28000.0,fee-for-service,1,1,2
+Frontal sinus trephination,annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),22400.0,fee-for-service,1,1,2
+Maxillary Artery Ligation,annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),67200.0,fee-for-service,1,1,2
+MUA # nose,annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),33600.0,fee-for-service,1,1,2
+Removal of FB in ear or nose (paediatrics under GA...,annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),61600.0,fee-for-service,1,1,2
+Adenoidectomy,annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),72240.0,fee-for-service,1,1,2
+Adenotonsillectomy (Ts 7 As),annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),77840.0,fee-for-service,1,1,2
+Cricotracheal reconstruction,annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),89600.0,fee-for-service,1,1,2
+Direct laryngoscopy and biopsy,annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),50400.0,fee-for-service,1,1,2
+Excision of submandibular gland,annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),89600.0,fee-for-service,1,1,2
+Frontal mucocele,annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),78400.0,fee-for-service,1,1,2
+Functional endoscopic sinus surgery (FESS),annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),123200.0,fee-for-service,1,3,2
+Hemiglossectomy,annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),89600.0,fee-for-service,1,1,2
+Intranasal ethmoidectomy,annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),112000.0,fee-for-service,1,1,2
+Laryngocele excision,annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),89600.0,fee-for-service,1,1,2
+"Lateral Rhinotomy (due to tumour, scars or congeni...",annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),67200.0,fee-for-service,1,1,2
+Maxillectomy,annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),134400.0,fee-for-service,1,1,2
+Myringoplasty,annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),67200.0,fee-for-service,1,1,2
+Myringotomy,annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),44800.0,fee-for-service,1,1,2
+Nasal polypectomy,annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),67200.0,fee-for-service,1,1,2
+Radical mastoidectomy,annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),145600.0,fee-for-service,1,1,2
+"Rhinoplasty: Soft and bony tissue (Tumours, congen...",annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),89600.0,fee-for-service,1,1,2
+"Rhinoplasty: Soft tissue (Tumors, congenital, trau...",annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),89600.0,fee-for-service,1,1,2
+"Septoplasty (Tumors, congenital, trauma)",annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),44800.0,fee-for-service,1,1,2
+Simple mastoidectomy,annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),44800.0,fee-for-service,1,1,2
+Submucous resection of nasal septum,annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),44800.0,fee-for-service,1,1,2
+Superficial Parotidectomy,annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),89600.0,fee-for-service,1,1,2
+T.I.T. and Intranasal Antrostomy,annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),100800.0,fee-for-service,1,1,2
+T.I.T. and Turbinoplasty,annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),100800.0,fee-for-service,1,1,2
+Tonsillectomy,annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),56000.0,fee-for-service,1,1,2
+Transplatatal excision of Choanal atresia,annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),89600.0,fee-for-service,1,1,2
+Tympanoplasty,annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),78400.0,fee-for-service,1,1,2
+Uvulopalatopharyngoplasty,annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),78400.0,fee-for-service,1,1,2
+Vocal Cord lateralisation,annex_procedure,Ear Nose & Throat,Level 4+ (County Hospital or higher),112000.0,fee-for-service,1,1,2
+Abdominoperineal resection (APR-tumor),annex_procedure,General,Level 3-4 (Health Center/County Hospital),134400.0,fee-for-service,1,1,2
+Anterior Resection of Rectum,annex_procedure,General,Level 3-4 (Health Center/County Hospital),123200.0,fee-for-service,1,1,2
+Appendicectomy,annex_procedure,General,Level 3-4 (Health Center/County Hospital),67200.0,fee-for-service,1,1,2
+Bilateral Herniotomy,annex_procedure,General,Level 3-4 (Health Center/County Hospital),56000.0,fee-for-service,1,1,2
+Bilateral Herniotomy + orchidopexy,annex_procedure,General,Level 3-4 (Health Center/County Hospital),56000.0,fee-for-service,1,1,2
+Bilateral inguinal herniorrapphy,annex_procedure,General,Level 3-4 (Health Center/County Hospital),56000.0,fee-for-service,1,1,2
+Bilateral Orchidopexy,annex_procedure,General,Level 3-4 (Health Center/County Hospital),56000.0,fee-for-service,1,1,2
+Bowel resection and anastomosis,annex_procedure,General,Level 3-4 (Health Center/County Hospital),112000.0,fee-for-service,1,1,2
+Breast Lumpectomy under GA,annex_procedure,General,Level 3-4 (Health Center/County Hospital),22400.0,fee-for-service,1,1,2
+Cervical lymph node biopsy,annex_procedure,General,Level 3-4 (Health Center/County Hospital),11200.0,fee-for-service,1,1,2
+Cholecystectomy,annex_procedure,General,Level 3-4 (Health Center/County Hospital),89600.0,fee-for-service,1,1,2
+Closure of Colostomy,annex_procedure,General,Level 3-4 (Health Center/County Hospital),89600.0,fee-for-service,1,1,2
+Colostomy,annex_procedure,General,Level 3-4 (Health Center/County Hospital),89600.0,fee-for-service,1,1,2
+diathermy excision of warts or subcutaneous tissue,annex_procedure,General,Level 3-4 (Health Center/County Hospital),8960.0,fee-for-service,1,1,2
+Drainage of Breast abscess (only under GA),annex_procedure,General,Level 3-4 (Health Center/County Hospital),11200.0,fee-for-service,1,1,2
+Excision of Liver hydatid cyst,annex_procedure,General,Level 3-4 (Health Center/County Hospital),134400.0,fee-for-service,1,1,2
+Excision of Thyroglossal cyst,annex_procedure,General,Level 3-4 (Health Center/County Hospital),89600.0,fee-for-service,1,1,2
+Exploration of retroperitoneal mass,annex_procedure,General,Level 3-4 (Health Center/County Hospital),112000.0,fee-for-service,1,1,2
+Exploratory Laparotomy,annex_procedure,General,Level 3-4 (Health Center/County Hospital),67200.0,fee-for-service,1,1,2
+gastrojejunostomy,annex_procedure,General,Level 3-4 (Health Center/County Hospital),134400.0,fee-for-service,1,1,2
+Haemorrhoidectomy,annex_procedure,General,Level 3-4 (Health Center/County Hospital),44800.0,fee-for-service,1,1,2
+Hemicolectomy,annex_procedure,General,Level 3-4 (Health Center/County Hospital),134400.0,fee-for-service,1,1,2
+Incision & Drainage (Peri anal Abscess),annex_procedure,General,Level 3-4 (Health Center/County Hospital),14000.0,fee-for-service,1,1,2
+Incision & Drainage Under GA,annex_procedure,General,Level 3-4 (Health Center/County Hospital),11200.0,fee-for-service,1,1,2
+Incision +drainage head and neck abscess (I&D) und...,annex_procedure,General,Level 3-4 (Health Center/County Hospital),11200.0,fee-for-service,1,1,2
+Incision and drainage of ocular abscess or cyst (I...,annex_procedure,General,Level 3-4 (Health Center/County Hospital),5600.0,fee-for-service,1,1,2
+Insertion of chest tube / chest aspiration,annex_procedure,General,Level 3-4 (Health Center/County Hospital),8960.0,fee-for-service,1,1,2
+Intestinal resection + anastomosis,annex_procedure,General,Level 3-4 (Health Center/County Hospital),134400.0,fee-for-service,1,1,2
+Laparoscopic Niessens fundoplication,annex_procedure,General,Level 3-4 (Health Center/County Hospital),212800.0,fee-for-service,1,1,2
+Laparotomy for Pyloric stenosis,annex_procedure,General,Level 3-4 (Health Center/County Hospital),134400.0,fee-for-service,1,1,2
+Lateral Sphincterotomy,annex_procedure,General,Level 3-4 (Health Center/County Hospital),44800.0,fee-for-service,1,1,2
+Lumbar puncture,annex_procedure,General,Level 3-4 (Health Center/County Hospital),5600.0,fee-for-service,1,1,2
+Lymph node biopsy,annex_procedure,General,Level 3-4 (Health Center/County Hospital),11200.0,fee-for-service,1,1,2
+Minor Surgical Toilet Under GA,annex_procedure,General,Level 3-4 (Health Center/County Hospital),11200.0,fee-for-service,1,1,2
+Needle biopsy: liver,annex_procedure,General,Level 3-4 (Health Center/County Hospital),16800.0,fee-for-service,1,1,2
+Nerve release and decompression,annex_procedure,General,Level 3-4 (Health Center/County Hospital),44800.0,fee-for-service,1,1,2
+Oesophagoscopy and removal of FB,annex_procedure,General,Level 3-4 (Health Center/County Hospital),8960.0,fee-for-service,1,1,2
+Orchidectomy,annex_procedure,General,Level 3-4 (Health Center/County Hospital),44800.0,fee-for-service,1,1,2
+Paediatric (below 6 years) Circumcision only under...,annex_procedure,General,Level 3-4 (Health Center/County Hospital),22400.0,fee-for-service,1,1,2
+Paracentesis,annex_procedure,General,Level 3-4 (Health Center/County Hospital),5600.0,fee-for-service,1,1,2
+Partial Gastrectomy,annex_procedure,General,Level 3-4 (Health Center/County Hospital),123200.0,fee-for-service,1,1,2
+Primary repair of incisional hernia laparoscopic,annex_procedure,General,Level 3-4 (Health Center/County Hospital),56000.0,fee-for-service,1,1,2
+Radical Mastectomy (To include lymph nodes clearan...,annex_procedure,General,Level 3-4 (Health Center/County Hospital),134400.0,fee-for-service,1,1,2
+Repair minor scalp wounds/lacerations under GA,annex_procedure,General,Level 3-4 (Health Center/County Hospital),11200.0,fee-for-service,1,1,2
+Repair of burst abdomen,annex_procedure,General,Level 3-4 (Health Center/County Hospital),44800.0,fee-for-service,1,1,2
+Repair of epigastric hernia,annex_procedure,General,Level 3-4 (Health Center/County Hospital),56000.0,fee-for-service,1,1,2
+Repair of hiatus hernia,annex_procedure,General,Level 3-4 (Health Center/County Hospital),168000.0,fee-for-service,1,1,2
+Repair of incisional hernia (with mesh),annex_procedure,General,Level 3-4 (Health Center/County Hospital),78400.0,fee-for-service,1,1,2
+Repair of perforated duodenal ulcer,annex_procedure,General,Level 3-4 (Health Center/County Hospital),134400.0,fee-for-service,1,1,2
+Repair of previous incision in abdominal wall,annex_procedure,General,Level 3-4 (Health Center/County Hospital),78400.0,fee-for-service,1,1,2
+Repair of strangulated hernias,annex_procedure,General,Level 3-4 (Health Center/County Hospital),89600.0,fee-for-service,1,1,2
+Repair of umbilical hernia (with mesh),annex_procedure,General,Level 3-4 (Health Center/County Hospital),44800.0,fee-for-service,1,1,2
+Simple Mastectomy,annex_procedure,General,Level 3-4 (Health Center/County Hospital),89600.0,fee-for-service,1,1,2
+Skin biopsy,annex_procedure,General,Level 3-4 (Health Center/County Hospital),8960.0,fee-for-service,1,1,2
+Splenectomy,annex_procedure,General,Level 3-4 (Health Center/County Hospital),134400.0,fee-for-service,1,1,2
+Stripping of bilateral varicose veins,annex_procedure,General,Level 3-4 (Health Center/County Hospital),78400.0,fee-for-service,1,1,2
+Subdural haematoma Evacuation,annex_procedure,General,Level 3-4 (Health Center/County Hospital),134400.0,fee-for-service,1,1,2
+"Surgical Debridement/Escharectomy: (Minor, Medium ...",annex_procedure,General,Level 3-4 (Health Center/County Hospital),33600.0,fee-for-service,1,2,2
+Surgical toilet under GA,annex_procedure,General,Level 3-4 (Health Center/County Hospital),11200.0,fee-for-service,1,1,2
+Thyroidectomy,annex_procedure,General,Level 3-4 (Health Center/County Hospital),134400.0,fee-for-service,1,1,2
+Total Gastrectomy,annex_procedure,General,Level 3-4 (Health Center/County Hospital),134400.0,fee-for-service,1,1,2
+Total Oesophagectomy,annex_procedure,General,Level 3-4 (Health Center/County Hospital),504000.0,fee-for-service,1,1,2
+Tracheostomy,annex_procedure,General,Level 3-4 (Health Center/County Hospital),44800.0,fee-for-service,1,1,2
+Transverse Colectomy,annex_procedure,General,Level 3-4 (Health Center/County Hospital),134400.0,fee-for-service,1,1,2
+Unilateral Adrenalectomy,annex_procedure,General,Level 3-4 (Health Center/County Hospital),168000.0,fee-for-service,1,1,2
+Unilateral femoral herniorrhaphy,annex_procedure,General,Level 3-4 (Health Center/County Hospital),56000.0,fee-for-service,1,1,2
+Unilateral gynaecomastia correction,annex_procedure,General,Level 3-4 (Health Center/County Hospital),56000.0,fee-for-service,1,1,2
+Unilateral Herniotomy,annex_procedure,General,Level 3-4 (Health Center/County Hospital),56000.0,fee-for-service,1,1,2
+Unilateral Herniotomy + orchidopexy,annex_procedure,General,Level 3-4 (Health Center/County Hospital),56000.0,fee-for-service,1,1,2
+Unilateral Orchidopexy,annex_procedure,General,Level 3-4 (Health Center/County Hospital),56000.0,fee-for-service,1,1,2
+Unilateral sympathectomy,annex_procedure,General,Level 3-4 (Health Center/County Hospital),56000.0,fee-for-service,1,1,2
+Vagotomy + drainage,annex_procedure,General,Level 3-4 (Health Center/County Hospital),56000.0,fee-for-service,1,1,2
+4-vessel cereral Angiography / Carotid Angiography...,annex_procedure,Interventional Radiology,Level 4+ (County Hospital or higher),61600.0,fee-for-service,1,1,2
+Balloon Angioplasty,annex_procedure,Interventional Radiology,Level 4+ (County Hospital or higher),145600.0,fee-for-service,1,1,2
+Bilateral nephrostomy tube insertion,annex_procedure,Interventional Radiology,Level 4+ (County Hospital or higher),72800.0,fee-for-service,1,1,2
+Biliary stenting,annex_procedure,Interventional Radiology,Level 4+ (County Hospital or higher),112000.0,fee-for-service,1,1,2
+CT guided bone biopsy,annex_procedure,Interventional Radiology,Level 4+ (County Hospital or higher),22400.0,fee-for-service,1,1,2
+CT guided lung biopsy,annex_procedure,Interventional Radiology,Level 4+ (County Hospital or higher),22400.0,fee-for-service,1,1,2
+DJ stenting bilateral,annex_procedure,Interventional Radiology,Level 4+ (County Hospital or higher),56000.0,fee-for-service,1,1,2
+DJ stenting unilateral,annex_procedure,Interventional Radiology,Level 4+ (County Hospital or higher),56000.0,fee-for-service,1,1,2
+Embolization/Carotid/Renal/Hepatic (no coils),annex_procedure,Interventional Radiology,Level 4+ (County Hospital or higher),224000.0,fee-for-service,1,1,2
+"Embolization/Carotid/Renal/Hepatic (no coils, embo...",annex_procedure,Interventional Radiology,Level 4+ (County Hospital or higher),168000.0,fee-for-service,1,1,2
+Embolization/Carotid/Renal/Hepatic (no micro cathe...,annex_procedure,Interventional Radiology,Level 4+ (County Hospital or higher),280000.0,fee-for-service,1,1,2
+Fallopian tube Catheterization,annex_procedure,Interventional Radiology,Level 4+ (County Hospital or higher),61600.0,fee-for-service,1,1,2
+Flush Aortogram/Renal Artery/Hepatic (with emboliz...,annex_procedure,Interventional Radiology,Level 4+ (County Hospital or higher),246400.0,fee-for-service,1,1,2
+Image guided chemo port insertion (adult),annex_procedure,Interventional Radiology,Level 4+ (County Hospital or higher),15000.0,fee-for-service,1,1,2
+Image guided chemo port insertion (paediatric),annex_procedure,Interventional Radiology,Level 4+ (County Hospital or higher),20000.0,fee-for-service,1,1,2
+Image guided CVC insertion,annex_procedure,Interventional Radiology,Level 4+ (County Hospital or higher),15568.0,fee-for-service,1,1,2
+Image guided dialysis catheter insertion,annex_procedure,Interventional Radiology,Level 4+ (County Hospital or higher),36176.0,fee-for-service,1,1,2
+Image guided gastrotomy tube/nasojejunal tube inse...,annex_procedure,Interventional Radiology,Level 4+ (County Hospital or higher),11200.0,fee-for-service,1,1,2
+Image guided PICC line insertion,annex_procedure,Interventional Radiology,Level 4+ (County Hospital or higher),31024.0,fee-for-service,1,1,2
+Internalization of biliary tube,annex_procedure,Interventional Radiology,Level 4+ (County Hospital or higher),50400.0,fee-for-service,1,1,2
+Lower limb/ upper limb arteriogram bilateral,annex_procedure,Interventional Radiology,Level 4+ (County Hospital or higher),58800.0,fee-for-service,1,1,2
+Lower limb/ upper limb arteriogram unilateral,annex_procedure,Interventional Radiology,Level 4+ (County Hospital or higher),54880.0,fee-for-service,1,1,2
+Neuro-embolization,annex_procedure,Interventional Radiology,Level 4+ (County Hospital or higher),392000.0,fee-for-service,1,1,2
+PTC/Biliary drainage,annex_procedure,Interventional Radiology,Level 4+ (County Hospital or higher),89600.0,fee-for-service,1,1,2
+PTC/Biliary drainage (tubes not available),annex_procedure,Interventional Radiology,Level 4+ (County Hospital or higher),56000.0,fee-for-service,1,1,2
+PTC/Biliary drainage and stenting (stent available...,annex_procedure,Interventional Radiology,Level 4+ (County Hospital or higher),190400.0,fee-for-service,1,1,2
+Ultrasound guided abdominal and peripheral biopsie...,annex_procedure,Interventional Radiology,Level 4+ (County Hospital or higher),22400.0,fee-for-service,1,1,2
+Ultrasound guided ascites drainage/abscess drainag...,annex_procedure,Interventional Radiology,Level 4+ (County Hospital or higher),22400.0,fee-for-service,1,1,2
+Ultrasound guided bilateral pleural effusion drain...,annex_procedure,Interventional Radiology,Level 4+ (County Hospital or higher),44800.0,fee-for-service,1,1,2
+Ultrasound guided breast/prostate biopsies,annex_procedure,Interventional Radiology,Level 4+ (County Hospital or higher),16800.0,fee-for-service,1,1,2
+Ultrasound guided unilateral pleural effusion drai...,annex_procedure,Interventional Radiology,Level 4+ (County Hospital or higher),22400.0,fee-for-service,1,1,2
+Unilateral nephrostomy tube insertion,annex_procedure,Interventional Radiology,Level 4+ (County Hospital or higher),47040.0,fee-for-service,1,1,2
+Bilateral Open Joint Arthroplasty with condylar ad...,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),392000.0,fee-for-service,1,1,2
+Bilateral Open Joint Arthroplasty with costochondr...,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),336000.0,fee-for-service,1,1,2
+Cheiloplasty without Flap closure,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),44800.0,fee-for-service,1,1,2
+Closed reduction # Mandible/ Maxilla/MMF,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),134400.0,fee-for-service,1,1,2
+Closed Rhinoplasty,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),56000.0,fee-for-service,1,1,2
+Closure Cleft Oronasal Fistula + Bone graft,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),168000.0,fee-for-service,1,1,2
+Closure Cleft Oronasal Fistula with no Bone graft,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),112000.0,fee-for-service,1,1,2
+Closure Oro- Antral fistula without flap,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),44800.0,fee-for-service,1,1,2
+Complex nerve exploration+microsurgical repair,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),168000.0,fee-for-service,1,2,2
+Complex Salivary gland Sialedenectomy/Tumours exci...,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),336000.0,fee-for-service,1,2,2
+ComplexFacial STR+Viin/Parotid Duct Repair,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),112000.0,fee-for-service,1,2,2
+Coronoidectomy,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),89600.0,fee-for-service,1,1,2
+Costocondral graft to Mandible post Tumour resecti...,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),168000.0,fee-for-service,1,1,2
+Debridement of Necrotising Orofacial infections pe...,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),44800.0,fee-for-service,1,1,2
+Elevation # Zygoma: ORIF,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),145600.0,fee-for-service,1,1,2
+Elevation #Zygoma: Closed,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),56000.0,fee-for-service,1,1,2
+Enucleation Mandibular/ Maxillary cyst,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),67200.0,fee-for-service,1,1,2
+EUA Diagnostic for Oro-facial / Biopsy,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),28000.0,fee-for-service,1,1,2
+Excision of Complex facial Hemangioma/Lymphangioma,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),201600.0,fee-for-service,1,2,2
+Excision of Head / Neck lipoma >8cm,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),33600.0,fee-for-service,1,1,2
+Excision Of Oral / Facial Odontogenic tumors,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),280000.0,fee-for-service,1,1,2
+Excision of Scalp lesion +/- Wolfe graft,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),78400.0,fee-for-service,1,1,2
+Excision of Simple facial Hemangioma/Lymphangioma,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),89600.0,fee-for-service,1,1,2
+Excision/ Revision Facial scar,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),44800.0,fee-for-service,1,1,2
+Excisionof Oral/ Facial BCC + Local Flap Reconstru...,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),280000.0,fee-for-service,1,1,2
+Exploration of Submandibular/ Parotid Gland duct w...,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),112000.0,fee-for-service,1,1,2
+Exploration/ removal Cranio- Facial Foreign bodies,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),145600.0,fee-for-service,1,1,2
+Exploration/ removal Cranio- Facial Foreign bodies...,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),33600.0,fee-for-service,1,1,2
+Exploration/Graft orbital fracture,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),201600.0,fee-for-service,1,1,2
+Facial Soft tissue Repair,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),44800.0,fee-for-service,1,1,2
+Fractures of Upper face and cranioplasty,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),336000.0,fee-for-service,1,1,2
+Full thickness skin graft to oral defect-,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),89600.0,fee-for-service,1,1,2
+Functional Orthognathic surgeries of the Maxilla/M...,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),308000.0,fee-for-service,1,1,2
+Lip shave and mucosal advancement flap,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),112000.0,fee-for-service,1,1,2
+Mandibular fractures (ORIF),annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),145600.0,fee-for-service,1,1,2
+Mandibular/Maxillary Autogenous bone graft,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),168000.0,fee-for-service,1,1,2
+Mandibulectomy plus Reconstruction/Plating,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),224000.0,fee-for-service,1,1,2
+Mandibulectomy/Maxillectomy plus Microvascular Bon...,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),224000.0,fee-for-service,1,1,2
+Maxillectomy + Obturator,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),179200.0,fee-for-service,1,1,2
+Mid face fractures,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),145600.0,fee-for-service,1,1,2
+Oral/ facial/ Catilage Onlay graft,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),112000.0,fee-for-service,1,1,2
+Panfacial fractures,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),392000.0,fee-for-service,1,1,2
+Post condylar cartilage Bilateral graft,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),168000.0,fee-for-service,1,1,2
+Reduction of Alveolar fracture closed,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),33600.0,fee-for-service,1,1,2
+Reduction of Alveolar fracture Open,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),145600.0,fee-for-service,1,1,2
+Removal of Bone plates,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),89600.0,fee-for-service,1,1,2
+Removal of branchial cyst/sinus/Ranula,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),89600.0,fee-for-service,1,1,2
+Revision Cleft Lip/ Nose,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),89600.0,fee-for-service,1,1,2
+Revision Palatoplasty- MicroVascular and Donor sit...,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),280000.0,fee-for-service,1,1,2
+Revision Palatoplasty-Rotational Flap,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),145600.0,fee-for-service,1,1,2
+Revision Vestibulopalsty + Skin graft,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),201600.0,fee-for-service,1,1,2
+RMND+ Mandibulectomy/Maxillectomy with Microvascul...,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),358400.0,fee-for-service,1,1,2
+"RMND+Pedicled Flap Mandibulectomy/Maxillectomy+/-...",annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),280000.0,fee-for-service,1,1,2
+Salivary Duct Redirection (Wilkie procedure),annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),89600.0,fee-for-service,1,1,2
+Secondary Craniofacial Reconstruction,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),392000.0,fee-for-service,1,1,2
+Segmental Osteotomy Mandible/Maxilla,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),168000.0,fee-for-service,1,1,2
+Sequestrectomy/ Decortication Mandible Maxilla,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),67200.0,fee-for-service,1,1,2
+Simple Nerve exploration + repair,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),112000.0,fee-for-service,1,1,2
+Simple Salivary Gland Sialedonectomy /Sialolithect...,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),100800.0,fee-for-service,1,1,2
+Simple Vestibulopalsty + Skin graft,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),89600.0,fee-for-service,1,1,2
+Superficial Parotidectomy,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),89600.0,fee-for-service,1,1,2
+Temporalis/ Masseter Myotomy,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),112000.0,fee-for-service,1,1,2
+TMJ Arthroscopy,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),44800.0,fee-for-service,1,1,2
+Torticollis / Fibromatosis Colli Correction,annex_procedure,Maxillofacial,Level 4-5 (County/Teaching Hospital),145600.0,fee-for-service,1,1,2
+Acrylic Cranioplasty,annex_procedure,Neurosurgery,Level 5-6 (Specialized Hospital),224000.0,fee-for-service,1,1,2
+Anterior cervical fusion - AO plating/POSTERIOR DE...,annex_procedure,Neurosurgery,Level 5-6 (Specialized Hospital),448000.0,fee-for-service,1,1,2
+Application of skull calipers,annex_procedure,Neurosurgery,Level 5-6 (Specialized Hospital),56000.0,fee-for-service,1,1,2
+Brain abscess,annex_procedure,Neurosurgery,Level 5-6 (Specialized Hospital),268800.0,fee-for-service,1,1,2
+Brain Biopsy procedure,annex_procedure,Neurosurgery,Level 5-6 (Specialized Hospital),112000.0,fee-for-service,1,1,2
+Clipping of cerebral artery,annex_procedure,Neurosurgery,Level 5-6 (Specialized Hospital),448000.0,fee-for-service,1,1,2
+Craniotomy for Aneurysm,annex_procedure,Neurosurgery,Level 5-6 (Specialized Hospital),504000.0,fee-for-service,1,1,2
+Craniotomy for AV malformation,annex_procedure,Neurosurgery,Level 5-6 (Specialized Hospital),336000.0,fee-for-service,1,1,2
+Craniotomy for Intracelebral haematoma,annex_procedure,Neurosurgery,Level 5-6 (Specialized Hospital),336000.0,fee-for-service,1,1,2
+Craniotomy for Brain Tumour,annex_procedure,Neurosurgery,Level 5-6 (Specialized Hospital),504000.0,fee-for-service,1,1,2
+Elevation of depressed skull fracture,annex_procedure,Neurosurgery,Level 5-6 (Specialized Hospital),168000.0,fee-for-service,1,1,2
+Endoscopic Third Ventriculostomy w Choroid Plexux ...,annex_procedure,Neurosurgery,Level 5-6 (Specialized Hospital),208000.0,fee-for-service,1,1,2
+EVD Insertion/ICP Monitoring,annex_procedure,Neurosurgery,Level 5-6 (Specialized Hospital),112000.0,fee-for-service,1,1,2
+Excision of intracranial nerve lesions,annex_procedure,Neurosurgery,Level 5-6 (Specialized Hospital),280000.0,fee-for-service,1,1,2
+Excision of spinal tumours,annex_procedure,Neurosurgery,Level 5-6 (Specialized Hospital),280000.0,fee-for-service,1,1,2
+Extradural haematoma,annex_procedure,Neurosurgery,Level 5-6 (Specialized Hospital),112000.0,fee-for-service,1,1,2
+Laminectomy for cervical / thoracic / or lumbar sp...,annex_procedure,Neurosurgery,Level 5-6 (Specialized Hospital),145600.0,fee-for-service,1,1,2
+Microdiscectomy,annex_procedure,Neurosurgery,Level 5-6 (Specialized Hospital),145600.0,fee-for-service,1,1,2
+Microsurgical nerve graft / Nerve repair / explora...,annex_procedure,Neurosurgery,Level 5-6 (Specialized Hospital),145600.0,fee-for-service,1,1,2
+Posterior fossa surgery,annex_procedure,Neurosurgery,Level 5-6 (Specialized Hospital),504000.0,fee-for-service,1,3,2
+Repair of Dura for non-trauma/non cancer related,annex_procedure,Neurosurgery,Level 5-6 (Specialized Hospital),224000.0,fee-for-service,2,1,2
+Spina Bifida Surgery/encephalocoele,annex_procedure,Neurosurgery,Level 5-6 (Specialized Hospital),168000.0,fee-for-service,1,3,2
+Spinal fusions with implants II level,annex_procedure,Neurosurgery,Level 5-6 (Specialized Hospital),280000.0,fee-for-service,1,1,2
+Spinal fusions with implants III level,annex_procedure,Neurosurgery,Level 5-6 (Specialized Hospital),313600.0,fee-for-service,1,1,2
+Spinal fusions with implants IV level,annex_procedure,Neurosurgery,Level 5-6 (Specialized Hospital),313600.0,fee-for-service,1,1,2
+Surgical Toilet and repair of major scalp wounds u...,annex_procedure,Neurosurgery,Level 5-6 (Specialized Hospital),67200.0,fee-for-service,1,2,2
+Surgical Toilet for scalp tumour under GA,annex_procedure,Neurosurgery,Level 5-6 (Specialized Hospital),67200.0,fee-for-service,1,1,2
+Ventriculoperitoneal (VP) shunting,annex_procedure,Neurosurgery,Level 5-6 (Specialized Hospital),210000.0,fee-for-service,1,1,2
+VP shunting,annex_procedure,Neurosurgery,Level 5-6 (Specialized Hospital),100800.0,fee-for-service,1,1,2
+AP colpoperineorrhaphy,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),89600.0,fee-for-service,1,1,2
+bilateral tubal ligation,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),28000.0,fee-for-service,1,1,2
+Cerclage,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),22400.0,fee-for-service,1,1,2
+Colposuspension + D&C,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),33600.0,fee-for-service,1,1,2
+Cornual Wedge resection for Interstitial Ectopic P...,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),134400.0,fee-for-service,1,1,2
+D & C + Cone biopsy,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),28000.0,fee-for-service,1,1,2
+Diagnostic / Dye Laparoscopy,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),22400.0,fee-for-service,1,1,2
+Dilation and Curettage for incomplete abortion/mis...,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),66000.0,fee-for-service,1,1,2
+Laparotomy: Endometriosis Surgery,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),134400.0,fee-for-service,1,3,2
+Laparotomy: Exploratory / Adhesiolysis,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),134400.0,fee-for-service,1,1,2
+Laparotomy: Hysterectomy (Abdominal),annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),89600.0,fee-for-service,1,1,2
+Laparotomy: Metroplasty / Uteroplasty,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),134400.0,fee-for-service,1,1,2
+Laparotomy: Myomectomy,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),89600.0,fee-for-service,1,1,2
+Laparotomy: Ovarian cystectomy,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),89600.0,fee-for-service,1,1,2
+Laparotomy: Pelvic Abscess,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),134400.0,fee-for-service,1,1,2
+Laparotomy: Ruptured ectopic pregnancy,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),134400.0,fee-for-service,1,1,2
+Laparotomy: Salpingo – oopherectomy,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),134400.0,fee-for-service,1,1,2
+Laparotomy: Tuboplasty,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),89600.0,fee-for-service,1,1,2
+Laparotomy: Vaginal Hysterectomy,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),89600.0,fee-for-service,1,1,2
+LLETZ (Loop excision),annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),22400.0,fee-for-service,1,1,2
+Manchester Repair,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),134400.0,fee-for-service,1,1,2
+Manual Vaccum Aspiriation,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),11200.0,fee-for-service,1,1,2
+Marsupialisation of Batholins Cyst / Abscess,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),16800.0,fee-for-service,1,1,2
+Obstetric Examination under GA,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),33000.0,fee-for-service,1,1,2
+Operative Hysteroscopy: Avulsion of Endometrial Po...,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),22400.0,fee-for-service,1,1,3
+Operative Hysteroscopy: Biopsy,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),22400.0,fee-for-service,1,1,2
+Operative Hysteroscopy: Endometrial Ablation,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),33600.0,fee-for-service,1,1,3
+Operative Hysteroscopy: Resection of Submucous Fib...,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),22400.0,fee-for-service,1,1,2
+Operative Hysteroscopy: Retrieval of lost/ fragmen...,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),8960.0,fee-for-service,1,1,2
+Operative Hysteroscopy: Synechiolysis / Septolysis,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),33600.0,fee-for-service,1,1,2
+Operative Laparoscopy: Adhesiolysis,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),134400.0,fee-for-service,1,1,2
+Operative Laparoscopy: Ectopic Pregnancy,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),134400.0,fee-for-service,1,1,2
+Operative Laparoscopy: Endometriosis Surgery,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),134400.0,fee-for-service,1,3,2
+Operative Laparoscopy: Hysterectomy,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),89600.0,fee-for-service,1,1,2
+Operative Laparoscopy: Myomectomy,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),89600.0,fee-for-service,1,1,2
+Operative Laparoscopy: Ovarian Cystectomy / Drilli...,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),89600.0,fee-for-service,1,1,2
+Operative Laparoscopy: Tuboplasty,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),89600.0,fee-for-service,1,1,2
+Ovarian cancer resection (Pelvic clearance),annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),246400.0,fee-for-service,1,1,2
+Radical Vulvectomy,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),168000.0,fee-for-service,1,1,2
+removal of retained placenta under GA,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),11200.0,fee-for-service,1,1,2
+Repair of rectovaginal fistula,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),89600.0,fee-for-service,1,1,2
+Repair of ruptured uterus/Caesarian Hysterectomy,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),134400.0,fee-for-service,1,1,2
+Repair of vesicovaginal fistula,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),89600.0,fee-for-service,1,1,2
+Resuturing of burst abdomen,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),44800.0,fee-for-service,1,1,2
+Simple Vulvectomy,annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),44800.0,fee-for-service,1,1,2
+Wertheim’s Hysterectomy (Oncology only),annex_procedure,Obs & Gyn,Level 4+ (County Hospital or higher),246400.0,fee-for-service,1,1,2
+A/B Scan,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),2240.0,fee-for-service,1,1,2
+Ahmed Valve,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),169000.0,fee-for-service,1,1,2
+Amniotic Membrane grafting (Large),annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),28000.0,fee-for-service,1,1,2
+Anterior Chamber reformation and bandage contact l...,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),14560.0,fee-for-service,1,1,2
+Anterior Chamber Tap,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),8960.0,fee-for-service,1,1,2
+Anterior Chamber Washout,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),16800.0,fee-for-service,1,1,2
+Anterior Stromal Puncture with Bandage Contact Len...,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),14560.0,fee-for-service,1,1,2
+Anterior Vitrectomy + Lensectomy,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),112000.0,fee-for-service,1,1,2
+Biometry,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),3360.0,fee-for-service,1,1,2
+Bleb revision,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),16800.0,fee-for-service,1,1,2
+Blepharoplasty/Blepharotomy,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),84000.0,fee-for-service,1,1,2
+Bullae Rupture with Bandage Contact Lens,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),8960.0,fee-for-service,1,1,2
+"Canthus Procedures (Cantholysis, Canthoplasty, Can...",annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),28000.0,fee-for-service,1,1,2
+Cataract extraction SICS,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),30000.0,fee-for-service,1,1,2
+Cataract extraction with implant -Phaco ALCON,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),60000.0,fee-for-service,1,1,2
+Cataract extraction with implant-Phaco IOL,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),60000.0,fee-for-service,1,1,2
+Conjunctival DCR plus tube,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),112000.0,fee-for-service,1,1,2
+Conjunctival Excision + Major Reconstruction,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),44800.0,fee-for-service,1,2,2
+Conjunctival Incision biopsy (including histopatho...,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),44800.0,fee-for-service,1,1,2
+Corneal Tomo/Topography,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),3360.0,fee-for-service,1,1,2
+Corneal transplant + Cataract Extraction + Intraoc...,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),280000.0,fee-for-service,1,1,2
+Corneal/Scleral Perforation repair,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),112000.0,fee-for-service,1,1,2
+Crosslinking,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),111000.0,fee-for-service,1,1,2
+Cyclocryotherapy,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),16800.0,fee-for-service,1,1,2
+Cyclophotocoagulation,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),16800.0,fee-for-service,1,1,2
+DCR revision,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),89600.0,fee-for-service,1,1,2
+DCR/Fistulectomy,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),145600.0,fee-for-service,1,1,2
+Ectropion repair minor and major,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),39200.0,fee-for-service,1,2,2
+Entropion repair minor and major,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),39200.0,fee-for-service,1,2,2
+Epiblepharon repair,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),39200.0,fee-for-service,1,1,2
+Evisceration + implant,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),44800.0,fee-for-service,1,1,2
+Flourescein Angiography,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),22400.0,fee-for-service,1,1,2
+Intraocular lens exchange,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),33600.0,fee-for-service,1,1,2
+Intraocular lens redialing,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),11200.0,fee-for-service,1,1,2
+Intravitreal Antibiotics/Steroid,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),7840.0,fee-for-service,1,1,2
+Intravitreal AntiFungal Injection,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),11200.0,fee-for-service,1,1,2
+Intravitreal Bevazicumab,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),11200.0,fee-for-service,1,1,2
+Intravitreal Dexamethasone implant,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),84000.0,fee-for-service,1,1,2
+Intravitreal Triamcinolone,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),7840.0,fee-for-service,1,1,2
+Iridolysis,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),22400.0,fee-for-service,1,1,2
+Lacrimal glands prolapse repair,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),56000.0,fee-for-service,1,1,2
+Lacrimal Probing and Syringing (adults),annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),16800.0,fee-for-service,1,1,2
+Lacrimal Probing and Syringing (pediatrics),annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),33600.0,fee-for-service,1,1,2
+Laser suturelysis,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),11200.0,fee-for-service,1,1,2
+Lash electrolysis,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),11200.0,fee-for-service,1,1,2
+Lid splitting +cryotherapy,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),33600.0,fee-for-service,1,1,2
+Lid tumour Excision + major reconstruction,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),78400.0,fee-for-service,1,2,2
+Lid tumour Excision biopsy,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),46000.0,fee-for-service,1,1,2
+Lid tumour Incision biopsy,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),46000.0,fee-for-service,1,1,2
+Macula Hole Surgery,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),224000.0,fee-for-service,1,3,2
+OCT Angiography,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),7840.0,fee-for-service,1,1,2
+OCT Anterior,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),3360.0,fee-for-service,1,1,2
+OCT Posterior,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),3360.0,fee-for-service,1,1,2
+Ocular prosthesis,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),11200.0,fee-for-service,1,1,2
+Orbital implant removal,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),22400.0,fee-for-service,1,1,2
+Orbitotomy (lateral/anterior),annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),112000.0,fee-for-service,1,1,2
+Penetrating Keratoplasty (PKP),annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),257600.0,fee-for-service,1,1,2
+Photodocumentation,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),3360.0,fee-for-service,1,1,2
+Posterior Victrectomy - Foreign Body,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),145600.0,fee-for-service,1,1,2
+Posterior Victrectomy - Sunk Nucleus,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),145600.0,fee-for-service,1,1,2
+Posterior Vitrectomy,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),168000.0,fee-for-service,1,1,2
+Posterior Vitrectomy + band/buckle,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),224000.0,fee-for-service,1,1,2
+Posterior Vitrectomy + band/buckle + Cataract surg...,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),257600.0,fee-for-service,1,3,2
+Posterior Vitrectomy + Cataract surgery,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),201600.0,fee-for-service,1,3,2
+Posterior Vitrectomy + Delamination + Oil,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),224000.0,fee-for-service,1,1,2
+"Pre-Descemets EndothelialKeratoplasty (DALK, DSAEK...",annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),313600.0,fee-for-service,1,1,2
+Pterygium excision with conjunctival autograft,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),33600.0,fee-for-service,1,1,2
+Ptosis repair/revision,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),56000.0,fee-for-service,1,1,2
+"Ptosis Surgery: Anterior levator repair/resection,...",annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),78400.0,fee-for-service,1,3,2
+Punctoplasty/canaliculoplasty,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),22400.0,fee-for-service,1,1,2
+Pupiloplasty,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),22400.0,fee-for-service,1,1,2
+Retinopexy (Silicon Oil/Gas Insertion),annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),44800.0,fee-for-service,1,1,2
+Scleral buckle + Cyrotherapy or Laser,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),100800.0,fee-for-service,1,1,2
+Scleral buckle removal,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),56000.0,fee-for-service,1,1,2
+Socket reconstruction minor,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),61600.0,fee-for-service,1,1,2
+Specular Microscopy,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),3360.0,fee-for-service,1,1,2
+Squint Surgeries (all),annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),134400.0,fee-for-service,1,1,2
+Surgical Peripheral Iridectomy,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),16800.0,fee-for-service,1,1,2
+Tarsorrhaphy temporary,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),16800.0,fee-for-service,1,1,2
+Trabeculectomy + Phacoemulsification cataract surg...,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),78400.0,fee-for-service,1,3,2
+Trabeculectomy + Small Incision Cataract surgery,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),44800.0,fee-for-service,1,3,2
+Trabeculectomy with Mitomycin C,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),33600.0,fee-for-service,1,1,2
+Trabeculotomy/Goniotomy,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),56000.0,fee-for-service,1,1,2
+Ultrasound Biomicrcopy (UBM),annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),3360.0,fee-for-service,1,1,2
+YAG Iridotomy,annex_procedure,Ophthalmic,Level 3-4 (Health Center/County Hospital),11200.0,fee-for-service,1,1,2
+Above elbow Amputation,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),67200.0,fee-for-service,1,1,2
+Above knees Amputation,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),67200.0,fee-for-service,1,1,2
+ACL/PCL repair,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),280000.0,fee-for-service,1,1,2
+Angle plating fracture neck of femur,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),168000.0,fee-for-service,1,1,2
+"Arthrodesis Hip, Knee, Ankle or Elbow with implant...",annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),168000.0,fee-for-service,1,1,2
+Arthrodesis vertebral joints,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),224000.0,fee-for-service,1,1,2
+Arthroscopic Bankart repair,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),280000.0,fee-for-service,1,1,2
+Arthroscopic Synovectomy,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),168000.0,fee-for-service,1,1,2
+Arthrotomy,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),89600.0,fee-for-service,1,1,2
+Below elbow Amputation,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),67200.0,fee-for-service,1,1,2
+Below knees Amputation,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),67200.0,fee-for-service,1,1,2
+Bone grafting,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),89600.0,fee-for-service,1,1,2
+Carpal tunnel decompression,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),56000.0,fee-for-service,1,1,2
+Cervical rib resection,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),112000.0,fee-for-service,1,1,2
+Chondroplasty,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),168000.0,fee-for-service,1,1,2
+Closed manipulation of dislocations/fractures unde...,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),16800.0,fee-for-service,1,1,2
+Contracture release without flaps,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),44800.0,fee-for-service,1,1,2
+Excision head of fibula,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),67200.0,fee-for-service,1,1,2
+Excision head of radius,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),67200.0,fee-for-service,1,1,2
+Excision of Bunion (simple and bilateral under GA),annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),11200.0,fee-for-service,1,1,2
+Excision of calcaneal spurs,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),44800.0,fee-for-service,1,1,2
+Excision of intervertebral disc,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),145600.0,fee-for-service,1,1,2
+Exploration of Osteomyelitis / sequestrectomy,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),67200.0,fee-for-service,1,1,2
+External clamp application and Debridement,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),145600.0,fee-for-service,1,1,2
+Extra articular repair of joint ligament and impla...,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),168000.0,fee-for-service,1,1,2
+Fasciectomy,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),44800.0,fee-for-service,1,1,2
+Femoral epiphysis reduction / fixation (SUFE)with ...,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),168000.0,fee-for-service,1,1,2
+Hallux valgus operation,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),44800.0,fee-for-service,1,3,2
+Ilizarov procedure,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),168000.0,fee-for-service,1,1,2
+Insertion of Steinmann pin,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),22400.0,fee-for-service,1,1,2
+Intra articular Surgery (large joints),annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),145600.0,fee-for-service,1,3,2
+Intra articular Surgery (medium joints),annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),145600.0,fee-for-service,1,3,2
+Intra articular Surgery (small joints),annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),145600.0,fee-for-service,1,3,2
+Joint aspirations under GA,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),8960.0,fee-for-service,1,1,2
+Meniscus repair,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),280000.0,fee-for-service,1,1,2
+Menisectomy,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),67200.0,fee-for-service,1,1,2
+Mild club foot correction,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),56000.0,fee-for-service,1,1,2
+Moderate / severe club foot correction,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),56000.0,fee-for-service,1,1,2
+Open bone biopsy,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),44800.0,fee-for-service,1,1,2
+Open reduction and internal fixation: Clavicle,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),145600.0,fee-for-service,1,1,2
+Open reduction and internal fixation: Femur,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),145600.0,fee-for-service,1,1,2
+Open reduction and internal fixation: Humerus,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),145600.0,fee-for-service,1,1,2
+Open reduction and internal fixation: Pelvis,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),224000.0,fee-for-service,1,1,2
+Open reduction and internal fixation: Radius / Uln...,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),145600.0,fee-for-service,1,1,2
+Open Synovectomy,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),56000.0,fee-for-service,1,1,2
+Operative Arthroscopy with implants,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),80640.0,fee-for-service,1,1,2
+Osteotomy and implants,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),89600.0,fee-for-service,1,1,2
+Puttiplatt procedure for shoulder dislocation / We...,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),89600.0,fee-for-service,1,1,2
+Removal of hardware (plates & nails),annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),89600.0,fee-for-service,1,1,2
+Removal of hardware (wires),annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),22400.0,fee-for-service,1,1,2
+Removal of Steinmann pin,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),22400.0,fee-for-service,1,1,2
+Revision of Total Hip or Knee (Including implants),annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),280000.0,fee-for-service,1,1,2
+Rotator cuff repair,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),280000.0,fee-for-service,1,1,2
+Scoliosis correction,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),291200.0,fee-for-service,1,1,2
+Stabilisation of Patella,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),89600.0,fee-for-service,1,1,2
+Subacromial decompression,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),201600.0,fee-for-service,1,1,2
+Syndactyly / polydactyly correction,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),44800.0,fee-for-service,1,1,2
+Synovectomy: Small joints,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),33600.0,fee-for-service,1,1,2
+Tendon repair (others),annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),145600.0,fee-for-service,1,1,2
+Tendon repair: Achiles tendon/Patella tendons/Quad...,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),145600.0,fee-for-service,1,1,2
+Tendon transfer,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),145600.0,fee-for-service,1,1,2
+Toes and fingers Disarticulation,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),33600.0,fee-for-service,1,1,2
+Total hipreplacement (THR) (Including implants),annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),336000.0,fee-for-service,1,1,2
+Total knee replacement (TKR) (Including implants),annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),336000.0,fee-for-service,1,1,2
+Wedge tarsectomy,annex_procedure,Orthopaedic,Level 4-5 (County/Teaching Hospital),145600.0,fee-for-service,1,1,2
+"Hirschsprung's disease procedure a) Laparotomy, bi...",annex_procedure,Paediatric,Level 4+ (County Hospital or higher),134400.0,fee-for-service,1,1,2
+"Hirschsprung's disease procedure b)Abdominoperine...",annex_procedure,Paediatric,Level 4+ (County Hospital or higher),201600.0,fee-for-service,1,1,2
+"Hirschsprung's disease procedure c) Closure ofCol...",annex_procedure,Paediatric,Level 4+ (County Hospital or higher),134400.0,fee-for-service,1,1,2
+Insertion of CAPD catheter,annex_procedure,Paediatric,Level 4+ (County Hospital or higher),33600.0,fee-for-service,1,1,2
+Insertion of underwater seal drainage (Paediatric ...,annex_procedure,Paediatric,Level 4+ (County Hospital or higher),33600.0,fee-for-service,1,1,2
+Laparotomy: Intestinal resection + anastomasis,annex_procedure,Paediatric,Level 4+ (County Hospital or higher),134400.0,fee-for-service,1,1,2
+Laparotomy: Intussusception,annex_procedure,Paediatric,Level 4+ (County Hospital or higher),134400.0,fee-for-service,1,1,2
+Laparotomy: Tumours,annex_procedure,Paediatric,Level 4+ (County Hospital or higher),168000.0,fee-for-service,1,1,2
+Laparotomy: Volvulus,annex_procedure,Paediatric,Level 4+ (County Hospital or higher),134400.0,fee-for-service,1,1,2
+Rectosigmoidectomy,annex_procedure,Paediatric,Level 4+ (County Hospital or higher),134400.0,fee-for-service,1,1,2
+Resection of posterior / anterior urethral valves,annex_procedure,Paediatric,Level 4+ (County Hospital or higher),89600.0,fee-for-service,1,1,2
+Urethroplasty for hypospadies and epispadies,annex_procedure,Paediatric,Level 4+ (County Hospital or higher),134400.0,fee-for-service,1,1,2
+Advancement flaps (CANCERS/TRAUMA),annex_procedure,Plastic,Level 4+ (County Hospital or higher),112000.0,fee-for-service,1,1,2
+Cleft lip and palate repair (Unilateral/Bilateral),annex_procedure,Plastic,Level 4+ (County Hospital or higher),112000.0,fee-for-service,1,1,2
+Cleft lip repair (Unilateral/Bilateral),annex_procedure,Plastic,Level 4+ (County Hospital or higher),56000.0,fee-for-service,1,1,2
+Cleft palate repair,annex_procedure,Plastic,Level 4+ (County Hospital or higher),89600.0,fee-for-service,1,1,2
+Insertion of tissue expander,annex_procedure,Plastic,Level 4+ (County Hospital or higher),168000.0,fee-for-service,1,1,2
+Lip reconstruction (ONLY for RTA and Tumors),annex_procedure,Plastic,Level 4+ (County Hospital or higher),89600.0,fee-for-service,1,1,2
+Posterior Sagittal Anorectalplasty (PSARP) for ano...,annex_procedure,Plastic,Level 4+ (County Hospital or higher),201600.0,fee-for-service,1,1,2
+Posterior Sagittal Anorectalplasty (PSARP) for ano...,annex_procedure,Plastic,Level 4+ (County Hospital or higher),134400.0,fee-for-service,1,1,2
+Reduction Mammoplasty (bilateral),annex_procedure,Plastic,Level 4+ (County Hospital or higher),168000.0,fee-for-service,1,1,2
+Removal of tissue expander,annex_procedure,Plastic,Level 4+ (County Hospital or higher),33600.0,fee-for-service,1,1,2
+Rotation flaps,annex_procedure,Plastic,Level 4+ (County Hospital or higher),112000.0,fee-for-service,1,1,2
+Skin graft <10 % TBSA,annex_procedure,Plastic,Level 4+ (County Hospital or higher),44800.0,fee-for-service,1,1,2
+Skin graft > 10% TBSA,annex_procedure,Plastic,Level 4+ (County Hospital or higher),89600.0,fee-for-service,1,1,2
+Anastomotic urethroplasty,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),112000.0,fee-for-service,1,1,2
+Anatrophic nephrolithotomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),243000.0,fee-for-service,1,1,2
+Anterior exenteration and ileal conduit,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),550000.0,fee-for-service,1,1,2
+Ascending urethrography,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),6000.0,fee-for-service,1,1,2
+Aspiration of hydrocele,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),10000.0,fee-for-service,1,1,2
+Bilateral modified inguinal node dissection,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),450000.0,fee-for-service,1,1,2
+Bilateral ochidectomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),44800.0,fee-for-service,1,1,2
+Bilateral radical inguinal node dissection,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),385000.0,fee-for-service,1,1,2
+Bipolar fulgration of genital and perineal warts,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),170000.0,fee-for-service,1,1,2
+Bipolar fulgration of urethral warts,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),97000.0,fee-for-service,1,1,2
+Bladder augmentation surgery,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),325000.0,fee-for-service,1,3,2
+Bladder biopsy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),16800.0,fee-for-service,1,1,2
+Bladder diverticulectomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),295000.0,fee-for-service,1,1,2
+Bladder injury repair,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),89600.0,fee-for-service,1,1,2
+Bladder washout,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),30000.0,fee-for-service,1,1,2
+Bricker's ileal conduit,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),268800.0,fee-for-service,1,1,2
+Combined ascending and descending urethrography,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),7000.0,fee-for-service,1,1,2
+Creation of instestinal continent catherizable pou...,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),424000.0,fee-for-service,1,1,2
+Cutaneous ureterostomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),270000.0,fee-for-service,1,1,2
+Direct visual urethrotomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),56000.0,fee-for-service,1,1,2
+Epispadia urethroplasty,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),420000.0,fee-for-service,1,1,2
+Excision and graft peyronies repair,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),396000.0,fee-for-service,1,1,2
+Excision of epididymal cyst,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),195000.0,fee-for-service,1,1,2
+Excision of patent urachus,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),250000.0,fee-for-service,1,1,2
+Female urethral diverticulectomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),320000.0,fee-for-service,1,1,2
+Femoral hernia repair,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),180000.0,fee-for-service,1,1,2
+Flexible cystoscopy and removal of JJ stent,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),35000.0,fee-for-service,1,1,2
+Flexible cystoscopy and surveillance for bladder c...,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),33600.0,fee-for-service,1,1,2
+Flexible ureterorenoscopy and laser ablation of ur...,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),201600.0,fee-for-service,1,1,2
+Flexible ureterorenoscopy and laser lithotripsy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),201600.0,fee-for-service,1,1,2
+Flexible ureteroscopy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),120000.0,fee-for-service,1,1,2
+Flexible urethrocystoscopy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),70000.0,fee-for-service,1,1,2
+Fournier's gangrene necrosectomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),180000.0,fee-for-service,1,1,2
+Graft urethroplasty,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),280000.0,fee-for-service,1,1,2
+Hydrocelectomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),75000.0,fee-for-service,1,1,2
+Hypospadia urethroplasty,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),202000.0,fee-for-service,1,1,2
+Ileal replacement of ureter,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),280000.0,fee-for-service,1,1,2
+Inguinal hernia repair,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),56000.0,fee-for-service,1,1,2
+Inguinal ochidopexy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),44800.0,fee-for-service,1,1,2
+Insertion of artificial urethral sphincter,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),1200000.0,fee-for-service,1,1,2
+Insertion of female urethral sling,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),300000.0,fee-for-service,1,1,2
+Intravesical instillation of chemotherapy for blad...,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),45000.0,fee-for-service,1,1,2
+JJ stent placement,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),56000.0,fee-for-service,1,1,2
+Laparoscopic ablation of renal cyst,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),250000.0,fee-for-service,1,1,2
+Laparoscopic adrenalectomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),168000.0,fee-for-service,1,1,2
+Laparoscopic donor nephrectomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),200000.0,fee-for-service,1,1,2
+Laparoscopic ochidopexy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),56000.0,fee-for-service,1,1,2
+Laparoscopic partial nephrectomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),325000.0,fee-for-service,1,1,2
+Laparoscopic pyelolithotomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),168000.0,fee-for-service,1,1,2
+Laparoscopic pyeloplasty,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),145600.0,fee-for-service,1,1,2
+Laparoscopic radical nephrectomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),280000.0,fee-for-service,1,1,2
+Laparoscopic radical nephroureterectomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),145600.0,fee-for-service,1,1,2
+Laparoscopic radical ochidectomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),134400.0,fee-for-service,1,1,2
+Laparoscopic radical prostatectomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),250000.0,fee-for-service,1,1,2
+Laparoscopic simple nephrectomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),145600.0,fee-for-service,1,1,2
+Laparoscopic ureterolithotomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),275000.0,fee-for-service,1,1,2
+Laparoscopic varicocelectomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),56000.0,fee-for-service,1,1,2
+Laser cystolithotripsy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),234000.0,fee-for-service,1,1,2
+Laser urethrolithotripsy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),168000.0,fee-for-service,1,1,2
+Laser urethrotomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),56000.0,fee-for-service,1,1,2
+Mainz II urinary diversion,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),224000.0,fee-for-service,1,1,2
+Meatoplasty,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),44800.0,fee-for-service,1,1,2
+Micturating cystourethrography,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),6000.0,fee-for-service,1,1,2
+Mitrofanoff's appendicovesicostomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),295000.0,fee-for-service,1,1,2
+Open adrenalectomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),168000.0,fee-for-service,1,1,2
+Open cystolithotomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),234000.0,fee-for-service,1,1,2
+Open decortication of renal cyst,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),250000.0,fee-for-service,1,1,2
+Open donor nephrectomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),200000.0,fee-for-service,1,1,2
+Open drainage of renal abscess,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),89600.0,fee-for-service,1,1,2
+Open nephrolithotomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),280000.0,fee-for-service,1,1,2
+Open partial nephrectomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),325000.0,fee-for-service,1,1,2
+Open pyelolithotomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),168000.0,fee-for-service,1,1,2
+Open pyeloplasty,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),145600.0,fee-for-service,1,1,2
+Open radical nephrectomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),280000.0,fee-for-service,1,1,2
+Open radical nephrectomy with IVC thrombectomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),850000.0,fee-for-service,1,1,2
+Open radical nephroureterectomy with bladder cuff,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),325000.0,fee-for-service,1,1,2
+Open radical prostatectomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),250000.0,fee-for-service,1,1,2
+Open Renorrhaphy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),145600.0,fee-for-service,1,1,2
+Open simple nephroureterectomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),145600.0,fee-for-service,1,1,2
+Open simple prostatectomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),280000.0,fee-for-service,1,1,2
+Open suprapubic catheterization,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),8960.0,fee-for-service,1,1,2
+Open ureterolithotomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),275000.0,fee-for-service,1,1,2
+Open varicocelectomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),56000.0,fee-for-service,1,1,2
+Orthotopic neobladder reconstruction,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),424000.0,fee-for-service,1,1,2
+Partial cystectomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),223000.0,fee-for-service,1,1,2
+Partial glansectomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),120000.0,fee-for-service,1,1,2
+Partial penectomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),168000.0,fee-for-service,1,1,2
+Pelvic fracture urethral defect (PFUD) urethroplas...,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),398000.0,fee-for-service,1,1,2
+Percutaneous ablation of renal cyst,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),280000.0,fee-for-service,1,1,2
+Percutaneous cystolithotripsy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),280000.0,fee-for-service,1,1,2
+Percutaneous drainage of renal abscess,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),89600.0,fee-for-service,1,1,2
+Percutaneous nephrolithotomy (PCNL),annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),336000.0,fee-for-service,1,1,2
+Percutaneous nephrostomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),143360.0,fee-for-service,1,1,2
+Percutaneous prograde JJ stenting,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),295000.0,fee-for-service,1,1,2
+Percutaneous prograde nephrostogram,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),295000.0,fee-for-service,1,1,2
+Percutaneous removal of retained JJ stent,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),295000.0,fee-for-service,1,1,2
+Percutaneous resection and ablation of urothelial ...,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),295000.0,fee-for-service,1,1,2
+Percutaneous suprapubic catheterization,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),8960.0,fee-for-service,1,1,2
+Pericatheter urethrography,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),6500.0,fee-for-service,1,1,2
+Perineal urethrostomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),280000.0,fee-for-service,1,1,2
+Plication Peyronie's repair,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),245000.0,fee-for-service,1,1,2
+Post circumcision repair,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),80000.0,fee-for-service,1,1,2
+Posterior urethral valve ablation,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),295000.0,fee-for-service,1,1,2
+Prostate biopsy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),16800.0,fee-for-service,1,1,2
+Proximal shunt of priapism,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),250000.0,fee-for-service,1,1,2
+Radical cystoprostatectomy and ileal conduit INC I...,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),850000.0,fee-for-service,1,1,2
+Radical inguinal ochidectomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),134400.0,fee-for-service,1,1,2
+Radical penectomy with perineal urethrostomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),450000.0,fee-for-service,1,1,2
+Radical urethrectomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),375000.0,fee-for-service,1,1,2
+Recipient kidney transplantation,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),800000.0,fee-for-service,1,1,2
+Repair of bladder extrophy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),490000.0,fee-for-service,1,1,2
+Repair of colovesical fistula,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),112000.0,fee-for-service,1,1,2
+Repair of cystocele with mesh,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),280000.0,fee-for-service,1,1,2
+Repair of fracture penis,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),246400.0,fee-for-service,1,1,2
+Repair of ligated ureter,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),295000.0,fee-for-service,1,1,2
+Repair of penile injury,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),89600.0,fee-for-service,1,1,2
+Repair of ureter injury,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),295000.0,fee-for-service,1,1,2
+Repair of urethral injury,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),112000.0,fee-for-service,1,1,2
+Retrograde pyelography,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),7500.0,fee-for-service,1,1,2
+Retroperitoneal lymph node dissection,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),500000.0,fee-for-service,1,1,2
+Rigid Cystoscopy and Removal of JJ stent,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),33600.0,fee-for-service,1,1,2
+Robotic radical prostatectomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),250000.0,fee-for-service,1,1,2
+Scrotal exploration and ochidopexy of testicular t...,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),95000.0,fee-for-service,1,1,2
+Semi rigid ureteroscopy and laser ureterolithotrip...,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),168000.0,fee-for-service,1,1,2
+Semi rigid ureteroscopy and removal of retained JJ...,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),290000.0,fee-for-service,1,1,2
+Semirigid ureteroscopy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),110000.0,fee-for-service,1,1,2
+Sentinel inguinal node biopsy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),175000.0,fee-for-service,1,1,2
+Simple cystectomy and ileal conduit,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),295000.0,fee-for-service,1,1,2
+Simple nephrectomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),168000.0,fee-for-service,1,1,2
+Simple ochidectomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),44800.0,fee-for-service,1,1,2
+Testicular/penile biopsy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),16800.0,fee-for-service,1,1,2
+Total penectomy with perineal urethrostomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),450000.0,fee-for-service,1,1,2
+Trasurethral resection of prostate (TURP),annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),168000.0,fee-for-service,1,1,2
+Trauma nephrectomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),168000.0,fee-for-service,2,1,2
+Ultrasound guided biopsy of renal masses,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),22400.0,fee-for-service,1,1,2
+Unilateral modified inguinal node dissection,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),270000.0,fee-for-service,1,1,2
+Unilateral radical inguinal node dissection,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),280000.0,fee-for-service,1,1,2
+Ureter reimplantation,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),280000.0,fee-for-service,1,1,2
+Ureteral dilation,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),90000.0,fee-for-service,1,1,2
+Ureterolysis,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),345000.0,fee-for-service,1,1,2
+Ureteroscopy and laser ablation of ureteric tumor,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),168000.0,fee-for-service,1,1,2
+Ureteroscopy and laser incision of ureter strictur...,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),280000.0,fee-for-service,1,1,2
+Ureteroureterostomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),134400.0,fee-for-service,1,1,2
+Urethral dilation,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),33600.0,fee-for-service,1,1,2
+Urethroscopy and ablation of bleeding prostatic he...,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),180000.0,fee-for-service,1,1,2
+Vesicostomy,annex_procedure,Urological,Level 4-5 (County/Teaching Hospital),280000.0,fee-for-service,1,1,2

@@ -1,0 +1,20 @@
+{
+  "timestamp": "2025-08-27T16:36:23.953164",
+  "analysis_time_seconds": 94.7122642993927,
+  "policy_services_count": 97,
+  "annex_procedures_count": 728,
+  "ai_contradictions_count": 6,
+  "clinical_gaps_count": 5,
+  "coverage_gaps_count": 24,
+  "total_gaps_before_dedup": 29,
+  "unique_insights": {
+    "total_runs": 84,
+    "current_run_gaps": 29,
+    "current_run_contradictions": 6,
+    "total_unique_gaps": 99,
+    "total_unique_contradictions": 29,
+    "high_priority_gaps": 0,
+    "high_severity_contradictions": 0,
+    "latest_discovery": "outputs_run_20250826_164516"
+  }
+}

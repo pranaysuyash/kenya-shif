@@ -1,0 +1,142 @@
+{
+  "facility_level_analysis": {
+    "level_1": {
+      "services_covered": 2,
+      "missing_services": [
+        "vaccination",
+        "first aid",
+        "basic sanitation"
+      ],
+      "governance": "Community Health Committees"
+    },
+    "level_2": {
+      "services_covered": 13,
+      "missing_services": [
+        "outpatient",
+        "pharmacy",
+        "basic care"
+      ],
+      "governance": "Sub-county health management teams"
+    },
+    "level_3": {
+      "services_covered": 13,
+      "missing_services": [
+        "dental",
+        "x-ray",
+        "diabetes care"
+      ],
+      "governance": "County level"
+    },
+    "level_4": {
+      "services_covered": 25,
+      "missing_services": [
+        "comprehensive care",
+        "surgery",
+        "specialized clinics"
+      ],
+      "governance": "County/SHIF overlap"
+    },
+    "level_5": {
+      "services_covered": 22,
+      "missing_services": [
+        "specialized care",
+        "teaching",
+        "comprehensive surgery"
+      ],
+      "governance": "County level"
+    },
+    "level_6": {
+      "services_covered": 22,
+      "missing_services": [
+        "cardiothoracic",
+        "neurosurgery"
+      ],
+      "governance": "National government"
+    }
+  },
+  "payment_mechanism_analysis": {
+    "case_based": 2,
+    "per_session": 2,
+    "per_diem": 10,
+    "fee_for_service": 15,
+    "capitation": 2,
+    "package_rate": 12
+  },
+  "coverage_gaps_by_kenyan_standards": {
+    "malaria": {
+      "gap_severity": "CRITICAL",
+      "reason": "High burden disease with only 4 coverage rules"
+    },
+    "tuberculosis": {
+      "gap_severity": "CRITICAL",
+      "reason": "High burden disease with only 0 coverage rules"
+    },
+    "hiv/aids": {
+      "gap_severity": "CRITICAL",
+      "reason": "High burden disease with only 2 coverage rules"
+    },
+    "respiratory_infections": {
+      "gap_severity": "CRITICAL",
+      "reason": "High burden disease with only 0 coverage rules"
+    },
+    "diarrheal_diseases": {
+      "gap_severity": "CRITICAL",
+      "reason": "High burden disease with only 0 coverage rules"
+    },
+    "maternal_mortality": {
+      "gap_severity": "CRITICAL",
+      "reason": "High burden disease with only 0 coverage rules"
+    },
+    "child_mortality": {
+      "gap_severity": "CRITICAL",
+      "reason": "High burden disease with only 0 coverage rules"
+    }
+  },
+  "shif_specific_findings": {
+    "Primary Healthcare Fund (PHF)": {
+      "services_covered": 53,
+      "target_levels": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "Social Health Insurance Fund (SHIF)": {
+      "services_covered": 69,
+      "target_levels": [
+        4,
+        5,
+        6
+      ]
+    },
+    "Emergency, Chronic, Critical Illness Fund (ECCIF)": {
+      "services_covered": 69,
+      "target_levels": [
+        4,
+        5,
+        6
+      ]
+    }
+  },
+  "policy_recommendations": [
+    {
+      "priority": "HIGH",
+      "area": "Community Health",
+      "recommendation": "Strengthen Level 1 community health services (only 2 covered)",
+      "justification": "Community health is foundation of Kenya's healthcare pyramid"
+    },
+    {
+      "priority": "CRITICAL",
+      "area": "Disease Coverage",
+      "recommendation": "Address 7 critical disease coverage gaps",
+      "justification": "High-burden diseases inadequately covered in SHIF benefits"
+    },
+    {
+      "priority": "MEDIUM",
+      "area": "Payment Reform",
+      "recommendation": "Expand case-based payment mechanisms for predictable costs",
+      "justification": "Case-based payments improve cost predictability and quality outcomes"
+    }
+  ]
+}

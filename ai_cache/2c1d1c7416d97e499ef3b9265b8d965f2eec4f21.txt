@@ -1,0 +1,404 @@
+[
+  {
+    "service_name": "removal of retained placenta under GA",
+    "specialty": "Obs & Gyn",
+    "recommended_facility_level": [4,5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Emergency obstetric procedure needing OR, anesthesia and possible transfusion — appropriate at sub-county and above; tariff reasonable for an urgent operative procedure."
+  },
+  {
+    "service_name": "Repair of rectovaginal fistula",
+    "specialty": "Obs & Gyn",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Complex reconstructive surgery requiring experienced surgeons, prolonged theatre and follow-up; typically provided at referral hospitals and often underfunded."
+  },
+  {
+    "service_name": "Repair of ruptured uterus / Caesarian Hysterectomy",
+    "specialty": "Obs & Gyn",
+    "recommended_facility_level": [4,5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Life‑threatening obstetric emergency needing immediate OR, anesthesia, blood and ICU capacity; high resource intensity often exceeds basic tariff."
+  },
+  {
+    "service_name": "Repair of vesicovaginal fistula",
+    "specialty": "Obs & Gyn",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Delicate urogenital reconstruction, prolonged operative time and specialist input — best at higher‑level referral centres and current tariff is likely insufficient."
+  },
+  {
+    "service_name": "Resuturing of burst abdomen",
+    "specialty": "Obs & Gyn",
+    "recommended_facility_level": [4,5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Re‑operation for major postoperative complication with sepsis/critical care needs; requires timely theatre and possibly ICU and prolonged admission."
+  },
+  {
+    "service_name": "Simple Vulvectomy",
+    "specialty": "Obs & Gyn",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Surgical procedure for local disease that benefits from referral-level perioperative care; tariff is in a mid-range likely to cover costs in referral settings."
+  },
+  {
+    "service_name": "Wertheim’s Hysterectomy (Oncology only)",
+    "specialty": "Obs & Gyn",
+    "recommended_facility_level": [6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Radical oncologic pelvic surgery with high perioperative, ICU and multidisciplinary requirements — should be at national referral centres and is resource‑intensive."
+  },
+  {
+    "service_name": "A / B Scan",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Basic diagnostic ultrasound used in eye clinics; low risk and readily delivered at sub‑county/secondary eye units with set tariff adequate."
+  },
+  {
+    "service_name": "Ahmed Valve",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Glaucoma drainage device implantation needs specialized surgeon, consumable implant and follow-up; tariff is unlikely to fully cover implant and high‑level care."
+  },
+  {
+    "service_name": "Amniotic Membrane grafting (Large)",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Ocular surface reconstruction requiring theatre and graft material; usually done at referral eye units — tariff is in a reasonable mid-range."
+  },
+  {
+    "service_name": "Anterior Chamber reformation and bandage contact lens",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Urgent anterior chamber procedure done in eye units; requires anesthesia and appropriate postoperative monitoring — tariff appropriate for tertiary/sub‑county units."
+  },
+  {
+    "service_name": "Anterior Chamber Tap",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Diagnostic/therapeutic bedside or theatre procedure with modest resource needs — suitable for referral eye units."
+  },
+  {
+    "service_name": "Anterior Chamber Washout",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Requires theatre, anaesthesia and microscope; appropriate at sub‑county and referral eye units and tariff is consistent with resource use."
+  },
+  {
+    "service_name": "Anterior Stromal Puncture with Bandage Contact Lens",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Minor corneal procedure typically performed in eye clinics/operative settings with low complication risk; tariff adequate."
+  },
+  {
+    "service_name": "Anterior Vitrectomy + Lensectomy",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Complex intraocular surgery requiring vitreoretinal skills, specialized equipment and potential prolonged care — best at referral/tertiary centres and costly."
+  },
+  {
+    "service_name": "Biometry",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Preoperative measurement for cataract surgery; low risk diagnostic test suitable for sub‑county eye units."
+  },
+  {
+    "service_name": "Bleb revision",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Glaucoma filtration surgery revision needs surgical expertise and follow-up; referral eye units are appropriate and tariff aligns with moderate resource use."
+  },
+  {
+    "service_name": "Blepharoplasty / Blepharotomy",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Eyelid surgery (functional/cosmetic) requires theatre and skilled surgeons; higher complexity cases or implants may not be fully covered at current tariff."
+  },
+  {
+    "service_name": "Bullae Rupture with Bandage Contact Lens",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Minor therapeutic measure for ocular surface disease; low resource needs and suitable for referral eye units."
+  },
+  {
+    "service_name": "Canthus Procedures (Cantholysis, Canthoplasty, Canthotomy)",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Eyelid/trauma procedures often urgent; can be performed in sub‑county/referral units with appropriate surgical skills."
+  },
+  {
+    "service_name": "Cataract extraction SICS",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Standard extracapsular cataract procedure suitable for well‑equipped sub‑county eye units; tariff aligns with typical programmatic costs."
+  },
+  {
+    "service_name": "Cataract extraction with implant - Phaco ALCON",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Phacoemulsification with branded implant requires phaco theatre and consumables; at current tariff appropriate for established eye units though consumable choice affects cost."
+  },
+  {
+    "service_name": "Cataract extraction with implant - Phaco IOL",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Phaco with intraocular lens is standard elective service at referral centres; tariff consistent with common practice for public providers."
+  },
+  {
+    "service_name": "Conjunctival DCR plus tube",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Complex lacrimal/orbital procedure with implant and potential complications; requires specialist theatre and follow‑up—tariff appears low for full costs."
+  },
+  {
+    "service_name": "Conjunctival Excision + Major Reconstruction",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Major periorbital/conjunctival reconstruction needs specialist input and theatre; mid‑range tariff likely covers expected resource use at referral units."
+  },
+  {
+    "service_name": "Conjunctival Incision biopsy (including histopathology)",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Minor operative biopsy with pathology — suitable for referral units; tariff includes histopathology and is appropriate."
+  },
+  {
+    "service_name": "Corneal Tomo / Topography",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Specialised diagnostic imaging available at referral eye centres; low risk and tariff covers equipment use."
+  },
+  {
+    "service_name": "Corneal transplant + Cataract Extraction + Intraocular lens implant",
+    "specialty": "Ophthalmic",
+    "service_name_mod": "Corneal transplant + Cataract Extraction + Intraocular lens implant",
+    "specialty_mod": "Ophthalmic",
+    "recommended_facility_level": [6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Combined keratoplasty and cataract surgery requires donor tissue, theatre, specialized teams and prolonged follow‑up — best at national referral centres; tariff unlikely to cover full costs."
+  },
+  {
+    "service_name": "Corneal / Scleral Perforation repair",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Emergency ocular repair requiring urgent theatre, graft material and specialist skills — resource intensive and often underfunded."
+  },
+  {
+    "service_name": "Crosslinking",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Elective corneal strengthening procedure requiring specialized equipment and consumables; tariff likely below programmatic cost in many centres."
+  },
+  {
+    "service_name": "Cyclocryotherapy",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Glaucoma procedure using cryo equipment; suitable for referral eye units and tariff is consistent with moderate resource use."
+  },
+  {
+    "service_name": "Cyclophotocoagulation",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Laser procedure for refractory glaucoma needing specialized equipment; appropriate for referral centres with tariff covering typical costs."
+  },
+  {
+    "service_name": "DCR revision",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Revision lacrimal surgery can be lengthy with implants and specialist skills; higher tariff may be required for complex revisions."
+  },
+  {
+    "service_name": "DCR / Fistulectomy",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Major lacrimal/orbital surgery with potential for complications and extended theatre time — should be at referral centres and is resource intensive."
+  },
+  {
+    "service_name": "Ectropion repair minor and major",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Eyelid corrective surgery performed at referral or sub‑county units; tariff adequate for minor to moderate procedures."
+  },
+  {
+    "service_name": "Entropion repair minor and major",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Standard eyelid surgery with predictable resources — suitable for referral eye units; tariff acceptable."
+  },
+  {
+    "service_name": "Epiblepharon repair",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Minor eyelid procedure, usually day-case in eye clinics or sub‑county units; tariff appropriate."
+  },
+  {
+    "service_name": "Evisceration + implant",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Orbital surgery with implant cost — best done at referral centres; tariff at mid-range likely to cover typical implant and theatre costs in public settings."
+  },
+  {
+    "service_name": "Flourescein Angiography",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Specialised retinal diagnostic test available at referral eye centres; low procedural risk and tariff aligned with consumable and equipment use."
+  },
+  {
+    "service_name": "Intraocular lens exchange",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Secondary intraocular procedure requiring specialist surgeon and theatre; tariff reasonable for referral-level care."
+  },
+  {
+    "service_name": "Intraocular lens redialing",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Relatively minor intraocular corrective procedure done in referral eye units; low risk and tariff acceptable."
+  },
+  {
+    "service_name": "Intravitreal Antibiotics / Steroid",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Common therapeutic injections for endophthalmitis/inflammation — can be delivered in well‑equipped eye units; tariff covers drug and procedure costs."
+  },
+  {
+    "service_name": "Intravitreal AntiFungal Injection",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "HIGH",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Often used in severe fungal endophthalmitis requiring specialist care and expensive antifungal agents; referral-level setting appropriate and tariff modest but acceptable for single injections."
+  },
+  {
+    "service_name": "Intravitreal Bevazicumab",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Common anti-VEGF injection performed in eye clinics/referral units; low procedural risk — tariff reasonable though cumulative cost depends on frequency."
+  },
+  {
+    "service_name": "Intravitreal Dexamethasone implant",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "INSUFFICIENT",
+    "notes": "Implant is costly and requires specialist insertion and follow‑up; tariff likely does not cover device cost in many facilities."
+  },
+  {
+    "service_name": "Intravitreal Triamcinolone",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Relatively low-cost intravitreal steroid injection suitable for referral eye units; tariff covers expected drug and procedure costs."
+  },
+  {
+    "service_name": "Iridolysis",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Procedure to free posterior synechiae or iris adhesions needing microscope theatre; referral centre appropriate and tariff aligned with resource use."
+  },
+  {
+    "service_name": "Lacrimal glands prolapse repair",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [5,6],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Specialist oculoplastic repair requiring theatre and skilled surgeon; tariff is in the mid-range and generally adequate at referral level."
+  },
+  {
+    "service_name": "Lacrimal Probing and Syringing (adults)",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "LOW",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Simple outpatient lacrimal duct procedure suitable for sub‑county or referral eye units; low resource need and tariff appropriate."
+  },
+  {
+    "service_name": "Lacrimal Probing and Syringing (pediatrics)",
+    "specialty": "Ophthalmic",
+    "recommended_facility_level": [4,5],
+    "clinical_risk": "MEDIUM",
+    "coverage_adequacy": "ADEQUATE",
+    "notes": "Often performed under sedation or GA in young children, needs paediatric anaesthetic capacity — sub‑county/referral units appropriate and tariff reasonable."
+  }
+]

@@ -1,0 +1,14 @@
+specialty,procedure_count,average_tariff,total_value,coverage_adequacy
+Urological,146,217477.26,31751680.0,Adequate
+Cardiothoracic and Vascular,92,495684.78,45603000.0,Adequate
+Ophthalmic,85,65184.94,5540720.0,Adequate
+General,72,75981.11,5470640.0,Adequate
+Orthopaedic,65,123286.15,8013600.0,Adequate
+Maxillofacial,64,152775.0,9777600.0,Adequate
+Obs & Gyn,46,84277.39,3876760.0,Adequate
+Ear Nose & Throat,44,118338.18,5206880.0,Adequate
+Interventional Radiology,32,85177.75,2725688.0,Adequate
+Neurosurgery,29,244206.9,7082000.0,Adequate
+Cardiology,28,318542.86,8919200.0,Adequate
+Plastic,13,108553.85,1411200.0,Limited
+Paediatric,12,122266.67,1467200.0,Limited
