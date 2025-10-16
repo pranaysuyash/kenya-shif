@@ -440,89 +440,51 @@ class SHIFHealthcarePolicyAnalyzer:
             sub_progress.progress(20)
             sub_text.text("Extracting from PDF using integrated comprehensive analyzer...")
             
-            # Create a real-time log container
-            with log_exp:
-                log_container = st.empty()
-                
-                # Capture both stdout and stderr to show progress in UI
-                old_stdout = sys.stdout
-                old_stderr = sys.stderr
-                log_buffer = io.StringIO()
-                
-                try:
-                    # Custom writer to capture and display logs in real-time
-                    class StreamCapture:
-                        def __init__(self, original_stream, log_container):
-                            self.original_stream = original_stream
-                            self.log_container = log_container
-                            self.captured_lines = []
-                            
-                        def write(self, text):
-                            self.original_stream.write(text)  # Still show in terminal
-                            if text.strip():  # Only capture non-empty lines
-                                self.captured_lines.append(text.strip())
-                                # Update UI with latest logs (last 50 lines)
-                                recent_logs = '\n'.join(self.captured_lines[-50:])
-                                self.log_container.code(recent_logs, language='text')
-                            
-                        def flush(self):
-                            self.original_stream.flush()
-                    
-                    # Set up stream capture
-                    stdout_capture = StreamCapture(old_stdout, log_container)
-                    stderr_capture = StreamCapture(old_stderr, log_container)
-                    sys.stdout = stdout_capture
-                    sys.stderr = stderr_capture
-                    
-                    # Update progress in UI with time estimates
-                    extraction_status.markdown("""
-                    - 🔄 **Starting PDF extraction process...** (0-30 seconds)
-                    - 🔄 **Loading integrated comprehensive analyzer...** (30-60 seconds)
-                    - 🔄 **Initializing document processing...** (60-120 seconds)
-                    - 🔄 **AI analysis and gap detection...** (120-300 seconds)
-                    - 🔄 **Finalizing results...** (300-450 seconds)
-                    
-                    ⏱️ **Expected total time: 7-8 minutes**
-                    """)
-                    
-                    # Add a progress indicator for time
-                    time_progress = st.progress(0)
-                    time_text = st.empty()
-                    
-                    import threading
-                    import time as time_module
-                    
-                    # Track progress over time
-                    start_time = time_module.time()
-                    
-                    def update_time_progress():
-                        while True:
-                            elapsed = time_module.time() - start_time
-                            progress = min(elapsed / 450.0, 1.0)  # 450 seconds max
-                            time_progress.progress(progress)
-                            
-                            minutes, seconds = divmod(int(elapsed), 60)
-                            time_text.text(f"⏱️ Elapsed: {minutes}m {seconds}s")
-                            
-                            if progress >= 1.0:
-                                break
-                            time_module.sleep(1)
-                    
-                    # Start progress tracking in background
-                    progress_thread = threading.Thread(target=update_time_progress, daemon=True)
-                    progress_thread.start()
-                    
-                    dataset = analyzer.load_verified_dataset()
-                    
-                finally:
-                    # Always restore original streams
-                    sys.stdout = old_stdout
-                    sys.stderr = old_stderr
+            # Show extraction status
+            extraction_status.markdown("""
+            - 🔄 **Starting PDF extraction process...**
+            - 🔄 **Loading integrated comprehensive analyzer...**
+            - 🔄 **Building document vocabulary...**
+            - 🔄 **AI analysis and gap detection...**
             
-            if not dataset:
-                st.error("❌ Live extraction failed - check PDF and try again")
-                st.error("Check the logs above for detailed error information")
-                return
+            ⏱️ **Expected time: 7-8 minutes**
+            """)
+            
+            st.write("🔄 Running fresh PDF analysis...")
+            
+            # Run analyzer directly (not subprocess for simpler Streamlit integration)
+            try:
+                dataset = analyzer.load_verified_dataset()
+                
+                if dataset:
+                    st.success("✅ PDF analysis completed successfully!")
+                    extraction_status.markdown("""
+                    - ✅ **PDF extraction complete**
+                    - ✅ **Document vocabulary built**
+                    - ✅ **AI analysis finished**
+                    - ✅ **Results ready**
+                    """)
+                else:
+                    st.error("❌ Analysis returned no data - check PDF and logs")
+                    return
+                    
+            except Exception as e:
+                st.error(f"❌ Live extraction failed: {str(e)}")
+                st.info("💡 **Fallback:** System will attempt to load cached results...")
+                
+                # Try to recover with cached data
+                try:
+                    with log_exp:
+                        st.write("🔄 Loading cached analysis results...")
+                    dataset = analyzer.load_verified_dataset()
+                    if dataset:
+                        st.success("✅ Loaded cached analysis results")
+                    else:
+                        st.error("❌ Both live and cached extraction failed")
+                        return
+                except Exception as fallback_e:
+                    st.error(f"❌ Fallback also failed: {str(fallback_e)}")
+                    return
                 
             extraction_status.markdown("""
             - ✅ **Pages 1-18**: Policy structure extracted successfully

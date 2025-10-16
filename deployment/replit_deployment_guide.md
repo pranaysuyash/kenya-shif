@@ -11,6 +11,7 @@
 ### **2. Upload Files**
 
 Copy these files to your Repl:
+
 - `streamlit_app.py` (main application)
 - `shif_analyzer_enhanced.py` (core engine)
 - `requirements.txt` (dependencies)
@@ -19,6 +20,7 @@ Copy these files to your Repl:
 ### **3. Configure Environment**
 
 Create `.replit` file:
+
 ```toml
 modules = ["python-3.11"]
 run = "streamlit run streamlit_app.py --server.port 8080 --server.address 0.0.0.0"
@@ -33,11 +35,13 @@ run = ["sh", "-c", "streamlit run streamlit_app.py --server.port 8080 --server.a
 ### **4. Environment Variables**
 
 In Replit Secrets tab, add:
+
 - `OPENAI_API_KEY` = `your_openai_api_key_here`
 
 ### **5. Install Dependencies**
 
 Run in Replit console:
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -45,6 +49,7 @@ pip install -r requirements.txt
 ### **6. Launch Application**
 
 Click the "Run" button or execute:
+
 ```bash
 streamlit run streamlit_app.py --server.port 8080 --server.address 0.0.0.0
 ```
@@ -59,6 +64,7 @@ Once deployed, Replit will provide a shareable URL like:
 ### **Streamlit Configuration**
 
 Create `.streamlit/config.toml`:
+
 ```toml
 [server]
 port = 8080
@@ -76,6 +82,7 @@ textColor = "#262730"
 ### **Performance Optimization**
 
 Add to `streamlit_app.py`:
+
 ```python
 # Optimize for Replit deployment
 st.set_page_config(
@@ -91,12 +98,14 @@ st.set_page_config(
 ### **Common Issues**
 
 1. **Port Binding Error**
+
    ```bash
    # Solution: Use correct port in run command
    streamlit run streamlit_app.py --server.port 8080 --server.address 0.0.0.0
    ```
 
 2. **OpenAI API Error**
+
    ```bash
    # Solution: Check environment variable
    echo $OPENAI_API_KEY
@@ -111,6 +120,7 @@ st.set_page_config(
 ### **Memory Optimization**
 
 Add to your app:
+
 ```python
 import streamlit as st
 
@@ -124,11 +134,13 @@ if st.button("Clear Cache"):
 ## 🔒 **Security Best Practices**
 
 1. **API Key Security**
+
    - Store OpenAI API key in Replit Secrets
    - Never commit API keys to code
    - Use environment variable access
 
 2. **File Upload Safety**
+
    - Limit file size (50MB max)
    - Validate file types (PDF only)
    - Clear temporary files after processing
@@ -156,21 +168,25 @@ if st.button("Clear Cache"):
 ### **Live Demo Flow**
 
 1. **Welcome & Overview** (2 minutes)
+
    - Show landing page
    - Explain AI-enhanced capabilities
    - Highlight business value
 
 2. **Pre-loaded Analysis** (5 minutes)
+
    - Show existing SHIF analysis results
    - Navigate through contradictions
    - Demonstrate evidence tracking
 
 3. **Live PDF Processing** (10 minutes)
+
    - Upload new PDF document
    - Watch real-time AI analysis
    - Show extraction progress
 
 4. **Results Exploration** (10 minutes)
+
    - Browse extracted rules
    - Examine flagged contradictions
    - Review evidence snippets
