@@ -188,15 +188,23 @@ class SHIFHealthcarePolicyAnalyzer:
         """, unsafe_allow_html=True)
         
         # Load cached results on startup if available
-        if not self.results:
+        if "results" not in st.session_state or not st.session_state.results:
             cache_file = Path("unified_analysis_output.json")
             if cache_file.exists():
                 try:
                     with open(cache_file, "r", encoding="utf-8") as f:
-                        self.results = json.load(f)
+                        st.session_state.results = json.load(f)
                     st.sidebar.success("✅ Loaded cached analysis results")
                 except Exception as e:
                     st.sidebar.warning(f"⚠️ Could not load cache: {e}")
+            else:
+                st.session_state.results = {}
+        else:
+            # Results already in session state, use them
+            pass
+        
+        # Sync session state results to instance variable for compatibility
+        self.results = st.session_state.get("results", {})
         
         # Sidebar
         self.render_sidebar()
@@ -645,6 +653,9 @@ class SHIFHealthcarePolicyAnalyzer:
                 'extraction_method': 'LIVE_PDF_EXTRACTION'
             }
             
+            # Sync to session state for persistence across reruns
+            st.session_state.results = self.results
+            
             # Final success message
             col1, col2, col3 = st.columns(3)
             
@@ -1012,6 +1023,9 @@ class SHIFHealthcarePolicyAnalyzer:
                         'dataset': data.get('extraction_results', {}),
                         'timestamp': data.get('analysis_metadata', {}).get('analysis_timestamp', 'Unknown')
                     }
+                    
+                    # Sync to session state for persistence
+                    st.session_state.results = self.results
                     
                     st.success(f"✅ Loaded results from {file_path}")
                     break
