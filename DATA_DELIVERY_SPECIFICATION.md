@@ -221,10 +221,10 @@ Coverage: 98.8% tariff availability
 | Contradictions      | 6      | ✅ Validated    | Severity, Specialty, Type          |
 | Clinical Gaps       | 5      | ✅ AI-Identified| WHO Essential Services             |
 | Coverage Gaps       | 24     | ✅ Consolidated | Service/Geographic/Care/Population |
-| **Total Gaps (after dedup)** | **24-29*** | ✅ Unique | Gap type + Priority + Impact |
+| **Total Gaps (after dedup)** | **28** | ✅ Deterministic | Gap type + Priority + Impact |
 | Policy Services     | 825    | ✅ Extracted    | Fund, Facility, Tariff             |
 | Surgical Procedures | 272    | ✅ Extracted    | Specialty, Tariff                  |
 
 **Overall**: ✅ **All analyses provided**, ✅ **All categorizations included**, ✅ **No artificial inflation** - all data is clean and validated.
 
-**Note on Deduplication Variance**: The comprehensive_gaps_analysis.csv shows variance (24-29 rows) across runs due to probabilistic AI-powered deduplication. However, the core metrics remain constant: 5 clinical gaps + 24 coverage gaps always present, with 2 AI-flagged duplicates removed when conditions align (resulting in 27 unique gaps).
+**Note on Deduplication**: The comprehensive_gaps_analysis.csv contains 28 deduplicated gaps. The deduplication uses fast heuristic pattern matching (not probabilistic): Geographic access gaps are consolidated (both describe spatial distribution barriers), while specialty-specific gaps like cardiac rehabilitation are kept separate from general rehabilitation services (different medical specialties requiring different expertise).

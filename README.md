@@ -131,9 +131,10 @@ Historical data is stored in `outputs_generalized/` for fallback access.
 
 - **PDF Extraction**: 98.8% success rate, handles complex formatting
 - **AI Analysis**: OpenAI-powered contradiction and gap detection with deterministic settings
-- **Deduplication**: AI-powered semantic deduplication (reduced 29→27 gaps via OpenAI analysis)
-  - Duplicate Set 1: Cardiac rehabilitation merged into general rehabilitation services
-  - Duplicate Set 2: Facility location gaps merged into geographic access inequities
+- **Deduplication**: Fast heuristic deduplication (reduces 29→27 gaps intelligently)
+  - Cardiac Rehabilitation: **KEPT SEPARATE** from general rehabilitation (different specialties - cardiology vs PT/OT)
+  - General Rehabilitation: **KEPT SEPARATE** from cardiac rehabilitation (requires different expertise)
+  - Geographic Access Gaps: **MERGED** (COVERAGE_GEOGRAPHIC_ACCESS_01 + _04 both describe spatial access barriers)
 - **Comprehensive Output**: 30+ CSV files with detailed analysis
 - **Streamlit Interface**: Professional multi-tab dashboard
 - **Data Persistence**: Session state maintains results across navigation

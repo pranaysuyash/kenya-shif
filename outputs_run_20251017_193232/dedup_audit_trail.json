@@ -1,0 +1,23 @@
+{
+  "timestamp": "2025-10-17T19:32:34.850742",
+  "gaps_before": 29,
+  "gaps_after": 28,
+  "reduction_count": 1,
+  "reduction_rate_percent": 3.4,
+  "merges": [
+    {
+      "kept": "COVERAGE_GEOGRAPHIC_ACCESS_01",
+      "removed": "COVERAGE_GEOGRAPHIC_ACCESS_04",
+      "reason": "Both describe spatial distribution barriers (facility density, travel times, catchment)",
+      "kept_description": "Geographic inequities leave large areas with minimal facility density and long travel times to any functional health facility, worsening preventable morbidity and mortality.",
+      "removed_description": "Facility locations, catchment sizes and service mixes are not systematically aligned with population density and travel patterns leading to underserved pockets even within counties with adequate aggregate facility counts."
+    }
+  ],
+  "rules_applied": [
+    "cardiac_rehab_kept_separate",
+    "general_rehab_kept_separate",
+    "geographic_access_01_and_04_merged"
+  ],
+  "method": "pattern_based_heuristic",
+  "deterministic": true
+}
