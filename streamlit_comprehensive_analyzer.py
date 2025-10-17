@@ -194,11 +194,14 @@ class SHIFHealthcarePolicyAnalyzer:
                 try:
                     with open(cache_file, "r", encoding="utf-8") as f:
                         st.session_state.results = json.load(f)
+                    st.session_state.has_analysis = True  # Flag for checking if analysis was run
                     st.sidebar.success("✅ Loaded cached analysis results")
                 except Exception as e:
                     st.sidebar.warning(f"⚠️ Could not load cache: {e}")
+                    st.session_state.has_analysis = False
             else:
                 st.session_state.results = {}
+                st.session_state.has_analysis = False  # No analysis run yet
         else:
             # Results already in session state, use them
             pass
@@ -262,33 +265,42 @@ class SHIFHealthcarePolicyAnalyzer:
             
             st.markdown("---")
         
-        # Main content tabs
-        tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
-            "📊 Dashboard Overview", 
-            "📋 Task 1: Structured Rules",
-            "🔍 Task 2: Contradictions & Gaps", 
-            "🌍 Task 3: Kenya Context",
-            "📈 Advanced Analytics",
-            "🤖 AI Insights"
-        ])
-        
-        with tab1:
-            self.render_dashboard_overview()
-        
-        with tab2:
-            self.render_task1_structured_rules()
-        
-        with tab3:
-            self.render_task2_contradictions_gaps()
-        
-        with tab4:
-            self.render_task3_kenya_context()
-        
-        with tab5:
-            self.render_advanced_analytics()
-        
-        with tab6:
-            self.render_ai_insights()
+        # Main content tabs - show all tabs only after analysis is run
+        # Use has_analysis flag since it's explicitly set when analysis runs
+        if st.session_state.get("has_analysis", False):
+            # Show all tabs when results are available
+            tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
+                "📊 Dashboard Overview", 
+                "📋 Task 1: Structured Rules",
+                "🔍 Task 2: Contradictions & Gaps", 
+                "🌍 Task 3: Kenya Context",
+                "📈 Advanced Analytics",
+                "🤖 AI Insights"
+            ])
+            
+            with tab1:
+                self.render_dashboard_overview()
+            
+            with tab2:
+                self.render_task1_structured_rules()
+            
+            with tab3:
+                self.render_task2_contradictions_gaps()
+            
+            with tab4:
+                self.render_task3_kenya_context()
+            
+            with tab5:
+                self.render_advanced_analytics()
+            
+            with tab6:
+                self.render_ai_insights()
+        else:
+            # Show only Dashboard Overview tab when no results loaded
+            tab1 = st.container()
+            with tab1:
+                st.markdown("### 📊 Dashboard Overview")
+                self.render_dashboard_overview()
 
     # ---------- Helpers for saving CSVs from JSON ----------
     def _normalize_and_save(self, obj, out_path):
@@ -655,6 +667,7 @@ class SHIFHealthcarePolicyAnalyzer:
             
             # Sync to session state for persistence across reruns
             st.session_state.results = self.results
+            st.session_state.has_analysis = True  # Set flag to show all tabs
             
             # Final success message
             col1, col2, col3 = st.columns(3)
@@ -677,6 +690,8 @@ class SHIFHealthcarePolicyAnalyzer:
             
             **Ready for OpenAI analysis and detailed insights!**
             """)
+            
+            st.rerun()  # Trigger rerun to show all tabs
             
         except Exception as e:
             progress_text.text("❌ Extraction failed")
@@ -999,38 +1014,80 @@ class SHIFHealthcarePolicyAnalyzer:
         return ui
     
     def load_existing_results(self):
-        """Load existing analysis results"""
+        """Load existing analysis results from most recent outputs_run folder"""
         
         try:
-            # Try to load from outputs directory
-            results_files = [
-                'outputs/shif_healthcare_pattern_complete_analysis.json',
-                'outputs/integrated_comprehensive_analysis.json'
-            ]
+            results_loaded = False
             
-            for file_path in results_files:
-                if Path(file_path).exists():
-                    with open(file_path, 'r') as f:
+            # First, try to find the most recent outputs_run_* folder
+            from pathlib import Path
+            base_path = Path(".")
+            outputs_run_folders = sorted(base_path.glob("outputs_run_*"), reverse=True)
+            
+            if outputs_run_folders:
+                latest_folder = outputs_run_folders[0]
+                results_file = latest_folder / "integrated_comprehensive_analysis.json"
+                
+                if results_file.exists():
+                    with open(results_file, 'r') as f:
                         data = json.load(f)
                     
-                    # Transform data structure for compatibility
+                    # Map to standard structure based on actual data keys
                     self.results = {
-                        'structured_rules': data.get('task1_structured_rules', []),
-                        'contradictions': data.get('task2_contradictions', []),
-                        'gaps': data.get('task2_gaps', []),
+                        'structured_rules': data.get('task1_structured_rules', data.get('comprehensive_services', [])),
+                        'contradictions': data.get('task2_contradictions', data.get('all_contradictions', [])),
+                        'gaps': data.get('task2_gaps', data.get('comprehensive_gaps', [])),
                         'context_analysis': data.get('task3_context_analysis', {}),
-                        'dashboard': data.get('task4_dashboard', {}),
+                        'dashboard': data.get('task4_dashboard', data.get('summary', {})),
                         'dataset': data.get('extraction_results', {}),
-                        'timestamp': data.get('analysis_metadata', {}).get('analysis_timestamp', 'Unknown')
+                        'timestamp': data.get('analysis_metadata', {}).get('analysis_timestamp', 'Unknown'),
+                        'ai_analysis': data  # Store full data for access to other fields
                     }
                     
                     # Sync to session state for persistence
                     st.session_state.results = self.results
+                    st.session_state.has_analysis = True  # Set flag to show tabs
                     
-                    st.success(f"✅ Loaded results from {file_path}")
-                    break
-            else:
+                    st.success(f"✅ Loaded results from {results_file}")
+                    results_loaded = True
+            
+            # Fallback to hardcoded paths if no outputs_run folder found
+            if not results_loaded:
+                results_files = [
+                    'outputs/shif_healthcare_pattern_complete_analysis.json',
+                    'outputs/integrated_comprehensive_analysis.json',
+                    'outputs_generalized/generalized_complete_analysis.json'
+                ]
+                
+                for file_path in results_files:
+                    if Path(file_path).exists():
+                        with open(file_path, 'r') as f:
+                            data = json.load(f)
+                        
+                        # Map to standard structure based on actual data keys
+                        self.results = {
+                            'structured_rules': data.get('task1_structured_rules', data.get('comprehensive_services', [])),
+                            'contradictions': data.get('task2_contradictions', data.get('all_contradictions', [])),
+                            'gaps': data.get('task2_gaps', data.get('comprehensive_gaps', [])),
+                            'context_analysis': data.get('task3_context_analysis', {}),
+                            'dashboard': data.get('task4_dashboard', data.get('summary', {})),
+                            'dataset': data.get('extraction_results', {}),
+                            'timestamp': data.get('analysis_metadata', {}).get('analysis_timestamp', 'Unknown'),
+                            'ai_analysis': data  # Store full data for access to other fields
+                        }
+                        
+                        # Sync to session state for persistence
+                        st.session_state.results = self.results
+                        st.session_state.has_analysis = True  # Set flag to show tabs
+                        
+                        st.success(f"✅ Loaded results from {file_path}")
+                        results_loaded = True
+                        break
+            
+            if not results_loaded:
                 st.warning("No existing results found. Run extraction first.")
+            else:
+                st.rerun()  # Trigger rerun to show all tabs
                 
         except Exception as e:
             st.error(f"Failed to load results: {str(e)}")
@@ -1586,87 +1643,109 @@ class SHIFHealthcarePolicyAnalyzer:
         
         st.markdown(f"""
         **🎯 Task 1 Results:**
-        - **{len(structured_rules)} rules** successfully structured
-        - Each rule includes: service name, conditions, facility level, coverage conditions, exclusions, tariff
+        - **{len(structured_rules)} services** successfully extracted
+        - Each service includes: name, pricing, extraction method, confidence score
         """)
         
-        # Facility level analysis
+        # Extraction method analysis
         col1, col2 = st.columns(2)
         
         with col1:
-            facility_levels = Counter(rule.get('facility_level', 'Unknown') for rule in structured_rules)
+            # Safe extraction: handle None and list values
+            extraction_methods = []
+            for rule in structured_rules:
+                method = rule.get('extraction_method', 'Unknown')
+                # If it's a list, take the first item or convert to string
+                if isinstance(method, list):
+                    method = method[0] if method else 'Unknown'
+                extraction_methods.append(str(method))
+            
+            method_counts = Counter(extraction_methods)
+            
+            # Create DataFrame for Plotly
+            method_df = pd.DataFrame({
+                'Extraction Method': list(method_counts.keys()),
+                'Number of Services': list(method_counts.values())
+            })
             
             fig = px.bar(
-                x=list(facility_levels.keys()),
-                y=list(facility_levels.values()),
-                title="Services by Facility Level",
-                labels={'x': 'Facility Level', 'y': 'Number of Services'}
+                method_df,
+                x='Extraction Method',
+                y='Number of Services',
+                title="Services by Extraction Method"
             )
             fig.update_xaxes(tickangle=45)
             st.plotly_chart(fig, use_container_width=True)
         
         with col2:
-            # Payment method analysis
-            payment_methods = Counter(rule.get('payment_method', 'Unknown') for rule in structured_rules)
+            # Price availability analysis
+            priced_services = sum(1 for s in structured_rules if s.get('pricing_kes'))
+            free_services = sum(1 for s in structured_rules if s.get('is_free_service'))
+            unknown_price = len(structured_rules) - priced_services - free_services
             
             fig = px.pie(
-                values=list(payment_methods.values()),
-                names=list(payment_methods.keys()),
-                title="Payment Method Distribution"
+                values=[priced_services, free_services, unknown_price],
+                names=['Priced Services', 'Free Services', 'Price Unknown'],
+                title="Service Pricing Distribution"
             )
             st.plotly_chart(fig, use_container_width=True)
         
-        # Rule complexity analysis
-        st.markdown("### 🧩 Rule Complexity Analysis")
+        # Service complexity analysis
+        st.markdown("### 🧩 Service Confidence Analysis")
         
-        complex_rules = 0
-        simple_rules = 0
+        high_confidence = sum(1 for s in structured_rules if s.get('extraction_confidence', 0) >= 0.9)
+        medium_confidence = sum(1 for s in structured_rules if 0.7 <= s.get('extraction_confidence', 0) < 0.9)
+        low_confidence = sum(1 for s in structured_rules if s.get('extraction_confidence', 0) < 0.7)
         
-        for rule in structured_rules:
-            conditions_count = len(rule.get('conditions', []))
-            exclusions_count = len(rule.get('exclusions', []))
-            
-            if conditions_count > 2 or exclusions_count > 1:
-                complex_rules += 1
-            else:
-                simple_rules += 1
-        
-        col1, col2 = st.columns(2)
+        col1, col2, col3 = st.columns(3)
         
         with col1:
-            st.metric("Complex Rules", complex_rules, delta=f"{(complex_rules/len(structured_rules)*100):.1f}%")
+            if len(structured_rules) > 0:
+                st.metric("High Confidence", high_confidence, delta=f"{(high_confidence/len(structured_rules)*100):.1f}%")
+            else:
+                st.metric("High Confidence", high_confidence, delta="N/A")
         
         with col2:
-            st.metric("Simple Rules", simple_rules, delta=f"{(simple_rules/len(structured_rules)*100):.1f}%")
+            if len(structured_rules) > 0:
+                st.metric("Medium Confidence", medium_confidence, delta=f"{(medium_confidence/len(structured_rules)*100):.1f}%")
+            else:
+                st.metric("Medium Confidence", medium_confidence, delta="N/A")
+                
+        with col3:
+            if len(structured_rules) > 0:
+                st.metric("Low Confidence", low_confidence, delta=f"{(low_confidence/len(structured_rules)*100):.1f}%")
+            else:
+                st.metric("Low Confidence", low_confidence, delta="N/A")
         
-        # Structured rules overview
-        st.markdown("### 📄 Structured Rules Overview")
+        # Services overview
+        st.markdown("### 📄 Extracted Services Overview")
         
         if structured_rules:
             # Create display dataframe
             display_rules = []
             for rule in structured_rules[:20]:  # Show first 20
+                service_name = rule.get('service_name', '')
+                if isinstance(service_name, list):
+                    service_name = service_name[0] if service_name else ''
                 display_rules.append({
-                    'Service Name': rule.get('service_name', '')[:50] + '...' if len(rule.get('service_name', '')) > 50 else rule.get('service_name', ''),
-                    'Rule Type': rule.get('rule_type', ''),
-                    'Facility Level': rule.get('facility_level', ''),
-                    'Tariff Amount': f"KES {rule.get('tariff_amount', 0):,.0f}" if rule.get('tariff_amount') else 'N/A',
-                    'Payment Method': rule.get('payment_method', ''),
-                    'Conditions Count': len(rule.get('conditions', [])),
-                    'Exclusions Count': len(rule.get('exclusions', []))
+                    'Service Name': (service_name[:50] + '...') if len(str(service_name)) > 50 else service_name,
+                    'Page': rule.get('page_reference', ''),
+                    'Pricing (KES)': f"{rule.get('pricing_kes', 'N/A'):,}" if rule.get('pricing_kes') else 'Free/Unknown',
+                    'Extraction Method': rule.get('extraction_method', ''),
+                    'Confidence': f"{rule.get('extraction_confidence', 0):.1%}"
                 })
             
             df_display = pd.DataFrame(display_rules)
             st.dataframe(df_display, use_container_width=True)
         
         # Download structured rules
-        if st.button("📥 Download Structured Rules CSV"):
+        if st.button("📥 Download Extracted Services CSV"):
             df_rules = pd.DataFrame(structured_rules)
             csv = df_rules.to_csv(index=False)
             st.download_button(
                 label="Download CSV",
                 data=csv,
-                file_name=f"structured_rules_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
+                file_name=f"extracted_services_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
                 mime="text/csv"
             )
     

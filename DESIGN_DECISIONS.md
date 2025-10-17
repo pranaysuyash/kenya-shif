@@ -552,9 +552,121 @@ AI Insights
 | Advanced Analytics | Power users            | Detailed exploration                     |
 | AI Insights        | Strategic decisions    | Evidence-based recommendations           |
 
+### AI Insights Tab - 5 Interactive Buttons
+
+The AI Insights tab provides five powerful analysis buttons:
+
+#### 1. 🔍 Analyze Contradictions
+
+Purpose: Identify policy conflicts that could harm patients or confuse providers
+
+Analysis: Uses medical expertise (Dr. Sarah Mwangi persona) across 10+ specialties
+
+Output: Structured analysis showing:
+
+- Contradiction type and severity
+- Medical specialty affected
+- Clinical impact (HIGH/MEDIUM/LOW)
+- Patient safety risks
+- Provider confusion implications
+- Recommended fixes with medical evidence
+
+Example: Detects dialysis session frequency conflicts between procedures
+
+#### 2. 📊 Analyze Coverage Gaps
+
+Purpose: Identify missing or insufficient healthcare coverage areas
+
+Analysis: Matches policy against Kenya health needs and disease burden
+
+Output: Gap analysis with:
+
+- Service coverage gaps
+- Population groups underserved
+- Disease areas not covered
+- Geographic disparities
+- County-level implementation challenges
+- Priority recommendations
+
+Example: Identifies mental health coverage insufficiency for specific age groups
+
+#### 3. 📋 Executive Policy Recommendations
+
+Purpose: Generate strategic policy improvement recommendations
+
+Analysis: Reviews all 920+ services against healthcare standards
+
+Output: Executive-level insights including:
+
+- High-level policy gaps
+- Facility-level mismatches
+- Resource utilization issues
+- Service prioritization recommendations
+- Implementation readiness assessment
+- Cost-benefit analysis
+
+Example: Recommends consolidating duplicative services, reallocating resources
+
+#### 4. 🌍 Kenya-Specific Insights
+
+Purpose: Ground analysis in Kenya's healthcare context and realities
+
+Analysis: Applies Kenya healthcare system knowledge (facility levels 1-6, resources, disease burden)
+
+Output: Contextualized insights:
+
+- Alignment with national health priorities
+- County implementation feasibility
+- Cultural and economic considerations
+- Healthcare system capacity constraints
+- Equity and access implications
+- Regional variation recommendations
+
+Example: Adapts recommendations for different county healthcare maturity levels
+
+#### 5. 🔮 Predictive Scenario Analysis
+
+Purpose: Project policy outcomes under different implementation scenarios
+
+Analysis: Runs AI models against user-provided scenarios
+
+Input: User describes scenario (e.g., "Baseline with moderate readiness, scale over 12 months")
+
+Output: Predictive analysis with:
+
+- Expected implementation timeline
+- Resource requirements
+- Provider adoption challenges
+- Patient impact projections
+- Risk factors and mitigation
+- Success indicators and KPIs
+
+Example: Projects coverage expansion outcomes under different scaling timelines
+
+### Why Session State for AI Insights?
+
+```text
+Problem: Streamlit reruns entire script on every interaction
+- Clicking "Analyze Contradictions" button triggers rerun
+- Instance variables (self.results) reset on each rerun
+- User would see "Load results" even though data existed
+
+Solution: Use st.session_state (persists across reruns)
+- Store extracted data in session state on startup
+- Sync to instance variables
+- Results remain available during entire user session
+- All buttons work immediately without re-extraction
+
+Result:
+✅ Click AI Insights tab → sees cached data
+✅ Click any button → works immediately
+✅ Multiple analyses possible → all reference same data
+✅ Fast interactions → no re-extraction needed
+```
+
 ### Why Documentation in Sidebar?
 
-```
+```text
 Initial design: Side panel (abandoned)
 ❌ Takes up 1/3 of screen
 ❌ Closes on interaction
