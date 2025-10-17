@@ -1,0 +1,5 @@
+openjdk-17-jre-headless
+ghostscript
+poppler-utils
+libgl1
+libglib2.0-0

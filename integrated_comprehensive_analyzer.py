@@ -21,6 +21,11 @@ try:
     import tabula  # type: ignore
 except Exception:
     tabula = None  # Fallback handled at call sites
+# Streamlit Cloud compatibility: wrapper for tabula with subprocess mode
+try:
+    from tabula_utils import tabula_read
+except ImportError:
+    tabula_read = None  # Fallback if tabula_utils not available
 from typing import List, Dict, Optional, Tuple
 import time
 from pathlib import Path
