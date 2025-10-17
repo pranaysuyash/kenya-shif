@@ -206,10 +206,13 @@ class SHIFHealthcarePolicyAnalyzer:
             st.session_state.view_doc = False
         if "selected_doc" not in st.session_state:
             st.session_state.selected_doc = "README"
+        if "is_ref_doc" not in st.session_state:
+            st.session_state.is_ref_doc = False
         
         # Documentation Viewer in Main Window
         if st.session_state.view_doc:
-            doc_files = {
+            # Combined doc files dict
+            all_docs = {
                 "📖 README": "README.md",
                 "🏗️ System Architecture & Flow": "SYSTEM_ARCHITECTURE_FLOW.md",
                 "🔄 System Flow Explanation": "SYSTEM_FLOW_EXPLANATION.md",
@@ -217,32 +220,39 @@ class SHIFHealthcarePolicyAnalyzer:
                 "📋 Implementation Summary": "IMPLEMENTATION_SUMMARY.md",
                 "🚀 Quick Deployment": "QUICK_DEPLOYMENT.md",
                 "📚 Deployment Guide": "DEPLOYMENT_GUIDE.md",
-                "✅ Deployment Readiness Checklist": "DEPLOYMENT_READINESS_CHECKLIST.md",
-                "📦 Deployment Summary": "DEPLOYMENT_SUMMARY.md",
-                "📂 Directory Structure": "DIRECTORY_STRUCTURE.md",
+                "✅ Deployment Checklist": "DEPLOYMENT_READINESS_CHECKLIST.md",
+                " Directory Structure": "DIRECTORY_STRUCTURE.md",
                 "🏢 Architecture Overview": "ARCHITECTURE.md",
                 "📊 Production Files Guide": "PRODUCTION_FILES_GUIDE.md",
                 "📝 Current State Analysis": "CURRENT_STATE_ANALYSIS.md",
-                "🎯 Final Submission Complete": "FINAL_SUBMISSION_COMPLETE.md",
-                "🧹 Repository Cleanup Summary": "REPOSITORY_CLEANUP_SUMMARY.md",
+                "🎯 Final Submission": "FINAL_SUBMISSION_COMPLETE.md",
+                "🧹 Cleanup Summary": "REPOSITORY_CLEANUP_SUMMARY.md",
+                "📦 Deployment Summary": "DEPLOYMENT_SUMMARY.md",
             }
             
             st.markdown("---")
-            col1, col2 = st.columns([4, 1])
+            col1, col2, col3 = st.columns([3, 1, 1])
             with col1:
                 st.markdown(f"### 📖 {st.session_state.selected_doc}")
             with col2:
-                if st.button("✕ Close Documentation"):
+                if st.button("🔄 Refresh"):
+                    st.rerun()
+            with col3:
+                if st.button("✕ Close"):
                     st.session_state.view_doc = False
                     st.rerun()
             
-            doc_path = doc_files[st.session_state.selected_doc]
-            try:
-                with open(doc_path, "r") as f:
-                    content = f.read()
-                st.markdown(content)
-            except Exception as e:
-                st.error(f"Could not open {doc_path}: {e}")
+            # Get doc file path
+            doc_path = all_docs.get(st.session_state.selected_doc)
+            if doc_path:
+                try:
+                    with open(doc_path, "r", encoding="utf-8") as f:
+                        content = f.read()
+                    st.markdown(content)
+                except Exception as e:
+                    st.error(f"Could not open {doc_path}: {e}")
+            else:
+                st.error(f"Documentation file not found for: {st.session_state.selected_doc}")
             
             st.markdown("---")
         
@@ -426,19 +436,32 @@ class SHIFHealthcarePolicyAnalyzer:
             "📋 Implementation Summary": "IMPLEMENTATION_SUMMARY.md",
             "🚀 Quick Deployment": "QUICK_DEPLOYMENT.md",
             "📚 Deployment Guide": "DEPLOYMENT_GUIDE.md",
-            "✅ Deployment Readiness Checklist": "DEPLOYMENT_READINESS_CHECKLIST.md",
-            "📦 Deployment Summary": "DEPLOYMENT_SUMMARY.md",
-            "📂 Directory Structure": "DIRECTORY_STRUCTURE.md",
-            "🏢 Architecture Overview": "ARCHITECTURE.md",
-            "📊 Production Files Guide": "PRODUCTION_FILES_GUIDE.md",
-            "📝 Current State Analysis": "CURRENT_STATE_ANALYSIS.md",
-            "🎯 Final Submission Complete": "FINAL_SUBMISSION_COMPLETE.md",
-            "🧹 Repository Cleanup Summary": "REPOSITORY_CLEANUP_SUMMARY.md",
+            "✅ Deployment Checklist": "DEPLOYMENT_READINESS_CHECKLIST.md",
         }
+        
+        st.sidebar.markdown("**Main Docs** ↓")
         selected_doc = st.sidebar.selectbox("View Documentation", list(doc_files.keys()), index=0)
         if st.sidebar.button("📖 Open Selected Doc"):
             st.session_state.view_doc = True
             st.session_state.selected_doc = selected_doc
+        
+        # Reference docs (collapsible)
+        with st.sidebar.expander("📎 Reference Docs (Expand)"):
+            ref_docs = {
+                "📂 Directory Structure": "DIRECTORY_STRUCTURE.md",
+                "🏢 Architecture Overview": "ARCHITECTURE.md",
+                "📊 Production Files Guide": "PRODUCTION_FILES_GUIDE.md",
+                "📝 Current State Analysis": "CURRENT_STATE_ANALYSIS.md",
+                "🎯 Final Submission": "FINAL_SUBMISSION_COMPLETE.md",
+                "🧹 Cleanup Summary": "REPOSITORY_CLEANUP_SUMMARY.md",
+                "📦 Deployment Summary": "DEPLOYMENT_SUMMARY.md",
+            }
+            selected_ref_doc = st.selectbox("Reference Documentation", list(ref_docs.keys()), key="ref_doc_select")
+            if st.button("📖 Open Reference Doc", key="ref_doc_button"):
+                st.session_state.view_doc = True
+                st.session_state.selected_doc = selected_ref_doc
+                st.session_state.ref_doc_files = ref_docs
+                st.session_state.is_ref_doc = True
     
     def run_complete_extraction(self):
         """Run complete LIVE extraction and analysis with real-time progress"""
