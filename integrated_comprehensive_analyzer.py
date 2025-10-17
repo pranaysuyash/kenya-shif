@@ -905,27 +905,39 @@ class IntegratedComprehensiveMedicalAnalyzer:
         return None
 
     def read_tables_proven(self, pdf_path: str, pages="1-18"):
-        """User's proven table reading with defensive fallback when tabula isn't available"""
+        """User's proven table reading with defensive fallback when tabula isn't available or JVM fails"""
         if tabula is None:
             print("   ⚠️ tabula-py not available; skipping table read for",
                   f"pages {pages} and returning no tables")
             return []
-        dfs = tabula.read_pdf(
-            pdf_path,
-            pages=pages,
-            lattice=True,
-            multiple_tables=True,
-            pandas_options={"header": None},
-        ) or []
-        if not dfs:
+        
+        try:
             dfs = tabula.read_pdf(
                 pdf_path,
                 pages=pages,
-                stream=True,
+                lattice=True,
                 multiple_tables=True,
                 pandas_options={"header": None},
             ) or []
-        return dfs
+            if not dfs:
+                dfs = tabula.read_pdf(
+                    pdf_path,
+                    pages=pages,
+                    stream=True,
+                    multiple_tables=True,
+                    pandas_options={"header": None},
+                ) or []
+            return dfs
+        except Exception as e:
+            # Catch JVM-related exceptions and other tabula failures
+            error_msg = str(e).lower()
+            if 'jvm' in error_msg or 'java' in error_msg or 'jpype' in error_msg:
+                print(f"   ⚠️ tabula-py JVM error: {e}")
+                print("   ⚠️ Falling back to pdfplumber for table extraction")
+                return []
+            else:
+                # Re-raise non-JVM exceptions
+                raise
 
     def extract_rules_tables_proven(self, pdf_path: str, pages="1-18"):
         """User's PROVEN extraction function for pages 1-18"""
@@ -1127,13 +1139,24 @@ class IntegratedComprehensiveMedicalAnalyzer:
             # Extract sample tables to build vocabulary (only if tabula is available)
             dfs = []
             if tabula is not None:
-                dfs = tabula.read_pdf(
-                    pdf_path,
-                    pages="1-18",
-                    lattice=True,
-                    multiple_tables=True,
-                    pandas_options={"header": None},
-                ) or []
+                try:
+                    dfs = tabula.read_pdf(
+                        pdf_path,
+                        pages="1-18",
+                        lattice=True,
+                        multiple_tables=True,
+                        pandas_options={"header": None},
+                    ) or []
+                except Exception as e:
+                    # Catch JVM-related exceptions
+                    error_msg = str(e).lower()
+                    if 'jvm' in error_msg or 'java' in error_msg or 'jpype' in error_msg:
+                        print(f"   ⚠️ tabula-py JVM error in vocabulary building: {e}")
+                        print("   ⚠️ Skipping vocabulary building due to JVM issues")
+                        dfs = []
+                    else:
+                        # Re-raise non-JVM exceptions
+                        raise
             
             word_re = re.compile(r"[A-Za-z][A-Za-z\-']{2,}")
             
@@ -1706,13 +1729,24 @@ class IntegratedComprehensiveMedicalAnalyzer:
                 print("   ⚠️ tabula-py not available; skipping annex table extraction")
                 return {'procedures': pd.DataFrame()}
 
-            # EXACT extract_annex_tabula_simple function from manual.ipynb
-            dfs = tabula.read_pdf(
-                pdf_path,
-                pages=pages,
-                multiple_tables=True,
-                pandas_options={"header": None}
-            ) or []
+            try:
+                # EXACT extract_annex_tabula_simple function from manual.ipynb
+                dfs = tabula.read_pdf(
+                    pdf_path,
+                    pages=pages,
+                    multiple_tables=True,
+                    pandas_options={"header": None}
+                ) or []
+            except Exception as e:
+                # Catch JVM-related exceptions and other tabula failures
+                error_msg = str(e).lower()
+                if 'jvm' in error_msg or 'java' in error_msg or 'jpype' in error_msg:
+                    print(f"   ⚠️ tabula-py JVM error in annex extraction: {e}")
+                    print("   ⚠️ Falling back to pdfplumber for annex extraction")
+                    return {'procedures': pd.DataFrame()}
+                else:
+                    # Re-raise non-JVM exceptions
+                    raise
             
             results = []
             for df in dfs:
