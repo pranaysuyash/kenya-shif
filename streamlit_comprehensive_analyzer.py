@@ -206,8 +206,6 @@ class SHIFHealthcarePolicyAnalyzer:
             st.session_state.view_doc = False
         if "selected_doc" not in st.session_state:
             st.session_state.selected_doc = "README"
-        if "is_ref_doc" not in st.session_state:
-            st.session_state.is_ref_doc = False
         
         # Documentation Viewer in Main Window
         if st.session_state.view_doc:
@@ -425,7 +423,7 @@ class SHIFHealthcarePolicyAnalyzer:
         st.sidebar.info(f"Integrated Analyzer: {'✅' if integrated_available else '❌'}")
         st.sidebar.info(f"OpenAI Client: {'✅' if self.openai_client else '❌'}")
 
-        # --- Documentation Viewer in Sidebar Menu ---
+        # --- Documentation Viewer ---
         st.sidebar.markdown("---")
         st.sidebar.markdown("### 📚 Documentation")
         doc_files = {
@@ -437,31 +435,19 @@ class SHIFHealthcarePolicyAnalyzer:
             "🚀 Quick Deployment": "QUICK_DEPLOYMENT.md",
             "📚 Deployment Guide": "DEPLOYMENT_GUIDE.md",
             "✅ Deployment Checklist": "DEPLOYMENT_READINESS_CHECKLIST.md",
+            "📂 Directory Structure": "DIRECTORY_STRUCTURE.md",
+            "🏢 Architecture Overview": "ARCHITECTURE.md",
+            "📊 Production Files Guide": "PRODUCTION_FILES_GUIDE.md",
+            "📝 Current State Analysis": "CURRENT_STATE_ANALYSIS.md",
+            "🎯 Final Submission": "FINAL_SUBMISSION_COMPLETE.md",
+            "🧹 Cleanup Summary": "REPOSITORY_CLEANUP_SUMMARY.md",
+            "📦 Deployment Summary": "DEPLOYMENT_SUMMARY.md",
         }
         
-        st.sidebar.markdown("**Main Docs** ↓")
         selected_doc = st.sidebar.selectbox("View Documentation", list(doc_files.keys()), index=0)
         if st.sidebar.button("📖 Open Selected Doc"):
             st.session_state.view_doc = True
             st.session_state.selected_doc = selected_doc
-        
-        # Reference docs (collapsible)
-        with st.sidebar.expander("📎 Reference Docs (Expand)"):
-            ref_docs = {
-                "📂 Directory Structure": "DIRECTORY_STRUCTURE.md",
-                "🏢 Architecture Overview": "ARCHITECTURE.md",
-                "📊 Production Files Guide": "PRODUCTION_FILES_GUIDE.md",
-                "📝 Current State Analysis": "CURRENT_STATE_ANALYSIS.md",
-                "🎯 Final Submission": "FINAL_SUBMISSION_COMPLETE.md",
-                "🧹 Cleanup Summary": "REPOSITORY_CLEANUP_SUMMARY.md",
-                "📦 Deployment Summary": "DEPLOYMENT_SUMMARY.md",
-            }
-            selected_ref_doc = st.selectbox("Reference Documentation", list(ref_docs.keys()), key="ref_doc_select")
-            if st.button("📖 Open Reference Doc", key="ref_doc_button"):
-                st.session_state.view_doc = True
-                st.session_state.selected_doc = selected_ref_doc
-                st.session_state.ref_doc_files = ref_docs
-                st.session_state.is_ref_doc = True
     
     def run_complete_extraction(self):
         """Run complete LIVE extraction and analysis with real-time progress"""
