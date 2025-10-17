@@ -269,10 +269,10 @@ If fails → Return empty dict with error message
 ```
 Total Services: 825 ✅
 Contradictions: 6 (5 high severity) ✅
-Coverage Gaps: 27 after AI semantic deduplication ✅
+Coverage Gaps: 28 after fast heuristic deduplication ✅
   - 29 gaps initially identified
-  - 2 duplicates removed via OpenAI analysis
-  - 27 final deduplicated gaps in output
+  - 1 geographic gap merged via pattern-based heuristic (cardiac kept separate)
+  - 28 final deduplicated gaps in output
 Tariff Coverage: 98.8% ✅
 ```
 

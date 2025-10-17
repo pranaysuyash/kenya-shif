@@ -104,10 +104,10 @@ Historical data is stored in `outputs_generalized/` for fallback access.
 **Latest Results:**
 - **Total Services**: 825 (97 policy + 728 annex)
 - **Contradictions**: 6 detected with proper severity classification (5 high severity)
-- **Coverage Gaps**: 27 final gaps after AI-powered deduplication
+- **Coverage Gaps**: 28 final gaps after fast heuristic deduplication
   - 29 total gaps initially identified (5 clinical + 24 coverage)
-  - 2 duplicates removed through OpenAI semantic analysis
-  - **27 final deduplicated gaps** delivered in outputs
+  - 1 geographic access gap merged through pattern-based heuristic (cardiac rehab kept separate)
+  - **28 final deduplicated gaps** delivered in outputs
 - **Tariff Coverage**: 98.8% of services analyzed
 - **Dashboard Metrics**: All showing correct numbers from CSV data
 
@@ -131,7 +131,7 @@ Historical data is stored in `outputs_generalized/` for fallback access.
 
 - **PDF Extraction**: 98.8% success rate, handles complex formatting
 - **AI Analysis**: OpenAI-powered contradiction and gap detection with deterministic settings
-- **Deduplication**: Fast heuristic deduplication (reduces 29→27 gaps intelligently)
+- **Deduplication**: Fast heuristic deduplication (reduces 29→28 gaps intelligently)
   - Cardiac Rehabilitation: **KEPT SEPARATE** from general rehabilitation (different specialties - cardiology vs PT/OT)
   - General Rehabilitation: **KEPT SEPARATE** from cardiac rehabilitation (requires different expertise)
   - Geographic Access Gaps: **MERGED** (COVERAGE_GEOGRAPHIC_ACCESS_01 + _04 both describe spatial access barriers)
