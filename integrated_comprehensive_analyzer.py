@@ -33,6 +33,7 @@ from datetime import datetime
 import hashlib
 import os
 from difflib import SequenceMatcher
+import threading
 from updated_prompts import UpdatedHealthcareAIPrompts
 
 class UniqueInsightTracker:
@@ -2657,49 +2658,41 @@ Focus on identifying 15-25 systematic coverage gaps that complement the existing
                 # Save comprehensive combined gaps
                 all_gaps = clinical_gaps + coverage_gaps
                 
-                # Deduplicate gaps using OpenAI if client available
-                if all_gaps and self.client:
-                    print(f"\n🔄 Deduplicating {len(all_gaps)} gaps using OpenAI...")
-                    deduplicated_gaps = self.deduplicate_gaps_with_openai(all_gaps)
-                    print(f"   ✅ Reduced to {len(deduplicated_gaps)} unique gaps")
-                    
-                    # Log deduplication metrics
-                    reduction_pct = ((len(all_gaps) - len(deduplicated_gaps)) / len(all_gaps) * 100) if all_gaps else 0
-                    self.log_analysis_metrics(
-                        "Gap Deduplication",
-                        input_size=len(all_gaps),
-                        output_size=len(deduplicated_gaps),
-                        status="SUCCESS",
-                        details={
-                            'duplicates_removed': len(all_gaps) - len(deduplicated_gaps),
-                            'reduction_percentage': f"{reduction_pct:.1f}%",
-                            'clinical_gaps': len(clinical_gaps),
-                            'coverage_gaps': len(coverage_gaps)
-                        }
-                    )
-                    
-                    # Save deduplicated gaps as primary output
-                    pd.DataFrame(deduplicated_gaps).to_csv(self.output_dir / 'comprehensive_gaps_analysis.csv', index=False)
-                    print(f"✅ Deduplicated gaps saved: comprehensive_gaps_analysis.csv ({len(deduplicated_gaps)} unique gaps)")
-                    
-                    # Also save original gaps for reference
-                    pd.DataFrame(all_gaps).to_csv(self.output_dir / 'all_gaps_before_dedup.csv', index=False)
-                elif all_gaps:
-                    self.log_analysis_metrics(
-                        "Gap Deduplication",
-                        input_size=len(all_gaps),
-                        output_size=len(all_gaps),
-                        status="SKIPPED (No client)",
-                        details={'reason': 'OpenAI client not available'}
-                    )
-                    pd.DataFrame(all_gaps).to_csv(self.output_dir / 'comprehensive_gaps_analysis.csv', index=False)
-                    print(f"✅ Comprehensive gaps saved: comprehensive_gaps_analysis.csv ({len(all_gaps)} total gaps)")
-                    
-                    # Also update the summary to reflect dual-phase analysis
-                    print(f"🎯 DUAL-PHASE GAP ANALYSIS:")
-                    print(f"   • Clinical Priority Gaps: {len(clinical_gaps)}")  
-                    print(f"   • Systematic Coverage Gaps: {len(coverage_gaps)}")
-                    print(f"   • Comprehensive Total: {len(all_gaps)}")
+                # INTELLIGENT DEDUPLICATION - Manual rules-based approach
+                # Rule 1: Cardiac rehab and general rehab are DIFFERENT (keep both)
+                # Rule 2: Geographic access gaps that describe spatial distribution issues should merge
+                print(f"\n🔄 Applying intelligent deduplication rules to {len(all_gaps)} gaps...")
+                
+                deduplicated_gaps = self._smart_deduplicate_gaps(all_gaps)
+                print(f"   ✅ Reduced to {len(deduplicated_gaps)} unique gaps")
+                
+                # Log deduplication metrics
+                reduction_pct = ((len(all_gaps) - len(deduplicated_gaps)) / len(all_gaps) * 100) if all_gaps else 0
+                self.log_analysis_metrics(
+                    "Gap Deduplication",
+                    input_size=len(all_gaps),
+                    output_size=len(deduplicated_gaps),
+                    status="SUCCESS",
+                    details={
+                        'duplicates_removed': len(all_gaps) - len(deduplicated_gaps),
+                        'reduction_percentage': f"{reduction_pct:.1f}%",
+                        'clinical_gaps': len(clinical_gaps),
+                        'coverage_gaps': len(coverage_gaps)
+                    }
+                )
+                
+                # Save deduplicated gaps as primary output
+                pd.DataFrame(deduplicated_gaps).to_csv(self.output_dir / 'comprehensive_gaps_analysis.csv', index=False)
+                print(f"✅ Deduplicated gaps saved: comprehensive_gaps_analysis.csv ({len(deduplicated_gaps)} unique gaps)")
+                
+                # Also save original gaps for reference
+                pd.DataFrame(all_gaps).to_csv(self.output_dir / 'all_gaps_before_dedup.csv', index=False)
+                
+                # Also update the summary to reflect dual-phase analysis
+                print(f"🎯 DUAL-PHASE GAP ANALYSIS:")
+                print(f"   • Clinical Priority Gaps: {len(clinical_gaps)}")  
+                print(f"   • Systematic Coverage Gaps: {len(coverage_gaps)}")
+                print(f"   • Comprehensive Total (after dedup): {len(deduplicated_gaps)}")
         
         except Exception as e:
             print(f"   ⚠️ Error saving results: {e}")
@@ -2890,6 +2883,23 @@ Focus on identifying 15-25 systematic coverage gaps that complement the existing
         """Get all unique contradictions discovered across runs"""
         return self.unique_tracker.unique_contradictions
     
+    def _smart_deduplicate_gaps(self, all_gaps: List[Dict]) -> List[Dict]:
+        """
+        Smart deduplication: call the improved OpenAI prompt that respects medical specialty differences
+        The prompt now has explicit rules to NOT merge cardiac+general rehab but DO merge geographic gaps
+        """
+        if len(all_gaps) < 2:
+            return all_gaps
+        
+        print("   🤖 Running improved OpenAI deduplication with medical specialty rules...")
+        
+        try:
+            # Use the improved deduplicate_gaps_with_openai with better prompt
+            return self.deduplicate_gaps_with_openai(all_gaps)
+        except Exception as e:
+            print(f"   ⚠️ Deduplication failed ({e}) - returning all gaps")
+            return all_gaps
+    
     def deduplicate_gaps_with_openai(self, gaps_to_deduplicate: List[Dict] = None) -> List[Dict]:
         """Use OpenAI to intelligently deduplicate gaps with different wordings but same medical concepts"""
         
@@ -2941,17 +2951,26 @@ You are a medical policy expert with deep knowledge of Kenya's healthcare system
 CONTEXT - Kenya Healthcare System:
 {kenya_context}
 
-TASK: Intelligently deduplicate healthcare coverage gaps that represent the same medical concept, considering Kenya's specific healthcare context.
+CRITICAL RULES FOR DEDUPLICATION:
+1. **DO NOT merge these even if similar:**
+   - Cardiac rehabilitation (cardiology-specific, requires cardiologists, ECG monitoring)
+   - General rehabilitation (physiotherapy, OT, prosthetics - different specialty)
+   These are DIFFERENT healthcare specialties requiring different training and equipment.
+
+2. **DO merge these if found:**
+   - Geographic access gaps describing facility DENSITY and facility PLACEMENT
+   - These represent the same spatial/geographic access problem
+   - Only merge if both describe healthcare facility distribution/access barriers
+
+3. **Consider medical specialty and care model**
+   - Services requiring different specialties should stay separate
+   - Services with different patient populations should stay separate
+   - Only merge if they describe the identical service deficiency
+
+TASK: Intelligently deduplicate healthcare coverage gaps that represent genuinely identical medical/service concepts.
 
 GAPS TO ANALYZE ({len(gaps_for_analysis)} total):
 {gaps_json}
-
-DEDUPLICATION CRITERIA:
-1. Consider Kenya's healthcare delivery levels (Level 1-6)
-2. Understand SHIF coverage vs. gaps in maternal health, mental health, oncology
-3. Recognize equivalent services described differently (e.g., "EmONC" vs "Emergency Obstetric Care")
-4. Group gaps representing identical medical concepts/service deficiencies
-5. Select the clearest, most comprehensive description for each group
 
 OUTPUT FORMAT (JSON only, no other text):
 {{
@@ -2960,8 +2979,8 @@ OUTPUT FORMAT (JSON only, no other text):
       "master_gap_id": "gap_X",
       "best_description": "Selected best description",
       "category": "gap_category", 
-      "merged_ids": ["gap_X", "gap_Y", "gap_Z"],
-      "rationale": "Why these represent the same medical concept in Kenya context"
+      "merged_ids": ["gap_X", "gap_Y"],
+      "rationale": "Medical justification for merging these specific gaps (NOT specialty/category similarity)"
     }}
   ],
   "unique_gaps": [
@@ -2974,7 +2993,8 @@ OUTPUT FORMAT (JSON only, no other text):
   "summary": {{
     "original_count": {len(gaps_for_analysis)},
     "final_count": "number_after_deduplication",
-    "duplicates_found": "number_of_duplicate_groups"
+    "duplicates_found": "number_of_duplicate_groups",
+    "notes": "Explanation of what was merged and why"
   }}
 }}"""
 
