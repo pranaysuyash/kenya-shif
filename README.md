@@ -11,6 +11,57 @@ This system analyzes the Kenya Social Health Insurance Fund (SHIF) benefit packa
 3. **Streamlit Dashboard** - Interactive visualization interface
 4. **Deterministic Checker** - Validation without AI dependencies
 
+## Data Flow & Storage
+
+### Fresh Extraction Output
+
+When you run a fresh analysis:
+
+1. PDF is extracted and analyzed
+2. All results are saved to a timestamped folder: `outputs_run_YYYYMMDD_HHMMSS/`
+3. Contains: `rules_p1_18_structured.csv`, `annex_procedures.csv`, `ai_contradictions.csv`, `ai_gaps.csv`, etc.
+
+### Data Loading Priority
+
+In `load_existing_results()`:
+
+```text
+PRIORITY 1: Fresh CSV Data from Latest Run
+- Searches for most recent outputs_run_*/ folder
+- Loads: rules_p1_18_structured.csv (policy services)
+- Loads: annex_procedures.csv (annex procedures)
+- Sets source_type = 'fresh_extraction_csv'
+- Syncs to session state for persistence
+
+PRIORITY 2: Historical JSON Archive (Fallback)
+- Only if no fresh run found
+- Loads from: outputs_generalized/generalized_complete_analysis.json
+- Sets source_type = 'historical_archive'
+```
+
+### Usage Scenarios
+
+#### Scenario 1: First Run
+
+- Click "Run Fresh Analysis" → PDF extracted → `outputs_run_20251017_112838/`
+- Analysis completes → 97 policy + 728 annex = 825 services
+- Results displayed in tabs → Session state persists data
+
+#### Scenario 2: Load Previous Results
+
+- Click "Load Existing Results"
+- System checks latest `outputs_run_*/` folder
+- Loads fresh CSVs if found (825 services)
+- Falls back to historical JSON if no fresh run (629 services from old extraction)
+- Data persists in session across tab switches
+
+#### Scenario 3: Multiple Runs
+
+- First run → `outputs_run_20251017_112838/` → 825 services loaded
+- Switch tabs → Data persists via `st.session_state`
+- Run fresh analysis again → `outputs_run_20251017_120000/` (new folder)
+- Click Load Existing → Loads from new folder automatically
+
 ## Prerequisites
 
 - Python 3.8+
@@ -27,19 +78,24 @@ This system analyzes the Kenya Social Health Insurance Fund (SHIF) benefit packa
 
 ## Output Files
 
-All results are saved in the `outputs/` directory:
+All fresh results are saved in timestamped folders `outputs_run_YYYYMMDD_HHMMSS/`:
 
-- `rules_p1_18_structured.csv` - Structured policy services
-- `annex_procedures.csv` - Annex surgical procedures
+- `rules_p1_18_structured.csv` - 97 policy services
+- `annex_procedures.csv` - 728 annex procedures
 - `ai_contradictions.csv` - Detected policy contradictions
 - `ai_gaps.csv` - Identified coverage gaps
-- Timestamped folders contain complete analysis results
+- `integrated_comprehensive_analysis.json` - Complete analysis
+- `analysis_summary.csv` - Summary metrics
+
+Historical data is stored in `outputs_generalized/` for fallback access.
 
 ## Accessing Results
 
-- **Streamlit Dashboard**: http://localhost:8504
-- **Direct CSV Access**: Files in `outputs/` directory
-- **Complete JSON**: `outputs/integrated_comprehensive_analysis.json`
+- **Streamlit Dashboard**: http://localhost:8501
+- **Fresh CSV Data**: `outputs_run_*/` folders (latest = most recent run)
+- **Direct CSV Access**: `rules_p1_18_structured.csv`, `annex_procedures.csv`
+- **Complete JSON**: `outputs_run_*/integrated_comprehensive_analysis.json`
+- **Deterministic Validation**: `python deterministic_checker.py` (shows current counts)
 
 ## Analysis Capabilities
 

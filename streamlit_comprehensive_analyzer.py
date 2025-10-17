@@ -1012,46 +1012,340 @@ class SHIFHealthcarePolicyAnalyzer:
             })
         ui['structured_rules'] = structured_rules
         return ui
+
+    def normalize_loaded_results(self, data: dict, source_path: str | None = None) -> dict:
+        """Normalize historical/variant analysis JSON into the app's canonical results shape.
+
+        Canonical keys produced:
+        - structured_rules: list[dict]
+        - contradictions: list[dict]
+        - gaps: list[dict]
+        - context_analysis: dict
+        - dashboard: dict
+        - dataset: dict
+        - timestamp: str
+        - ai_analysis: original raw data
+        """
+        try:
+            # Helper to safely pull a list from possible shapes
+            def extract_list(obj, *keys):
+                for k in keys:
+                    if not k:
+                        continue
+                    v = obj.get(k)
+                    if isinstance(v, list):
+                        return v
+                    # some older outputs wrap lists under {'data': [...]}
+                    if isinstance(v, dict) and 'data' in v and isinstance(v['data'], list):
+                        return v['data']
+                return []
+
+            # Structured rules candidates
+            structured_candidates = (
+                data.get('task1_structured_rules'),
+                data.get('comprehensive_services'),
+                data.get('structured_rules'),
+                data.get('policy_structure'),
+                data.get('policy_results'),
+                data.get('extraction_results', {}).get('policy_structure'),
+            )
+
+            # Try to find a structured list
+            structured = []
+            for cand in structured_candidates:
+                if isinstance(cand, list):
+                    structured = cand
+                    break
+                if isinstance(cand, dict) and 'data' in cand and isinstance(cand['data'], list):
+                    structured = cand['data']
+                    break
+
+            # Annex / procedures may be under different keys
+            annex_candidates = (
+                data.get('annex_procedures'),
+                data.get('annex'),
+                data.get('annex_procedures_list'),
+                data.get('extraction_results', {}).get('annex_procedures'),
+                data.get('comprehensive_annex'),
+            )
+            annex = []
+            for cand in annex_candidates:
+                if isinstance(cand, list):
+                    annex = cand
+                    break
+                if isinstance(cand, dict) and 'data' in cand and isinstance(cand['data'], list):
+                    annex = cand['data']
+                    break
+
+            # Build canonical structured_rules by normalizing fields
+            normalized_rules = []
+
+            def pick_service_name(r):
+                for key in ('service_name', 'service', 'intervention', 'scope', 'name', 'label'):
+                    v = r.get(key)
+                    if v:
+                        # If it's a list, pick first
+                        if isinstance(v, list):
+                            return v[0] if v else ''
+                        return v
+                return ''
+
+            def normalize_facility_level(v):
+                if v is None:
+                    return 'Not specified'
+                if isinstance(v, list):
+                    # Flatten numeric/string entries
+                    try:
+                        parts = [str(p) for p in v if p is not None]
+                        return '/'.join(parts) if parts else 'Not specified'
+                    except Exception:
+                        return str(v)
+                if isinstance(v, (int, float)):
+                    return str(int(v))
+                if isinstance(v, str) and v.strip():
+                    return v
+                return 'Not specified'
+
+            def extract_tariff_amount(r):
+                # Look for common tariff fields and coerce to number
+                candidates = ['tariff_amount', 'tariff', 'tariff_num', 'pricing_kes', 'price', 'fee']
+                for k in candidates:
+                    val = r.get(k)
+                    if val is None:
+                        continue
+                    # If nested like {'amount': ...}
+                    if isinstance(val, dict) and 'amount' in val:
+                        val = val.get('amount')
+                    # If string, strip currency symbols and commas
+                    if isinstance(val, str):
+                        s = re.sub(r"[^0-9.-]", "", val)
+                        if s == '':
+                            continue
+                        try:
+                            return float(s)
+                        except Exception:
+                            continue
+                    if isinstance(val, (int, float)):
+                        return float(val)
+                return None
+
+            # Normalize annex rows (procedures)
+            for row in annex:
+                try:
+                    service_name = pick_service_name(row)
+                    normalized_rules.append({
+                        'rule_type': 'annex_procedure',
+                        'service_name': service_name,
+                        'specialty': row.get('specialty') or row.get('dept') or '',
+                        'facility_level': normalize_facility_level(row.get('facility_level') or row.get('access_point') or []),
+                        'tariff_amount': extract_tariff_amount(row),
+                        'conditions': row.get('conditions', []) or [],
+                        'exclusions': row.get('exclusions', []) or [],
+                        'payment_method': row.get('payment_method') or row.get('payer') or '',
+                        'extraction_method': row.get('extraction_method') or row.get('method') or '',
+                        'extraction_confidence': row.get('extraction_confidence') or row.get('confidence') or None,
+                        'page_reference': row.get('page') or row.get('page_reference') or None,
+                    })
+                except Exception:
+                    continue
+
+            # Normalize policy/structured rows
+            for row in structured:
+                try:
+                    service_name = pick_service_name(row)
+                    # infer rule_type
+                    rt = row.get('rule_type') or ('policy' if any(k in row for k in ('scope', 'service', 'access_rules', 'tariff_num')) else 'policy')
+                    normalized_rules.append({
+                        'rule_type': rt,
+                        'service_name': service_name,
+                        'specialty': row.get('specialty') or '',
+                        'facility_level': normalize_facility_level(row.get('facility_level') or row.get('access_point') or row.get('levels') or []),
+                        'tariff_amount': extract_tariff_amount(row),
+                        'conditions': row.get('conditions', []) or row.get('access_rules', []) or [],
+                        'exclusions': row.get('exclusions', []) or [],
+                        'payment_method': row.get('payment_method') or '',
+                        'extraction_method': row.get('extraction_method') or row.get('method') or '',
+                        'extraction_confidence': row.get('extraction_confidence') or row.get('confidence') or None,
+                        'page_reference': row.get('page') or row.get('page_reference') or None,
+                    })
+                except Exception:
+                    continue
+
+            # Contradictions and gaps
+            contradictions = (
+                data.get('task2_contradictions') or
+                data.get('all_contradictions') or
+                data.get('ai_contradictions') or
+                data.get('contradictions') or
+                []
+            )
+
+            gaps = (
+                data.get('task2_gaps') or
+                data.get('comprehensive_gaps') or
+                data.get('ai_gaps') or
+                data.get('gaps') or
+                []
+            )
+
+            context_analysis = data.get('task3_context_analysis') or data.get('context_analysis') or {}
+            dashboard = data.get('task4_dashboard') or data.get('summary') or {}
+            dataset = data.get('extraction_results') or data.get('dataset') or {}
+            timestamp = (
+                (data.get('analysis_metadata') or {}).get('analysis_timestamp') or
+                data.get('timestamp') or
+                data.get('created_at') or
+                datetime.now().isoformat()
+            )
+
+            normalized = {
+                'structured_rules': normalized_rules,
+                'contradictions': contradictions if isinstance(contradictions, list) else [],
+                'gaps': gaps if isinstance(gaps, list) else [],
+                'context_analysis': context_analysis,
+                'dashboard': dashboard,
+                'dataset': dataset,
+                'timestamp': timestamp,
+                'ai_analysis': data,
+                'normalized_from': source_path,
+            }
+
+            return normalized
+        except Exception as e:
+            # If normalization fails, fall back to a safe minimal mapping
+            return {
+                'structured_rules': data.get('structured_rules', []) or [],
+                'contradictions': data.get('contradictions', []) or [],
+                'gaps': data.get('gaps', []) or [],
+                'context_analysis': data.get('context_analysis', {}) or {},
+                'dashboard': data.get('summary', {}) or {},
+                'dataset': data.get('extraction_results', {}) or {},
+                'timestamp': data.get('timestamp', datetime.now().isoformat()),
+                'ai_analysis': data,
+                'normalized_from': source_path,
+            }
     
     def load_existing_results(self):
-        """Load existing analysis results from most recent outputs_run folder"""
+        """Load existing analysis results from most recent outputs_run folder or CSVs"""
         
         try:
             results_loaded = False
             
-            # First, try to find the most recent outputs_run_* folder
+            # PRIORITY 1: Try to find the most recent outputs_run_* folder with CSV files
             from pathlib import Path
             base_path = Path(".")
             outputs_run_folders = sorted(base_path.glob("outputs_run_*"), reverse=True)
             
             if outputs_run_folders:
                 latest_folder = outputs_run_folders[0]
-                results_file = latest_folder / "integrated_comprehensive_analysis.json"
                 
-                if results_file.exists():
-                    with open(results_file, 'r') as f:
-                        data = json.load(f)
-                    
-                    # Map to standard structure based on actual data keys
-                    self.results = {
-                        'structured_rules': data.get('task1_structured_rules', data.get('comprehensive_services', [])),
-                        'contradictions': data.get('task2_contradictions', data.get('all_contradictions', [])),
-                        'gaps': data.get('task2_gaps', data.get('comprehensive_gaps', [])),
-                        'context_analysis': data.get('task3_context_analysis', {}),
-                        'dashboard': data.get('task4_dashboard', data.get('summary', {})),
-                        'dataset': data.get('extraction_results', {}),
-                        'timestamp': data.get('analysis_metadata', {}).get('analysis_timestamp', 'Unknown'),
-                        'ai_analysis': data  # Store full data for access to other fields
-                    }
-                    
-                    # Sync to session state for persistence
-                    st.session_state.results = self.results
-                    st.session_state.has_analysis = True  # Set flag to show tabs
-                    
-                    st.success(f"✅ Loaded results from {results_file}")
-                    results_loaded = True
+                # Try to load from CSV files (fresh extraction output)
+                policy_csv = latest_folder / "rules_p1_18_structured.csv"
+                annex_csv = latest_folder / "annex_procedures.csv"
+                contradictions_csv = latest_folder / "ai_contradictions.csv"
+                gaps_csv = latest_folder / "ai_gaps.csv"
+                
+                if policy_csv.exists() and annex_csv.exists():
+                    # Load CSVs - this is the FRESH extraction data
+                    try:
+                        policy_df = pd.read_csv(policy_csv)
+                        annex_df = pd.read_csv(annex_csv)
+                        
+                        # Convert to structured rules format
+                        structured_rules = []
+                        
+                        # POLICY rules: columns are 'fund', 'service', 'item_tariff', 'block_tariff', etc.
+                        for _, row in policy_df.iterrows():
+                            # Use block_tariff or item_tariff (prefer non-null value)
+                            tariff = None
+                            if pd.notna(row.get('block_tariff')):
+                                tariff = row.get('block_tariff')
+                            elif pd.notna(row.get('item_tariff')):
+                                tariff = row.get('item_tariff')
+                            
+                            structured_rules.append({
+                                'rule_type': 'policy',
+                                'service_name': row.get('service') or row.get('scope_item', 'Unknown Policy Item'),
+                                'specialty': '',  # Not present in policy CSV
+                                'facility_level': 'Not specified',  # Not present in policy CSV
+                                'tariff_amount': float(tariff) if pd.notna(tariff) else None,
+                                'conditions': [],
+                                'exclusions': [],
+                                'payment_method': '',
+                                'extraction_method': 'extracted',
+                                'extraction_confidence': 0.9,  # Default confidence for extracted data
+                                'page_reference': 'Pages 1-18',
+                            })
+                        
+                        # ANNEX procedures: columns are 'id', 'specialty', 'intervention', 'tariff'
+                        for _, row in annex_df.iterrows():
+                            tariff = row.get('tariff')
+                            
+                            structured_rules.append({
+                                'rule_type': 'annex_procedure',
+                                'service_name': row.get('intervention', 'Unknown Procedure'),
+                                'specialty': row.get('specialty', ''),
+                                'facility_level': 'Level 4+',  # Annex is typically for higher level facilities
+                                'tariff_amount': float(tariff) if pd.notna(tariff) else None,
+                                'conditions': [],
+                                'exclusions': [],
+                                'payment_method': '',
+                                'extraction_method': 'extracted',
+                                'extraction_confidence': 0.95,  # High confidence for structured annex
+                                'page_reference': f"Pages 19-54 (Annex - {row.get('id', 'N/A')})",
+                            })
+                        
+                        # Load contradictions and gaps - use raw dict conversion (they have proper column names)
+                        contradictions = []
+                        if contradictions_csv.exists():
+                            contra_df = pd.read_csv(contradictions_csv)
+                            # Replace NaN values with None for JSON serialization
+                            contradictions = contra_df.where(pd.notna(contra_df), None).to_dict('records')
+                        
+                        gaps = []
+                        if gaps_csv.exists():
+                            gaps_df = pd.read_csv(gaps_csv)
+                            # Replace NaN values with None for JSON serialization
+                            gaps = gaps_df.where(pd.notna(gaps_df), None).to_dict('records')
+                        
+                        # Create results structure
+                        self.results = {
+                            'structured_rules': structured_rules,
+                            'contradictions': contradictions,
+                            'gaps': gaps,
+                            'context_analysis': {},
+                            'dashboard': {},
+                            'dataset': {},
+                            'timestamp': latest_folder.name,
+                            'ai_analysis': {},
+                            'normalized_from': str(latest_folder),
+                            'source_type': 'fresh_extraction_csv'
+                        }
+                        
+                        # Sync to session state for persistence
+                        st.session_state.results = self.results
+                        st.session_state.has_analysis = True
+                        
+                        st.success(f"✅ Loaded FRESH extraction results from {latest_folder.name}")
+                        st.info(f"📊 Found {len(structured_rules)} services (policy + annex)")
+                        results_loaded = True
+                    except Exception as e:
+                        st.warning(f"⚠️ Could not load CSV files: {e}")
+                
+                # Fallback: Try integrated JSON if CSV load failed
+                if not results_loaded:
+                    results_file = latest_folder / "integrated_comprehensive_analysis.json"
+                    if results_file.exists():
+                        with open(results_file, 'r') as f:
+                            data = json.load(f)
+                        normalized = self.normalize_loaded_results(data, str(results_file))
+                        self.results = normalized
+                        st.session_state.results = self.results
+                        st.session_state.has_analysis = True
+                        st.success(f"✅ Loaded results from integrated JSON")
+                        results_loaded = True
             
-            # Fallback to hardcoded paths if no outputs_run folder found
+            # PRIORITY 2: Fallback to historical/archived JSON only if no fresh run found
             if not results_loaded:
                 results_files = [
                     'outputs/shif_healthcare_pattern_complete_analysis.json',
@@ -1063,34 +1357,25 @@ class SHIFHealthcarePolicyAnalyzer:
                     if Path(file_path).exists():
                         with open(file_path, 'r') as f:
                             data = json.load(f)
-                        
-                        # Map to standard structure based on actual data keys
-                        self.results = {
-                            'structured_rules': data.get('task1_structured_rules', data.get('comprehensive_services', [])),
-                            'contradictions': data.get('task2_contradictions', data.get('all_contradictions', [])),
-                            'gaps': data.get('task2_gaps', data.get('comprehensive_gaps', [])),
-                            'context_analysis': data.get('task3_context_analysis', {}),
-                            'dashboard': data.get('task4_dashboard', data.get('summary', {})),
-                            'dataset': data.get('extraction_results', {}),
-                            'timestamp': data.get('analysis_metadata', {}).get('analysis_timestamp', 'Unknown'),
-                            'ai_analysis': data  # Store full data for access to other fields
-                        }
-                        
+
+                        normalized = self.normalize_loaded_results(data, file_path)
+                        self.results = normalized
+
                         # Sync to session state for persistence
                         st.session_state.results = self.results
-                        st.session_state.has_analysis = True  # Set flag to show tabs
-                        
-                        st.success(f"✅ Loaded results from {file_path}")
+                        st.session_state.has_analysis = True
+
+                        st.warning(f"⚠️ Loaded historical/archived results from {file_path} (may be outdated)")
                         results_loaded = True
                         break
             
             if not results_loaded:
-                st.warning("No existing results found. Run extraction first.")
+                st.warning("❌ No existing results found. Run extraction first.")
             else:
                 st.rerun()  # Trigger rerun to show all tabs
                 
         except Exception as e:
-            st.error(f"Failed to load results: {str(e)}")
+            st.error(f"❌ Failed to load results: {str(e)}")
     
     def get_total_services(self):
         """Get total number of services"""
@@ -1103,30 +1388,52 @@ class SHIFHealthcarePolicyAnalyzer:
             return policy_count + annex_count
         return 0
     
+    def get_latest_run_folder(self):
+        """Get the most recent outputs_run_* folder"""
+        from pathlib import Path
+        base_path = Path(".")
+        outputs_run_folders = sorted(base_path.glob("outputs_run_*"), reverse=True)
+        return outputs_run_folders[0] if outputs_run_folders else None
+    
     def show_quick_summary(self):
         """Show a quick summary of available results"""
         
-        # Check for existing result files (clean format from manual.ipynb logic)
-        result_files = {
-            'Policy Services (Clean)': 'outputs/rules_p1_18_structured.csv',
-            'Annex Procedures (Clean)': 'outputs/annex_procedures.csv',
-            'AI Contradictions': 'outputs_run_*/contradictions_analysis.csv',
-            'AI Gaps Analysis': 'outputs_run_*/gaps_analysis.csv',
-            'Analysis Summary': 'outputs_run_*/analysis_summary.csv'
-        }
+        # Get latest run folder
+        latest_run = self.get_latest_run_folder()
+        
+        # Build file paths from latest run
+        result_files = {}
+        if latest_run:
+            result_files = {
+                'Policy Services (Clean)': latest_run / 'rules_p1_18_structured.csv',
+                'Annex Procedures (Clean)': latest_run / 'annex_procedures.csv',
+                'AI Contradictions': latest_run / 'ai_contradictions.csv',
+                'Coverage Gaps Analysis': latest_run / 'coverage_gaps_analysis.csv',
+                'Comprehensive Gaps': latest_run / 'all_unique_gaps_comprehensive.csv',
+                'Unique Contradictions': latest_run / 'all_unique_contradictions_comprehensive.csv',
+                'Integrated Analysis': latest_run / 'integrated_comprehensive_analysis.json',
+                'Analysis Summary': latest_run / 'analysis_summary.csv'
+            }
         
         st.markdown("### 📋 Available Analysis Results")
         
         available_files = []
+        file_count = 0
+        total_size = 0
+        
         for name, path in result_files.items():
-            if Path(path).exists():
-                file_size = Path(path).stat().st_size
+            if isinstance(path, Path) and path.exists():
+                file_size = path.stat().st_size
+                total_size += file_size
+                file_count += 1
                 available_files.append(f"✅ **{name}** ({file_size:,} bytes)")
             else:
-                available_files.append(f"❌ **{name}** (Not found)")
+                available_files.append(f"⚠️ **{name}** (Not yet generated)")
         
         for file_info in available_files:
             st.markdown(file_info)
+        
+        st.success(f"📊 Summary: {file_count}/{len(result_files)} files available • Total size: {total_size:,} bytes ({total_size/1024/1024:.1f} MB)")
         
         # Quick stats if analysis report exists
         report_path = 'outputs/shif_healthcare_analysis_report.txt'
@@ -1372,96 +1679,82 @@ class SHIFHealthcarePolicyAnalyzer:
         
         st.markdown("### 📁 Download Generated Files")
         
-        # Define all available files with descriptions
-        available_files = {
-            # Core Analysis Files
-            'Analysis Report': {
-                'path': 'outputs/shif_healthcare_analysis_report.txt',
-                'description': 'Executive summary with key findings',
-                'category': 'Core Analysis'
+        # Get latest run folder for dynamic path resolution
+        latest_run_dir = self.get_latest_run_folder()
+        
+        # Define all available files with descriptions (without path - will be resolved dynamically)
+        file_mappings = {
+            # AI Analysis Files
+            'AI Contradictions': {
+                'filename': 'ai_contradictions.csv',
+                'description': 'Policy contradictions identified by AI analysis',
+                'category': 'AI Analysis'
             },
-            'Complete Analysis JSON': {
-                'path': 'outputs/shif_healthcare_pattern_complete_analysis.json', 
-                'description': 'Full analysis results with all tasks',
-                'category': 'Core Analysis'
+            'AI Coverage Gaps': {
+                'filename': 'ai_gaps.csv',
+                'description': 'Healthcare coverage gaps identified by AI analysis',
+                'category': 'AI Analysis'
             },
-            
-            # Task Outputs
-            'Structured Rules': {
-                'path': 'outputs/shif_healthcare_rules_parsed.csv',
-                'description': 'All 922 structured healthcare rules',
-                'category': 'Task Outputs'
-            },
-            'Contradictions': {
-                'path': 'outputs/shif_healthcare_contradictions.csv',
-                'description': '19 policy contradictions identified',
-                'category': 'Task Outputs'
-            },
-            'Coverage Gaps': {
-                'path': 'outputs/shif_healthcare_gaps.csv',
-                'description': '10 healthcare coverage gaps',
-                'category': 'Task Outputs'
-            },
-            'Specialties Analysis': {
-                'path': 'outputs/shif_healthcare_specialties.csv',
-                'description': 'Medical specialty breakdown',
-                'category': 'Task Outputs'
-            },
-            'Kenya Context': {
-                'path': 'outputs/shif_healthcare_kenya_context.csv',
-                'description': 'Kenya healthcare system context',
-                'category': 'Task Outputs'
-            },
-            'Recommendations': {
-                'path': 'outputs/shif_healthcare_recommendations.csv',
-                'description': 'Policy improvement recommendations',
-                'category': 'Task Outputs'
+            'Clinical Gaps Analysis': {
+                'filename': 'clinical_gaps_analysis.csv',
+                'description': 'Detailed clinical gap analysis',
+                'category': 'AI Analysis'
             },
             
-            # Source Data Files
-            'Pages 1-18 Raw': {
-                'path': 'outputs/rules_p1_18_raw.csv',
-                'description': 'Raw extracted data from policy pages 1-18',
-                'category': 'Source Data'
+            # Extraction Data Files
+            'Policy Rules (Structured)': {
+                'filename': 'rules_p1_18_structured.csv',
+                'description': 'Structured policy rules extracted from pages 1-18',
+                'category': 'Extraction Data'
             },
-            'Pages 1-18 Structured': {
-                'path': 'outputs/rules_p1_18_structured.csv',
-                'description': 'Structured data from policy pages 1-18',
-                'category': 'Source Data'
+            'Policy Rules (Wide Format)': {
+                'filename': 'rules_p1_18_structured_wide.csv',
+                'description': 'Wide format structured policy rules',
+                'category': 'Extraction Data'
             },
-            'Pages 1-18 Wide Format': {
-                'path': 'outputs/rules_p1_18_structured_wide.csv',
-                'description': 'Wide format structured data from policy pages 1-18',
-                'category': 'Source Data'
-            },
-            'Pages 1-18 Exploded': {
-                'path': 'outputs/rules_p1_18_structured_exploded.csv',
-                'description': 'Exploded/detailed data from policy pages 1-18',
-                'category': 'Source Data'
-            },
-            'Pages 1-18 JSONL': {
-                'path': 'outputs/rules_p1_18.jsonl',
-                'description': 'JSON Lines format extraction from pages 1-18',
-                'category': 'Source Data'
+            'Policy Rules (Exploded)': {
+                'filename': 'rules_p1_18_structured_exploded.csv',
+                'description': 'Exploded/detailed policy rules for deeper analysis',
+                'category': 'Extraction Data'
             },
             'Annex Procedures': {
-                'path': 'outputs/annex_surgical_tariffs_all.csv',
-                'description': 'All surgical procedures from annex pages 19-54',
-                'category': 'Source Data'
+                'filename': 'annex_procedures.csv',
+                'description': 'All surgical procedures from annex with tariffs',
+                'category': 'Extraction Data'
             },
-            'Integrated Analysis': {
-                'path': 'outputs/integrated_comprehensive_analysis.json',
-                'description': 'Complete integrated analysis results',
-                'category': 'Source Data'
+            'Coverage Gaps Analysis': {
+                'filename': 'coverage_gaps_analysis.csv',
+                'description': 'Comprehensive coverage gaps analysis',
+                'category': 'Extraction Data'
             },
             
-            # Dashboard Data
-            'Dashboard JSON': {
-                'path': 'outputs/shif_healthcare_pattern_dashboard.json',
-                'description': 'Dashboard visualization data',
-                'category': 'Dashboard Data'
+            # Deduplication Analysis
+            'Gaps Deduplication': {
+                'filename': 'gaps_deduplication_analysis.json',
+                'description': 'Analysis of gap deduplication and consolidation',
+                'category': 'Analysis Metadata'
+            },
+            'All Gaps Before Dedup': {
+                'filename': 'all_gaps_before_dedup.csv',
+                'description': 'All gaps before deduplication processing',
+                'category': 'Analysis Metadata'
             }
         }
+        
+        # Build available_files with resolved paths
+        available_files = {}
+        for file_name, file_info in file_mappings.items():
+            if latest_run_dir:
+                file_path = str(Path(latest_run_dir) / file_info['filename'])
+            else:
+                # Fallback to outputs/ directory if no latest run
+                file_path = f"outputs/{file_info['filename']}"
+            
+            available_files[file_name] = {
+                'path': file_path,
+                'description': file_info['description'],
+                'category': file_info['category']
+            }
         
         # Group files by category
         categories = {}
@@ -1519,8 +1812,9 @@ class SHIFHealthcarePolicyAnalyzer:
         # Integrated analyzer downloads (if available)
         st.markdown("### 📁 Integrated Analyzer Outputs")
         try:
-            base_dir = getattr(self, 'integrated_output_dir', None)
-            if base_dir:
+            # Use latest run folder for integrated outputs
+            base_dir = latest_run_dir or getattr(self, 'integrated_output_dir', None)
+            if base_dir and Path(base_dir).exists():
                 integrated_files = {
                     'Integrated Analysis JSON': Path(base_dir) / 'integrated_comprehensive_analysis.json',
                     'Policy Structured CSV': Path(base_dir) / 'policy_structured.csv',
@@ -1569,10 +1863,8 @@ class SHIFHealthcarePolicyAnalyzer:
                             )
                         except Exception as e:
                             st.error(f"Error reading {file_name}: {str(e)}")
-                    else:
-                        st.warning(f"⚠️ {file_name} - File not found")
             else:
-                st.info("Run the Integrated Analyzer to generate additional outputs here.")
+                st.info("📁 Run the Integrated Analyzer to generate additional outputs here.")
         except Exception as e:
             st.warning(f"⚠️ Error listing integrated outputs: {e}")
 
@@ -1593,42 +1885,66 @@ class SHIFHealthcarePolicyAnalyzer:
             # Contradiction severity distribution
             contradictions = self.results.get('contradictions', [])
             if contradictions:
-                severity_counts = Counter(c.get('severity', 'unknown') for c in contradictions)
+                # Check for severity field - fresh CSV uses 'clinical_severity'
+                severity_counts = {}
+                for c in contradictions:
+                    severity = c.get('clinical_severity') or c.get('clinical_impact') or c.get('severity') or 'unknown'
+                    severity_counts[severity] = severity_counts.get(severity, 0) + 1
                 
-                fig = px.pie(
-                    values=list(severity_counts.values()),
-                    names=list(severity_counts.keys()),
-                    title="Contradiction Severity Distribution"
-                )
-                fig.update_traces(textposition='inside', textinfo='percent+label')
-                st.plotly_chart(fig, use_container_width=True)
+                if severity_counts and len(severity_counts) > 0:
+                    fig = px.pie(
+                        values=list(severity_counts.values()),
+                        names=list(severity_counts.keys()),
+                        title="Contradiction Severity Distribution"
+                    )
+                    fig.update_traces(textposition='inside', textinfo='percent+label')
+                    st.plotly_chart(fig, use_container_width=True)
+                else:
+                    st.info("⚠️ No contradiction severity data available")
+            else:
+                st.info("ℹ️ No contradictions to display")
         
         with col2:
             # Gap impact distribution
             gaps = self.results.get('gaps', [])
             if gaps:
-                impact_counts = Counter(g.get('impact', 'unknown') for g in gaps)
+                impact_counts = {}
+                for g in gaps:
+                    impact = g.get('clinical_priority') or g.get('impact_level') or g.get('impact') or 'unknown'
+                    impact_counts[impact] = impact_counts.get(impact, 0) + 1
                 
-                fig = px.pie(
-                    values=list(impact_counts.values()),
-                    names=list(impact_counts.keys()),
-                    title="Coverage Gap Impact Distribution"
-                )
-                fig.update_traces(textposition='inside', textinfo='percent+label')
-                st.plotly_chart(fig, use_container_width=True)
+                if impact_counts and len(impact_counts) > 0:
+                    fig = px.pie(
+                        values=list(impact_counts.values()),
+                        names=list(impact_counts.keys()),
+                        title="Coverage Gap Impact Distribution"
+                    )
+                    fig.update_traces(textposition='inside', textinfo='percent+label')
+                    st.plotly_chart(fig, use_container_width=True)
+                else:
+                    st.info("⚠️ No gap impact data available")
+            else:
+                st.info("ℹ️ No gaps to display")
         
         # Rule type distribution
         structured_rules = self.results.get('structured_rules', [])
         if structured_rules:
-            rule_types = Counter(rule.get('rule_type', 'unknown') for rule in structured_rules)
+            rule_types = {}
+            for rule in structured_rules:
+                rtype = rule.get('rule_type', 'unknown')
+                rule_types[rtype] = rule_types.get(rtype, 0) + 1
             
-            fig = px.bar(
-                x=list(rule_types.keys()),
-                y=list(rule_types.values()),
-                title="Rule Type Distribution",
-                labels={'x': 'Rule Type', 'y': 'Count'}
-            )
-            st.plotly_chart(fig, use_container_width=True)
+            if rule_types and len(rule_types) > 0:
+                fig = px.bar(
+                    x=list(rule_types.keys()),
+                    y=list(rule_types.values()),
+                    title=f"Rule Type Distribution ({len(structured_rules)} total services)",
+                    labels={'x': 'Rule Type', 'y': 'Count'},
+                    color=list(rule_types.keys())
+                )
+                st.plotly_chart(fig, use_container_width=True)
+        else:
+            st.info("ℹ️ No structured rules available for chart")
     
     def render_task1_structured_rules(self):
         """Render Task 1 - Structured Rules"""
@@ -1678,24 +1994,27 @@ class SHIFHealthcarePolicyAnalyzer:
             st.plotly_chart(fig, use_container_width=True)
         
         with col2:
-            # Price availability analysis
-            priced_services = sum(1 for s in structured_rules if s.get('pricing_kes'))
-            free_services = sum(1 for s in structured_rules if s.get('is_free_service'))
-            unknown_price = len(structured_rules) - priced_services - free_services
+            # Price availability analysis - check tariff_amount field
+            priced_services = sum(1 for s in structured_rules if s.get('tariff_amount') and pd.notna(s.get('tariff_amount')))
+            unknown_price = len(structured_rules) - priced_services
             
-            fig = px.pie(
-                values=[priced_services, free_services, unknown_price],
-                names=['Priced Services', 'Free Services', 'Price Unknown'],
-                title="Service Pricing Distribution"
-            )
-            st.plotly_chart(fig, use_container_width=True)
+            if priced_services > 0:
+                fig = px.pie(
+                    values=[priced_services, unknown_price],
+                    names=['Priced Services', 'Price Unknown'],
+                    title="Service Pricing Coverage"
+                )
+                st.plotly_chart(fig, use_container_width=True)
+            else:
+                st.info("⚠️ No pricing data available in current dataset")
         
         # Service complexity analysis
         st.markdown("### 🧩 Service Confidence Analysis")
         
-        high_confidence = sum(1 for s in structured_rules if s.get('extraction_confidence', 0) >= 0.9)
-        medium_confidence = sum(1 for s in structured_rules if 0.7 <= s.get('extraction_confidence', 0) < 0.9)
-        low_confidence = sum(1 for s in structured_rules if s.get('extraction_confidence', 0) < 0.7)
+        # Safely handle None values in confidence scores
+        high_confidence = sum(1 for s in structured_rules if (s.get('extraction_confidence') is not None) and s.get('extraction_confidence') >= 0.9)
+        medium_confidence = sum(1 for s in structured_rules if (s.get('extraction_confidence') is not None) and 0.7 <= s.get('extraction_confidence') < 0.9)
+        low_confidence = sum(1 for s in structured_rules if (s.get('extraction_confidence') is None) or s.get('extraction_confidence') < 0.7)
         
         col1, col2, col3 = st.columns(3)
         
@@ -1727,12 +2046,17 @@ class SHIFHealthcarePolicyAnalyzer:
                 service_name = rule.get('service_name', '')
                 if isinstance(service_name, list):
                     service_name = service_name[0] if service_name else ''
+                
+                # Format confidence score safely
+                conf = rule.get('extraction_confidence')
+                conf_str = f"{conf:.1%}" if (conf is not None and isinstance(conf, (int, float))) else 'Unknown'
+                
                 display_rules.append({
                     'Service Name': (service_name[:50] + '...') if len(str(service_name)) > 50 else service_name,
                     'Page': rule.get('page_reference', ''),
-                    'Pricing (KES)': f"{rule.get('pricing_kes', 'N/A'):,}" if rule.get('pricing_kes') else 'Free/Unknown',
+                    'Pricing (KES)': f"{rule.get('tariff_amount', 'N/A'):,}" if rule.get('tariff_amount') else 'N/A',
                     'Extraction Method': rule.get('extraction_method', ''),
-                    'Confidence': f"{rule.get('extraction_confidence', 0):.1%}"
+                    'Confidence': conf_str
                 })
             
             df_display = pd.DataFrame(display_rules)
@@ -2980,7 +3304,41 @@ Analyze each contradiction using your generalized medical knowledge across all s
                 
                 st.markdown("### 🤖 AI Analysis: Policy Contradictions")
                 st.info(f"Analysis generated using {model_used}")
-                st.markdown(ai_analysis)
+                
+                # Try to parse and format as structured JSON if possible
+                try:
+                    import json
+                    # Check if response is JSON array or object
+                    if ai_analysis.strip().startswith('[') or ai_analysis.strip().startswith('{'):
+                        parsed = json.loads(ai_analysis)
+                        
+                        # If it's a list of contradictions, display in formatted sections
+                        if isinstance(parsed, list) and len(parsed) > 0:
+                            for idx, item in enumerate(parsed, 1):
+                                with st.expander(f"#{idx}: {item.get('contradiction_type', 'Contradiction').upper()} - {item.get('medical_specialty', 'General').title()}", expanded=(idx == 1)):
+                                    col1, col2 = st.columns([2, 1])
+                                    with col1:
+                                        st.markdown(f"**Description:** {item.get('description', 'N/A')}")
+                                        if 'clinical_impact' in item:
+                                            st.markdown(f"**Clinical Impact:** {item.get('clinical_impact')}")
+                                        if 'patient_safety_risk' in item:
+                                            st.markdown(f"**Patient Safety Risk:** {item.get('patient_safety_risk')}")
+                                        if 'medical_rationale' in item:
+                                            st.markdown(f"**Medical Rationale:** {item.get('medical_rationale')}")
+                                        if 'recommendation' in item:
+                                            st.markdown(f"**Recommendation:** {item.get('recommendation')}")
+                                    with col2:
+                                        if 'confidence' in item:
+                                            st.metric("Confidence", f"{item.get('confidence', 0):.0%}")
+                        else:
+                            # Display as JSON if not a list
+                            st.json(parsed)
+                    else:
+                        # Plain markdown text
+                        st.markdown(ai_analysis)
+                except json.JSONDecodeError:
+                    # Not JSON, display as markdown
+                    st.markdown(ai_analysis)
                 
                 # Store for later reference
                 if not hasattr(self, 'ai_insights'):
@@ -3066,7 +3424,44 @@ Focus on actionable, Kenya-specific recommendations with medical rationale."""
                 
                 st.markdown("### 🤖 AI Analysis: Coverage Gaps")
                 st.info(f"Analysis generated using {model_used}")
-                st.markdown(ai_analysis)
+                
+                # Try to parse and format as structured JSON if possible
+                try:
+                    import json
+                    # Check if response is JSON array or object
+                    if ai_analysis.strip().startswith('[') or ai_analysis.strip().startswith('{'):
+                        parsed = json.loads(ai_analysis)
+                        
+                        # If it's a list of gaps, display in formatted sections
+                        if isinstance(parsed, list) and len(parsed) > 0:
+                            for idx, item in enumerate(parsed, 1):
+                                with st.expander(f"#{idx}: {item.get('gap_type', 'Gap').upper()} - {item.get('medical_specialty', 'General').title()}", expanded=(idx == 1)):
+                                    col1, col2 = st.columns([2, 1])
+                                    with col1:
+                                        if 'description' in item:
+                                            st.markdown(f"**Description:** {item.get('description')}")
+                                        if 'clinical_priority' in item:
+                                            st.markdown(f"**Clinical Priority:** {item.get('clinical_priority')}")
+                                        if 'affected_population' in item:
+                                            st.markdown(f"**Affected Population:** {item.get('affected_population')}")
+                                        if 'medical_rationale' in item:
+                                            st.markdown(f"**Medical Rationale:** {item.get('medical_rationale')}")
+                                        if 'implementation_strategy' in item:
+                                            st.markdown(f"**Implementation Strategy:** {item.get('implementation_strategy')}")
+                                        if 'resource_requirements' in item:
+                                            st.markdown(f"**Resource Requirements:** {item.get('resource_requirements')}")
+                                    with col2:
+                                        if 'kenya_context' in item:
+                                            st.info(f"🌍 Kenya Context: {item.get('kenya_context')[:100]}...")
+                        else:
+                            # Display as JSON if not a list
+                            st.json(parsed)
+                    else:
+                        # Plain markdown text
+                        st.markdown(ai_analysis)
+                except json.JSONDecodeError:
+                    # Not JSON, display as markdown
+                    st.markdown(ai_analysis)
                 
                 if not hasattr(self, 'ai_insights'):
                     self.ai_insights = {}
