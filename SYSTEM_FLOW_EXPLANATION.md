@@ -167,16 +167,7 @@
 
 ---
 
-## 8. For Assignment/Interview Prep
-
-- **Explain the flow from user and technical perspective.**
-- **Highlight platform support and deterministic outputs.**
-- **Show how historical and download features work.**
-- **Reference main files for technical deep dive.**
-
----
-
-## 9. References
+## 8. References
 
 - See `README.md`, `IMPLEMENTATION_SUMMARY.md`, and `DEPLOYMENT_GUIDE.md` for more details.
 

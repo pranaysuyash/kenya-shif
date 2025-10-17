@@ -187,8 +187,64 @@ class SHIFHealthcarePolicyAnalyzer:
         </div>
         """, unsafe_allow_html=True)
         
+        # Load cached results on startup if available
+        if not self.results:
+            cache_file = Path("unified_analysis_output.json")
+            if cache_file.exists():
+                try:
+                    with open(cache_file, "r", encoding="utf-8") as f:
+                        self.results = json.load(f)
+                    st.sidebar.success("✅ Loaded cached analysis results")
+                except Exception as e:
+                    st.sidebar.warning(f"⚠️ Could not load cache: {e}")
+        
         # Sidebar
         self.render_sidebar()
+        
+        # Initialize session state for documentation viewer
+        if "view_doc" not in st.session_state:
+            st.session_state.view_doc = False
+        if "selected_doc" not in st.session_state:
+            st.session_state.selected_doc = "README"
+        
+        # Documentation Viewer in Main Window
+        if st.session_state.view_doc:
+            doc_files = {
+                "📖 README": "README.md",
+                "🏗️ System Architecture & Flow": "SYSTEM_ARCHITECTURE_FLOW.md",
+                "🔄 System Flow Explanation": "SYSTEM_FLOW_EXPLANATION.md",
+                "⚙️ Design Decisions & Architecture": "DESIGN_DECISIONS.md",
+                "📋 Implementation Summary": "IMPLEMENTATION_SUMMARY.md",
+                "🚀 Quick Deployment": "QUICK_DEPLOYMENT.md",
+                "📚 Deployment Guide": "DEPLOYMENT_GUIDE.md",
+                "✅ Deployment Readiness Checklist": "DEPLOYMENT_READINESS_CHECKLIST.md",
+                "📦 Deployment Summary": "DEPLOYMENT_SUMMARY.md",
+                "📂 Directory Structure": "DIRECTORY_STRUCTURE.md",
+                "🏢 Architecture Overview": "ARCHITECTURE.md",
+                "📊 Production Files Guide": "PRODUCTION_FILES_GUIDE.md",
+                "📝 Current State Analysis": "CURRENT_STATE_ANALYSIS.md",
+                "🎯 Final Submission Complete": "FINAL_SUBMISSION_COMPLETE.md",
+                "🧹 Repository Cleanup Summary": "REPOSITORY_CLEANUP_SUMMARY.md",
+            }
+            
+            st.markdown("---")
+            col1, col2 = st.columns([4, 1])
+            with col1:
+                st.markdown(f"### 📖 {st.session_state.selected_doc}")
+            with col2:
+                if st.button("✕ Close Documentation"):
+                    st.session_state.view_doc = False
+                    st.rerun()
+            
+            doc_path = doc_files[st.session_state.selected_doc]
+            try:
+                with open(doc_path, "r") as f:
+                    content = f.read()
+                st.markdown(content)
+            except Exception as e:
+                st.error(f"Could not open {doc_path}: {e}")
+            
+            st.markdown("---")
         
         # Main content tabs
         tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
@@ -359,27 +415,30 @@ class SHIFHealthcarePolicyAnalyzer:
         st.sidebar.info(f"Integrated Analyzer: {'✅' if integrated_available else '❌'}")
         st.sidebar.info(f"OpenAI Client: {'✅' if self.openai_client else '❌'}")
 
-        # --- Documentation Viewer ---
+        # --- Documentation Viewer in Sidebar Menu ---
         st.sidebar.markdown("---")
-        st.sidebar.markdown("### 📚 Documentation & Guides")
+        st.sidebar.markdown("### 📚 Documentation")
         doc_files = {
-            "README": "README.md",
-            "Implementation Summary": "IMPLEMENTATION_SUMMARY.md",
-            "Deployment Guide": "DEPLOYMENT_GUIDE.md",
-            "Quick Deployment": "QUICK_DEPLOYMENT.md",
-            "System Architecture & Flow": "SYSTEM_ARCHITECTURE_FLOW.md",
-            "System Flow Explanation": "SYSTEM_FLOW_EXPLANATION.md",
+            "📖 README": "README.md",
+            "🏗️ System Architecture & Flow": "SYSTEM_ARCHITECTURE_FLOW.md",
+            "🔄 System Flow Explanation": "SYSTEM_FLOW_EXPLANATION.md",
+            "⚙️ Design Decisions & Architecture": "DESIGN_DECISIONS.md",
+            "📋 Implementation Summary": "IMPLEMENTATION_SUMMARY.md",
+            "🚀 Quick Deployment": "QUICK_DEPLOYMENT.md",
+            "📚 Deployment Guide": "DEPLOYMENT_GUIDE.md",
+            "✅ Deployment Readiness Checklist": "DEPLOYMENT_READINESS_CHECKLIST.md",
+            "📦 Deployment Summary": "DEPLOYMENT_SUMMARY.md",
+            "📂 Directory Structure": "DIRECTORY_STRUCTURE.md",
+            "🏢 Architecture Overview": "ARCHITECTURE.md",
+            "📊 Production Files Guide": "PRODUCTION_FILES_GUIDE.md",
+            "📝 Current State Analysis": "CURRENT_STATE_ANALYSIS.md",
+            "🎯 Final Submission Complete": "FINAL_SUBMISSION_COMPLETE.md",
+            "🧹 Repository Cleanup Summary": "REPOSITORY_CLEANUP_SUMMARY.md",
         }
         selected_doc = st.sidebar.selectbox("View Documentation", list(doc_files.keys()), index=0)
-        if st.sidebar.button("Open Selected Doc"):
-            doc_path = doc_files[selected_doc]
-            try:
-                with open(doc_path, "r") as f:
-                    content = f.read()
-                st.sidebar.markdown(f"#### {selected_doc}")
-                st.sidebar.markdown(f"<div style='max-height:400px;overflow:auto;border:1px solid #eee;padding:8px;background:#fafcff'>{content}</div>", unsafe_allow_html=True)
-            except Exception as e:
-                st.sidebar.error(f"Could not open {doc_path}: {e}")
+        if st.sidebar.button("📖 Open Selected Doc"):
+            st.session_state.view_doc = True
+            st.session_state.selected_doc = selected_doc
     
     def run_complete_extraction(self):
         """Run complete LIVE extraction and analysis with real-time progress"""
