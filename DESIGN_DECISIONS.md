@@ -1,11 +1,13 @@
 # Design Decisions & Architecture Rationale
 
 ## Overview
+
 This document explains the key architectural decisions made in the Kenya SHIF Healthcare Policy Analyzer, the reasoning behind them, and the trade-offs considered.
 
 ---
 
 ## Table of Contents
+
 1. [PDF Extraction Strategy](#pdf-extraction-strategy)
 2. [Data Processing Pipeline](#data-processing-pipeline)
 3. [Deduplication & Data Cleaning](#deduplication--data-cleaning)
@@ -20,11 +22,13 @@ This document explains the key architectural decisions made in the Kenya SHIF He
 ## PDF Extraction Strategy
 
 ### Problem
+
 The SHIF policy document is a 54-page PDF with mixed content: structured tables on pages 1-18 and semi-structured text on pages 19-54. A single extraction method wouldn't work for both.
 
 ### Solution: Hybrid Extraction Approach
 
 #### Pages 1-18: Advanced PyPDF2 Processing
+
 ```python
 # Why we chose this approach:
 ✅ Pages 1-18 contain well-formatted tables with consistent structure
@@ -34,12 +38,14 @@ The SHIF policy document is a 54-page PDF with mixed content: structured tables 
 ```
 
 **Key Features:**
+
 - Preserves spacing and indentation
 - Detects column boundaries automatically
 - Handles wrapped text and multiline entries
 - Works offline (no external APIs)
 
 **Trade-offs:**
+
 - ❌ Slower than tabula for very large documents
 - ❌ Memory-intensive for complex layouts
 - ✅ But: Better accuracy for policy documents with precise formatting
@@ -47,6 +53,7 @@ The SHIF policy document is a 54-page PDF with mixed content: structured tables 
 ---
 
 #### Pages 19-54: Tabula Extraction
+
 ```python
 # Why we chose tabula for later pages:
 ✅ Pages 19-54 have less consistent table structure
@@ -56,12 +63,14 @@ The SHIF policy document is a 54-page PDF with mixed content: structured tables 
 ```
 
 **Key Features:**
+
 - Detects tables automatically in text
 - Handles variable column counts
 - Fast extraction
 - Returns structured DataFrames
 
 **Trade-offs:**
+
 - ❌ Can merge adjacent tables incorrectly
 - ❌ Struggles with complex nested structures
 - ✅ But: Acceptable for text-heavy policy sections
@@ -69,17 +78,19 @@ The SHIF policy document is a 54-page PDF with mixed content: structured tables 
 ---
 
 ### Why Not Single Method?
-| Method | Pages 1-18 | Pages 19-54 | Reason |
-|--------|-----------|-----------|--------|
-| PyPDF2 only | ⭐⭐⭐⭐⭐ | ⭐⭐ | Too slow for large text sections |
-| Tabula only | ⭐⭐⭐ | ⭐⭐⭐⭐ | Misses formatting details in structured tables |
-| **Hybrid** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | **Optimal for mixed content** |
+
+| Method      | Pages 1-18 | Pages 19-54 | Reason                                         |
+| ----------- | ---------- | ----------- | ---------------------------------------------- |
+| PyPDF2 only | ⭐⭐⭐⭐⭐ | ⭐⭐        | Too slow for large text sections               |
+| Tabula only | ⭐⭐⭐     | ⭐⭐⭐⭐    | Misses formatting details in structured tables |
+| **Hybrid**  | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐    | **Optimal for mixed content**                  |
 
 ---
 
 ## Data Processing Pipeline
 
 ### Step 1: Raw Extraction
+
 ```
 PDF Document
     ↓
@@ -89,6 +100,7 @@ Raw Text Chunks
 ```
 
 ### Step 2: Text Normalization
+
 ```python
 # Remove artifacts:
 ✅ Strip extra whitespace
@@ -101,6 +113,7 @@ Why: Ensures consistent format for downstream processing
 ```
 
 ### Step 3: Chunking & Structuring
+
 ```python
 # Split into logical units:
 ✅ Service blocks (e.g., "Inpatient Services", "Outpatient")
@@ -112,6 +125,7 @@ Why: Makes it easier for AI to understand context
 ```
 
 ### Step 4: Semantic Enrichment
+
 ```python
 # Add metadata:
 ✅ Service category (inpatient, outpatient, etc.)
@@ -152,6 +166,7 @@ The SHIF document has intentional and unintentional duplicates:
 ### Deduplication Strategy
 
 #### Level 1: Exact Deduplication
+
 ```python
 # Remove identical entries:
 if normalized_text(entry1) == normalized_text(entry2):
@@ -168,6 +183,7 @@ Result: Removes ~15% of entries
 ```
 
 #### Level 2: Fuzzy Matching
+
 ```python
 # Find similar entries:
 similarity = levenshtein_distance(entry1, entry2)
@@ -182,6 +198,7 @@ Result: Removes ~8% of remaining entries
 ```
 
 #### Level 3: Semantic Deduplication
+
 ```python
 # Use AI to identify logical duplicates:
 if semantic_similarity(entry1, entry2) > 90%:
@@ -197,14 +214,15 @@ Result: Removes ~5% of semantic duplicates
 
 ### Why This Multi-Level Approach?
 
-| Level | Why | Tradeoff |
-|-------|-----|----------|
-| Exact | Fast, zero false positives | Misses intentional rewording |
-| Fuzzy | Catches typos & variations | Can create false positives |
-| Semantic | Catches true duplicates | Requires AI, slower |
+| Level        | Why                         | Tradeoff                     |
+| ------------ | --------------------------- | ---------------------------- |
+| Exact        | Fast, zero false positives  | Misses intentional rewording |
+| Fuzzy        | Catches typos & variations  | Can create false positives   |
+| Semantic     | Catches true duplicates     | Requires AI, slower          |
 | **Combined** | **Best recall & precision** | **Slower but more accurate** |
 
 ### Deduplication Results
+
 ```
 Before deduplication: 1,247 entries
 After exact: 1,087 entries (-160, 12.8%)
@@ -221,6 +239,7 @@ Total reduction: 327 entries (26.2%)
 ### Why Use OpenAI Instead of Local Models?
 
 #### Option 1: Local Models (Ollama, LLaMA)
+
 ```
 Pros: ✅ Privacy, ✅ Offline, ✅ No API costs
 Cons: ❌ Hardware requirements, ❌ Limited accuracy, ❌ Slow
@@ -228,6 +247,7 @@ Decision: Not suitable for policy analysis requiring nuance
 ```
 
 #### Option 2: Open-Source APIs (HuggingFace)
+
 ```
 Pros: ✅ Lower cost, ✅ More transparent
 Cons: ❌ Model variety, ❌ Inference speed, ❌ Worse quality
@@ -235,6 +255,7 @@ Decision: Policy analysis needs GPT-4 level accuracy
 ```
 
 #### Option 3: OpenAI (GPT-4.5-mini, GPT-4.1-mini)
+
 ```
 Pros: ✅ Best accuracy, ✅ Fast inference, ✅ Context window, ✅ Cost-effective
 Cons: ❌ API dependency, ❌ Quota limits
@@ -259,6 +280,7 @@ model = "gpt-4.5-mini"  # Consistent behavior
 ### AI Usage Patterns
 
 #### 1. Structured Rule Extraction
+
 ```python
 # Prompt strategy:
 Input: Raw text chunk
@@ -267,12 +289,13 @@ Output: Structured JSON with fields:
   - Coverage details
   - Exclusions
   - Cost implications
-  
+
 Why: Transforms unstructured text → queryable data
 Temperature: 0 (deterministic)
 ```
 
 #### 2. Contradiction Detection
+
 ```python
 # Prompt strategy:
 Input: Pairs of similar rules
@@ -286,6 +309,7 @@ Temperature: 0 (deterministic)
 ```
 
 #### 3. Gap Analysis
+
 ```python
 # Prompt strategy:
 Input: Services covered + Kenya healthcare needs
@@ -299,6 +323,7 @@ Temperature: 0 (deterministic)
 ```
 
 #### 4. Kenya Context Integration
+
 ```python
 # Prompt strategy:
 Input: Service rules + Kenya healthcare context
@@ -518,14 +543,14 @@ AI Insights
 
 ### Why This Structure?
 
-| Tab | Why | Benefit |
-|-----|-----|---------|
-| Overview | Entry point | Users understand what they're looking at |
-| Structured | Deep dive | Explore individual services |
-| Contradictions | Problem identification | Find issues systematically |
-| Kenya Context | Local relevance | Connect to real-world implementation |
-| Advanced Analytics | Power users | Detailed exploration |
-| AI Insights | Strategic decisions | Evidence-based recommendations |
+| Tab                | Why                    | Benefit                                  |
+| ------------------ | ---------------------- | ---------------------------------------- |
+| Overview           | Entry point            | Users understand what they're looking at |
+| Structured         | Deep dive              | Explore individual services              |
+| Contradictions     | Problem identification | Find issues systematically               |
+| Kenya Context      | Local relevance        | Connect to real-world implementation     |
+| Advanced Analytics | Power users            | Detailed exploration                     |
+| AI Insights        | Strategic decisions    | Evidence-based recommendations           |
 
 ### Why Documentation in Sidebar?
 
@@ -705,17 +730,17 @@ except Exception:
 
 ## Summary: Design Philosophy
 
-| Principle | Implementation | Benefit |
-|-----------|----------------|---------|
-| **Hybrid approach** | Different methods for different data | Optimal accuracy |
-| **Deterministic** | temperature=0, seed=42 | Reproducible, testable |
-| **Cached results** | Save AI outputs to JSON | Fast subsequent loads |
-| **Granular data** | 920 detailed rules | Precise analysis |
-| **Multi-level dedup** | Exact + fuzzy + semantic | Accurate counts |
-| **Multiple deployment** | Local, Replit, Streamlit, Vercel | Flexibility |
-| **Lazy loading** | Only render active tabs | Performance |
-| **Fallback systems** | Cached results, alternative models | Resilience |
-| **Documentation** | In-app + GitHub | Accessibility |
+| Principle               | Implementation                       | Benefit                |
+| ----------------------- | ------------------------------------ | ---------------------- |
+| **Hybrid approach**     | Different methods for different data | Optimal accuracy       |
+| **Deterministic**       | temperature=0, seed=42               | Reproducible, testable |
+| **Cached results**      | Save AI outputs to JSON              | Fast subsequent loads  |
+| **Granular data**       | 920 detailed rules                   | Precise analysis       |
+| **Multi-level dedup**   | Exact + fuzzy + semantic             | Accurate counts        |
+| **Multiple deployment** | Local, Replit, Streamlit, Vercel     | Flexibility            |
+| **Lazy loading**        | Only render active tabs              | Performance            |
+| **Fallback systems**    | Cached results, alternative models   | Resilience             |
+| **Documentation**       | In-app + GitHub                      | Accessibility          |
 
 ---
 
@@ -756,6 +781,7 @@ except Exception:
 ## Conclusion
 
 Every architectural decision in this system was made to balance:
+
 - **Accuracy** vs Speed
 - **Features** vs Simplicity
 - **Cost** vs Quality
