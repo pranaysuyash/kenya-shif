@@ -1,0 +1,33 @@
+{
+  "name": "Kenya SHIF Healthcare Policy Analyzer",
+  "version": "1.0.0",
+  "description": "Complete analysis system for Kenya SHIF healthcare policy contradictions and coverage gaps",
+  "main": "streamlit_comprehensive_analyzer.py",
+  "license": "MIT",
+  "author": "Pranay Suyash",
+  "repository": "https://github.com/pranaysuyash/kenya-shif",
+  "scripts": {
+    "start": "streamlit run streamlit_comprehensive_analyzer.py",
+    "dev": "streamlit run streamlit_comprehensive_analyzer.py --logger.level=debug",
+    "analyze": "python integrated_comprehensive_analyzer.py",
+    "test": "pytest test_streamlit_app.py -v"
+  },
+  "dependencies": {
+    "python": ">=3.9",
+    "streamlit": ">=1.28.0",
+    "pandas": ">=2.0.0",
+    "openai": ">=1.3.0",
+    "pdfplumber": ">=0.10.0",
+    "plotly": ">=5.0.0"
+  },
+  "keywords": [
+    "kenya",
+    "healthcare",
+    "policy",
+    "analysis",
+    "shif",
+    "contradictions",
+    "coverage-gaps",
+    "streamlit"
+  ]
+}
