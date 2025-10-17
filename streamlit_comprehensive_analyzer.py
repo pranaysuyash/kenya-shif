@@ -358,6 +358,28 @@ class SHIFHealthcarePolicyAnalyzer:
         st.sidebar.markdown("### 🔧 System Info")
         st.sidebar.info(f"Integrated Analyzer: {'✅' if integrated_available else '❌'}")
         st.sidebar.info(f"OpenAI Client: {'✅' if self.openai_client else '❌'}")
+
+        # --- Documentation Viewer ---
+        st.sidebar.markdown("---")
+        st.sidebar.markdown("### 📚 Documentation & Guides")
+        doc_files = {
+            "README": "README.md",
+            "Implementation Summary": "IMPLEMENTATION_SUMMARY.md",
+            "Deployment Guide": "DEPLOYMENT_GUIDE.md",
+            "Quick Deployment": "QUICK_DEPLOYMENT.md",
+            "System Architecture & Flow": "SYSTEM_ARCHITECTURE_FLOW.md",
+            "System Flow Explanation": "SYSTEM_FLOW_EXPLANATION.md",
+        }
+        selected_doc = st.sidebar.selectbox("View Documentation", list(doc_files.keys()), index=0)
+        if st.sidebar.button("Open Selected Doc"):
+            doc_path = doc_files[selected_doc]
+            try:
+                with open(doc_path, "r") as f:
+                    content = f.read()
+                st.sidebar.markdown(f"#### {selected_doc}")
+                st.sidebar.markdown(f"<div style='max-height:400px;overflow:auto;border:1px solid #eee;padding:8px;background:#fafcff'>{content}</div>", unsafe_allow_html=True)
+            except Exception as e:
+                st.sidebar.error(f"Could not open {doc_path}: {e}")
     
     def run_complete_extraction(self):
         """Run complete LIVE extraction and analysis with real-time progress"""

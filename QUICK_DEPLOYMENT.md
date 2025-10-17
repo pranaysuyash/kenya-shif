@@ -3,6 +3,7 @@
 ## Three Options for Deploying SHIF Analyzer
 
 ### Option 1: LOCAL (Development) ✅ BEST FOR TESTING
+
 ```
 Your Computer
 ├── Persistent storage: YES ✅
@@ -12,12 +13,14 @@ Your Computer
 ```
 
 **How to run:**
+
 ```bash
 source .venv/bin/activate
 streamlit run streamlit_comprehensive_analyzer.py
 ```
 
 **Output behavior:**
+
 - Results saved to `outputs/run_TIMESTAMP/` folder
 - Can browse all previous runs in Analytics → Historical
 - Can load any folder path from history
@@ -26,6 +29,7 @@ streamlit run streamlit_comprehensive_analyzer.py
 ---
 
 ### Option 2: REPLIT (Free Web Hosting)
+
 ```
 Replit.com
 ├── Persistent storage: NO ⚠️ (Deleted after ~1 hour idle)
@@ -35,12 +39,14 @@ Replit.com
 ```
 
 **How to use:**
+
 1. Click "Import from GitHub" in Replit
 2. Enter: `pranaysuyash/kenya-shif`
 3. Set env var: `OPENAI_API_KEY=sk-...`
 4. Press Run → Get public URL
 
 **Important workflow:**
+
 ```
 1. Upload PDF
 2. Run Analysis
@@ -55,6 +61,7 @@ Replit.com
 ---
 
 ### Option 3: VERCEL (Production)
+
 ```
 Vercel.com
 ├── Persistent storage: NO ❌ (Serverless)
@@ -64,12 +71,14 @@ Vercel.com
 ```
 
 **How to deploy:**
+
 1. Push code to GitHub
 2. Connect repo to Vercel
 3. Set env var: `OPENAI_API_KEY=sk-...`
 4. Deploy (automatic)
 
 **Important workflow:**
+
 ```
 1. Each session is fresh (no stored files)
 2. Always download results after analysis
@@ -83,18 +92,21 @@ Vercel.com
 ## KEY FEATURES - ALL PLATFORMS
 
 ### ✅ Extraction (100% Deterministic)
+
 ```
 Same PDF → Always Same Output ✅
 (Uses Tabula + pdfplumber, deterministic)
 ```
 
-### ✅ AI Analysis (Now Deterministic!) 
+### ✅ AI Analysis (Now Deterministic!)
+
 ```
 temperature=0 + seed=42
 → Same prompts = Same results every time ✅
 ```
 
 ### ✅ Downloads (All Platforms)
+
 ```
 Analytics → Downloads tab
 ├── Individual CSVs (Policy, Contradictions, Gaps)
@@ -103,6 +115,7 @@ Analytics → Downloads tab
 ```
 
 ### ✅ Historical (Platform-Dependent)
+
 ```
 LOCAL:   Browse entire folder history ✅
 REPLIT:  Upload previous outputs ✅
@@ -131,16 +144,19 @@ Do you want to...?
 ## WHAT'S INCLUDED
 
 ### In `output_manager.py`:
+
 - `OutputManager`: Auto-detects platform, manages file storage
 - `DownloadManager`: Creates ZIP/CSV/JSON for downloads
 - `HistoricalAnalysisLoader`: Browse past runs
 
 ### In `streamlit_comprehensive_analyzer.py`:
+
 - **Analytics Tab**: Charts and metrics
 - **📥 Downloads Tab**: Export all results
 - **📂 Historical Tab**: Load past runs or custom paths
 
 ### In `integrated_comprehensive_analyzer.py`:
+
 - `temperature=0` + `seed=42` for deterministic AI
 - Works on all platforms
 
@@ -149,6 +165,7 @@ Do you want to...?
 ## YOUR OUTPUTS
 
 ### LOCAL
+
 ```
 outputs/
 ├── run_20251017_120000/
@@ -157,9 +174,11 @@ outputs/
 │   ├── gaps.csv
 │   └── metadata.json
 ```
+
 → Files stay forever ✅
 
 ### REPLIT/VERCEL
+
 ```
 Downloaded to YOUR computer:
 ├── policy_services.csv
@@ -167,6 +186,7 @@ Downloaded to YOUR computer:
 ├── gaps.csv
 └── metadata.json
 ```
+
 → Server files deleted after session ⚠️
 
 ---
@@ -174,17 +194,21 @@ Downloaded to YOUR computer:
 ## NEXT STEPS
 
 1. **Test locally first**
+
    ```bash
    streamlit run streamlit_comprehensive_analyzer.py
    ```
 
 2. **Upload your PDF**
+
    - Task 1 or Task 2 tab
 
 3. **Run analysis**
+
    - Wait for extraction + AI insights
 
 4. **Download results**
+
    - Analytics → Downloads tab
 
 5. **Deploy anywhere**
@@ -196,29 +220,32 @@ Downloaded to YOUR computer:
 
 ## TROUBLESHOOTING
 
-| Problem | Solution |
-|---------|----------|
-| Download button not working | Make sure `.env` has valid API key |
-| No historical runs showing | They're in `outputs/run_*` (LOCAL only) |
-| "Method not found" error | Run: `find . -type d -name __pycache__ -delete` |
-| App crashes | Check logs, verify all imports work |
+| Problem                     | Solution                                        |
+| --------------------------- | ----------------------------------------------- |
+| Download button not working | Make sure `.env` has valid API key              |
+| No historical runs showing  | They're in `outputs/run_*` (LOCAL only)         |
+| "Method not found" error    | Run: `find . -type d -name __pycache__ -delete` |
+| App crashes                 | Check logs, verify all imports work             |
 
 ---
 
 ## REMEMBER
 
 ✅ **All 3 platforms support**:
+
 - PDF extraction ✓
 - AI analysis ✓
 - Downloads ✓
 - Deterministic outputs ✓
 
 ⚠️ **LOCAL has advantage**:
+
 - Persistent storage
 - Browse full history
 - No time limits
 
 ⚠️ **REPLIT/VERCEL need**:
+
 - Download immediately
 - Upload to restore history
 

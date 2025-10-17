@@ -6,16 +6,16 @@ This app now supports **local development, cloud deployment (Replit, Vercel), an
 
 ### Key Features by Platform
 
-| Feature | Local | Replit | Vercel | Streamlit Cloud |
-|---------|-------|--------|--------|-----------------|
-| **App Functions** | ✅ Full | ✅ Full | ✅ Full | ✅ Full |
-| **PDF Extraction** | ✅ Deterministic | ✅ Deterministic | ✅ Deterministic | ✅ Deterministic |
-| **AI Analysis** | ✅ Deterministic | ✅ Deterministic | ✅ Deterministic | ✅ Deterministic |
-| **Download Results** | ✅ Yes | ✅ Yes | ✅ Yes | ✅ Yes |
-| **Local File Storage** | ✅ Persistent | ⚠️ Ephemeral* | ❌ No | ⚠️ Session-only |
-| **Historical Browsing** | ✅ Yes | ⚠️ Limited* | ❌ No | ⚠️ Session-only |
+| Feature                 | Local            | Replit           | Vercel           | Streamlit Cloud  |
+| ----------------------- | ---------------- | ---------------- | ---------------- | ---------------- |
+| **App Functions**       | ✅ Full          | ✅ Full          | ✅ Full          | ✅ Full          |
+| **PDF Extraction**      | ✅ Deterministic | ✅ Deterministic | ✅ Deterministic | ✅ Deterministic |
+| **AI Analysis**         | ✅ Deterministic | ✅ Deterministic | ✅ Deterministic | ✅ Deterministic |
+| **Download Results**    | ✅ Yes           | ✅ Yes           | ✅ Yes           | ✅ Yes           |
+| **Local File Storage**  | ✅ Persistent    | ⚠️ Ephemeral\*   | ❌ No            | ⚠️ Session-only  |
+| **Historical Browsing** | ✅ Yes           | ⚠️ Limited\*     | ❌ No            | ⚠️ Session-only  |
 
-*Ephemeral = Deleted after session idle or browser close
+\*Ephemeral = Deleted after session idle or browser close
 
 ---
 
@@ -114,11 +114,13 @@ run = "export DEPLOYMENT_ENV=replit && streamlit run streamlit_comprehensive_ana
 ### Important Notes
 
 ⚠️ **Storage is Ephemeral**:
+
 - Files deleted after ~1 hour of inactivity
 - Browser close = session ends
 - **Always download results before leaving**
 
 ⚠️ **To Use Historical Features**:
+
 - Upload previously saved output directories
 - Use "Load Custom Path" feature
 - Or re-upload ZIP from previous session
@@ -199,11 +201,13 @@ OPENAI_API_KEY = sk-proj-...
 ### Important Limitations
 
 ❌ **NO Local File Storage**:
+
 - Serverless = no persistent filesystem
 - Each session is fresh
 - Cannot browse "outputs/" folder
 
 ✅ **Download-Only Model**:
+
 - Generate all files in-memory
 - User downloads to their machine
 - For next session: upload ZIP or re-run
@@ -315,22 +319,23 @@ st.download_button("📥 Download", data=zip_bytes, file_name="analysis.zip")
 
 ## 6. PLATFORM COMPARISON TABLE
 
-| Aspect | Local | Replit | Vercel | Streamlit |
-|--------|-------|--------|--------|-----------|
-| **Speed** | Fast | Medium | Fast* | Medium |
-| **Storage** | Persistent | Ephemeral (1hr) | None | Session-only |
-| **History** | Full browsing | Upload only | Upload only | Upload only |
-| **Setup** | 2 mins | 5 mins | 10 mins | 2 mins |
-| **Cost** | Free | Free | Free | Free |
-| **Best For** | Development | Testing | Production | Demo |
+| Aspect       | Local         | Replit          | Vercel      | Streamlit    |
+| ------------ | ------------- | --------------- | ----------- | ------------ |
+| **Speed**    | Fast          | Medium          | Fast\*      | Medium       |
+| **Storage**  | Persistent    | Ephemeral (1hr) | None        | Session-only |
+| **History**  | Full browsing | Upload only     | Upload only | Upload only  |
+| **Setup**    | 2 mins        | 5 mins          | 10 mins     | 2 mins       |
+| **Cost**     | Free          | Free            | Free        | Free         |
+| **Best For** | Development   | Testing         | Production  | Demo         |
 
-*Vercel: Fast but requires re-running analysis each session
+\*Vercel: Fast but requires re-running analysis each session
 
 ---
 
 ## 7. TROUBLESHOOTING
 
 ### App won't start
+
 ```bash
 # Check Python version
 python3 --version  # Should be 3.8+
@@ -344,6 +349,7 @@ rm -rf .streamlit/
 ```
 
 ### Download button not working
+
 ```python
 # Ensure data is bytes
 data = dm.dataframe_to_bytes(df)  # ← Correct
@@ -351,6 +357,7 @@ data = dm.dataframe_to_bytes(df)  # ← Correct
 ```
 
 ### Historical folder not showing
+
 ```python
 # Check if outputs/ directory exists
 ls -la outputs/
@@ -362,6 +369,7 @@ om.save_dataframe(results, 'results.csv')
 ```
 
 ### API key issues
+
 ```bash
 # Verify .env exists
 cat .env | grep OPENAI_API_KEY
@@ -384,6 +392,7 @@ python3 -c "from openai import OpenAI; OpenAI(api_key='sk-...')"
 - [ ] PDF test file available
 
 ### Local Deployment
+
 ```bash
 ✅ streamlit run streamlit_comprehensive_analyzer.py
 ✅ Upload PDF
@@ -393,6 +402,7 @@ python3 -c "from openai import OpenAI; OpenAI(api_key='sk-...')"
 ```
 
 ### Cloud Deployment (Replit)
+
 ```bash
 ✅ Set DEPLOYMENT_ENV=replit
 ✅ Public URL accessible
@@ -401,6 +411,7 @@ python3 -c "from openai import OpenAI; OpenAI(api_key='sk-...')"
 ```
 
 ### Production (Vercel)
+
 ```bash
 ✅ Environment variables set
 ✅ GitHub repo connected
@@ -413,6 +424,7 @@ python3 -c "from openai import OpenAI; OpenAI(api_key='sk-...')"
 ## 9. QUICK START BY PLATFORM
 
 ### Local (Fastest)
+
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
@@ -422,6 +434,7 @@ streamlit run streamlit_comprehensive_analyzer.py
 ```
 
 ### Replit (Web Browser)
+
 ```bash
 1. Create Replit account
 2. Click "Import from GitHub"
@@ -431,6 +444,7 @@ streamlit run streamlit_comprehensive_analyzer.py
 ```
 
 ### Vercel (Production)
+
 ```bash
 1. Push code to GitHub
 2. Create Vercel account
@@ -444,6 +458,7 @@ streamlit run streamlit_comprehensive_analyzer.py
 ## Questions?
 
 Check:
+
 - `integrated_comprehensive_analyzer.py` - Core logic
 - `streamlit_comprehensive_analyzer.py` - UI components
 - `output_manager.py` - File handling
