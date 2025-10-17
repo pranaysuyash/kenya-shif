@@ -2230,6 +2230,8 @@ Focus on identifying 15-25 systematic coverage gaps that complement the existing
             resp = self.client.chat.completions.create(
                 model=self.primary_model,
                 messages=[{"role": "user", "content": prompt}],
+                temperature=0,  # Deterministic AI responses
+                seed=42  # Reproducible across runs
             )
             content = (resp.choices[0].message.content or "")
             self._cache_set(primary_key, content)
@@ -2238,6 +2240,8 @@ Focus on identifying 15-25 systematic coverage gaps that complement the existing
             resp = self.client.chat.completions.create(
                 model=self.fallback_model,
                 messages=[{"role": "user", "content": prompt}],
+                temperature=0,  # Deterministic AI responses
+                seed=42  # Reproducible across runs
             )
             content = (resp.choices[0].message.content or "")
             self._cache_set(fallback_key, content)

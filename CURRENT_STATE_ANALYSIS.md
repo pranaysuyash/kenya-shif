@@ -8,6 +8,7 @@
 ## 📋 OFFICIAL PRODUCTION GUIDE REQUIREMENTS
 
 ### From PRODUCTION_FILES_GUIDE.md (AUTHORITATIVE):
+
 ```
 CORE PRODUCTION FILES (Use These Only):
 
@@ -42,6 +43,7 @@ CORE PRODUCTION FILES (Use These Only):
 ### Python Files in Root (Should be ~3, Actually are 83+):
 
 **Main Files (✅ Correct)**
+
 - ✅ `streamlit_comprehensive_analyzer.py` (3256 lines) - Current main UI (replaces streamlit_generalized_medical.py)
 - ✅ `integrated_comprehensive_analyzer.py` (3372 lines) - Main analyzer (replaces generalized_medical_analyzer.py)
 - ✅ `shif_healthcare_pattern_analyzer.py` (1333 lines) - Fallback analyzer
@@ -51,6 +53,7 @@ CORE PRODUCTION FILES (Use These Only):
 - ✅ `launch_streamlit.py` - Streamlit launcher
 
 **Test/Debug Files (❌ Should be archived, Currently in root):**
+
 - test_analyzer.py
 - test_and_run.py
 - test_comprehensive_enhanced_system.py
@@ -83,6 +86,7 @@ CORE PRODUCTION FILES (Use These Only):
 - **~30+ other test files**
 
 **Analysis/Development Files (❌ Should be archived):**
+
 - analyze_pdf_direct.py
 - comprehensive_analysis.py
 - compare_all_extractions.py
@@ -103,6 +107,7 @@ CORE PRODUCTION FILES (Use These Only):
 - **~40+ other development files**
 
 **Specialized Analyzers (❌ Should be archived - superseded by integrated_comprehensive):**
+
 - ai_enhanced_hierarchical_extractor.py
 - ai_first_analyzer.py
 - ai_first_enhanced.py
@@ -139,6 +144,7 @@ CORE PRODUCTION FILES (Use These Only):
 ## 📊 IMPACT OF CURRENT ORGANIZATION
 
 ### Problems:
+
 1. **Bloated root directory** - 83 Python files instead of 7-8
 2. **Confusion about which files to use** - Multiple versions of analyzers
 3. **Git noise** - Too many files to maintain, review, and deploy
@@ -146,6 +152,7 @@ CORE PRODUCTION FILES (Use These Only):
 5. **Difficult onboarding** - New users don't know which files are current
 
 ### Why This Happened:
+
 - Development process created many iterations
 - Each version kept for reference/fallback
 - Testing iterations accumulated
@@ -156,6 +163,7 @@ CORE PRODUCTION FILES (Use These Only):
 ## ✅ RECOMMENDED FILE ORGANIZATION
 
 ### CORE FILES TO KEEP IN ROOT (8 files):
+
 ```
 Root/
 ├── streamlit_comprehensive_analyzer.py       # Main UI
@@ -169,6 +177,7 @@ Root/
 ```
 
 ### EVERYTHING ELSE → archive/
+
 ```
 archive/
 ├── development/
@@ -192,12 +201,14 @@ archive/
 ## 🎯 LOGGING IMPLEMENTATION FINDINGS
 
 ### Current Streamlit Approach (My Changes):
+
 - ❌ Complex stream capture with custom class
 - ❌ Threading for time tracking
 - ❌ Multiple containers and state management
 - ❌ Overcomplicated for actual need
 
 ### Best Practice from Commit 44bad2c:
+
 - ✅ Simple `st.write()` and `st.info()` for messages
 - ✅ Subprocess for analyzer execution
 - ✅ Check returncode for errors
@@ -205,6 +216,7 @@ archive/
 - ✅ Much simpler and more robust
 
 ### Recommendation:
+
 **Revert to simple approach** - Use `st.write()`, `st.info()`, `st.warning()` for logging messages. Let the analyzer print to terminal naturally. The expander shows logs from the terminal output easily.
 
 ---
@@ -221,6 +233,7 @@ archive/
 6. **Malformed Data** → Pattern matching with fallbacks
 
 ### Fallback Chain:
+
 ```
 Live Extraction with all optimizations
 ↓
@@ -234,6 +247,7 @@ If fails → Return empty dict with error message
 ```
 
 ### Real Scenarios:
+
 - Extraction taking too long? → Not a failure, just show progress
 - API rate limited? → Retry logic in place
 - Temporary network hiccup? → Fallback catches it
@@ -242,16 +256,16 @@ If fails → Return empty dict with error message
 
 ## 📋 SUMMARY OF FINDINGS
 
-| Aspect | Official Guide | Current State | Match? |
-|--------|---|---|---|
-| **Main files in root** | 3 files | 83 files | ❌ NO |
-| **Core analyzer name** | generalized_medical_analyzer.py | integrated_comprehensive_analyzer.py | ✓ Functionally OK (renamed) |
-| **Streamlit file name** | streamlit_generalized_medical.py | streamlit_comprehensive_analyzer.py | ✓ Functionally OK (renamed) |
-| **Test files location** | Not in root | In root | ❌ NO |
-| **Debug files location** | Archived | In root | ❌ NO |
-| **Logging approach** | Simple st.write() | Complex stream capture | ❌ NO |
-| **Fallback handling** | Multiple cached paths | Limited paths | ⚠️ PARTIAL |
-| **Live extraction robustness** | Should never fail | Proper error handling | ✓ YES |
+| Aspect                         | Official Guide                   | Current State                        | Match?                      |
+| ------------------------------ | -------------------------------- | ------------------------------------ | --------------------------- |
+| **Main files in root**         | 3 files                          | 83 files                             | ❌ NO                       |
+| **Core analyzer name**         | generalized_medical_analyzer.py  | integrated_comprehensive_analyzer.py | ✓ Functionally OK (renamed) |
+| **Streamlit file name**        | streamlit_generalized_medical.py | streamlit_comprehensive_analyzer.py  | ✓ Functionally OK (renamed) |
+| **Test files location**        | Not in root                      | In root                              | ❌ NO                       |
+| **Debug files location**       | Archived                         | In root                              | ❌ NO                       |
+| **Logging approach**           | Simple st.write()                | Complex stream capture               | ❌ NO                       |
+| **Fallback handling**          | Multiple cached paths            | Limited paths                        | ⚠️ PARTIAL                  |
+| **Live extraction robustness** | Should never fail                | Proper error handling                | ✓ YES                       |
 
 ---
 
@@ -262,4 +276,3 @@ If fails → Return empty dict with error message
 3. **Update fallback paths** to search more locations systematically
 4. **Document current state** - update DIRECTORY_STRUCTURE.md with actual current files
 5. **Test end-to-end** - verify Streamlit works with simplified approach
-

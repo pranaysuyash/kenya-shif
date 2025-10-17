@@ -2128,6 +2128,207 @@ class SHIFHealthcarePolicyAnalyzer:
         
         st.markdown('<div class="task-header"><h2>📈 Advanced Analytics</h2></div>', unsafe_allow_html=True)
         
+        # ===== NEW: Download & Historical Tab =====
+        from output_manager import OutputManager, DownloadManager, HistoricalAnalysisLoader
+        
+        # Create tabs for Analytics, Downloads, and History
+        analytics_tab, downloads_tab, history_tab = st.tabs(["📊 Analytics", "📥 Downloads", "📂 Historical"])
+        
+        om = OutputManager()
+        dm = DownloadManager()
+        
+        # ===== DOWNLOADS TAB =====
+        with downloads_tab:
+            st.markdown("### 📥 Download Analysis Results")
+            
+            if not self.results:
+                st.info("⚠️ Run analysis first to generate downloadable outputs")
+            else:
+                st.success("✅ Analysis complete! Download your results below.")
+                
+                # Create download columns
+                col1, col2, col3 = st.columns(3)
+                
+                # Get current results data
+                policy_df = pd.DataFrame(self.results.get('structured_rules', []))
+                contradictions_df = pd.DataFrame(self.results.get('contradictions', []))
+                gaps_df = pd.DataFrame(self.results.get('gaps', []))
+                
+                with col1:
+                    st.markdown("#### 📋 Individual Exports")
+                    
+                    if not policy_df.empty:
+                        st.download_button(
+                            label="📥 Policy Services (CSV)",
+                            data=dm.dataframe_to_bytes(policy_df),
+                            file_name=f"policy_services_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
+                            mime="text/csv"
+                        )
+                    
+                    if not contradictions_df.empty:
+                        st.download_button(
+                            label="📥 Contradictions (CSV)",
+                            data=dm.dataframe_to_bytes(contradictions_df),
+                            file_name=f"contradictions_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
+                            mime="text/csv"
+                        )
+                    
+                    if not gaps_df.empty:
+                        st.download_button(
+                            label="📥 Gaps (CSV)",
+                            data=dm.dataframe_to_bytes(gaps_df),
+                            file_name=f"gaps_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
+                            mime="text/csv"
+                        )
+                
+                with col2:
+                    st.markdown("#### 📦 Complete Package")
+                    
+                    # Create comprehensive ZIP
+                    files_to_zip = {}
+                    if not policy_df.empty:
+                        files_to_zip['policy_services.csv'] = policy_df
+                    if not contradictions_df.empty:
+                        files_to_zip['contradictions.csv'] = contradictions_df
+                    if not gaps_df.empty:
+                        files_to_zip['gaps.csv'] = gaps_df
+                    files_to_zip['analysis_metadata.json'] = {
+                        'timestamp': datetime.now().isoformat(),
+                        'policy_count': len(policy_df),
+                        'contradictions_count': len(contradictions_df),
+                        'gaps_count': len(gaps_df),
+                    }
+                    
+                    zip_data = dm.create_multi_file_zip(files_to_zip)
+                    st.download_button(
+                        label="📦 Download ALL as ZIP",
+                        data=zip_data,
+                        file_name=f"shif_analysis_complete_{datetime.now().strftime('%Y%m%d_%H%M%S')}.zip",
+                        mime="application/zip"
+                    )
+                
+                with col3:
+                    st.markdown("#### 💾 Local Storage")
+                    if st.button("💾 Save to Local Directory"):
+                        try:
+                            run_dir = om.create_run_directory()
+                            om.current_run_dir = run_dir
+                            
+                            if not policy_df.empty:
+                                om.save_dataframe(policy_df, 'policy_services.csv')
+                            if not contradictions_df.empty:
+                                om.save_dataframe(contradictions_df, 'contradictions.csv')
+                            if not gaps_df.empty:
+                                om.save_dataframe(gaps_df, 'gaps.csv')
+                            
+                            om.save_json({
+                                'timestamp': datetime.now().isoformat(),
+                                'summary': {
+                                    'policy_count': len(policy_df),
+                                    'contradictions_count': len(contradictions_df),
+                                    'gaps_count': len(gaps_df),
+                                }
+                            }, 'metadata.json')
+                            
+                            st.success(f"✅ Saved to: {run_dir}")
+                        except Exception as e:
+                            st.error(f"❌ Error saving: {e}")
+                
+                # Deployment info
+                st.divider()
+                with st.expander("ℹ️ Deployment Information"):
+                    deployment_info = om.get_deployment_info()
+                    cols = st.columns(2)
+                    for i, (key, value) in enumerate(deployment_info.items()):
+                        with cols[i % 2]:
+                            st.write(f"**{key}**: `{value}`")
+        
+        # ===== HISTORICAL TAB =====
+        with history_tab:
+            st.markdown("### 📂 Historical Analysis Results")
+            
+            hal = HistoricalAnalysisLoader(om)
+            historical_runs = hal.get_historical_runs_list()
+            
+            if not historical_runs:
+                st.info("ℹ️ No historical runs yet. Results from local runs will appear here.")
+                st.write("**Option 1**: Run analysis locally and save to directory")
+                st.write("**Option 2**: Upload a previous output directory below")
+            else:
+                st.success(f"✅ Found {len(historical_runs)} historical runs")
+                
+                # Display historical runs
+                for run_info in historical_runs[:10]:  # Show last 10 runs
+                    with st.expander(f"📅 {run_info['timestamp']} ({run_info['files']} files)"):
+                        col1, col2 = st.columns([3, 1])
+                        
+                        with col1:
+                            if st.button(f"📂 Load {run_info['timestamp']}", key=run_info['path']):
+                                try:
+                                    run_data = hal.load_analysis(run_info['path'])
+                                    summary = hal.get_summary(run_data)
+                                    
+                                    st.write("**Analysis Summary:**")
+                                    cols = st.columns(4)
+                                    cols[0].metric("Policy Services", summary['policy_services'])
+                                    cols[1].metric("Annex Procedures", summary['annex_procedures'])
+                                    cols[2].metric("Contradictions", summary['ai_contradictions'])
+                                    cols[3].metric("Gaps", summary['ai_gaps'])
+                                    
+                                    st.write("**Files in this run:**")
+                                    st.write(list(run_data.keys()))
+                                except Exception as e:
+                                    st.error(f"❌ Error loading run: {e}")
+                        
+                        with col2:
+                            if st.button("🗑️ Delete", key=f"del_{run_info['path']}"):
+                                import shutil
+                                try:
+                                    shutil.rmtree(run_info['path'])
+                                    st.success("Deleted")
+                                    st.rerun()
+                                except:
+                                    st.error("Failed to delete")
+            
+            # Upload custom output directory
+            st.divider()
+            st.markdown("### 📤 Load Custom Output Directory")
+            st.write("Provide path to outputs folder from a previous run:")
+            
+            custom_path = st.text_input("Outputs folder path:", value="", placeholder="/path/to/outputs/run_20240101_120000")
+            
+            if custom_path and st.button("📂 Load Custom Path"):
+                try:
+                    custom_run_data = hal.load_analysis(custom_path)
+                    if custom_run_data:
+                        summary = hal.get_summary(custom_run_data)
+                        st.success(f"✅ Loaded {len(custom_run_data)} files")
+                        
+                        cols = st.columns(4)
+                        cols[0].metric("Policy Services", summary['policy_services'])
+                        cols[1].metric("Annex Procedures", summary['annex_procedures'])
+                        cols[2].metric("Contradictions", summary['ai_contradictions'])
+                        cols[3].metric("Gaps", summary['ai_gaps'])
+                        
+                        # Show available files for download
+                        st.markdown("#### Download from loaded run:")
+                        for filename, content in custom_run_data.items():
+                            if isinstance(content, pd.DataFrame):
+                                st.download_button(
+                                    label=f"📥 {filename}.csv",
+                                    data=dm.dataframe_to_bytes(content),
+                                    file_name=f"{filename}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
+                                    mime="text/csv"
+                                )
+                    else:
+                        st.warning("⚠️ No data found in path")
+                except Exception as e:
+                    st.error(f"❌ Error loading path: {e}")
+        
+        # ===== ANALYTICS TAB (Original) =====
+        with analytics_tab:
+            st.markdown("### 📊 Analysis Metrics")
+        
         if not self.results:
             st.info("📂 Load results to see advanced analytics")
             return
