@@ -198,6 +198,34 @@ class UniqueInsightTracker:
                 added_count += 1
         return added_count
     
+    def log_analysis_metrics(self, stage: str, input_size: int = 0, output_size: int = 0, 
+                            status: str = "INFO", details: Dict = None):
+        """Log analysis metrics for audit trail and monitoring"""
+        try:
+            metrics = {
+                'timestamp': datetime.now().isoformat(),
+                'stage': stage,
+                'input_size': input_size,
+                'output_size': output_size,
+                'status': status,
+                'details': details or {}
+            }
+            
+            # Append to metrics log file
+            metrics_file = self.output_dir / 'analysis_metrics.jsonl'
+            with open(metrics_file, 'a') as f:
+                f.write(json.dumps(metrics) + '\n')
+            
+            # Print summary
+            if output_size > 0:
+                ratio = output_size / max(input_size, 1)
+                print(f"   📊 [{stage}] Input: {input_size} → Output: {output_size} ({ratio:.1%}) [{status}]")
+            else:
+                print(f"   📊 [{stage}] {status}")
+                
+        except Exception as e:
+            print(f"   ⚠️ Failed to log metrics: {e}")
+    
     def get_summary(self) -> Dict:
         """Get summary of tracked insights"""
         return {
@@ -1845,6 +1873,19 @@ MEDICAL SPECIALTIES COVERED:
                 contradiction_analysis = self._call_openai(contradiction_prompt, tag="contradictions_main")
                 contradictions = self._extract_ai_contradictions(contradiction_analysis)
                 
+                # Log metrics
+                self.log_analysis_metrics(
+                    "Contradiction Extraction",
+                    input_size=len(contradiction_analysis),
+                    output_size=len(contradictions),
+                    status="SUCCESS",
+                    details={
+                        'openai_response_chars': len(contradiction_analysis),
+                        'contradictions_found': len(contradictions),
+                        'contradiction_ids': [c.get('contradiction_id', 'UNKNOWN') for c in contradictions[:3]]
+                    }
+                )
+                
                 # Add page source tracking for contradictions
                 contradictions = self._add_page_sources(contradictions, "contradiction", policy_df, annex_df)
                 
@@ -1886,6 +1927,19 @@ MEDICAL SPECIALTIES COVERED:
                     print(f"   🔍 Gap analysis starts with: {gap_analysis[:200]}...")
                 
                 gaps = self._extract_ai_gaps(gap_analysis)
+                
+                # Log metrics
+                self.log_analysis_metrics(
+                    "Gap Extraction",
+                    input_size=len(gap_analysis),
+                    output_size=len(gaps),
+                    status="SUCCESS",
+                    details={
+                        'openai_response_chars': len(gap_analysis),
+                        'gaps_found': len(gaps),
+                        'gap_ids': [g.get('gap_id', 'UNKNOWN') for g in gaps[:3]]
+                    }
+                )
                 
                 # Add page source tracking for gaps
                 gaps = self._add_page_sources(gaps, "gap", policy_df, annex_df)
@@ -2570,6 +2624,21 @@ Focus on identifying 15-25 systematic coverage gaps that complement the existing
                     deduplicated_gaps = self.deduplicate_gaps_with_openai(all_gaps)
                     print(f"   ✅ Reduced to {len(deduplicated_gaps)} unique gaps")
                     
+                    # Log deduplication metrics
+                    reduction_pct = ((len(all_gaps) - len(deduplicated_gaps)) / len(all_gaps) * 100) if all_gaps else 0
+                    self.log_analysis_metrics(
+                        "Gap Deduplication",
+                        input_size=len(all_gaps),
+                        output_size=len(deduplicated_gaps),
+                        status="SUCCESS",
+                        details={
+                            'duplicates_removed': len(all_gaps) - len(deduplicated_gaps),
+                            'reduction_percentage': f"{reduction_pct:.1f}%",
+                            'clinical_gaps': len(clinical_gaps),
+                            'coverage_gaps': len(coverage_gaps)
+                        }
+                    )
+                    
                     # Save deduplicated gaps as primary output
                     pd.DataFrame(deduplicated_gaps).to_csv(self.output_dir / 'comprehensive_gaps_analysis.csv', index=False)
                     print(f"✅ Deduplicated gaps saved: comprehensive_gaps_analysis.csv ({len(deduplicated_gaps)} unique gaps)")
@@ -2577,6 +2646,13 @@ Focus on identifying 15-25 systematic coverage gaps that complement the existing
                     # Also save original gaps for reference
                     pd.DataFrame(all_gaps).to_csv(self.output_dir / 'all_gaps_before_dedup.csv', index=False)
                 elif all_gaps:
+                    self.log_analysis_metrics(
+                        "Gap Deduplication",
+                        input_size=len(all_gaps),
+                        output_size=len(all_gaps),
+                        status="SKIPPED (No client)",
+                        details={'reason': 'OpenAI client not available'}
+                    )
                     pd.DataFrame(all_gaps).to_csv(self.output_dir / 'comprehensive_gaps_analysis.csv', index=False)
                     print(f"✅ Comprehensive gaps saved: comprehensive_gaps_analysis.csv ({len(all_gaps)} total gaps)")
                     

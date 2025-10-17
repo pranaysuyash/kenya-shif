@@ -1,0 +1,28 @@
+
+DR. RISHI HEALTHCARE POLICY ANALYSIS REPORT
+==========================================
+Generated: 2025-10-17T16:48:02.651180
+
+EXECUTIVE SUMMARY
+-----------------
+• Total Services Analyzed: 825
+• Rules Structured: 825
+• Tariff Coverage: 100.0%
+• Contradictions Found: 11 (5 high severity)
+• Coverage Gaps Identified: 11 (10 high impact)
+
+TOP FINDINGS
+------------
+• Most Common Rule Type: annex_procedure
+• Largest Specialty: Urological (146 procedures)
+• Most Common Gap Type: specialty_coverage_gap
+
+RECOMMENDATIONS
+---------------
+1. Establish clear policy guidelines to resolve contradictions in facility level requirements
+2. Conduct comprehensive benefit package review to address coverage gaps
+3. Strengthen primary care services (Level 1-3) to improve access in rural areas
+4. Expand specialist services coverage to address referral bottlenecks
+5. Integrate mental health services across all care levels
+
+For detailed analysis, see CSV files in outputs/ directory.

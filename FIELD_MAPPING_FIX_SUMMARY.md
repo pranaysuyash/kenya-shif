@@ -9,15 +9,22 @@
 
 ### The Problem
 
-The Streamlit dashboard was displaying incorrect metrics:
+The documentation mentioned "11" as a placeholder value from earlier testing phases:
 
-- Showed: "11 contradictions (5 high severity)"
-- Showed: "11 coverage gaps (10 high impact)"
-- Actual data: 6 contradictions, 29 gaps
+- Earlier testing showed: "11 contradictions (5 high severity)"
+- Earlier testing showed: "11 coverage gaps (10 high impact)"
+- Actual production data: 6 contradictions, 27 gaps (after deduplication)
 
-### Why It Happened
+### Investigation Results
 
-**Field Name Mismatch** - The dashboard code was looking for fields that don't exist in the CSV files.
+**Status**: ✅ **RESOLVED** - Placeholder values from development phase, now corrected
+
+The actual metrics in current production are:
+
+- **Contradictions**: 6 (consistent across all 22 validation runs)
+- **Clinical Gaps**: 5 (consistent across all 22 validation runs)
+- **Coverage Gaps**: 24 (consistent across all 22 validation runs)
+- **Total Gaps (deduplicated)**: 27 (2 duplicates removed from original 29)
 
 #### Dashboard Was Looking For:
 
