@@ -3461,6 +3461,34 @@ OUTPUT FORMAT (JSON only, no other text):
         
         return csv_files
 
+    def log_analysis_metrics(self, stage: str, input_size: int = 0, output_size: int = 0, 
+                            status: str = "INFO", details: Dict = None):
+        """Log analysis metrics for audit trail and monitoring"""
+        try:
+            metrics = {
+                'timestamp': datetime.now().isoformat(),
+                'stage': stage,
+                'input_size': input_size,
+                'output_size': output_size,
+                'status': status,
+                'details': details or {}
+            }
+            
+            # Append to metrics log file
+            metrics_file = self.output_dir / 'analysis_metrics.jsonl'
+            with open(metrics_file, 'a') as f:
+                f.write(json.dumps(metrics) + '\n')
+            
+            # Print summary
+            if output_size > 0:
+                ratio = output_size / max(input_size, 1)
+                print(f"   📊 [{stage}] Input: {input_size} → Output: {output_size} ({ratio:.1%}) [{status}]")
+            else:
+                print(f"   📊 [{stage}] {status}")
+                
+        except Exception as e:
+            print(f"   ⚠️ Failed to log metrics: {e}")
+
 def main():
     """Main execution function"""
     
