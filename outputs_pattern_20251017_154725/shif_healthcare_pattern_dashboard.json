@@ -1,0 +1,240 @@
+{
+  "summary_statistics": {
+    "total_services_analyzed": 0,
+    "total_rules_structured": 0,
+    "tariff_coverage_percentage": 0,
+    "rule_type_distribution": {},
+    "specialty_distribution": {},
+    "facility_level_distribution": {},
+    "total_contradictions": 0,
+    "high_severity_contradictions": 0,
+    "contradiction_type_distribution": {},
+    "total_gaps": 18,
+    "high_impact_gaps": 17,
+    "gap_type_distribution": {
+      "specialty_coverage_gap": 8,
+      "essential_service_gap": 8,
+      "age_specific_gap": 2
+    }
+  },
+  "rules_parsed_table": [],
+  "contradictions_flagged_table": [],
+  "coverage_gaps_table": [
+    {
+      "gap_type": "specialty_coverage_gap",
+      "description": "Insufficient Emergency Medicine coverage",
+      "impact": "high",
+      "affected_population": "All patients requiring this specialty",
+      "recommended_action": "Add 20 more Emergency Medicine procedures",
+      "kenya_priority": "Not assessed"
+    },
+    {
+      "gap_type": "specialty_coverage_gap",
+      "description": "Insufficient Pediatrics coverage",
+      "impact": "high",
+      "affected_population": "All patients requiring this specialty",
+      "recommended_action": "Add 30 more Pediatrics procedures",
+      "kenya_priority": "Not assessed"
+    },
+    {
+      "gap_type": "specialty_coverage_gap",
+      "description": "Insufficient Internal Medicine coverage",
+      "impact": "high",
+      "affected_population": "All patients requiring this specialty",
+      "recommended_action": "Add 25 more Internal Medicine procedures",
+      "kenya_priority": "Not assessed"
+    },
+    {
+      "gap_type": "specialty_coverage_gap",
+      "description": "Insufficient Family Medicine coverage",
+      "impact": "high",
+      "affected_population": "All patients requiring this specialty",
+      "recommended_action": "Add 20 more Family Medicine procedures",
+      "kenya_priority": "Not assessed"
+    },
+    {
+      "gap_type": "specialty_coverage_gap",
+      "description": "Insufficient Psychiatry coverage",
+      "impact": "high",
+      "affected_population": "All patients requiring this specialty",
+      "recommended_action": "Add 15 more Psychiatry procedures",
+      "kenya_priority": "Not assessed"
+    },
+    {
+      "gap_type": "specialty_coverage_gap",
+      "description": "Insufficient Radiology coverage",
+      "impact": "high",
+      "affected_population": "All patients requiring this specialty",
+      "recommended_action": "Add 25 more Radiology procedures",
+      "kenya_priority": "Not assessed"
+    },
+    {
+      "gap_type": "specialty_coverage_gap",
+      "description": "Insufficient Pathology coverage",
+      "impact": "high",
+      "affected_population": "All patients requiring this specialty",
+      "recommended_action": "Add 20 more Pathology procedures",
+      "kenya_priority": "Not assessed"
+    },
+    {
+      "gap_type": "specialty_coverage_gap",
+      "description": "Insufficient Anesthesia coverage",
+      "impact": "high",
+      "affected_population": "All patients requiring this specialty",
+      "recommended_action": "Add 15 more Anesthesia procedures",
+      "kenya_priority": "Not assessed"
+    },
+    {
+      "gap_type": "essential_service_gap",
+      "description": "Missing coverage for Family planning",
+      "impact": "high",
+      "affected_population": "General population",
+      "recommended_action": "Add Family planning to benefit package",
+      "kenya_priority": "Not assessed"
+    },
+    {
+      "gap_type": "essential_service_gap",
+      "description": "Missing coverage for Mental health services",
+      "impact": "high",
+      "affected_population": "General population",
+      "recommended_action": "Add Mental health services to benefit package",
+      "kenya_priority": "Not assessed"
+    },
+    {
+      "gap_type": "essential_service_gap",
+      "description": "Missing coverage for Dental care",
+      "impact": "high",
+      "affected_population": "General population",
+      "recommended_action": "Add Dental care to benefit package",
+      "kenya_priority": "Not assessed"
+    },
+    {
+      "gap_type": "essential_service_gap",
+      "description": "Missing coverage for Rehabilitation services",
+      "impact": "high",
+      "affected_population": "General population",
+      "recommended_action": "Add Rehabilitation services to benefit package",
+      "kenya_priority": "Not assessed"
+    },
+    {
+      "gap_type": "essential_service_gap",
+      "description": "Missing coverage for Palliative care",
+      "impact": "high",
+      "affected_population": "General population",
+      "recommended_action": "Add Palliative care to benefit package",
+      "kenya_priority": "Not assessed"
+    },
+    {
+      "gap_type": "essential_service_gap",
+      "description": "Missing coverage for Health education",
+      "impact": "high",
+      "affected_population": "General population",
+      "recommended_action": "Add Health education to benefit package",
+      "kenya_priority": "Not assessed"
+    },
+    {
+      "gap_type": "essential_service_gap",
+      "description": "Missing coverage for Community health services",
+      "impact": "high",
+      "affected_population": "General population",
+      "recommended_action": "Add Community health services to benefit package",
+      "kenya_priority": "Not assessed"
+    },
+    {
+      "gap_type": "essential_service_gap",
+      "description": "Missing coverage for Occupational health",
+      "impact": "high",
+      "affected_population": "General population",
+      "recommended_action": "Add Occupational health to benefit package",
+      "kenya_priority": "Not assessed"
+    },
+    {
+      "gap_type": "age_specific_gap",
+      "description": "Insufficient pediatric services coverage",
+      "impact": "high",
+      "affected_population": "Children under 18",
+      "recommended_action": "Add more pediatric-specific procedures",
+      "kenya_priority": "Not assessed"
+    },
+    {
+      "gap_type": "age_specific_gap",
+      "description": "Insufficient geriatric services coverage",
+      "impact": "medium",
+      "affected_population": "Elderly population",
+      "recommended_action": "Add geriatric-specific services",
+      "kenya_priority": "Not assessed"
+    }
+  ],
+  "specialty_analysis_table": [],
+  "kenya_context_table": [
+    {
+      "context_area": "Healthcare System Structure",
+      "relevance": "High",
+      "key_insight": "SHIF benefit package must align with 6-tier health system",
+      "implication": "Facility level requirements need clear mapping"
+    },
+    {
+      "context_area": "Disease Burden",
+      "relevance": "High",
+      "key_insight": "High burden of communicable and non-communicable diseases",
+      "implication": "Both categories need comprehensive coverage"
+    },
+    {
+      "context_area": "Access Barriers",
+      "relevance": "Medium",
+      "key_insight": "Geographic and financial barriers prevalent",
+      "implication": "Need for flexible facility requirements and affordable tariffs"
+    },
+    {
+      "context_area": "NHIF Transition",
+      "relevance": "High",
+      "key_insight": "SHIF designed to address NHIF limitations",
+      "implication": "Benefit package should reflect lessons learned"
+    }
+  ],
+  "recommendations_table": [
+    {
+      "priority": "High",
+      "category": "Policy Improvement",
+      "recommendation": "Conduct comprehensive benefit package review to address coverage gaps",
+      "timeline": "Medium-term",
+      "implementation_complexity": "Medium"
+    },
+    {
+      "priority": "High",
+      "category": "Policy Improvement",
+      "recommendation": "Strengthen primary care services (Level 1-3) to improve access in rural areas",
+      "timeline": "Medium-term",
+      "implementation_complexity": "Medium"
+    },
+    {
+      "priority": "High",
+      "category": "Policy Improvement",
+      "recommendation": "Expand specialist services coverage to address referral bottlenecks",
+      "timeline": "Medium-term",
+      "implementation_complexity": "Medium"
+    },
+    {
+      "priority": "Medium",
+      "category": "Policy Improvement",
+      "recommendation": "Integrate mental health services across all care levels",
+      "timeline": "Medium-term",
+      "implementation_complexity": "Medium"
+    },
+    {
+      "priority": "Medium",
+      "category": "Policy Improvement",
+      "recommendation": "Enhance maternal and child health benefit coverage",
+      "timeline": "Medium-term",
+      "implementation_complexity": "Medium"
+    },
+    {
+      "priority": "Medium",
+      "category": "Policy Improvement",
+      "recommendation": "Develop clear quality standards for contracted providers",
+      "timeline": "Short-term",
+      "implementation_complexity": "Low"
+    }
+  ],
+  "generated_timestamp": "2025-10-17T15:47:49.774701"
+}

@@ -1,0 +1,8 @@
+{
+  "total_runs_analyzed": 26,
+  "unique_contradiction_versions": 1,
+  "unique_gap_versions": 1,
+  "contradiction_consistency_score": "100.0%",
+  "gap_consistency_score": "100.0%",
+  "runs_list": "outputs_run_20251017_100945, outputs_run_20251017_101105, outputs_run_20251017_103109, outputs_run_20251017_103800, outputs_run_20251017_103940..."
+}

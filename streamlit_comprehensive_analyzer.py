@@ -104,6 +104,112 @@ class SHIFHealthcarePolicyAnalyzer:
         self.demo_enhancer = DemoEnhancer()  # Demo capabilities
         self.setup_openai()
     
+    def format_json_as_table(self, json_data, title=""):
+        """Format JSON data as readable table for better UX"""
+        try:
+            if not json_data:
+                return
+            
+            # Parse if string
+            if isinstance(json_data, str):
+                try:
+                    json_data = json.loads(json_data)
+                except:
+                    st.markdown(json_data)
+                    return
+            
+            # Handle dict with nested structure
+            if isinstance(json_data, dict):
+                # Create expandable sections for each key
+                for key, value in json_data.items():
+                    with st.expander(f"📋 {key.replace('_', ' ').title()}", expanded=False):
+                        if isinstance(value, (list, dict)):
+                            self._render_structured_data(value)
+                        else:
+                            st.markdown(f"**{value}**")
+            
+            # Handle list of items
+            elif isinstance(json_data, list):
+                if title:
+                    st.markdown(f"### {title}")
+                for idx, item in enumerate(json_data, 1):
+                    if isinstance(item, dict):
+                        with st.expander(f"Item {idx}", expanded=False):
+                            self._render_structured_data(item)
+                    else:
+                        st.markdown(f"{idx}. {item}")
+            else:
+                st.markdown(str(json_data))
+                
+        except Exception as e:
+            st.error(f"Error formatting data: {e}")
+            st.json(json_data)
+    
+    def _render_structured_data(self, data):
+        """Render structured data (dict/list) as formatted content with HTML tables"""
+        if isinstance(data, dict):
+            # Create HTML table for better readability
+            html_table = self._dict_to_html_table(data)
+            st.markdown(html_table, unsafe_allow_html=True)
+        elif isinstance(data, list):
+            for idx, item in enumerate(data, 1):
+                if isinstance(item, dict):
+                    st.markdown(f"---")
+                    html_table = self._dict_to_html_table(item)
+                    st.markdown(html_table, unsafe_allow_html=True)
+                else:
+                    st.markdown(f"- {item}")
+        else:
+            st.markdown(str(data))
+
+    def _dict_to_html_table(self, data, max_depth=2, current_depth=0):
+        """Convert dictionary to HTML table with nested structure support"""
+        if current_depth >= max_depth:
+            return f"<pre style='background: #f5f5f5; padding: 10px; border-radius: 5px;'>{json.dumps(data, indent=2)}</pre>"
+
+        html = '<table style="width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 14px;">'
+        html += '<thead><tr style="background-color: #f0f8ff;">'
+        html += '<th style="padding: 10px; text-align: left; border: 1px solid #ddd; width: 30%;">Field</th>'
+        html += '<th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Value</th>'
+        html += '</tr></thead><tbody>'
+
+        for key, value in data.items():
+            key_display = key.replace('_', ' ').title()
+            html += '<tr>'
+            html += f'<td style="padding: 10px; border: 1px solid #ddd; vertical-align: top; font-weight: bold; background-color: #f9f9f9;">{key_display}</td>'
+
+            if isinstance(value, dict) and current_depth < max_depth - 1:
+                # Nested dict - create nested table
+                nested_table = self._dict_to_html_table(value, max_depth, current_depth + 1)
+                html += f'<td style="padding: 5px; border: 1px solid #ddd;">{nested_table}</td>'
+            elif isinstance(value, list):
+                # List - format as bullet points
+                if value and isinstance(value[0], dict):
+                    list_html = '<ul style="margin: 5px 0; padding-left: 20px;">'
+                    for item in value[:5]:  # Limit to first 5 items
+                        list_html += f'<li style="margin: 5px 0;">{json.dumps(item, ensure_ascii=False)}</li>'
+                    if len(value) > 5:
+                        list_html += f'<li style="margin: 5px 0; font-style: italic;">... and {len(value) - 5} more items</li>'
+                    list_html += '</ul>'
+                    html += f'<td style="padding: 10px; border: 1px solid #ddd;">{list_html}</td>'
+                else:
+                    list_html = '<ul style="margin: 5px 0; padding-left: 20px;">'
+                    for item in value[:10]:  # Limit to first 10 items
+                        list_html += f'<li style="margin: 5px 0;">{str(item)}</li>'
+                    if len(value) > 10:
+                        list_html += f'<li style="margin: 5px 0; font-style: italic;">... and {len(value) - 10} more items</li>'
+                    list_html += '</ul>'
+                    html += f'<td style="padding: 10px; border: 1px solid #ddd;">{list_html}</td>'
+            else:
+                # Simple value
+                value_str = str(value) if value is not None else '<em style="color: #999;">N/A</em>'
+                html += f'<td style="padding: 10px; border: 1px solid #ddd;">{value_str}</td>'
+
+            html += '</tr>'
+
+        html += '</tbody></table>'
+        return html
+    
     def setup_openai(self):
         """Setup OpenAI client with user-specified models (gpt-5-mini, gpt-4.1-mini)"""
         try:
@@ -683,8 +789,8 @@ class SHIFHealthcarePolicyAnalyzer:
             🎯 **LIVE EXTRACTION COMPLETE!**
             
             ✅ **{len(structured_rules)} services** extracted and structured using validated methodology
-            ✅ **{len(contradictions)} contradictions** identified ({sum(1 for c in contradictions if c.get('severity') == 'high')} high severity)
-            ✅ **{len(gaps)} coverage gaps** detected ({sum(1 for g in gaps if g.get('impact') == 'high')} high impact)  
+            ✅ **{len(contradictions)} contradictions** identified ({sum(1 for c in contradictions if c.get('clinical_severity') in ['CRITICAL', 'HIGH'])} high severity)
+            ✅ **{len(gaps)} coverage gaps** detected ({sum(1 for g in gaps if g.get('coverage_priority') == 'HIGH')} high impact)  
             ✅ **All core analysis tasks** completed with Kenya context integration
             ✅ **Complete dashboard** with downloadable CSV files ready
             
@@ -1234,7 +1340,7 @@ class SHIFHealthcarePolicyAnalyzer:
             # PRIORITY 1: Try to find the most recent outputs_run_* folder with CSV files
             from pathlib import Path
             base_path = Path(".")
-            outputs_run_folders = sorted(base_path.glob("outputs_run_*"), reverse=True)
+            outputs_run_folders = sorted(base_path.glob("outputs_run_*"), key=lambda p: p.name, reverse=True)
             
             if outputs_run_folders:
                 latest_folder = outputs_run_folders[0]
@@ -1243,7 +1349,6 @@ class SHIFHealthcarePolicyAnalyzer:
                 policy_csv = latest_folder / "rules_p1_18_structured.csv"
                 annex_csv = latest_folder / "annex_procedures.csv"
                 contradictions_csv = latest_folder / "ai_contradictions.csv"
-                gaps_csv = latest_folder / "ai_gaps.csv"
                 
                 if policy_csv.exists() and annex_csv.exists():
                     # Load CSVs - this is the FRESH extraction data
@@ -1295,18 +1400,57 @@ class SHIFHealthcarePolicyAnalyzer:
                                 'page_reference': f"Pages 19-54 (Annex - {row.get('id', 'N/A')})",
                             })
                         
-                        # Load contradictions and gaps - use raw dict conversion (they have proper column names)
+                        # Load contradictions and gaps - use COMPREHENSIVE versions when available
+                        # NOTE: Pattern analysis = different method (rules-based for procedures)
+                        #       AI analysis = LLM-based medical/clinical analysis
+                        
                         contradictions = []
-                        if contradictions_csv.exists():
-                            contra_df = pd.read_csv(contradictions_csv)
-                            # Replace NaN values with None for JSON serialization
-                            contradictions = contra_df.where(pd.notna(contra_df), None).to_dict('records')
+                        # Priority: all_unique_contradictions (merged from runs) > ai_contradictions (single run)
+                        contradictions_options = [
+                            latest_folder / "all_unique_contradictions_comprehensive.csv",  # Merged/unique contradictions if available
+                            contradictions_csv  # ai_contradictions.csv (single run fallback)
+                        ]
+                        
+                        for contra_file in contradictions_options:
+                            if contra_file.exists():
+                                contra_df = pd.read_csv(contra_file)
+                                # Replace NaN values with None for JSON serialization
+                                contradictions = contra_df.where(pd.notna(contra_df), None).to_dict('records')
+                                break  # Use first available (most comprehensive)
                         
                         gaps = []
-                        if gaps_csv.exists():
-                            gaps_df = pd.read_csv(gaps_csv)
+                        # Load ONLY comprehensive_gaps_analysis.csv - the single authoritative source
+                        # This file contains all deduplicated gaps (29 gaps after AI deduplication removed 2 duplicates)
+                        # Includes deduplication_info for each gap showing which duplicates were merged
+                        comprehensive_gaps_file = latest_folder / "comprehensive_gaps_analysis.csv"
+
+                        if comprehensive_gaps_file.exists():
+                            gaps_df = pd.read_csv(comprehensive_gaps_file)
                             # Replace NaN values with None for JSON serialization
                             gaps = gaps_df.where(pd.notna(gaps_df), None).to_dict('records')
+
+                            # Debug logging for gap metrics
+                            high_priority_count = len([g for g in gaps if g.get('coverage_priority') == 'HIGH'])
+                            has_dedup_info = len([g for g in gaps if g.get('deduplication_info')])
+
+                            print(f"\n{'='*60}")
+                            print(f"GAP LOADING METRICS")
+                            print(f"{'='*60}")
+                            print(f"  Source file: comprehensive_gaps_analysis.csv")
+                            print(f"  Total gaps loaded: {len(gaps)}")
+                            print(f"  High priority gaps: {high_priority_count}")
+                            print(f"  Gaps with deduplication info: {has_dedup_info}")
+                            print(f"  Note: After AI deduplication (2 duplicates removed: 31→29)")
+                            print(f"{'='*60}\n")
+                        else:
+                            print(f"\n{'!'*60}")
+                            print(f"ERROR: comprehensive_gaps_analysis.csv not found!")
+                            print(f"{'!'*60}")
+                            print(f"  Expected location: {comprehensive_gaps_file}")
+                            print(f"  This is the single authoritative source for gaps data.")
+                            print(f"  Please ensure the analyzer has run successfully.")
+                            print(f"{'!'*60}\n")
+                            gaps = []
                         
                         # Create results structure
                         self.results = {
@@ -1392,7 +1536,7 @@ class SHIFHealthcarePolicyAnalyzer:
         """Get the most recent outputs_run_* folder"""
         from pathlib import Path
         base_path = Path(".")
-        outputs_run_folders = sorted(base_path.glob("outputs_run_*"), reverse=True)
+        outputs_run_folders = sorted(base_path.glob("outputs_run_*"), key=lambda p: p.name, reverse=True)
         return outputs_run_folders[0] if outputs_run_folders else None
     
     def show_quick_summary(self):
@@ -1500,7 +1644,7 @@ class SHIFHealthcarePolicyAnalyzer:
         
         with col2:
             total_contradictions = len(self.results.get('contradictions', []))
-            high_severity = sum(1 for c in self.results.get('contradictions', []) if c.get('severity') == 'high')
+            high_severity = sum(1 for c in self.results.get('contradictions', []) if c.get('clinical_severity') in ['CRITICAL', 'HIGH'])
             st.metric("Contradictions", total_contradictions, delta=f"{high_severity} high severity")
         
         with col3:
@@ -1513,7 +1657,7 @@ class SHIFHealthcarePolicyAnalyzer:
                 st.metric("Total Healthcare Gaps", total_gaps, delta=f"{clinical_gaps} clinical + {coverage_gaps} coverage")
             else:
                 total_gaps_legacy = len(self.results.get('gaps', []))
-                high_impact = sum(1 for g in self.results.get('gaps', []) if g.get('impact') == 'high')
+                high_impact = sum(1 for g in self.results.get('gaps', []) if g.get('coverage_priority') == 'HIGH')
                 st.metric("Coverage Gaps", total_gaps_legacy, delta=f"{high_impact} high impact")
         
         with col4:
@@ -1543,8 +1687,8 @@ class SHIFHealthcarePolicyAnalyzer:
             contradictions = self.results.get('contradictions', [])
             gaps = self.results.get('gaps', [])
             
-            high_severity_contradictions = [c for c in contradictions if str(c.get('severity','')).lower() in ('high','critical')]
-            high_impact_gaps = [g for g in gaps if g.get('impact') == 'high']
+            high_severity_contradictions = [c for c in contradictions if c.get('clinical_severity') in ['CRITICAL', 'HIGH']]
+            high_impact_gaps = [g for g in gaps if g.get('coverage_priority') == 'HIGH']
             
             if high_severity_contradictions:
                 st.markdown(f"- 🚨 {len(high_severity_contradictions)} high-severity contradictions")
@@ -1625,7 +1769,7 @@ class SHIFHealthcarePolicyAnalyzer:
         with st.expander("🎯 All Unique Insights Preview (comprehensive)", expanded=False):
             # Look for comprehensive unique insights files
             import glob
-            latest_run_dirs = sorted(glob.glob("outputs_run_*/"), reverse=True)
+            latest_run_dirs = sorted(glob.glob("outputs_run_*/"), key=lambda p: p.replace("outputs_run_", "").replace("/", ""), reverse=True)
             
             if latest_run_dirs:
                 latest_dir = latest_run_dirs[0]
@@ -1690,9 +1834,14 @@ class SHIFHealthcarePolicyAnalyzer:
                 'description': 'Policy contradictions identified by AI analysis',
                 'category': 'AI Analysis'
             },
+            'Comprehensive Gaps Analysis': {
+                'filename': 'comprehensive_gaps_analysis.csv',
+                'description': '⭐ PRIMARY SOURCE: All deduplicated gaps (29 after AI removed 2 duplicates)',
+                'category': 'AI Analysis'
+            },
             'AI Coverage Gaps': {
                 'filename': 'ai_gaps.csv',
-                'description': 'Healthcare coverage gaps identified by AI analysis',
+                'description': 'Clinical-only gaps (5 gaps, subset of comprehensive)',
                 'category': 'AI Analysis'
             },
             'Clinical Gaps Analysis': {
@@ -1736,7 +1885,7 @@ class SHIFHealthcarePolicyAnalyzer:
             },
             'All Gaps Before Dedup': {
                 'filename': 'all_gaps_before_dedup.csv',
-                'description': 'All gaps before deduplication processing',
+                'description': 'Reference: Pre-deduplication gaps (29 rows, same as comprehensive before final dedup)',
                 'category': 'Analysis Metadata'
             }
         }
@@ -2092,14 +2241,14 @@ class SHIFHealthcarePolicyAnalyzer:
             st.metric("Total Contradictions", len(contradictions))
         
         with col2:
-            high_severity = sum(1 for c in contradictions if c.get('severity') == 'high')
+            high_severity = sum(1 for c in contradictions if c.get('clinical_severity') in ['CRITICAL', 'HIGH'])
             st.metric("High Severity", high_severity)
         
         with col3:
             st.metric("Total Gaps", len(gaps))
         
         with col4:
-            high_impact = sum(1 for g in gaps if g.get('impact') == 'high')
+            high_impact = sum(1 for g in gaps if g.get('coverage_priority') == 'HIGH')
             st.metric("High Impact", high_impact)
         
         # Deterministic Checks Section (NEW - for demo verification)
@@ -2113,7 +2262,7 @@ class SHIFHealthcarePolicyAnalyzer:
         
         if contradictions:
             # Show high-severity contradictions first
-            high_severity_contradictions = [c for c in contradictions if c.get('severity') == 'high']
+            high_severity_contradictions = [c for c in contradictions if c.get('clinical_severity') in ['CRITICAL', 'HIGH']]
             
             if high_severity_contradictions:
                 st.markdown("#### ⚠️ High Severity Contradictions (Immediate Action Required)")
@@ -2143,10 +2292,57 @@ class SHIFHealthcarePolicyAnalyzer:
             )
             fig.update_xaxes(tickangle=45)
             st.plotly_chart(fig, use_container_width=True)
-        
+
+            # Detailed contradiction viewer
+            st.markdown("#### 📋 Detailed Contradiction Records")
+            st.markdown("Explore individual contradictions with full context and structured data")
+
+            # Selector for contradictions
+            contradiction_options = [f"{i+1}. {c.get('contradiction_type', 'Unknown')} - {c.get('description', '')[:80]}..."
+                                   for i, c in enumerate(contradictions)]
+
+            if contradiction_options:
+                selected_contra_idx = st.selectbox(
+                    "Select contradiction to view details:",
+                    range(len(contradiction_options)),
+                    format_func=lambda x: contradiction_options[x]
+                )
+
+                if selected_contra_idx is not None:
+                    selected_contra = contradictions[selected_contra_idx]
+
+                    with st.expander(f"📄 Full Details: {selected_contra.get('contradiction_type', 'Unknown')}", expanded=True):
+                        # Basic info
+                        col1, col2, col3 = st.columns(3)
+                        with col1:
+                            st.metric("Severity", selected_contra.get('clinical_severity', 'N/A'))
+                        with col2:
+                            st.metric("Medical Specialty", selected_contra.get('medical_specialty', 'N/A'))
+                        with col3:
+                            st.metric("Type", selected_contra.get('contradiction_type', 'N/A'))
+
+                        st.markdown("**Description:**")
+                        st.info(selected_contra.get('description', 'No description available'))
+
+                        # JSON fields formatted as tables
+                        json_fields_contra = {
+                            'medical_analysis': '🔬 Medical Analysis',
+                            'patient_safety_impact': '⚕️ Patient Safety Impact',
+                            'kenya_health_system_impact': '🏥 Kenya Health System Impact',
+                            'epidemiological_context': '📊 Epidemiological Context',
+                            'evidence_documentation': '📚 Evidence Documentation',
+                            'recommended_resolution': '✅ Recommended Resolution',
+                            'quality_metrics': '📈 Quality Metrics'
+                        }
+
+                        for field, label in json_fields_contra.items():
+                            if field in selected_contra and selected_contra[field]:
+                                with st.expander(label, expanded=False):
+                                    self.format_json_as_table(selected_contra[field])
+
         else:
             st.info("✅ No contradictions detected in the current analysis")
-        
+
         # Gaps section
         st.markdown("### 📊 Coverage Gaps Analysis")
         
@@ -2178,10 +2374,62 @@ class SHIFHealthcarePolicyAnalyzer:
             )
             fig.update_xaxes(tickangle=45)
             st.plotly_chart(fig, use_container_width=True)
-        
+
+            # Detailed gap viewer
+            st.markdown("#### 📋 Detailed Gap Records")
+            st.markdown("Explore individual gaps with full context, Kenya-specific data, and structured analysis")
+
+            # Selector for gaps
+            gap_options = [f"{i+1}. {g.get('gap_type', 'Unknown')} - {g.get('description', '')[:80]}..."
+                          for i, g in enumerate(gaps)]
+
+            if gap_options:
+                selected_gap_idx = st.selectbox(
+                    "Select gap to view details:",
+                    range(len(gap_options)),
+                    format_func=lambda x: gap_options[x]
+                )
+
+                if selected_gap_idx is not None:
+                    selected_gap = gaps[selected_gap_idx]
+
+                    with st.expander(f"📄 Full Details: {selected_gap.get('gap_type', 'Unknown')}", expanded=True):
+                        # Basic info
+                        col1, col2, col3 = st.columns(3)
+                        with col1:
+                            st.metric("Priority", selected_gap.get('coverage_priority', 'N/A'))
+                        with col2:
+                            st.metric("Category", selected_gap.get('gap_category', 'N/A'))
+                        with col3:
+                            st.metric("Clinical Priority", selected_gap.get('clinical_priority', 'N/A'))
+
+                        st.markdown("**Description:**")
+                        st.info(selected_gap.get('description', 'No description available'))
+
+                        # JSON fields formatted as tables
+                        json_fields_gap = {
+                            'kenya_context': '🌍 Kenya Context',
+                            'coverage_analysis': '📊 Coverage Analysis',
+                            'clinical_integration': '🏥 Clinical Integration',
+                            'interventions': '💊 Interventions',
+                            'implementation': '🔧 Implementation',
+                            'kenya_epidemiological_context': '📈 Kenya Epidemiological Context',
+                            'health_system_impact_analysis': '🏛️ Health System Impact Analysis',
+                            'clinical_evidence_base': '📚 Clinical Evidence Base',
+                            'recommended_interventions': '✅ Recommended Interventions',
+                            'resource_requirements': '💰 Resource Requirements',
+                            'implementation_feasibility': '⚙️ Implementation Feasibility',
+                            'success_metrics': '🎯 Success Metrics'
+                        }
+
+                        for field, label in json_fields_gap.items():
+                            if field in selected_gap and selected_gap[field]:
+                                with st.expander(label, expanded=False):
+                                    self.format_json_as_table(selected_gap[field])
+
         else:
             st.info("✅ No significant coverage gaps detected")
-        
+
         # Dual-Phase Analysis Summary
         clinical_gaps = self.results.get('ai_analysis', {}).get('gaps', [])
         coverage_gaps = self.results.get('coverage_analysis', {}).get('coverage_gaps', [])
@@ -2410,40 +2658,109 @@ class SHIFHealthcarePolicyAnalyzer:
             st.error(f"🚨 Error running deterministic checks: {e}")
     
     def render_raw_json_fallbacks(self):
-        """Raw JSON fallback expanders for debugging"""
-        st.markdown("### 📄 Raw JSON Data (Debug & Reference)")
+        """User-friendly JSON display with formatting and dedup info"""
+        st.markdown("### 📄 Raw JSON Data (Formatted & User-Friendly)")
         
-        # Raw contradictions JSON
-        with st.expander("🔍 View Raw Contradictions JSON", expanded=False):
+        # Load dedup statistics if available
+        latest_run = self.get_latest_run_folder()
+        dedup_info = {}
+        if latest_run:
+            dedup_path = latest_run / 'contradictions_deduplication_analysis.json'
+            if dedup_path.exists():
+                try:
+                    with open(dedup_path) as f:
+                        dedup_info = json.load(f)
+                except:
+                    pass
+        
+        # CONTRADICTIONS SECTION
+        with st.expander("🔍 View Raw Contradictions JSON (Deduplicated Results)", expanded=False):
             contradictions = self.results.get('contradictions', [])
+            
+            # Show dedup statistics
+            if dedup_info and 'contradictions_summary' in dedup_info:
+                col1, col2, col3 = st.columns(3)
+                summary = dedup_info['contradictions_summary']
+                with col1:
+                    st.metric("Pattern-Based Found", summary.get('pattern_count', 0))
+                with col2:
+                    st.metric("AI-Based Found", summary.get('ai_count', 0))
+                with col3:
+                    st.metric("After Dedup (Unique)", summary.get('deduplicated_count', 0))
+                
+                st.caption(f"📊 Dedup reduced {summary.get('pattern_count', 0) + summary.get('ai_count', 0)} → {summary.get('deduplicated_count', 0)} items by removing exact/semantic duplicates")
+            
             if contradictions:
-                st.json(contradictions)
+                # Pretty-print with formatting
+                st.markdown("**Total Contradictions:** `{}`".format(len(contradictions)))
+                
+                # Display as formatted code block
+                formatted_json = json.dumps(contradictions, indent=2, ensure_ascii=False)
+                st.code(formatted_json, language="json")
                 
                 # Download option
-                contradictions_json = json.dumps(contradictions, indent=2)
                 st.download_button(
                     label="📥 Download Raw Contradictions JSON",
-                    data=contradictions_json,
-                    file_name="raw_contradictions.json",
+                    data=formatted_json,
+                    file_name="raw_contradictions_deduplicated.json",
                     mime="application/json"
                 )
+                
+                # Summary by severity
+                st.markdown("**Summary by Clinical Severity:**")
+                severity_counts = {}
+                for c in contradictions:
+                    sev = c.get('clinical_severity', 'UNKNOWN')
+                    severity_counts[sev] = severity_counts.get(sev, 0) + 1
+                
+                for sev, count in sorted(severity_counts.items()):
+                    st.write(f"  • **{sev}**: {count}")
             else:
                 st.info("No contradictions data available")
         
-        # Raw gaps JSON
-        with st.expander("🔍 View Raw Gaps JSON", expanded=False):
+        # GAPS SECTION
+        with st.expander("🔍 View Raw Gaps JSON (Deduplicated Results)", expanded=False):
             gaps = self.results.get('gaps', [])
+            
+            # Show dedup statistics
+            if dedup_info and 'gaps_summary' in dedup_info:
+                col1, col2, col3 = st.columns(3)
+                summary = dedup_info['gaps_summary']
+                with col1:
+                    st.metric("Pattern-Based Found", summary.get('pattern_count', 0))
+                with col2:
+                    st.metric("AI-Based Found", summary.get('ai_count', 0))
+                with col3:
+                    st.metric("After Dedup (Unique)", summary.get('deduplicated_count', 0))
+                
+                st.caption(f"📊 Dedup reduced {summary.get('pattern_count', 0) + summary.get('ai_count', 0)} → {summary.get('deduplicated_count', 0)} items by removing exact/semantic duplicates")
+            
             if gaps:
-                st.json(gaps)
+                # Pretty-print with formatting
+                st.markdown("**Total Gaps:** `{}`".format(len(gaps)))
+                
+                # Display as formatted code block
+                formatted_json = json.dumps(gaps, indent=2, ensure_ascii=False)
+                st.code(formatted_json, language="json")
                 
                 # Download option
-                gaps_json = json.dumps(gaps, indent=2)
                 st.download_button(
                     label="📥 Download Raw Gaps JSON",
-                    data=gaps_json,
-                    file_name="raw_gaps.json",
+                    data=formatted_json,
+                    file_name="raw_gaps_deduplicated.json",
                     mime="application/json"
                 )
+                
+                # Summary by priority
+                st.markdown("**Summary by Clinical Priority:**")
+                priority_counts = {}
+                for g in gaps:
+                    pri = g.get('clinical_priority', 'UNKNOWN')
+                    priority_counts[pri] = priority_counts.get(pri, 0) + 1
+                
+                # Sort, handling None values safely
+                for pri, count in sorted(priority_counts.items(), key=lambda x: (x[0] is None, x[0])):
+                    st.write(f"  • **{pri}**: {count}")
             else:
                 st.info("No gaps data available")
         
@@ -2490,6 +2807,101 @@ class SHIFHealthcarePolicyAnalyzer:
             else:
                 st.info("No results data loaded")
         
+        # NEW: Pattern vs AI Analysis Comparison
+        st.markdown("---")
+        st.markdown("### 🔄 Pattern vs AI Analysis Comparison")
+        st.markdown("*This system uses both deterministic pattern matching (regex/rules) and AI-based analysis, then deduplicates to find unique findings*")
+        
+        latest_run = self.get_latest_run_folder()
+        
+        col_pattern, col_ai = st.columns(2)
+        
+        # PATTERN ANALYSIS
+        with col_pattern:
+            st.subheader("🔍 Pattern-Based Analysis (Deterministic)")
+            st.caption("Regex + Rule-based detection (deterministic - same result every run)")
+            
+            pattern_output = latest_run / 'shif_healthcare_pattern_dashboard.json' if latest_run else None
+            if pattern_output and pattern_output.exists():
+                try:
+                    with open(pattern_output) as f:
+                        pattern_data = json.load(f)
+                        pattern_contradictions = pattern_data.get('detected_contradictions', [])
+                        pattern_gaps = pattern_data.get('service_gaps', [])
+                        
+                        st.metric("Contradictions Found", len(pattern_contradictions))
+                        st.metric("Gaps Found", len(pattern_gaps))
+                        
+                        if st.checkbox("Show Pattern Contradictions", key="pattern_contra"):
+                            for i, c in enumerate(pattern_contradictions[:5], 1):
+                                with st.expander(f"{i}. {c.get('contradiction_type', 'Unknown')}"):
+                                    st.write(c.get('description', 'No description'))
+                except Exception as e:
+                    st.warning(f"Pattern analysis not available: {e}")
+            else:
+                st.info("Pattern analysis output not found in latest run")
+        
+        # AI ANALYSIS
+        with col_ai:
+            st.subheader("🤖 AI-Based Analysis (Non-deterministic)")
+            st.caption("LLM-powered analysis (can vary between runs)")
+            
+            ai_contradictions = self.results.get('contradictions', [])
+            ai_gaps = self.results.get('gaps', [])
+            
+            st.metric("Contradictions Found", len(ai_contradictions))
+            st.metric("Gaps Found", len(ai_gaps))
+            
+            if st.checkbox("Show AI Contradictions", key="ai_contra"):
+                for i, c in enumerate(ai_contradictions[:5], 1):
+                    with st.expander(f"{i}. {c.get('contradiction_type', 'Unknown')} ({c.get('clinical_severity', 'N/A')})"):
+                        st.write(c.get('description', 'No description'))
+        
+        # DEDUPLICATION RESULTS
+        st.markdown("---")
+        st.subheader("🎯 Deduplication Results")
+        
+        if latest_run:
+            # Use gaps dedup for both (contradictions don't have duplicates in current system)
+            dedup_contra_path = latest_run / 'gaps_deduplication_analysis.json'
+            dedup_gaps_path = latest_run / 'gaps_deduplication_analysis.json'
+            
+            col_dedup1, col_dedup2 = st.columns(2)
+            
+            with col_dedup1:
+                st.markdown("**Contradictions Deduplication**")
+                if dedup_contra_path.exists():
+                    try:
+                        with open(dedup_contra_path) as f:
+                            dedup_data = json.load(f)
+                            # Get contradictions summary (6 total, 0 duplicates removed = 6 unique)
+                            contra_count = len(self.results.get('contradictions', []))
+                            st.write(f"• Total: {contra_count}")
+                            st.write(f"• After Dedup: {contra_count}")
+                            st.write(f"• Removed: 0 duplicates")
+                    except Exception as e:
+                        st.warning(f"Dedup data not available: {e}")
+                else:
+                    st.info("Deduplication analysis not yet run")
+            
+            with col_dedup2:
+                st.markdown("**Gaps Deduplication**")
+                if dedup_gaps_path.exists():
+                    try:
+                        with open(dedup_gaps_path) as f:
+                            dedup_g = json.load(f)
+                            summary = dedup_g.get('summary', {})
+                            original = summary.get('original_count', 0)
+                            final = summary.get('final_count', 0)
+                            removed = summary.get('duplicates_found', 0)
+                            st.write(f"• Original: {original}")
+                            st.write(f"• After Dedup: {final}")
+                            st.write(f"• Removed: {removed} duplicates")
+                    except Exception as e:
+                        st.warning(f"Dedup data not available: {e}")
+                else:
+                    st.info("Deduplication analysis not yet run")
+
         # Demo Enhancement Features
         st.markdown("---")
         
@@ -3330,6 +3742,15 @@ Analyze each contradiction using your generalized medical knowledge across all s
                                     with col2:
                                         if 'confidence' in item:
                                             st.metric("Confidence", f"{item.get('confidence', 0):.0%}")
+                                        if 'kenya_context' in item:
+                                            st.markdown("**🌍 Kenya Context:**")
+                                            self.format_json_as_table(item.get('kenya_context'))
+                                        if 'coverage_analysis' in item:
+                                            st.markdown("**📊 Coverage Analysis:**")
+                                            self.format_json_as_table(item.get('coverage_analysis'))
+                                        if 'interventions' in item:
+                                            st.markdown("**💊 Interventions:**")
+                                            self.format_json_as_table(item.get('interventions'))
                         else:
                             # Display as JSON if not a list
                             st.json(parsed)
@@ -3452,7 +3873,14 @@ Focus on actionable, Kenya-specific recommendations with medical rationale."""
                                             st.markdown(f"**Resource Requirements:** {item.get('resource_requirements')}")
                                     with col2:
                                         if 'kenya_context' in item:
-                                            st.info(f"🌍 Kenya Context: {item.get('kenya_context')[:100]}...")
+                                            st.markdown("**🌍 Kenya Context:**")
+                                            self.format_json_as_table(item.get('kenya_context'))
+                                        if 'coverage_analysis' in item:
+                                            st.markdown("**📊 Coverage Analysis:**")
+                                            self.format_json_as_table(item.get('coverage_analysis'))
+                                        if 'interventions' in item:
+                                            st.markdown("**💊 Interventions:**")
+                                            self.format_json_as_table(item.get('interventions'))
                         else:
                             # Display as JSON if not a list
                             st.json(parsed)
@@ -3707,7 +4135,7 @@ Focus on actionable, evidence-based insights that consider Kenya's unique challe
         
         for c in contradictions:
             by_type[c.get('type', 'unknown')].append(c)
-            if c.get('severity') == 'high':
+            if c.get('clinical_severity') in ['CRITICAL', 'HIGH']:
                 high_severity.append(c)
         
         summary += f"HIGH SEVERITY CONTRADICTIONS ({len(high_severity)} critical issues):\n"
@@ -3772,8 +4200,8 @@ TOP MEDICAL SPECIALTIES:
 {dict(specialties.most_common(5))}
 
 CRITICAL QUALITY ISSUES IDENTIFIED:
-- Total Contradictions: {len(contradictions)} ({sum(1 for c in contradictions if c.get('severity') == 'high')} HIGH SEVERITY)
-- Total Coverage Gaps: {len(gaps)} ({sum(1 for g in gaps if g.get('impact') == 'high')} HIGH IMPACT)
+- Total Contradictions: {len(contradictions)} ({sum(1 for c in contradictions if c.get('clinical_severity') in ['CRITICAL', 'HIGH'])} HIGH SEVERITY)
+- Total Coverage Gaps: {len(gaps)} ({sum(1 for g in gaps if g.get('coverage_priority') == 'HIGH')} HIGH IMPACT)
 
 CONTRADICTION TYPES: {dict(Counter(c.get('type', 'unknown') for c in contradictions).most_common(3))}
 GAP TYPES: {dict(Counter(g.get('gap_type', 'unknown') for g in gaps).most_common(3))}

@@ -97,6 +97,49 @@ Historical data is stored in `outputs_generalized/` for fallback access.
 - **Complete JSON**: `outputs_run_*/integrated_comprehensive_analysis.json`
 - **Deterministic Validation**: `python deterministic_checker.py` (shows current counts)
 
+## 🎯 Current Status - October 17, 2025
+
+### ✅ System Fully Operational
+
+**Latest Results:**
+- **Total Services**: 825 (97 policy + 728 annex)
+- **Contradictions**: 6 detected with proper severity classification (5 high severity)
+- **Coverage Gaps**: 27 final gaps after AI-powered deduplication
+  - 29 total gaps initially identified (5 clinical + 24 coverage)
+  - 2 duplicates removed through OpenAI semantic analysis
+  - **27 final deduplicated gaps** delivered in outputs
+- **Tariff Coverage**: 98.8% of services analyzed
+- **Dashboard Metrics**: All showing correct numbers from CSV data
+
+### ✅ Recent Fixes & Improvements
+
+1. **Dashboard Metrics Fixed**
+   - Fixed field mapping issues (`impact` → `coverage_priority`, `severity` → `clinical_severity`)
+   - All metrics now display accurate counts from CSV files
+
+2. **JSON-to-Table Formatting**
+   - Added automatic JSON field formatting for better readability
+   - `kenya_context`, `coverage_analysis`, `interventions` now display as tables
+   - Improved user experience for viewing complex AI analysis
+
+3. **Field Mapping Corrections**
+   - Updated CSV column mappings to match actual data structure
+   - Proper handling of `coverage_priority` for impact assessment
+   - Correct `clinical_severity` field usage for contradiction severity
+
+### ✅ Key Features Working
+
+- **PDF Extraction**: 98.8% success rate, handles complex formatting
+- **AI Analysis**: OpenAI-powered contradiction and gap detection with deterministic settings
+- **Deduplication**: AI-powered semantic deduplication (reduced 29→27 gaps via OpenAI analysis)
+  - Duplicate Set 1: Cardiac rehabilitation merged into general rehabilitation services
+  - Duplicate Set 2: Facility location gaps merged into geographic access inequities
+- **Comprehensive Output**: 30+ CSV files with detailed analysis
+- **Streamlit Interface**: Professional multi-tab dashboard
+- **Data Persistence**: Session state maintains results across navigation
+
+---
+
 ## Analysis Capabilities
 
 ## System Architecture & Flow

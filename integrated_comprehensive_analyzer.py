@@ -2495,9 +2495,10 @@ Focus on identifying 15-25 systematic coverage gaps that complement the existing
                     try:
                         parsed = json.loads(match)
                         if isinstance(parsed, list) and parsed:
-                            gaps.extend(parsed)
+                            # Only add dict items from the list
+                            gaps.extend([item for item in parsed if isinstance(item, dict)])
                         elif isinstance(parsed, dict) and (
-                            'gap_type' in parsed or 
+                            'gap_type' in parsed or
                             'gap_id' in parsed or
                             'gap_category' in parsed or
                             'missing' in parsed.get('description', '').lower()
@@ -2510,7 +2511,10 @@ Focus on identifying 15-25 systematic coverage gaps that complement the existing
             if gaps:
                 print(f"   📋 Extracted {len(gaps)} AI gaps from JSON")
                 return gaps
-        
+
+            # No gaps found in JSON parsing
+            return []
+
         except Exception as e:
             print(f"   ❌ Error parsing AI gaps: {e}")
             return []
@@ -2911,13 +2915,14 @@ OUTPUT FORMAT (JSON only, no other text):
                 
                 # Create mapping from original gap IDs to gap objects
                 id_to_gap = {f"gap_{i+1}": gap['original_data'] for i, gap in enumerate(original_gaps)}
-                
+
                 final_gaps = []
-                
-                # Add deduplicated/merged gaps
+                added_gap_ids = set()  # Track which gaps we've already added to prevent duplicates
+
+                # Add deduplicated/merged gaps (these are the master gaps from duplicate sets)
                 for duplicate_group in dedup_data.get('duplicates_removed', []):
                     master_id = duplicate_group.get('master_gap_id')
-                    if master_id in id_to_gap:
+                    if master_id in id_to_gap and master_id not in added_gap_ids:
                         # Use the original gap data but update with best description
                         master_gap = id_to_gap[master_id].copy()
                         master_gap['description'] = duplicate_group.get('best_description', master_gap.get('description'))
@@ -2927,19 +2932,32 @@ OUTPUT FORMAT (JSON only, no other text):
                             'deduplication_date': datetime.now().isoformat()
                         }
                         final_gaps.append(master_gap)
-                
-                # Add unique gaps (no duplicates found)
+                        added_gap_ids.add(master_id)  # Mark as added
+
+                # Add unique gaps (no duplicates found for these)
                 for unique_gap in dedup_data.get('unique_gaps', []):
                     gap_id = unique_gap.get('gap_id')
-                    if gap_id in id_to_gap:
+                    if gap_id in id_to_gap and gap_id not in added_gap_ids:  # Skip if already added as master gap
                         unique_gap_data = id_to_gap[gap_id].copy()
                         unique_gap_data['deduplication_info'] = {
                             'status': 'unique',
                             'deduplication_date': datetime.now().isoformat()
                         }
                         final_gaps.append(unique_gap_data)
+                        added_gap_ids.add(gap_id)  # Mark as added
                 
-                print(f"📊 Deduplication results: {dedup_data.get('summary', {})}")
+                # Show deduplication summary
+                summary = dedup_data.get('summary', {})
+                original_count = summary.get('original_count', len(original_gaps))
+                final_count = len(final_gaps)
+                duplicates_removed = original_count - final_count
+
+                print(f"📊 Deduplication Results:")
+                print(f"   • Original gaps: {original_count}")
+                print(f"   • Final gaps: {final_count}")
+                print(f"   • Duplicates removed: {duplicates_removed}")
+                print(f"   • Reduction: {(duplicates_removed/original_count*100):.1f}%" if original_count > 0 else "")
+
                 return final_gaps
                 
         except Exception as e:
